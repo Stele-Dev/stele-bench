@@ -3,12 +3,27 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from stele_bench.results import RunRecord
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE = ROOT / "results" / "2026-08-preliminary"
+
+
+class _LinkParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.hrefs: list[str] = []
+
+    def handle_starttag(
+        self,
+        _tag: str,
+        attrs: list[tuple[str, str | None]],
+    ) -> None:
+        self.hrefs.extend(value for name, value in attrs if name == "href" and value)
 
 
 def test_preliminary_admissions_are_complete_and_match_durable_records() -> None:
@@ -64,3 +79,27 @@ def test_preliminary_evidence_contains_no_host_paths_or_secret_shapes() -> None:
             continue
         text = path.read_text(encoding="utf-8")
         assert not any(pattern.search(text) for pattern in forbidden), path
+
+
+def test_interpreted_report_covers_admitted_results_and_resolves_local_links() -> None:
+    report = (ROOT / "index.html").read_text(encoding="utf-8")
+    for required in (
+        "−40.7%",
+        "−71.3%",
+        "−54.0%",
+        "+24.04s",
+        "+83,520",
+        "+33.08s",
+        "COMPOUNDING NOT MEASURED",
+        "within these admitted runs",
+        "tui-forge-integration",
+    ):
+        assert required in report
+
+    parser = _LinkParser()
+    parser.feed(report)
+    for href in parser.hrefs:
+        parsed = urlsplit(href)
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            continue
+        assert (ROOT / parsed.path).is_file(), href

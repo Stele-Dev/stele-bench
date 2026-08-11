@@ -12,6 +12,9 @@ This foundation contains contracts, fixture validation, pinned source
 materialization, an external provisioner boundary, and no-cost smoke preparation.
 It does not invoke models or require a remote service from the public package.
 
+The public, interpreted result summary is available at
+[stele-dev.github.io/stele-bench](https://stele-dev.github.io/stele-bench/).
+
 ## External provisioner protocol
 
 `ExternalCommandProvisioner` connects the benchmark to any backend without importing

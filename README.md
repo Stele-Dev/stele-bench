@@ -3,6 +3,10 @@
 Open apparatus and evidence for Stele's preliminary controlled coding-agent
 memory evaluation.
 
+**[Read the interpreted results](https://stele-dev.github.io/stele-bench/)**,
+including the clear investigation win, measured overhead, safety observation,
+and the limits of the compounding-cost hypothesis.
+
 The canonical v0.1 report is
 [`When does project memory help a coding agent?`](eval/stele-bench/results/2026-08-preliminary/README.md).
 It presents all three accepted cohorts together:

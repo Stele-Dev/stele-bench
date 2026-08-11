@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Preliminary controlled results on when Stele project memory helps a coding agent, when it adds overhead, and what remains untested.">
+  <meta name="theme-color" content="#090b10">
+  <title>When does project memory help a coding agent? | Stele Bench</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090b10;
+      --surface: #10141c;
+      --surface-2: #151b25;
+      --line: #2a3443;
+      --line-soft: #202936;
+      --text: #edf2f7;
+      --muted: #a8b3c1;
+      --quiet: #778496;
+      --blue: #70a5ff;
+      --blue-soft: #162a49;
+      --green: #72d6a0;
+      --green-soft: #122c22;
+      --amber: #f2c56b;
+      --amber-soft: #302717;
+      --rose: #f199a7;
+      --rose-soft: #351b22;
+      --max: 72rem;
+      --measure: 47rem;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-synthesis: none;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: var(--bg);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 78% -10%, rgba(112, 165, 255, 0.14), transparent 34rem),
+        radial-gradient(circle at 8% 18%, rgba(114, 214, 160, 0.07), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover { color: #a7c8ff; }
+
+    a:focus-visible,
+    summary:focus-visible {
+      border-radius: 0.2rem;
+      outline: 0.18rem solid var(--amber);
+      outline-offset: 0.2rem;
+    }
+
+    code {
+      border: 1px solid var(--line-soft);
+      border-radius: 0.35rem;
+      background: #0c1118;
+      padding: 0.1em 0.35em;
+      color: #dbe8fb;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      overflow-wrap: anywhere;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 10;
+      inset-block-start: 0.75rem;
+      inset-inline-start: 0.75rem;
+      translate: 0 -180%;
+      border-radius: 0.45rem;
+      background: var(--text);
+      padding: 0.65rem 0.85rem;
+      color: var(--bg);
+      font-weight: 700;
+    }
+
+    .skip-link:focus { translate: 0; }
+
+    .site-header {
+      border-block-end: 1px solid var(--line-soft);
+      background: rgba(9, 11, 16, 0.88);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: safe center;
+      gap: 0.8rem 1.4rem;
+      max-inline-size: var(--max);
+      margin-inline: auto;
+      padding: 1rem clamp(1rem, 3vw, 2rem);
+    }
+
+    .wordmark {
+      margin-inline-end: auto;
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+
+    .nav-link:hover { color: var(--text); }
+
+    main { overflow: clip; }
+
+    .wrap {
+      max-inline-size: var(--max);
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 3vw, 2rem);
+    }
+
+    .hero {
+      padding-block: clamp(4rem, 10vw, 8rem) clamp(3.5rem, 8vw, 6rem);
+    }
+
+    .eyebrow,
+    .label {
+      margin: 0;
+      color: var(--blue);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-block: 0;
+      font-weight: 650;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-inline-size: 17ch;
+      margin-block-start: 1rem;
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+    }
+
+    h2 { font-size: clamp(2rem, 4.5vw, 3.6rem); }
+    h3 { font-size: clamp(1.25rem, 2.4vw, 1.65rem); }
+
+    .lede {
+      max-inline-size: 42rem;
+      margin: 1.8rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1.15rem, 2vw, 1.42rem);
+      line-height: 1.55;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-block-start: 2rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(16, 20, 28, 0.78);
+      padding: 0.4rem 0.72rem;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.76rem;
+    }
+
+    .boundary {
+      display: grid;
+      grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
+      gap: 1.5rem;
+      border-block: 1px solid var(--line);
+      padding-block: 1.6rem;
+    }
+
+    .boundary p { margin: 0; }
+    .boundary-copy { color: var(--muted); }
+    .boundary strong { color: var(--text); }
+
+    .section {
+      padding-block: clamp(4.5rem, 9vw, 7.5rem);
+    }
+
+    .section + .section { border-block-start: 1px solid var(--line-soft); }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    .section-intro {
+      max-inline-size: var(--measure);
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+      gap: 1rem;
+      margin-block-start: 2.5rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .metric,
+    .cohort,
+    .note {
+      border: 1px solid var(--line);
+      border-radius: 0.8rem;
+      background: linear-gradient(145deg, rgba(21, 27, 37, 0.96), rgba(13, 17, 24, 0.96));
+    }
+
+    .metric { padding: 1.25rem; }
+
+    .metric-value {
+      display: block;
+      margin-block-start: 0.5rem;
+      color: var(--green);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 720;
+      letter-spacing: -0.045em;
+      line-height: 1;
+    }
+
+    .metric-detail {
+      margin: 0.75rem 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .trace {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      margin-block-start: 2.5rem;
+      border: 1px solid var(--line);
+      border-radius: 0.8rem;
+      overflow: clip;
+      background: var(--surface);
+      padding: 0;
+      list-style: none;
+    }
+
+    .trace-step {
+      position: relative;
+      min-inline-size: 0;
+      padding: 1.35rem;
+    }
+
+    .trace-step + .trace-step { border-inline-start: 1px solid var(--line); }
+
+    .trace-step + .trace-step::before {
+      position: absolute;
+      inset-block-start: 1.45rem;
+      inset-inline-start: -0.42rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--blue-soft);
+      content: "";
+    }
+
+    .trace-step p:last-child {
+      margin: 0.65rem 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .evidence-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      margin-block-start: 2.5rem;
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+      background: var(--surface);
+      padding: clamp(1.25rem, 3vw, 2rem);
+    }
+
+    .evidence-card p { color: var(--muted); }
+    .evidence-card p:first-of-type { margin-block-start: 1rem; }
+
+    .source-list {
+      display: grid;
+      gap: 0.7rem;
+      align-content: start;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .source-list li {
+      border-block-end: 1px solid var(--line-soft);
+      padding-block-end: 0.7rem;
+    }
+
+    .source-list a { font-size: 0.9rem; }
+
+    .cohort-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+      gap: 1rem;
+      margin-block-start: 2.5rem;
+    }
+
+    .cohort { padding: 1.4rem; }
+
+    .cohort[data-tone="tare"] { border-block-start: 0.24rem solid var(--amber); }
+    .cohort[data-tone="null"] { border-block-start: 0.24rem solid var(--rose); }
+
+    .cohort p { color: var(--muted); }
+    .cohort ul { padding-inline-start: 1.2rem; color: var(--muted); }
+    .cohort strong { color: var(--text); }
+
+    .delta {
+      display: inline-block;
+      border-radius: 999px;
+      background: var(--amber-soft);
+      padding: 0.25rem 0.58rem;
+      color: var(--amber);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.76rem;
+    }
+
+    .where-cost-went {
+      display: grid;
+      grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+      gap: 2rem;
+      margin-block-start: 2.5rem;
+      border-block-start: 1px solid var(--line);
+      padding-block-start: 2rem;
+    }
+
+    .where-cost-went p { margin: 0; color: var(--muted); }
+    .where-cost-went strong { color: var(--text); }
+
+    .hypothesis {
+      border: 1px solid #3a4658;
+      border-radius: 0.9rem;
+      background: #0d121a;
+      padding: clamp(1.25rem, 3vw, 2.25rem);
+    }
+
+    .hypothesis-copy {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(2rem, 5vw, 5rem);
+    }
+
+    .hypothesis-copy p { margin: 0; color: var(--muted); }
+
+    .chart {
+      margin: 2.2rem 0 0;
+      border-block-start: 1px solid var(--line-soft);
+      padding-block-start: 2rem;
+    }
+
+    .chart svg {
+      display: block;
+      inline-size: 100%;
+      block-size: auto;
+    }
+
+    .chart figcaption {
+      max-inline-size: 56rem;
+      margin-block-start: 1rem;
+      color: var(--quiet);
+      font-size: 0.84rem;
+    }
+
+    .safety-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+      gap: clamp(2rem, 5vw, 5rem);
+      margin-block-start: 2.5rem;
+    }
+
+    .safety-grid p { color: var(--muted); }
+
+    .note {
+      align-self: start;
+      padding: 1.35rem;
+    }
+
+    .note strong { color: var(--green); }
+    .note p { margin-block-end: 0; }
+
+    .table-wrap {
+      margin-block-start: 2rem;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scrollbar-gutter: stable;
+    }
+
+    table {
+      width: 100%;
+      min-inline-size: 42rem;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th,
+    td {
+      border-block-end: 1px solid var(--line);
+      padding: 0.85rem 0.75rem;
+      text-align: start;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--quiet);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    td { color: var(--muted); }
+    td:first-child { color: var(--text); font-weight: 650; }
+
+    details {
+      margin-block-start: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 0.7rem;
+      background: var(--surface);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    details p {
+      margin: 0;
+      border-block-start: 1px solid var(--line-soft);
+      padding: 1rem 1.2rem;
+      color: var(--muted);
+    }
+
+    .field-evidence {
+      display: grid;
+      grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    .field-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-block-start: 1.5rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .field-stat {
+      border: 1px solid var(--line);
+      border-radius: 0.7rem;
+      background: var(--surface);
+      padding: 1rem;
+    }
+
+    .field-stat span {
+      display: block;
+      color: var(--quiet);
+      font-size: 0.78rem;
+    }
+
+    .field-stat strong {
+      display: block;
+      margin-block-start: 0.25rem;
+      font-size: 1.25rem;
+    }
+
+    .field-copy p { color: var(--muted); }
+
+    .site-footer {
+      border-block-start: 1px solid var(--line);
+      padding-block: 2.5rem;
+      color: var(--quiet);
+      font-size: 0.88rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      align-items: safe center;
+    }
+
+    .footer-inner p { margin: 0 auto 0 0; }
+
+    @media (max-width: 46rem) {
+      .boundary,
+      .section-head,
+      .where-cost-went,
+      .hypothesis-copy,
+      .safety-grid,
+      .field-evidence,
+      .evidence-card {
+        grid-template-columns: 1fr;
+      }
+
+      .trace { grid-template-columns: 1fr; }
+      .trace-step + .trace-step { border-block-start: 1px solid var(--line); border-inline-start: 0; }
+      .trace-step + .trace-step::before { inset-block-start: -0.42rem; inset-inline-start: 1.45rem; }
+      .field-stats { grid-template-columns: 1fr 1fr; }
+      .nav-link { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    @media print {
+      :root { color-scheme: light; --bg: #fff; --surface: #fff; --surface-2: #fff; --line: #bbb; --line-soft: #ddd; --text: #111; --muted: #333; --quiet: #555; --blue: #174ea6; --green: #176b3a; --amber: #7a5100; --rose: #8a2638; }
+      body { background: #fff; }
+      .site-header, .skip-link { display: none; }
+      .section { break-inside: avoid; padding-block: 2rem; }
+      .metric, .cohort, .note, .hypothesis, .evidence-card, .trace, details { background: #fff; }
+      a { color: #174ea6; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to results</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Benchmark report">
+      <a class="wordmark" href="https://github.com/Stele-Dev/stele-bench">Stele / Bench</a>
+      <a class="nav-link" href="#results">Results</a>
+      <a class="nav-link" href="#interpretation">Interpretation</a>
+      <a class="nav-link" href="#limitations">Limits</a>
+      <a class="nav-link" href="https://github.com/Stele-Dev/stele-bench">Repository</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">August 2026 · preliminary controlled results</p>
+        <h1 id="page-title">When does project memory help a coding agent?</h1>
+        <p class="lede">One task showed a clear investigation win. One measured the fixed cost when memory had little to contribute. One showed that relevant memory can be used without improving the outcome.</p>
+        <ul class="hero-meta" aria-label="Study summary">
+          <li class="pill">3 admitted cohorts</li>
+          <li class="pill">4 valid pairs</li>
+          <li class="pill">equal correctness in every pair</li>
+          <li class="pill">43 public trajectories</li>
+        </ul>
+      </section>
+
+      <aside class="boundary" aria-label="Claim boundary">
+        <p class="label">What this can claim</p>
+        <p class="boundary-copy"><strong>Case-level evidence, not an average productivity estimate.</strong> The tasks used different models and tested different memory values. We report them together, but never pool them into a global score.</p>
+      </aside>
+    </div>
+
+    <section class="section" id="results" aria-labelledby="win-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">01 · the clear win</p>
+            <h2 id="win-title">Memory shortened the dig.</h2>
+          </div>
+          <p class="section-intro">Asked why keypress failures kept recurring across DotState input fields, both agents reached the correct architectural diagnosis. The Stele arm reached it with much less investigation because memory identified where and how to start verifying.</p>
+        </div>
+
+        <ul class="result-grid" aria-label="Keypress cohort results">
+          <li class="metric">
+            <p class="label">Correctness</p>
+            <strong class="metric-value">1 = 1</strong>
+            <p class="metric-detail">Both arms earned full reward.</p>
+          </li>
+          <li class="metric">
+            <p class="label">Investigation</p>
+            <strong class="metric-value">−40.7%</strong>
+            <p class="metric-detail">16 investigative calls with Stele, 27 without.</p>
+          </li>
+          <li class="metric">
+            <p class="label">Input tokens</p>
+            <strong class="metric-value">−71.3%</strong>
+            <p class="metric-detail">519,028 with Stele, 1,811,074 without.</p>
+          </li>
+          <li class="metric">
+            <p class="label">Recorded cost</p>
+            <strong class="metric-value">−54.0%</strong>
+            <p class="metric-detail">$0.4268 with Stele, $0.9286 without.</p>
+          </li>
+        </ul>
+
+        <ul class="trace" aria-label="How the Stele agent used memory">
+          <li class="trace-step">
+            <p class="label">Recall</p>
+            <p>Stele surfaced <code>App::sync_input_mode</code>, <code>App::get_action</code>, and the files <code>src/app.rs</code> and <code>src/ui.rs</code>.</p>
+          </li>
+          <li class="trace-step">
+            <p class="label">Target</p>
+            <p>It supplied the literal source phrase <code>ALWAYS insert the character first</code> and the screen files where that duplicated guard lived.</p>
+          </li>
+          <li class="trace-step">
+            <p class="label">Verify</p>
+            <p>The agent opened the named code, searched for the phrase, counted the implementations, and checked the screen trait before answering.</p>
+          </li>
+        </ul>
+
+        <article class="evidence-card">
+          <div>
+            <h3>Stele did not replace investigation. It gave investigation a precise starting point.</h3>
+            <p>The useful memory was operational: exact symbols, exact file anchors, the relevant event-ordering rule, and a search string that occurred in source. The agent still checked the central filter and the local per-screen guards. That is the behavior this benchmark was meant to distinguish from a memory system that simply encourages an agent to trust an old conclusion.</p>
+            <p><strong>N=1 matters.</strong> This is a concrete, valid example of the mechanism working. It is not yet evidence for how often the same reduction will repeat across tasks.</p>
+          </div>
+          <ul class="source-list" aria-label="Keypress evidence links">
+            <li><a href="results/2026-08-preliminary/accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/agent/trajectory.json">Stele trajectory</a></li>
+            <li><a href="results/2026-08-preliminary/accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/agent/trajectory.json">Control trajectory</a></li>
+            <li><a href="results/2026-08-preliminary/accepted/input-keypress-architecture-v3/result.json">Machine-readable result</a></li>
+            <li><a href="preregistrations/input-keypress-architecture-v3.md">Frozen preregistration</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="interpretation" aria-labelledby="overhead-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">02 · where memory did not win</p>
+            <h2 id="overhead-title">Relevant memory still has a price.</h2>
+          </div>
+          <p class="section-intro">The other admitted cohorts make the cost visible. In both, correctness stayed equal. Stele either had little useful history to apply, or surfaced a valid reminder that the control could recover cheaply from source.</p>
+        </div>
+
+        <div class="cohort-grid">
+          <article class="cohort" data-tone="tare">
+            <p class="label">Low-memory tare · N=1</p>
+            <h3>Package cache was an intentionally small task.</h3>
+            <p>Both agents made the correct change. Stele used one fewer call, but its fixed context and tool surface cost more than it saved.</p>
+            <ul>
+              <li><strong>+24.04s</strong> wall time</li>
+              <li><strong>+83,520</strong> input tokens</li>
+              <li><strong>+$0.1261</strong> recorded cost</li>
+            </ul>
+            <p><a href="results/2026-08-preliminary/accepted/package-cache-is-empty-v2/result.json">Raw result</a> · <a href="preregistrations/package-cache-is-empty-v2.md">Preregistration</a></p>
+            <span class="delta">expected overhead, no benefit</span>
+          </article>
+
+          <article class="cohort" data-tone="null">
+            <p class="label">Relevant but redundant · N=2</p>
+            <h3>Settings-label memory was delivered and used.</h3>
+            <p>All four agents solved the task. The reminder correctly identified the display-string contract, but both controls also recovered it from nearby source.</p>
+            <ul>
+              <li><strong>2/2 vs 2/2</strong> correctness</li>
+              <li><strong>+33.08s</strong> paired median wall time</li>
+              <li><strong>+$0.205</strong> paired median Gateway cost</li>
+            </ul>
+            <p><a href="results/2026-08-preliminary/accepted/settings-label-roundtrip-v4/result.json">Raw result</a> · <a href="preregistrations/settings-label-roundtrip-v4.md">Preregistration</a></p>
+            <span class="delta">mechanism worked, outcome did not improve</span>
+          </article>
+        </div>
+
+        <div class="where-cost-went">
+          <p class="label">The interpretation</p>
+          <p><strong>An explanation for overhead is not a reason to hide it.</strong> Stele loads operating context, exposes graph tools, retrieves candidates, and asks the agent to maintain durable knowledge. On a small project, or on a task where the answer is already obvious from one file, that cost has little room to pay back. Stele, and persistent memory systems generally, may be the wrong trade for projects where discovery is already cheap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="payback-title">
+      <div class="wrap">
+        <div class="hypothesis">
+          <div class="hypothesis-copy">
+            <div>
+              <p class="eyebrow">03 · the product hypothesis</p>
+              <h2 id="payback-title">The early sessions fund the later ones.</h2>
+            </div>
+            <p>Adopting project memory means paying token and tool cost before the graph is useful. Early sessions populate decisions, failed approaches, hidden contracts, and verified lessons. The thesis is that later sessions recover that cost by spending less time rediscovering the same facts. Discovery and investigation are often the most expensive part of a coding session, so this is where payback must appear.</p>
+          </div>
+
+          <figure class="chart">
+            <svg viewBox="0 0 920 360" role="img" aria-labelledby="chart-title chart-desc">
+              <title id="chart-title">Conceptual per-session memory cost and possible payback</title>
+              <desc id="chart-desc">The observed evidence covers isolated tasks only. A dotted conceptual line shows memory costing more in early sessions and potentially less later as prior work is reused. A flat comparison line represents work without persistent project memory.</desc>
+              <defs>
+                <linearGradient id="memory-fill" x1="0" x2="1">
+                  <stop offset="0" stop-color="#70a5ff" stop-opacity="0.22"/>
+                  <stop offset="1" stop-color="#70a5ff" stop-opacity="0.03"/>
+                </linearGradient>
+              </defs>
+              <g fill="none" stroke="#2a3443" stroke-width="2">
+                <path d="M85 285H840"/>
+                <path d="M85 58V285"/>
+              </g>
+              <g fill="#778496" font-family="ui-monospace, monospace" font-size="13" letter-spacing="1.4">
+                <text x="85" y="325">EARLY SESSIONS</text>
+                <text x="660" y="325">FUTURE SESSIONS</text>
+                <text x="18" y="52">COST / SESSION</text>
+              </g>
+              <path d="M85 202H840" fill="none" stroke="#778496" stroke-dasharray="7 8" stroke-width="2"/>
+              <text x="650" y="191" fill="#a8b3c1" font-family="ui-monospace, monospace" font-size="14">without project memory</text>
+              <path d="M85 112 C215 130 310 162 398 199 C510 246 640 258 840 267 L840 202 C650 200 512 201 398 199 C305 175 200 136 85 112Z" fill="url(#memory-fill)"/>
+              <path d="M85 112 C215 130 310 162 398 199 C510 246 640 258 840 267" fill="none" stroke="#70a5ff" stroke-dasharray="8 8" stroke-width="3"/>
+              <circle cx="85" cy="112" r="6" fill="#70a5ff"/>
+              <path d="M265 64V285" fill="none" stroke="#3b4656" stroke-dasharray="4 7" stroke-width="2"/>
+              <text x="282" y="82" fill="#f2c56b" font-family="ui-monospace, monospace" font-size="13" letter-spacing="1">COMPOUNDING NOT MEASURED</text>
+              <text x="104" y="96" fill="#a8b3c1" font-family="ui-monospace, monospace" font-size="13">graph population + fixed context</text>
+              <text x="570" y="250" fill="#70a5ff" font-family="ui-monospace, monospace" font-size="13">possible reuse payback</text>
+            </svg>
+            <figcaption>This curve is a hypothesis, not a fitted result. The current release measures isolated value, tare, and null/mixed cases. A registered multi-session benchmark is still required to locate any crossover point or show that one exists.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="safety-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">04 · behavior under memory</p>
+            <h2 id="safety-title">We did not observe memory replacing verification.</h2>
+          </div>
+          <p class="section-intro">A known failure mode for agent memory is overreliance: an agent accepts a stale fact, stops investigating, or skips verification. Recent memory evaluations have found that agents can retrieve updated evidence and still act on outdated assumptions. That failure mode did not appear in the admitted Stele trajectories.</p>
+        </div>
+
+        <div class="safety-grid">
+          <div>
+            <p>Across four valid pairs, every Stele arm earned full correctness reward. In the keypress case, the agent followed memory into the named source and checked the pattern. In the settings case, both treatment agents used the reminder and still performed the task's required source and test work. The low-memory task also completed correctly despite the added overhead.</p>
+            <p>This is a limited safety observation, not proof that stale-memory harm cannot occur. The current suite is small and does not include a dedicated contradiction or stale-fact challenge. What it can say is narrower: <strong>within these admitted runs, Stele did not make the coding agent less correct or observably cause it to stop investigating and verifying.</strong></p>
+            <p><a href="https://arxiv.org/abs/2605.06527">Background: STALE benchmark on outdated agent memory</a></p>
+          </div>
+          <aside class="note" aria-label="Safety result boundary">
+            <p class="label">Observed boundary</p>
+            <p><strong>4/4 Stele arms passed.</strong> No correctness regression was observed. Negative and null efficiency outcomes remain fully reported.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="limitations" aria-labelledby="admissions-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">05 · admissions</p>
+            <h2 id="admissions-title">Broken experiments stayed visible.</h2>
+          </div>
+          <p class="section-intro">Seven versions were excluded for apparatus or question-design failures. Their evidence remains public, but none contributes to the effect estimates above.</p>
+        </div>
+
+        <div class="table-wrap" tabindex="0" aria-label="Excluded benchmark admissions, horizontally scrollable">
+          <table>
+            <thead>
+              <tr><th>Versions</th><th>Why excluded</th><th>What happened to the outcome</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Keypress v1</td><td>Turn cap, invalid trajectory, and verifier defects</td><td>Retained, not pooled</td></tr>
+              <tr><td>Keypress v2</td><td>Forbidden repository-history inspection and verifier false negatives</td><td>Retained, not treated as replication</td></tr>
+              <tr><td>Package cache v1</td><td>Undeclared lockfile mutation prevented the hidden contract test</td><td>Retained, not pooled</td></tr>
+              <tr><td>Settings label v1–v3</td><td>Mutation allowlist, cold-build, and clean-exit budget defects</td><td>Retained, not pooled</td></tr>
+              <tr><td>Drift r1</td><td>The N=1 signal disappeared at N=5 because the question allowed multiple reasonable readings</td><td>Retained as a question-design lesson</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <details>
+          <summary>What is still unknown?</summary>
+          <p>We do not yet know a general win rate, stable average cost effect, or statistical significance. We have not yet measured whether graph-writing cost in one session pays back in later sessions. Keypress v3 and the low-memory tare remain N=1 until their frozen protocols are repeated.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="field-title">
+      <div class="wrap field-evidence">
+        <div>
+          <p class="eyebrow">06 · qualitative field evidence</p>
+          <h2 id="field-title">Stele also found the work that was not on main.</h2>
+          <ul class="field-stats" aria-label="Tui-forge field comparison">
+            <li class="field-stat"><span>comparison</span><strong>9 min · 7 calls</strong></li>
+            <li class="field-stat"><span>Stele</span><strong>47 sec · 3 calls</strong></li>
+            <li class="field-stat"><span>comparison tokens</span><strong>450K</strong></li>
+            <li class="field-stat"><span>Stele tokens</span><strong>154K</strong></li>
+          </ul>
+        </div>
+        <div class="field-copy">
+          <p>In a separate retained DotState session, both responses found the structural keypress problem. Stele also identified the parked <code>tui-forge-integration</code> workspace as a likely solution path and pointed to its owned-focus form widgets. The comparison response did not mention it.</p>
+          <p>Main-branch source inspection could not recover that branch-only work. This is the kind of cross-session continuity the product is intended to provide. It is also <strong>uncontrolled, post-hoc evidence</strong>: the branch was not inspected during the treatment, the session was not a registered endpoint, and these numbers are not pooled with the controlled results.</p>
+          <p><a href="results/2026-08-preliminary/README.md">Read the complete report and evidence boundary</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Stele Bench v0.1 · apparatus and evidence under MIT</p>
+      <a href="METHODOLOGY.md">Methodology</a>
+      <a href="results/2026-08-preliminary/admissions.json">Admissions JSON</a>
+      <a href="https://github.com/Stele-Dev/stele-bench/releases/tag/v0.1.0">Release</a>
+    </div>
+  </footer>
+</body>
+</html>
