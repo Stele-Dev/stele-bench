@@ -1,0 +1,170 @@
+{
+    "id": "d19fc1b0-c99b-4689-b648-cc900b249796",
+    "task_name": "local/dotfile-drift-detection",
+    "trial_name": "dotfile-drift-detection__7sAEQ4Y",
+    "trial_uri": "file://$STELE_BENCH_STATE/runs/drift-r1/work/e28710b2ef79eafdbda0/jobs/route-two/dotfile-drift-detection__7sAEQ4Y",
+    "task_id": {
+        "path": "$STELE_BENCH_STATE/runs/drift-r1/work/e28710b2ef79eafdbda0/pack/dotfile-drift-detection"
+    },
+    "source": null,
+    "task_checksum": "3f9f8dcffd3c38c2f234feb265ba90b023f24b119f63e03d7201e024d6be8a5f",
+    "config": {
+        "task": {
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/e28710b2ef79eafdbda0/pack/dotfile-drift-detection",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "dotfile-drift-detection__7sAEQ4Y",
+        "trials_dir": "$STELE_BENCH_STATE/runs/drift-r1/work/e28710b2ef79eafdbda0/jobs/route-two",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "stele_bench.harbor_entrypoint:ConfiguredSteleClaudeCode",
+            "model_name": "anthropic/claude-haiku-4.5",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": true,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "artifact_path": "$STELE_BENCH_STATE/artifacts/stele-linux-arm64-1fdc1e40d6327eac",
+                "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+                "artifact_source_kind": "local-dirty-worktree",
+                "credentials_path": "$STELE_BENCH_STATE/attempts/e28710b2ef79eafdbda0239b3137ff2691aef156fb15ad9cfc0d71c18cab75ff/credentials.json",
+                "max_budget_usd": "1.50",
+                "max_turns": 60,
+                "permission_mode": "bypassPermissions",
+                "preferences_path": "$STELE_BENCH_STATE/attempts/e28710b2ef79eafdbda0239b3137ff2691aef156fb15ad9cfc0d71c18cab75ff/preferences.json",
+                "project_binding_path": "$STELE_BENCH_STATE/attempts/e28710b2ef79eafdbda0239b3137ff2691aef156fb15ad9cfc0d71c18cab75ff/project.json"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****",
+                "STELE_SEMANTIC_ENDPOINT": "http://host.docker.internal:57376/api/semantic-seeds?bridge_token=<redacted>",
+                "SUPABASE_ANON_KEY": "sb_p****AaH",
+                "SUPABASE_URL": "http://host.docker.internal:54321"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "11d6a405-c270-47d1-afa6-9204cf30919b"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.219",
+        "model_info": {
+            "name": "claude-haiku-4.5",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": null,
+    "verifier_result": {
+        "rewards": {
+            "reward": 1
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-07-24T19:39:09.952520Z",
+    "finished_at": "2026-07-24T19:45:56.675627Z",
+    "environment_setup": {
+        "started_at": "2026-07-24T19:39:09.990597Z",
+        "finished_at": "2026-07-24T19:39:12.603861Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-07-24T19:39:12.604138Z",
+        "finished_at": "2026-07-24T19:42:26.856132Z"
+    },
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": [
+        {
+            "step_name": "establish",
+            "agent_result": {
+                "n_input_tokens": 608751,
+                "n_cache_tokens": 481780,
+                "n_output_tokens": 2321,
+                "cost_usd": 0.9942337499999999,
+                "rollout_details": null,
+                "metadata": null
+            },
+            "verifier_result": {
+                "rewards": {
+                    "reward": 1
+                }
+            },
+            "exception_info": null,
+            "agent_execution": {
+                "started_at": "2026-07-24T19:42:27.089540Z",
+                "finished_at": "2026-07-24T19:45:18.910502Z"
+            },
+            "verifier": {
+                "started_at": "2026-07-24T19:45:19.995863Z",
+                "finished_at": "2026-07-24T19:45:22.720382Z"
+            }
+        },
+        {
+            "step_name": "follow-up",
+            "agent_result": {
+                "n_input_tokens": 675732,
+                "n_cache_tokens": 530161,
+                "n_output_tokens": 2959,
+                "cost_usd": 0.13316175,
+                "rollout_details": null,
+                "metadata": null
+            },
+            "verifier_result": {
+                "rewards": {
+                    "reward": 1
+                }
+            },
+            "exception_info": null,
+            "agent_execution": {
+                "started_at": "2026-07-24T19:45:22.907599Z",
+                "finished_at": "2026-07-24T19:45:42.024076Z"
+            },
+            "verifier": {
+                "started_at": "2026-07-24T19:45:42.600602Z",
+                "finished_at": "2026-07-24T19:45:45.312489Z"
+            }
+        }
+    ]
+}

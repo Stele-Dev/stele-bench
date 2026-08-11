@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Benchmark history</title><style>
+:root { color-scheme: light dark; --fg:#16181d; --muted:#5c6470; --bg:#ffffff;
+  --line:#d8dce3; --panel:#f6f7f9; --treatment:#2f6df6; --control:#8a8f98; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6e8ec; --muted:#98a0ac;
+  --bg:#0f1115; --line:#2a2f38; --panel:#171a20; --treatment:#6f9dff;
+  --control:#7d8590; } }
+:root[data-theme="dark"] { --fg:#e6e8ec; --muted:#98a0ac; --bg:#0f1115;
+  --line:#2a2f38; --panel:#171a20; --treatment:#6f9dff; --control:#7d8590; }
+:root[data-theme="light"] { --fg:#16181d; --muted:#5c6470; --bg:#ffffff;
+  --line:#d8dce3; --panel:#f6f7f9; --treatment:#2f6df6; --control:#8a8f98; }
+body { margin:0; padding:2.5rem 1.25rem 5rem; background:var(--bg); color:var(--fg);
+  font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif; }
+main { max-width:60rem; margin:0 auto; }
+h1 { font-size:1.5rem; margin:0 0 .25rem; letter-spacing:-.01em; }
+h2 { font-size:1.05rem; margin:0 0 .2rem; letter-spacing:-.005em; }
+h3 { font-size:.95rem; margin:0 0 .4rem; }
+code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.85em; }
+.muted { color:var(--muted); }
+.lede { color:var(--muted); margin:0 0 2rem; }
+.line { border:1px solid var(--line); border-radius:10px; padding:1.1rem 1.25rem;
+  margin:0 0 1.5rem; background:var(--panel); }
+.meta { color:var(--muted); font-size:.83rem; margin:0 0 1rem; }
+.meta span { margin-right:1rem; white-space:nowrap; }
+figure.chart { margin:0 0 1rem; }
+figcaption { font-size:.8rem; color:var(--muted); text-transform:uppercase;
+  letter-spacing:.06em; margin-bottom:.3rem; }
+svg { width:100%; height:auto; display:block; }
+.grid { stroke:var(--line); stroke-width:1; }
+.axis { fill:var(--muted); font-size:10px; font-family:ui-monospace,monospace; }
+.trend { fill:none; stroke-width:1.5; opacity:.85; }
+.band { stroke-width:6; opacity:.22; stroke-linecap:round; }
+.cap { stroke-width:1.25; opacity:.55; }
+.treatment { stroke:var(--treatment); } circle.treatment { fill:var(--treatment); stroke:none; }
+.control { stroke:var(--control); } circle.control { fill:var(--control); stroke:none; }
+.legend { font-size:.8rem; color:var(--fg); margin:.4rem 0 0; }
+.swatch { display:inline-block; width:10px; height:10px; border-radius:2px;
+  margin:0 .35rem 0 0; vertical-align:middle; }
+.swatch.treatment { background:var(--treatment); } .swatch.control { background:var(--control); }
+.legend span.muted { margin-left:.75rem; }
+.note { font-size:.83rem; color:var(--muted); margin:.5rem 0 0; }
+.table-scroll { overflow-x:auto; }
+/* Inconclusive is not a pass. It gets the neutral colour, never the green one. */
+.verdict-non-inferior { color:#1a7f45; font-weight:600; }
+.verdict-inconclusive { color:var(--muted); font-weight:600; }
+.verdict-inferior { color:#b3261e; font-weight:600; }
+table { border-collapse:collapse; width:100%; font-size:.85rem; }
+th, td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line);
+  white-space:nowrap; }
+th { color:var(--muted); font-weight:600; font-size:.78rem; text-transform:uppercase;
+  letter-spacing:.04em; }
+.divergence { border-left:3px solid var(--line); padding:0 0 0 1rem; margin:0 0 1.25rem; }
+.divergence ul { margin:.4rem 0 0; padding-left:1.1rem; }
+.divergence li { font-size:.85rem; margin-bottom:.2rem; }
+.empty { color:var(--muted); }
+</style></head><body><main><h1>Benchmark history</h1><p class="lede">2 retained run(s); 1 admitted across 1 comparable line(s). Generated 2026-08-11T20:12:46.314556Z. Bars are 95% Wilson intervals — at these sample sizes the interval, not the point, is the measurement.</p><section class="line"><h2>package-cache-is-empty · dotstate-faithful-20260723-v1 · anthropic/claude-haiku-4.5 · faithful vs no-stele</h2><p class="meta"><span>fixture <code>dotstate-faithful-20260723-v1</code></span><span>corpus <code>a4a5986e</code></span><span>challenge <code>00da98b</code></span><span>verifier <code>704dc9e</code></span><span>line <code>d48398d4cd07</code></span></p><figure class="chart"><figcaption>reward</figcaption><svg viewBox="0 0 720 220" role="img" aria-label="reward across runs"><line class="grid" x1="46" y1="176.0" x2="704" y2="176.0" /><text class="axis" x="38" y="180.0" text-anchor="end">0.0</text><line class="grid" x1="46" y1="136.0" x2="704" y2="136.0" /><text class="axis" x="38" y="140.0" text-anchor="end">0.2</text><line class="grid" x1="46" y1="96.0" x2="704" y2="96.0" /><text class="axis" x="38" y="100.0" text-anchor="end">0.5</text><line class="grid" x1="46" y1="56.0" x2="704" y2="56.0" /><text class="axis" x="38" y="60.0" text-anchor="end">0.8</text><line class="grid" x1="46" y1="16.0" x2="704" y2="16.0" /><text class="axis" x="38" y="20.0" text-anchor="end">1.0</text><text class="axis" x="375.0" y="194.0" text-anchor="middle">2026-08-11</text><text class="axis muted" x="375.0" y="208.0" text-anchor="middle">5deb3a6</text><line class="band control" x1="375.0" y1="143.0" x2="375.0" y2="16.0" /><line class="cap control" x1="371.0" y1="143.0" x2="379.0" y2="143.0" /><line class="cap control" x1="371.0" y1="16.0" x2="379.0" y2="16.0" /><circle class="dot control" cx="375.0" cy="16.0" r="3.5"><title>package-cache-is-empty-v2 — 1.00 of 1 (build 5deb3a6)</title></circle><line class="band treatment" x1="375.0" y1="143.0" x2="375.0" y2="16.0" /><line class="cap treatment" x1="371.0" y1="143.0" x2="379.0" y2="143.0" /><line class="cap treatment" x1="371.0" y1="16.0" x2="379.0" y2="16.0" /><circle class="dot treatment" cx="375.0" cy="16.0" r="3.5"><title>package-cache-is-empty-v2 — 1.00 of 1 (build 5deb3a6)</title></circle></svg><p class="legend"><span class="swatch treatment"></span>faithful<span class="swatch control"></span>no-stele<span class="muted">— bars are 95% Wilson intervals</span></p><p class="note">A single run is a measurement, not a trend — the interval is the whole story until there is a second point.</p></figure><div class="table-scroll"><table><thead><tr><th>date</th><th>run</th><th>build</th><th>analysed</th><th>reward (treatment)</th><th>difference</th><th>one-sided p</th><th>memory uptake</th><th>status</th><th>admission</th></tr></thead><tbody><tr><td>2026-08-11</td><td><code>package-cache-is-empty-v2</code></td><td><code>5deb3a6</code></td><td>1/1</td><td>1.00 <span class="muted">[0.21, 1.00]</span></td><td>0.00</td><td>1.000</td><td>0/1 injected · 0/1 scored</td><td>completed</td><td>accepted</td></tr></tbody></table></div></section><h2>Excluded runs</h2><p class="muted">Retained for transparency. These outcomes do not contribute to any reported effect estimate.</p><div class="table-scroll"><table><thead><tr><th>run</th><th>reason code</th><th>reason</th></tr></thead><tbody><tr><td><code>package-cache-is-empty-v1</code></td><td><code>undeclared-lockfile-mutation</code></td><td>Ordinary Cargo execution created Cargo.lock, which the mutation allowlist rejected before the hidden contract tests ran.</td></tr></tbody></table></div></main></body></html>

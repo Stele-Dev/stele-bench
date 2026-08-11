@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "challenge_id": "settings-label-roundtrip",
+  "title": "Clarify the automatic update setting label",
+  "description": "Rename one settings-row label without breaking its runtime toggle behavior.",
+  "prompt": "On the Settings screen, rename the row currently labeled \"Check for Updates\" to \"Automatic Update Checks\" so its purpose is clearer. Keep the setting behavior unchanged, add focused regression coverage, and do not change unrelated settings.\n",
+  "allowed_output_paths": [
+    "/workspace/src/screens/settings.rs",
+    "/workspace/tests",
+    "/workspace/Cargo.lock",
+    "/workspace/target"
+  ],
+  "agent_timeout_seconds": 900,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 900,
+    "cpus": 2,
+    "memory_mb": 4096,
+    "storage_mb": 8192,
+    "prebuild_argv": [
+      "cargo",
+      "test",
+      "--no-run",
+      "--lib"
+    ]
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 900
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "result_kind": "discarded-k5-admission",
+  "experiment_id": "click-clirunner-k5-v1",
+  "run_id": "click-clirunner-k5-admission-001",
+  "classification": "discarded-admission",
+  "status": "failed",
+  "admission_passed": false,
+  "cohort_authorized": false,
+  "completed_at": "2026-07-27T18:42:06.608935Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "arm_order": [
+    "control",
+    "treatment"
+  ],
+  "provenance": {
+    "receipt_sha256": "fc8fc640f6f9ce940a51b09831877df89f945670c3b589976f58f49b2af88c6a",
+    "artifact_sha256": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+    "chain_manifest_sha256": "82eac34a64e61b4da37d47020ddc0de8dfcb8bc60fa9e0acb0c3d1cd18400dea",
+    "preregistration_sha256": "8d555b95dafb768b7d59e31ae6b7a6f0d792af84f781438e85f7c31b60c2f6a6"
+  },
+  "billing": {
+    "all_ten_intervals_exclusive": true,
+    "all_ten_costs_settled": true,
+    "control_gateway_usd": "4.24664025",
+    "treatment_gateway_usd": "6.07389187",
+    "total_gateway_usd": "10.32053212",
+    "treatment_minus_control_usd": "1.82725162",
+    "treatment_minus_control_percent": 43.02817079925713,
+    "acknowledged_pair_cap_usd": "30.00",
+    "between_arm_drain_check_observed_usd": "4.25"
+  },
+  "prefixes": [
+    {
+      "k": 1,
+      "control_gateway_usd": "1.23099345",
+      "treatment_gateway_usd": "1.37078613",
+      "treatment_minus_control_usd": "0.13979268"
+    },
+    {
+      "k": 2,
+      "control_gateway_usd": "1.39488105",
+      "treatment_gateway_usd": "2.23837244",
+      "treatment_minus_control_usd": "0.84349139"
+    },
+    {
+      "k": 3,
+      "control_gateway_usd": "1.94577030",
+      "treatment_gateway_usd": "3.12048879",
+      "treatment_minus_control_usd": "1.17471849"
+    },
+    {
+      "k": 4,
+      "control_gateway_usd": "2.99971860",
+      "treatment_gateway_usd": "4.35786627",
+      "treatment_minus_control_usd": "1.35814767"
+    },
+    {
+      "k": 5,
+      "control_gateway_usd": "4.24664025",
+      "treatment_gateway_usd": "6.07389187",
+      "treatment_minus_control_usd": "1.82725162"
+    }
+  ],
+  "arms": {
+    "control": {
+      "condition": "no-stele",
+      "chain_outcome": "invalid",
+      "cleanup_completed": true,
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "session_outcomes": [
+        "failed",
+        "failed",
+        "infrastructure-error",
+        "invalid",
+        "failed"
+      ],
+      "gateway_usd_by_session": [
+        "1.23099345",
+        "0.16388760",
+        "0.55088925",
+        "1.05394830",
+        "1.24692165"
+      ],
+      "external_source_access_by_session": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "input_tokens": 6511996,
+      "output_tokens": 85982
+    },
+    "treatment": {
+      "condition": "stele-fresh",
+      "chain_outcome": "completed",
+      "cleanup_completed": true,
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "session_outcomes": [
+        "failed",
+        "infrastructure-error",
+        "infrastructure-error",
+        "failed",
+        "failed"
+      ],
+      "gateway_usd_by_session": [
+        "1.37078613",
+        "0.86758631",
+        "0.88211635",
+        "1.23737748",
+        "1.71602560"
+      ],
+      "external_source_access_by_session": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "input_tokens": 9532217,
+      "output_tokens": 107138,
+      "graph_write_sessions": [
+        5
+      ],
+      "pre_reuse_graph_write": false,
+      "exact_prior_version_delivery_sessions": [],
+      "later_exact_prior_version_delivered": false,
+      "only_graph_crossed_session_boundaries": true
+    }
+  },
+  "validity": {
+    "pinned_model_every_session": true,
+    "source_reset_from_registered_bases": true,
+    "treatment_graph_boundary_clean": true,
+    "pair_source_boundary_clean": false,
+    "infrastructure_error_sessions": [
+      "control-3",
+      "treatment-2",
+      "treatment-3"
+    ],
+    "infrastructure_error": "API Error: Claude's response exceeded the configured output token maximum.",
+    "external_source_attempt": "control-4 attempted curl against bootstrap.pypa.io; curl was unavailable",
+    "mutation_wrapper_pycache_sessions": [
+      "control-1",
+      "treatment-1",
+      "control-4",
+      "treatment-4",
+      "control-5",
+      "treatment-5"
+    ],
+    "pycache_only_forced_zero_sessions": [
+      "control-1",
+      "treatment-1",
+      "control-4",
+      "control-5"
+    ],
+    "sessions_also_changing_undeclared_tests": [
+      "treatment-4",
+      "treatment-5"
+    ]
+  },
+  "registered_gates": {
+    "ten_sessions_operationally_valid": false,
+    "at_least_four_of_five_passes_each_arm": false,
+    "exclusive_authoritative_cost_vector": true,
+    "clean_treatment_graph_boundary": true,
+    "natural_pre_reuse_treatment_write": false,
+    "later_exact_prior_version_delivery": false,
+    "k5_cost_feasible_after_session_2": true
+  },
+  "interpretation": "The discarded admission fails and authorizes no cohort. The exclusive authoritative billing path is proven, but correctness is validity-limited, treatment did not write before a reuse opportunity, and no exact prior node version was delivered. The registered candidate is not rerun or tuned."
+}

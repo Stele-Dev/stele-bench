@@ -1,0 +1,159 @@
+{
+  "aggregates": [
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "sbr-001-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "interval_high": 0.7934506856227626,
+      "interval_low": 0.0,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 0.0
+    },
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "sbr-001-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "interval_high": 0.7934506856227626,
+      "interval_low": 0.0,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 0.0
+    },
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "sbr-001-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "trial_wall_seconds_paired_difference",
+      "n": 1,
+      "value": 25.423279999999977
+    }
+  ],
+  "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+  "attempts": [
+    {
+      "attempt_id": "sbr-001-no-anchor-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.0",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "sbr-001-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "infrastructure-error",
+      "provenance_hashes": {
+        "artifact": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+        "challenge_manifest": "2443b02ec615c830e1fa5d72a0fc4c38f1d97cbe4052daaac248aa6374d9bd23",
+        "verifier": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 241.028771,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "attempt_id": "sbr-001-no-anchor-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "condition_id": "faithful",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.0",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "sbr-001-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "infrastructure-error",
+      "provenance_hashes": {
+        "artifact": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+        "challenge_manifest": "2443b02ec615c830e1fa5d72a0fc4c38f1d97cbe4052daaac248aa6374d9bd23",
+        "verifier": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 266.452051,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    }
+  ],
+  "attempts_analysed": 1,
+  "attempts_run": 1,
+  "comparability": {
+    "challenge_id": "session-boundary-recall",
+    "challenge_manifest_sha256": "2443b02ec615c830e1fa5d72a0fc4c38f1d97cbe4052daaac248aa6374d9bd23",
+    "control_condition": "no-stele",
+    "fixture_id": "session-boundary-recall-no-anchor-v1",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful",
+    "verifier_sha256": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+  },
+  "comparability_digest": "27ea1c35901f32ca5bd4cae405f2e26ed6204e22d0217dce20d81d639fc2086c",
+  "memory_uptake": {
+    "control": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    }
+  },
+  "recorded_at": "2026-07-23T19:34:11.520784Z",
+  "run_id": "sbr-001-no-anchor",
+  "run_shape": "quad",
+  "schema_version": 1,
+  "status": "failed",
+  "verdicts": {
+    "reward": {
+      "difference": 0.0,
+      "fisher_one_sided_p": 1.0
+    },
+    "trial_wall_seconds": {
+      "difference": 25.423279999999977,
+      "fisher_one_sided_p": null
+    }
+  }
+}

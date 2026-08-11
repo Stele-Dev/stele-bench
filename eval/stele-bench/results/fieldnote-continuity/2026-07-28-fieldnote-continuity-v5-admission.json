@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "result_kind": "discarded-continuity-admission",
+  "experiment_id": "fieldnote-continuity-v5",
+  "run_id": "fieldnote-continuity-v5-admission-20260728",
+  "classification": "discarded-admission",
+  "status": "completed",
+  "admission_passed": true,
+  "cohort_authorized": false,
+  "completed_at": "2026-07-28T00:14:10.665412Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "arm_order": [
+    "control",
+    "treatment"
+  ],
+  "provenance": {
+    "receipt_sha256": "b32fc9277d9918d5a8169805ccbb99fd8c42c4a8f238983ab51326403eb99b04",
+    "artifact_sha256": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+    "chain_manifest_sha256": "0fe8e58925acd6e76b473d40bf8c3f8513156efd92aa4bad7fca14008b510ba5",
+    "chain_manifest_payload_sha256": "ab6bddd76e152e1376191c123fd22aec73e1bc8fe0059455ceea3bd0bc547c31",
+    "preregistration_sha256": "b6e0754cb706c1eeea81d954312d4b5d3aefcf2e4edc8b4ebfcf50366102d2a4"
+  },
+  "billing": {
+    "model_calls_started": 8,
+    "settled_gateway_usd": "3.29199078",
+    "acknowledged_pair_cap_usd": "30.00",
+    "control_gateway_usd": "1.22557830",
+    "treatment_gateway_usd": "2.06641248"
+  },
+  "arms": {
+    "control": {
+      "condition": "no-stele",
+      "chain_outcome": "completed",
+      "rewards": [0.0, 0.0, 1.0, 0.0],
+      "tokens": {
+        "input": 2249858,
+        "output": 26431,
+        "cache_read": 2167956,
+        "cache_write": 73812
+      },
+      "external_source_access_by_session": [false, false, false, false]
+    },
+    "treatment": {
+      "condition": "stele-fresh",
+      "chain_outcome": "completed",
+      "rewards": [0.0, 0.0, 1.0, 0.0],
+      "tokens": {
+        "input": 4574760,
+        "output": 34710,
+        "cache_read": 4390111,
+        "cache_write": 149284
+      },
+      "external_source_access_by_session": [false, false, false, false],
+      "graph_writes_by_session": [0, 0, 2, 1],
+      "delivered_prior_node_by_session": [false, false, false, true],
+      "session_4_prior_nodes": ["TASK-4", "TASK-5"]
+    }
+  },
+  "validity": {
+    "source_and_challenge_certification_passed": true,
+    "pinned_image_base_target_qualification_passed": true,
+    "real_harbor_nop_qualification_passed": true,
+    "all_eight_sessions_started": true,
+    "distinct_conversation_identities": true,
+    "source_and_graph_boundaries_held": true,
+    "no_external_source_access": true,
+    "all_hidden_verifiers_returned_valid_rewards": true,
+    "model_pinned_every_session": true,
+    "exclusive_settled_gateway_receipts": true,
+    "pair_valid": true,
+    "failure_stage": null,
+    "failure_message": null
+  },
+  "behavioral_observation_not_an_estimate": {
+    "same_reward_vector": true,
+    "treatment_wrote_no_nodes_in_sessions_1_and_2": true,
+    "treatment_first_wrote_graph_nodes_in_session_3": true,
+    "treatment_delivered_session_3_nodes_in_session_4": true,
+    "description": "The discarded admission is not part of the preregistered estimand. Sonnet persisted nothing from the decision-heavy first prompt or milestone 2. It wrote two completed task records in milestone 3, received both in milestone 4, and wrote a final task. Both arms passed only the milestone 3 hidden verifier, producing the same [0, 0, 1, 0] reward vector."
+  },
+  "interpretation": "The v5 admission passed every preregistered operational and validity gate, so the apparatus is eligible for a separately authorized cohort. The admission is discarded from inference. Its diagnostic behavior does not show the intended session-1 decision-memory path: the treatment produced no graph writes until session 3 and had no reward advantage over control. A cohort would measure whether that apparent null pattern persists, but this single admission is not an effect estimate."
+}

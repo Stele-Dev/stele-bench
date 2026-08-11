@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "challenge_id": "profile-selection-intake",
+  "title": "Investigate the live profile-selection implementation",
+  "description": "Identify which of two profile-selection implementations is live without changing source code.",
+  "prompt": "Investigate why `ProfileSelectionScreen` exists alongside `ProfileSelectionPopup`. Determine which implementation is live in the profile-selection flow shown after repository setup, explain the relationship, and do not change code. End your answer with `Live implementation: <path>`.\n",
+  "response_markers": [
+    "Live implementation: src/components/profile_selection_popup.rs"
+  ],
+  "allowed_output_paths": [
+    "/workspace/target"
+  ],
+  "agent_timeout_seconds": 900,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 900,
+    "cpus": 2,
+    "memory_mb": 4096,
+    "storage_mb": 8192
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "c32d290f2d193beb44b84beb33fabd71b9932fdc626962fc7a34679abd2ed140",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 30
+  }
+}

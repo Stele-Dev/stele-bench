@@ -1,0 +1,309 @@
+warning: use of deprecated method `ratatui::buffer::Cell::set_skip`: use `set_diff_option(CellDiffOption::Skip)` instead
+   --> src/widgets/text_input.rs:199:22
+    |
+199 |                 cell.set_skip(false);
+    |                      ^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: `dotstate` (lib) generated 1 warning
+   Compiling dotstate v0.4.0 (/workspace)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.60s
+     Running tests/settings_label_roundtrip_contract.rs (target/debug/deps/settings_label_roundtrip_contract-c81516e62d171578)
+
+running 1 test
+test renamed_update_setting_label_still_round_trips ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+warning: use of deprecated method `ratatui::buffer::Cell::set_skip`: use `set_diff_option(CellDiffOption::Skip)` instead
+   --> src/widgets/text_input.rs:199:22
+    |
+199 |                 cell.set_skip(false);
+    |                      ^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: `dotstate` (lib test) generated 1 warning
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.15s
+     Running unittests src/lib.rs (target/debug/deps/dotstate-75ea12d5470887c7)
+
+running 275 tests
+test cli::common::tests::test_output_helpers_compile ... ok
+test cli::profiles::tests::current_profile_reads_configured_profile ... ok
+test cli::profiles::tests::profile_list_handles_empty_manifest ... ok
+test cli::profiles::tests::profile_list_marks_active_and_inactive_profiles ... ok
+test cli::profiles::tests::switch_activates_target_profile_when_deactivated ... ok
+test components::popup::tests::percentage_height_floored_to_min ... ok
+test cli::profiles::tests::switch_replaces_symlinks_when_current_profile_is_active ... ok
+test components::popup::tests::returns_none_when_area_smaller_than_min_height ... ok
+test components::popup::tests::renders_when_area_meets_min_size ... ok
+test components::popup::tests::returns_none_when_area_smaller_than_min_width ... ok
+test components::profile_selection_popup::tests::test_is_create_new_selected ... ok
+test components::profile_selection_popup::tests::test_item_count_with_no_profiles ... ok
+test components::profile_selection_popup::tests::test_popup_creation ... ok
+test config::tests::test_config_default ... ok
+test config::tests::test_config_already_at_current_version ... ok
+test config::tests::test_config_includes_update_config ... ok
+test config::tests::test_config_save_and_load ... ok
+test config::tests::test_config_migration_v0_to_v1 ... ok
+test config::tests::test_new_config_has_current_version ... ok
+test config::tests::test_old_config_defaults_to_github_mode ... ok
+test config::tests::test_old_config_defaults_update_config ... ok
+test config::tests::test_repo_mode_serialization ... ok
+test config::tests::test_update_config_defaults ... ok
+test config::tests::test_update_config_custom_interval ... ok
+test config::tests::test_update_config_disabled ... ok
+test config::tests::test_update_config_serialization ... ok
+test file_manager::tests::test_copy_dir_all ... ok
+test file_manager::tests::test_copy_to_repo_directory ... ok
+test file_manager::tests::test_copy_to_repo_file ... ok
+test file_manager::tests::test_file_manager_creation ... ok
+test file_manager::tests::test_copy_to_repo_overwrites_existing ... ok
+test file_manager::tests::test_is_symlink_nonexistent ... ok
+test file_manager::tests::test_is_symlink ... ok
+test file_manager::tests::test_resolve_symlink ... ok
+test file_manager::tests::test_resolve_symlink_chain ... ok
+test file_manager::tests::test_resolve_symlink_relative ... ok
+test file_manager::tests::test_resolve_symlink_max_depth ... ok
+test file_manager::tests::test_scan_dotfiles ... ok
+test file_manager::tests::test_scan_dotfiles_empty_list ... ok
+test file_manager::tests::test_scan_dotfiles_with_subdirectory ... ok
+test git::tests::test_expand_path ... ok
+test git::tests::test_detect_object_format_sha1 ... ok
+test git::tests::test_generate_commit_message_added_files ... ok
+test git::tests::test_generate_commit_message_empty ... ok
+test git::tests::test_generate_commit_message_manifest_only ... ok
+test git::tests::test_generate_commit_message_manifest_with_other_files ... ok
+test git::tests::test_generate_commit_message_modified_files ... ok
+test git::tests::test_generate_commit_message_multiple_files ... ok
+test git::tests::test_git_init ... ok
+test git::tests::test_validate_local_repo_nonexistent ... ok
+test git::tests::test_validate_local_repo_not_git ... ok
+test git::tests::test_validate_local_repo_no_origin ... ok
+test git::tests::test_validate_local_repo_sha256_warning ... ok
+test git::tests::test_validate_local_repo_sha1_no_warning ... ok
+test icons::tests::test_all_icon_sets_have_values ... ok
+test icons::tests::test_icon_set_detection ... ok
+test icons::tests::test_icons_creation ... ok
+test keymap::actions::tests::test_action_category ... ok
+test keymap::actions::tests::test_action_description ... ok
+test git::tests::test_validate_local_repo_valid ... ok
+test keymap::actions::tests::test_action_deserialization ... ok
+test keymap::actions::tests::test_action_serialization ... ok
+test keymap::binding::tests::test_format_key_display ... ok
+test keymap::binding::tests::test_key_binding_description ... ok
+test keymap::binding::tests::test_key_binding_matches ... ok
+test keymap::binding::tests::test_normalize_shift_char ... ok
+test keymap::binding::tests::test_parse_arrow_key ... ok
+test keymap::binding::tests::test_parse_ctrl_key ... ok
+test keymap::binding::tests::test_parse_function_keys ... ok
+test keymap::binding::tests::test_parse_multi_modifier ... ok
+test keymap::binding::tests::test_parse_shift_key ... ok
+test keymap::binding::tests::test_parse_simple_key ... ok
+test keymap::binding::tests::test_parse_special_keys ... ok
+test keymap::binding::tests::test_shift_g_matches ... ok
+test keymap::presets::tests::test_emacs_has_ctrl_np ... ok
+test keymap::presets::tests::test_preset_deserialization ... ok
+test keymap::presets::tests::test_preset_names ... ok
+test keymap::presets::tests::test_preset_serialization ... ok
+test keymap::presets::tests::test_standard_bindings_complete ... ok
+test keymap::presets::tests::test_vim_has_hjkl ... ok
+test keymap::tests::test_default_keymap ... ok
+test keymap::tests::test_get_action_from_preset ... ok
+test keymap::tests::test_override_takes_precedence ... ok
+test keymap::tests::test_vim_preset ... ok
+test screens::dotfile_selection::tests::test_dotfile_selection_screen_creation ... ok
+test screens::dotfile_selection::tests::test_set_backup_enabled ... ok
+test screens::main_menu::tests::test_main_menu_screen_creation ... ok
+test screens::main_menu::tests::test_selected_item_default ... ok
+test screens::main_menu::tests::test_selected_item_unconfigured ... ok
+test screens::profile_selection::tests::test_profile_selection_screen_creation ... ok
+test screens::profile_selection::tests::test_reset ... ok
+test screens::profile_selection::tests::test_set_profiles ... ok
+test screens::storage_setup::tests::test_default_state ... ok
+test screens::storage_setup::tests::test_github_field_navigation ... ok
+test screens::storage_setup::tests::test_storage_method_from_index ... ok
+test screens::storage_setup::tests::test_storage_method_index ... ok
+test screens::sync_with_remote::tests::test_reset_state ... ok
+test screens::sync_with_remote::tests::test_sync_with_remote_screen_creation ... ok
+test services::git_service::tests::test_check_changes_unconfigured ... ok
+test services::git_service::tests::test_get_diff_invalid_format ... ok
+test services::git_service::tests::test_load_changed_files_nonexistent ... ok
+test services::package_service::tests::test_create_package ... ok
+test services::package_service::tests::test_validate_custom_package_no_install_command ... ok
+test services::package_service::tests::test_validate_managed_package_no_package_name ... ok
+test services::package_service::tests::test_validate_package_empty_binary ... ok
+test services::package_service::tests::test_validate_package_empty_name ... ok
+test services::package_service::tests::test_validate_valid_managed_package ... ok
+test services::profile_service::tests::test_delete_active_profile_fails ... ok
+test services::profile_service::tests::test_sanitize_empty_name ... ok
+test services::storage_setup_service::tests::test_failed_result ... ok
+test services::storage_setup_service::tests::test_step_result_variants ... ok
+test services::sync_service::tests::test_is_custom_file ... ok
+test services::sync_service::tests::test_scan_dotfiles_path_normalization ... ok
+test styles::tests::placeholder_style_uses_text_placeholder ... ok
+test styles::tests::test_no_color_theme_styles_do_not_set_colors ... ok
+test styles::tests::test_theme_type_from_str ... ok
+test styles::tests::text_contrast_meets_thresholds_on_rgb_themes ... ok
+test utils::backup_manager::tests::test_backup_manager_creation ... ok
+test utils::list_navigation::tests::test_empty_list ... ok
+test utils::backup_manager::tests::test_backup_session_creation ... ok
+test utils::list_navigation::tests::test_move_down_by ... ok
+test utils::list_navigation::tests::test_move_up_by ... ok
+test utils::list_navigation::tests::test_select_first_last ... ok
+test utils::list_navigation::tests::test_selected_or_first ... ok
+test utils::list_navigation::tests::test_wrap_navigation ... ok
+test utils::move_to_common_validation::tests::test_files_have_same_content_different ... ok
+test utils::move_to_common_validation::tests::test_files_have_same_content_identical ... ok
+test utils::move_to_common_validation::tests::test_path_hierarchy_conflicts_child ... ok
+test utils::move_to_common_validation::tests::test_path_hierarchy_conflicts_parent ... ok
+test utils::move_to_common_validation::tests::test_validate_move_to_common_no_conflicts ... ok
+test utils::move_to_common_validation::tests::test_validate_move_to_common_different_content ... ok
+test utils::package_discovery::tests::test_discovery_source_display_name ... ok
+test utils::move_to_common_validation::tests::test_validate_move_to_common_same_content ... ok
+test utils::package_installer::tests::empty_existence_check_falls_through_to_binary ... ok
+test utils::package_installer::tests::existence_check_overrides_failing_binary ... ok
+test utils::package_installer::tests::existence_check_overrides_passing_binary ... ok
+test utils::package_installer::tests::none_existence_check_falls_through_to_binary ... ok
+test utils::profile_manifest::tests::test_common_files ... ok
+test utils::profile_manifest::tests::test_get_inheriting_profiles ... ok
+test utils::profile_manifest::tests::test_inheritance_chain_no_parent ... ok
+test utils::profile_manifest::tests::test_inheritance_chain_simple ... ok
+test utils::profile_manifest::tests::test_inheritance_cycle_detection ... ok
+test utils::profile_manifest::tests::test_inheritance_missing_parent ... ok
+test utils::profile_manifest::tests::test_inherits_field_serialization ... ok
+test utils::profile_manifest::tests::test_manifest_already_at_current_version ... ok
+test utils::profile_manifest::tests::test_manifest_migration_v0_to_v1 ... ok
+test utils::profile_manifest::tests::test_manifest_migration_v1_to_v2 ... ok
+test utils::profile_manifest::tests::test_move_from_common ... ok
+test utils::profile_manifest::tests::test_move_to_common ... ok
+test utils::profile_manifest::tests::test_new_manifest_has_current_version ... ok
+test utils::profile_manifest::tests::test_profile_manifest ... ok
+test utils::profile_manifest::tests::test_reserved_names ... ok
+test utils::profile_manifest::tests::test_resolve_files_no_inheritance ... ok
+test utils::profile_manifest::tests::test_resolve_files_profile_overrides_common ... ok
+test utils::profile_manifest::tests::test_resolve_files_with_inheritance ... ok
+test utils::profile_manifest::tests::test_resolve_packages_with_inheritance ... ok
+test utils::profile_manifest::tests::test_set_inherits ... ok
+test utils::profile_manifest::tests::test_set_inherits_cycle_prevention ... ok
+test utils::profile_manifest::tests::test_three_level_inheritance ... ok
+test utils::profile_manifest::tests::test_validate_inheritance_cycle ... ok
+test utils::profile_manifest::tests::test_validate_inheritance_missing_parent ... ok
+test utils::profile_manifest::tests::test_validate_inheritance_valid ... ok
+test utils::profile_validation::tests::test_duplicate_names ... ok
+test utils::profile_validation::tests::test_invalid_names ... ok
+test utils::profile_validation::tests::test_is_safe_name ... ok
+test utils::profile_validation::tests::test_sanitize_name ... ok
+test utils::profile_validation::tests::test_valid_names ... ok
+test utils::symlink_manager::tests::test_activate_profile ... ok
+test utils::symlink_manager::tests::test_create_symlink_manager ... ok
+test utils::sync_validation::tests::test_already_synced_exact_match ... ok
+test utils::sync_validation::tests::test_case_sensitivity ... ok
+test utils::sync_validation::tests::test_complex_nested_scenario ... ok
+test utils::sync_validation::tests::test_concurrent_operations_simulation ... ok
+test utils::sync_validation::tests::test_contains_git_repo ... ok
+test utils::sync_validation::tests::test_deeply_nested_conflicts ... ok
+test utils::sync_validation::tests::test_directory_contains_multiple_synced_files ... ok
+test utils::sync_validation::tests::test_directory_contains_synced_files ... ok
+test utils::sync_validation::tests::test_directory_with_only_dotfiles ... ok
+test utils::sync_validation::tests::test_empty_paths ... ok
+test utils::sync_validation::tests::test_git_repo_as_file_not_directory ... ok
+test utils::sync_validation::tests::test_git_repo_in_parent_directory ... ok
+test utils::sync_validation::tests::test_git_repo_max_depth_limit ... ok
+test utils::sync_validation::tests::test_is_file_inside_synced_directory ... ok
+test utils::sync_validation::tests::test_multiple_git_repos_in_tree ... ok
+test utils::sync_validation::tests::test_multiple_synced_directories ... ok
+test utils::sync_validation::tests::test_nested_git_repos ... ok
+test utils::sync_validation::tests::test_nested_git_repos_deep ... ok
+test utils::sync_validation::tests::test_nested_symlink_scenarios ... ok
+test utils::sync_validation::tests::test_path_normalization_edge_cases ... ok
+test utils::sync_validation::tests::test_path_with_dot_components ... ok
+test utils::sync_validation::tests::test_reverse_scenario_file_then_directory ... ok
+test utils::sync_validation::tests::test_sibling_files_same_directory ... ok
+test utils::sync_validation::tests::test_symlink_issue_display ... ok
+test utils::sync_validation::tests::test_symlink_validation_with_existing_symlink ... ok
+test utils::sync_validation::tests::test_unicode_and_special_characters ... ok
+test utils::sync_validation::tests::test_validate_before_sync_dir_contains_synced_files ... ok
+test utils::sync_validation::tests::test_validate_before_sync_file_inside_synced_dir ... ok
+test utils::sync_validation::tests::test_validate_before_sync_with_broken_symlink ... ok
+test utils::sync_validation::tests::test_validate_before_sync_with_circular_symlink ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_broken_in_nested ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_broken_symlink ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_circular_to_parent ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_circular_to_self ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_external_directory ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_external_file_ok ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_multiple_issues ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_nested_directory ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_no_symlinks ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_relative_symlink ... ok
+test utils::sync_validation::tests::test_validate_directory_symlinks_valid_internal_symlink ... ok
+test utils::sync_validation::tests::test_validate_home_directory ... ok
+test utils::sync_validation::tests::test_validate_repo_path_conflicts ... ok
+test utils::sync_validation::tests::test_validate_symlink_creation_parent_not_dir ... ok
+test utils::sync_validation::tests::test_validate_symlink_creation_source_missing ... ok
+test utils::sync_validation::tests::test_validate_symlink_creation_success ... ok
+test utils::sync_validation::tests::test_very_long_paths ... ok
+test utils::syntax_theme::tests::test_get_syntax_theme_dark ... ok
+test utils::syntax_theme::tests::test_get_syntax_theme_light ... ok
+test utils::syntax_theme::tests::test_get_syntax_theme_nocolor ... ok
+test utils::syntax_theme::tests::test_get_syntax_theme_solarized ... ok
+test utils::text_input::tests::test_backspace ... ok
+test utils::text_input::tests::test_backspace_at_start ... ok
+test utils::text_input::tests::test_char_insertion ... ok
+test utils::text_input::tests::test_char_insertion_at_end ... ok
+test utils::text_input::tests::test_cursor_movement_end ... ok
+test utils::text_input::tests::test_cursor_movement_home ... ok
+test utils::text_input::tests::test_cursor_movement_left ... ok
+test utils::text_input::tests::test_cursor_movement_right ... ok
+test utils::text_input::tests::test_delete ... ok
+test utils::text_input::tests::test_delete_at_end ... ok
+test utils::text_input::tests::test_is_action_allowed_when_focused ... ok
+test utils::text_input::tests::test_text_input_backspace ... ok
+test utils::text_input::tests::test_text_input_clear ... ok
+test utils::text_input::tests::test_text_input_clone ... ok
+test utils::text_input::tests::test_text_input_cursor_movement ... ok
+test utils::text_input::tests::test_text_input_default ... ok
+test utils::text_input::tests::test_text_input_delete ... ok
+test utils::text_input::tests::test_text_input_handle_action ... ok
+test utils::text_input::tests::test_text_input_handle_key ... ok
+test utils::text_input::tests::test_text_input_insert_char ... ok
+test utils::text_input::tests::test_text_input_is_empty_whitespace ... ok
+test utils::text_input::tests::test_text_input_new ... ok
+test utils::text_input::tests::test_text_input_set_text ... ok
+test utils::text_input::tests::test_text_input_trimmed ... ok
+test utils::text_input::tests::test_text_input_with_text ... ok
+test utils::text_input::tests::test_unicode_handling ... ok
+test utils::versioned::tests::test_migrate_file_creates_and_removes_backup ... ok
+test utils::versioned::tests::test_migrate_file_keeps_backup_on_failure ... ok
+test version_check::tests::test_current_version ... ok
+test version_check::tests::test_current_version_matches_cargo ... ok
+test version_check::tests::test_install_script_url ... ok
+test version_check::tests::test_releases_url ... ok
+test version_check::tests::test_releases_url_format ... ok
+test version_check::tests::test_repo_constants ... ok
+test version_check::tests::test_update_info_clone ... ok
+test version_check::tests::test_update_info_creation ... ok
+test widgets::dialog::tests::renders_at_normal_size ... ok
+test widgets::dialog::tests::renders_in_narrow_terminal_without_panic ... ok
+test widgets::logo::tests::default_logo_is_small ... ok
+test widgets::logo::tests::logo_dimensions_match_content ... ok
+test widgets::logo::tests::new_size ... ok
+test widgets::logo::tests::regular_logo_constant ... ok
+test widgets::logo::tests::small_logo_constant ... ok
+test widgets::menu::tests::test_clickable_areas ... ok
+test widgets::menu::tests::test_menu_item_creation ... ok
+test widgets::menu::tests::test_menu_item_disabled ... ok
+test widgets::menu::tests::test_menu_state ... ok
+test widgets::text_input::tests::test_border_style_focused ... ok
+test widgets::text_input::tests::test_display_text_empty_with_placeholder ... ok
+test widgets::text_input::tests::test_display_text_masked ... ok
+test widgets::text_input::tests::test_display_text_normal ... ok
+test widgets::text_input::tests::test_text_style_disabled ... ok
+test widgets::text_input::tests::test_widget_builder ... ok
+test widgets::text_input::tests::test_widget_creation ... ok
+test utils::package_discovery::tests::test_service_creation ... ok
+
+test result: ok. 275 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s
+

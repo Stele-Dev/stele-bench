@@ -1,0 +1,39 @@
+{
+    "job_name": "route-two",
+    "jobs_dir": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v1/work/1498acb8881e7632022f/jobs",
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "import_path": "stele_bench.harbor_entrypoint:ConfiguredSteleClaudeCode",
+            "model_name": "anthropic/claude-haiku-4.5",
+            "kwargs": {
+                "artifact_path": "$STELE_BENCH_STATE/artifacts/stele-linux-arm64-90295ac2f8bb2677",
+                "artifact_sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+                "artifact_source_kind": "local-dirty-worktree",
+                "auto_rag_injection": "off",
+                "credentials_path": "$STELE_BENCH_STATE/attempts/1498acb8881e7632022fb9ca957771301edd13bf21dab6b462dd472c78e4f70a/credentials.json",
+                "max_budget_usd": "3",
+                "max_turns": 60,
+                "permission_mode": "bypassPermissions",
+                "preferences_path": "$STELE_BENCH_STATE/attempts/1498acb8881e7632022fb9ca957771301edd13bf21dab6b462dd472c78e4f70a/preferences.json",
+                "project_binding_path": "$STELE_BENCH_STATE/attempts/1498acb8881e7632022fb9ca957771301edd13bf21dab6b462dd472c78e4f70a/project.json",
+                "project_name": "Workspace",
+                "project_provisioning": "restore"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****",
+                "STELE_SEMANTIC_ENDPOINT": "http://host.docker.internal:60045/api/semantic-seeds?bridge_token=<redacted>",
+                "SUPABASE_ANON_KEY": "sb_p****AaH",
+                "SUPABASE_URL": "http://host.docker.internal:54321"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v1/work/1498acb8881e7632022f/pack/settings-label-roundtrip"
+        }
+    ]
+}

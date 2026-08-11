@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "fixture_id": "dotstate-compounding-fresh-v1",
+  "cohort_id": "dotstate-compounding-v1",
+  "evidence_corpus": {
+    "path": "corpora/evidence.json",
+    "sha256": "7a0b7943ccd293821e69c3413abdfebf3d74e3d9a2a92c2f362a7fcbab72f8b3",
+    "media_type": "application/json",
+    "ordering": "No prior project evidence"
+  },
+  "graphs": {
+    "faithful": {
+      "path": "graphs/faithful.json",
+      "sha256": "7cfb950c3b9529f07236360d8f04207ae833433f89105ffe018077a7c8873dc4",
+      "media_type": "application/json",
+      "graph_format_version": "stele-canonical-graph-v2",
+      "backend_compatibility_id": "stele-local-schema-2026-07",
+      "embedding_model_id": "openai/text-embedding-3-small",
+      "embedding_dimensions": 1536
+    }
+  },
+  "memory_marker": null
+}

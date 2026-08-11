@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "result_kind": "discarded-continuity-admission",
+  "experiment_id": "fieldnote-continuity-v3",
+  "run_id": "fieldnote-continuity-v3-admission-20260728",
+  "classification": "discarded-admission",
+  "status": "failed",
+  "admission_passed": false,
+  "cohort_authorized": false,
+  "completed_at": "2026-07-27T23:22:34.309152Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "arm_order": [
+    "control",
+    "treatment"
+  ],
+  "provenance": {
+    "receipt_sha256": "bf20d39f0072f3c612d595199e9ef71f7ffc5f5db1af56923a3c5a02cef92097",
+    "artifact_sha256": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+    "chain_manifest_sha256": "5202ac7d5dec093eaf2ae653a110041522d7d47275bd2334e9d9e9b9bbe67802",
+    "preregistration_sha256": "db57bbe834b080afa8fac5202c130c5d212584bd78c61807b6ba673fdbdbe4ed"
+  },
+  "billing": {
+    "model_calls_started": 8,
+    "settled_gateway_usd": "2.92931762",
+    "acknowledged_pair_cap_usd": "30.00",
+    "control_gateway_usd": "1.15413330",
+    "treatment_gateway_usd": "1.77518432"
+  },
+  "arms": {
+    "control": {
+      "condition": "no-stele",
+      "chain_outcome": "invalid",
+      "rewards": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "tokens": {
+        "input": 2192246,
+        "output": 26586,
+        "cache_read": 2110271,
+        "cache_write": 71912
+      },
+      "external_source_access_by_session": [
+        false,
+        false,
+        false,
+        true
+      ]
+    },
+    "treatment": {
+      "condition": "stele-fresh",
+      "chain_outcome": "completed",
+      "rewards": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "tokens": {
+        "input": 3712698,
+        "output": 31993,
+        "cache_read": 3568620,
+        "cache_write": 120208
+      },
+      "graph_writes_by_session": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "delivered_prior_node_by_session": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "session_4_prior_nodes": [
+        "TASK-4",
+        "TASK-5"
+      ]
+    }
+  },
+  "validity": {
+    "source_and_challenge_certification_passed": true,
+    "pinned_image_base_target_qualification_passed": true,
+    "real_harbor_nop_qualification_passed": true,
+    "all_eight_sessions_started": true,
+    "distinct_conversation_identities": true,
+    "source_and_graph_boundaries_held": true,
+    "all_hidden_verifiers_returned_valid_rewards": true,
+    "model_pinned_every_session": true,
+    "exclusive_settled_gateway_receipts": true,
+    "pair_valid": false,
+    "failure_stage": "post-session trajectory boundary validation",
+    "failure_message": "control session 4 was marked as external source access after probing `curl --version` and `wget --version` without requesting a URL",
+    "cause": "The shell-network detector treated the mere presence of a network-client executable name as source access, so a local capability/version probe invalidated the otherwise structurally complete control chain."
+  },
+  "behavioral_observation_not_an_estimate": {
+    "same_reward_vector": true,
+    "treatment_wrote_no_nodes_in_sessions_1_and_2": true,
+    "treatment_first_wrote_graph_nodes_in_session_3": true,
+    "treatment_delivered_session_3_nodes_in_session_4": true,
+    "description": "The terminal discarded run is not an estimand. It does show that Sonnet did not persist the decision-heavy first prompt or milestone 2, then wrote two completed task records in milestone 3 and received both in milestone 4. Neither arm completed milestones 1, 2, or 4 according to the hidden verifiers."
+  },
+  "interpretation": "The discarded v3 admission is terminal and authorizes no cohort. All eight sessions ran with pinned Sonnet, exact source resets, distinct conversations, exclusive settled billing, and a valid treatment graph boundary. The control chain was nevertheless invalidated by a detector false positive on a version-only network-client probe. The behavior is retained only as diagnostic evidence; it is not a valid paired result and v3 is not rerun or reinterpreted."
+}

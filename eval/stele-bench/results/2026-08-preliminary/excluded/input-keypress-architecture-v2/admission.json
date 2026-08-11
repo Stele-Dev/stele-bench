@@ -1,0 +1,8 @@
+{
+  "decision": "excluded",
+  "preregistration": "../../preregistrations/input-keypress-architecture-v2.md",
+  "reason": "Both agents inspected repository history, violating the registered source-access rule, and the verifier rejected valid terminology.",
+  "reason_code": "forbidden-history-and-verifier-false-negative",
+  "result": "../input-keypress-architecture/2026-08-11-input-keypress-architecture-v2.json",
+  "run_id": "input-keypress-architecture-v2"
+}

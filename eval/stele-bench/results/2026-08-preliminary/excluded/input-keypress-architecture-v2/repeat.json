@@ -1,0 +1,421 @@
+{
+  "arms": {
+    "attempt-01-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v2/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "input-keypress-architecture"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v2/work/683cdb219844657b18be/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1266; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 60,
+        "model": "anthropic/claude-sonnet-4.5",
+        "outcome": "invalid",
+        "requested_budget_cap_usd_across_trials": "5",
+        "requested_budget_cap_usd_per_trial": "5",
+        "results": [
+          {
+            "challenge_id": "input-keypress-architecture",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 1.1524432500000001,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": null,
+              "requested_claude_cli_cap_usd": 5.0
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": true,
+              "injection_channel": null,
+              "investigation_depth": {
+                "by_tool": {
+                  "bash": 28,
+                  "read": 13
+                },
+                "investigative": 41,
+                "scanned_from": 1,
+                "session": {
+                  "by_tool": {
+                    "bash": 28,
+                    "read": 13
+                  },
+                  "investigative": 41,
+                  "total": 43
+                },
+                "total": 43
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": null,
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 0,
+              "runtime_plugin_count": 0,
+              "session_bytes": 667258,
+              "session_file_count": 2,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "invalid",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "0f40c6adc1cbf00ac028b291fdd0b73438429018e777e9cf49ebdf5c46217f7f",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "cd12b267ef87928bc92c20e8f2c59b2ac29fa758bd1f897bdadab0b381bdb3de"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": 227.287753,
+              "agent_setup": 0.342165,
+              "invocation_wall": 241.801449,
+              "verifier": 1.037707
+            },
+            "tokens": {
+              "cache_read": 1263124,
+              "cache_write": 159771,
+              "input": 1421646,
+              "output": 9364
+            }
+          }
+        ],
+        "run_id": "input-keypress-architecture-v2-attempt-01-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 243.93955245800316
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v2/attempt-01-control.json",
+      "run_id": "input-keypress-architecture-v2-attempt-01-control"
+    },
+    "attempt-01-treatment": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v2/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "input-keypress-architecture"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v2/work/9c654b87f16b6fe9aea9/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1267; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 60,
+        "model": "anthropic/claude-sonnet-4.5",
+        "outcome": "invalid",
+        "requested_budget_cap_usd_across_trials": "5",
+        "requested_budget_cap_usd_per_trial": "5",
+        "results": [
+          {
+            "challenge_id": "input-keypress-architecture",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 0.7607808,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": null,
+              "requested_claude_cli_cap_usd": 5.0
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": true,
+              "injection_channel": {
+                "auto_rag_hook_files": 3,
+                "expected": "on",
+                "install_roots": 2,
+                "sibling_hook_files": 3,
+                "verified": true
+              },
+              "investigation_depth": {
+                "by_tool": {
+                  "bash": 7,
+                  "read": 6
+                },
+                "investigative": 13,
+                "scanned_from": 1,
+                "session": {
+                  "by_tool": {
+                    "bash": 7,
+                    "read": 6
+                  },
+                  "investigative": 13,
+                  "total": 35
+                },
+                "total": 35
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": null,
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 377939,
+              "session_file_count": 2,
+              "stele_lifecycle_mentions": 490,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "invalid",
+            "provenance": {
+              "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+              "challenge_manifest_sha256": "0f40c6adc1cbf00ac028b291fdd0b73438429018e777e9cf49ebdf5c46217f7f",
+              "fixture_id": "dotstate-faithful-20260723-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "cd12b267ef87928bc92c20e8f2c59b2ac29fa758bd1f897bdadab0b381bdb3de"
+            },
+            "reward": 0.4,
+            "timings": {
+              "agent_execution": 207.460082,
+              "agent_setup": 10.519955,
+              "invocation_wall": 232.206653,
+              "verifier": 1.034893
+            },
+            "tokens": {
+              "cache_read": 775161,
+              "cache_write": 107376,
+              "input": 874067,
+              "output": 7519
+            }
+          }
+        ],
+        "run_id": "input-keypress-architecture-v2-attempt-01-treatment",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 234.34305766699254
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v2/attempt-01-treatment.json",
+      "run_id": "input-keypress-architecture-v2-attempt-01-treatment"
+    }
+  },
+  "attempts": [
+    {
+      "analysable": false,
+      "arm_order": [
+        "control",
+        "treatment"
+      ],
+      "attempt": 1,
+      "budget_truncation_risk": [],
+      "deltas": null,
+      "excluded_reason": "arm_outcome_invalid:control,treatment",
+      "labels": {
+        "control": "attempt-01-control",
+        "treatment": "attempt-01-treatment"
+      },
+      "memory_evidence": {
+        "treatment": null
+      },
+      "metrics": {
+        "control": {
+          "agent_execution_seconds": 227.287753,
+          "claude_reported_usd": 1.1524432500000001,
+          "investigative_tool_calls": 41.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 41.0,
+          "session_total_tool_calls": 43.0,
+          "tokens_cache_read": 1263124.0,
+          "tokens_cache_write": 159771.0,
+          "tokens_input": 1421646.0,
+          "tokens_output": 9364.0,
+          "total_tool_calls": 43.0,
+          "trial_wall_seconds": 241.801449
+        },
+        "treatment": {
+          "agent_execution_seconds": 207.460082,
+          "claude_reported_usd": 0.7607808,
+          "investigative_tool_calls": 13.0,
+          "reward": 0.4,
+          "session_investigative_tool_calls": 13.0,
+          "session_total_tool_calls": 35.0,
+          "tokens_cache_read": 775161.0,
+          "tokens_cache_write": 107376.0,
+          "tokens_input": 874067.0,
+          "tokens_output": 7519.0,
+          "total_tool_calls": 35.0,
+          "trial_wall_seconds": 232.206653
+        }
+      },
+      "outcomes": {
+        "control": "invalid",
+        "treatment": "invalid"
+      }
+    }
+  ],
+  "billing": {
+    "claude_reported_usd_by_condition": {
+      "attempt-01-control": 1.1524432500000001,
+      "attempt-01-treatment": 0.7607808
+    },
+    "gateway_drain_checks": [
+      {
+        "balance_usd": "108.92",
+        "checked_at": "2026-08-11T11:25:21.628710Z",
+        "drained_usd": "1.15",
+        "observed": true,
+        "reason": null
+      }
+    ],
+    "gateway_drain_stop": null,
+    "gateway_reserve_preflight": {
+      "acknowledged_pair_cap_usd": "10.00",
+      "advisory": "Gateway-reported figures are advisory; the Vercel dashboard remains authoritative for actual billing and for recalibrating the reserve.",
+      "calibrated_at": "2026-07-23",
+      "calibration_age_days": 19,
+      "calibration_authority": "vercel-dashboard",
+      "checked_at": "2026-08-11T11:21:14.081078Z",
+      "headroom_after_pair_usd": "75.07",
+      "headroom_after_reserve_usd": "85.07",
+      "key_budget": {
+        "active": true,
+        "current_spend_usd": "10.59",
+        "limit_amount_usd": "350.00",
+        "refresh_period": "monthly",
+        "remaining_usd": "339.41"
+      },
+      "key_fingerprint": "b48d0a8ec3af",
+      "key_id": "4nuA3CL9Ugmp648xgNcrAHYHNyJD7svExrevW8fg09QZVoGI",
+      "key_name": "Eval Suite Key",
+      "production_reserve_usd": "25.00",
+      "schema_version": 1,
+      "shared_balance_usd": "110.07",
+      "shared_total_used_usd": "314.93"
+    },
+    "gateway_total_usd": null,
+    "recorded_at": null,
+    "source": null
+  },
+  "comparable": false,
+  "completed_at": "2026-08-11T11:29:23.861291Z",
+  "configuration": {
+    "acknowledged_paid_repeat_cap_usd": "10",
+    "arm_count": 2,
+    "attempt_arm_order": {
+      "1": [
+        "control",
+        "treatment"
+      ]
+    },
+    "attempts": 1,
+    "challenge_id": "input-keypress-architecture",
+    "control_condition": "no-stele",
+    "fixture_id": "dotstate-faithful-20260723-v1",
+    "max_budget_usd_per_arm": "5",
+    "max_turns": 60,
+    "model": "anthropic/claude-sonnet-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful"
+  },
+  "created_at": "2026-08-11T11:21:15.198963Z",
+  "error": null,
+  "provenance": {
+    "artifact_manifest": "$STELE_BENCH_STATE/artifacts/current.json",
+    "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+    "artifact_source": {
+      "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dirty": false,
+      "head": "0679655947e1668074bda48ae14a585c33b1493b",
+      "status_entries": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked_bytes": 0,
+      "untracked_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked_files": 0
+    },
+    "artifact_target": "linux-arm64",
+    "certification": {
+      "arms": [
+        "faithful"
+      ],
+      "certified": true,
+      "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v2/certification.json",
+      "redacted_paths": [
+        ".claude/commands/publish.md",
+        ".claude/skills/dotstate-dev/SKILL.md",
+        ".stele/project.json",
+        "CLAUDE.md"
+      ],
+      "sha256": "9f22d6ba91d5cddf88d6e90d76f459cdcf185aad56dfa0a062b492f6747739b4"
+    },
+    "challenge_manifest_sha256": "0f40c6adc1cbf00ac028b291fdd0b73438429018e777e9cf49ebdf5c46217f7f",
+    "runtime": {
+      "docker_architecture": "aarch64",
+      "docker_server": "29.6.1",
+      "harbor": "0.20.0",
+      "python": "3.12.12",
+      "supabase": "2.109.0"
+    },
+    "verifier_sha256": "cd12b267ef87928bc92c20e8f2c59b2ac29fa758bd1f897bdadab0b381bdb3de"
+  },
+  "repeat_id": "input-keypress-architecture-v2",
+  "schema_version": 1,
+  "status": "completed",
+  "summary": {
+    "attempts_analysed": 0,
+    "attempts_excluded": [
+      {
+        "attempt": 1,
+        "reason": "arm_outcome_invalid:control,treatment"
+      }
+    ],
+    "attempts_run": 1,
+    "binary_measures": {
+      "cited_decision": null,
+      "reward": null
+    },
+    "paired_measures": {
+      "investigative_tool_calls": null,
+      "session_investigative_tool_calls": null,
+      "tokens_input": null,
+      "trial_wall_seconds": null
+    }
+  }
+}

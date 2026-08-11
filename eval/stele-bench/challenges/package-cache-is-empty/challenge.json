@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "challenge_id": "package-cache-is-empty",
+  "title": "Package cache emptiness",
+  "description": "Add a small query for whether the package cache contains any statuses.",
+  "prompt": "Add a public `PackageCacheData::is_empty(&self) -> bool` method in `src/utils/package_cache.rs`. It must return true exactly when `entries` contains no package statuses, independent of the schema version. Add appropriate unit tests and do not change unrelated behavior.\n",
+  "allowed_output_paths": [
+    "/workspace/src/utils/package_cache.rs",
+    "/workspace/Cargo.lock",
+    "/workspace/target"
+  ],
+  "agent_timeout_seconds": 600,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 600,
+    "cpus": 2,
+    "memory_mb": 4096,
+    "storage_mb": 8192,
+    "prebuild_argv": [
+      "cargo",
+      "test",
+      "--no-run",
+      "--lib"
+    ]
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "704dc9ee5f56a1c19fb8a106a6073f133583e1ae9ee12b5865763727d9556b7e",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 600
+  }
+}

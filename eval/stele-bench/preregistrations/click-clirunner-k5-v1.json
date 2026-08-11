@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "experiment_id": "click-clirunner-k5-v1",
+  "repository": {
+    "url": "https://github.com/pallets/click.git",
+    "object_format": "sha1",
+    "history_policy": "objects-reachable-from-base-only",
+    "remotes_in_task_workspace": false
+  },
+  "runtime": {
+    "harness": "claude-code",
+    "model": "anthropic/claude-sonnet-4.6",
+    "task_image": "harbor-local/claude-rust:2.1.220-rust-1.88.0",
+    "python": "3.11.2",
+    "network_mode": "public"
+  },
+  "carry_forward": {
+    "control": [],
+    "treatment": [
+      "stele-project-graph"
+    ],
+    "forbidden": [
+      "conversation-transcript",
+      "conversation-summary",
+      "agent-home",
+      "workspace-mutations",
+      "build-artifacts",
+      "future-git-objects"
+    ]
+  },
+  "history_assertions": {
+    "head_equals_registered_base": true,
+    "worktree_tree_equals_registered_base_tree": true,
+    "reachable_object_set_equals_registered_digest": true,
+    "canonical_target_commit_must_be_absent": true,
+    "git_fsck_must_pass": true,
+    "control_and_treatment_history_must_be_byte_identical": true
+  },
+  "sessions": [
+    {
+      "index": 1,
+      "challenge_id": "click-clirunner-stream-contract",
+      "challenge_manifest_sha256": "923905958f0a10a1db0745bbf23f4ccbbafac00b7e6a67cd059a230f670ccc0a",
+      "verifier_sha256": "8aaa0101a1162378db9eed2c5279d137e676970d60a9a594f475900ec1b3e4a4",
+      "base_revision": "948d7a707a0abda8ce0a1b39ba87390f11ffcd5e",
+      "base_tree": "11a374d0c1b1664e903b64374d2dcdc007d6b80d",
+      "reachable_commit_count": 2497,
+      "reachable_object_count": 11704,
+      "reachable_object_ids_sha256": "136d71eecaeec0d0dfec0f67ab8e37b3182faa9b8e0b6fb5a6eff19a110bc69c",
+      "canonical_target_revision": "0e0c00324a5af35f8995c7ff88df67b0f5594a58",
+      "canonical_target_tree": "2eb2f53e2ea2892fd1de142ef8c112cedb429e57",
+      "canonical_patch_sha256": "bd7858df653e2e354e9f9bf76a254e735731ed696aa50636c55ed9f92c60c650",
+      "issue_url": "https://github.com/pallets/click/issues/2522",
+      "pull_request_url": "https://github.com/pallets/click/pull/2523",
+      "expected_base_evidence": {
+        "stream_contract": false
+      },
+      "expected_target_evidence": {
+        "stream_contract": true
+      }
+    },
+    {
+      "index": 2,
+      "challenge_id": "click-clirunner-finalization-order",
+      "challenge_manifest_sha256": "e9afe4592c26e9d23a1e747048d8e1d0cf9e7e1a1c4baf57e7c4236c44b98866",
+      "verifier_sha256": "8747613e74ec0fcc9feec9e3872d21b51a1eea6eb7df8b54e62fc7b595675178",
+      "base_revision": "7b72bfb8cd3a0cec38197f6786ed583b5b3737e7",
+      "base_tree": "15ac8f4deefd4a58c5e25bc678cfa809745f736f",
+      "reachable_commit_count": 2730,
+      "reachable_object_count": 12830,
+      "reachable_object_ids_sha256": "3e1cea151c0ead0d8256a3531cfd00d05ada6b7a645a3114741e1726b1d1d6d8",
+      "canonical_target_revision": "737bfbd3122d96d41924323a3f45a8021c30d4c8",
+      "canonical_target_tree": "8e34949cb7664f88429bd73a3071545a493eda05",
+      "canonical_patch_sha256": "3c86cbe03abf253897c660a09bc9a9dd7726df0b8e008b60b7dcbdc89db87246",
+      "issue_url": "https://github.com/pallets/click/issues/2993",
+      "pull_request_url": "https://github.com/pallets/click/pull/2991",
+      "prior_target_gap_commits": 232,
+      "expected_base_evidence": {
+        "dependency_close_order": false
+      },
+      "expected_target_evidence": {
+        "dependency_close_order": true
+      }
+    },
+    {
+      "index": 3,
+      "challenge_id": "click-clirunner-buffer-ownership",
+      "challenge_manifest_sha256": "f96fa023bd9eb9c412e980b28c97f5a8930c93a5f6b69319bc096996d57634a3",
+      "verifier_sha256": "b15941fcccd0596396e37864a69b6b9d75650fc8c1ac89e06302d362bf74707b",
+      "base_revision": "b6afbf05ea6dbc8a4e7cdd448dd345c783973137",
+      "base_tree": "dac0c60066e8c8739da9037d8e25e1f9ae6f7c10",
+      "reachable_commit_count": 2986,
+      "reachable_object_count": 13776,
+      "reachable_object_ids_sha256": "99efe8b13236f138f24b4d079b6938b48c5501da9497861a76e3dbd9abdbd41c",
+      "canonical_target_revision": "d8e987eae723fbb0ccc355d125d0e179a1bf5fd8",
+      "canonical_target_tree": "8030b878bb2488b59187ec0069a412dc77c4c076",
+      "canonical_patch_sha256": "3b95166e21d4baccf539995379e8c52996fcc3de8578f17e47c3e009f12a28f2",
+      "issue_url": "https://github.com/pallets/click/issues/3110",
+      "pull_request_url": "https://github.com/pallets/click/pull/3139",
+      "prior_target_gap_commits": 253,
+      "expected_base_evidence": {
+        "single_buffer_owner": false
+      },
+      "expected_target_evidence": {
+        "single_buffer_owner": true
+      }
+    },
+    {
+      "index": 4,
+      "challenge_id": "click-clirunner-fileno-compatibility",
+      "challenge_manifest_sha256": "0684a3948e87ab790e751e4827f4ce7d2fc597f946db0866d6b40628035b175c",
+      "verifier_sha256": "e1dfeb6d3103b2afe14e735f7fa1d23031a78143fa78dcee7af05aa97b224563",
+      "base_revision": "878de46100e9c29aea9dab5b385b8116863cb5e3",
+      "base_tree": "326d02c3a776762496fa7c8adcc8849ebb932823",
+      "reachable_commit_count": 3032,
+      "reachable_object_count": 13969,
+      "reachable_object_ids_sha256": "821f25f901f763cbb141a83ac8f53ca36526fa1344c9435df0079cefcb82a3be",
+      "canonical_target_revision": "8762c7752cf1632d082c76922b15fef06ac3a2f1",
+      "canonical_target_tree": "bda38d80392a67cd8897419dac326d4a589074a9",
+      "canonical_patch_sha256": "093bd5cc798009117fb2a0a52e143dc1b95a1837f3a527cd6e97956098a61ae5",
+      "issue_url": "https://github.com/pallets/click/issues/2865",
+      "pull_request_url": "https://github.com/pallets/click/pull/3244",
+      "prior_target_gap_commits": 45,
+      "expected_base_evidence": {
+        "fileno_consumer_compatible": false
+      },
+      "expected_target_evidence": {
+        "fileno_consumer_compatible": true
+      }
+    },
+    {
+      "index": 5,
+      "challenge_id": "click-clirunner-capture-modes",
+      "challenge_manifest_sha256": "edf721b0589cd67ec5dc0d930f8278ba294f9ad6a30be0a0658fc6171dba242f",
+      "verifier_sha256": "0900efcaae4f37549da4df8fce45b9d5e230508b205b0f4965b9dacb63f5d8d3",
+      "base_revision": "0039359443e73ab1034c63a1f6d58aba22c0ebc8",
+      "base_tree": "fa953095f20193a4818f932d2e5601da5a448e82",
+      "reachable_commit_count": 3105,
+      "reachable_object_count": 14386,
+      "reachable_object_ids_sha256": "0b659ee0c52b69275a642b21bcbd07abac6f9aa5d7e4a1ea1714837b131faec6",
+      "canonical_target_revision": "ad39d749be85af02bf191636062eef51323ad5ab",
+      "canonical_target_tree": "d9d829025fa279a311d77f3eb56414fea9071fc2",
+      "canonical_patch_sha256": "17fd6db4741b462f75676f0dc53a4c0a9309b429b0cc1386ed0e4bf156a318e6",
+      "issue_url": "https://github.com/pallets/click/issues/3384",
+      "pull_request_url": "https://github.com/pallets/click/pull/3391",
+      "prior_target_gap_commits": 72,
+      "expected_base_evidence": {
+        "safe_default": false,
+        "fd_capture": false
+      },
+      "expected_target_evidence": {
+        "safe_default": true,
+        "fd_capture": true
+      }
+    }
+  ]
+}

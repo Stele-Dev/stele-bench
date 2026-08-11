@@ -1,0 +1,8 @@
+{
+  "decision": "excluded",
+  "preregistration": "../../preregistrations/settings-label-roundtrip-v3.md",
+  "reason": "The first control produced a correct workspace but exceeded the registered ceiling and exited nonzero, so the run stopped before treatment.",
+  "reason_code": "clean-exit-budget-headroom",
+  "result": null,
+  "run_id": "settings-label-roundtrip-v3"
+}

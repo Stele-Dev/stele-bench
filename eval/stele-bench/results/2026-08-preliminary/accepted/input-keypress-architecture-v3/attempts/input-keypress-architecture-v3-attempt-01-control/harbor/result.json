@@ -1,0 +1,123 @@
+{
+    "id": "f6294285-197e-48ee-b226-dc3fbde661ea",
+    "task_name": "local/input-keypress-architecture",
+    "trial_name": "input-keypress-architecture__WKExTUT",
+    "trial_uri": "file://$STELE_BENCH_STATE/runs/input-keypress-architecture-v3/work/ce54be7f962de8b51534/jobs/route-one/input-keypress-architecture__WKExTUT",
+    "task_id": {
+        "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v3/work/ce54be7f962de8b51534/pack/input-keypress-architecture"
+    },
+    "source": null,
+    "task_checksum": "584d9b427d0f9c9bcbeb04e50f404be9ec0a687b4be103135e7c2554d9240958",
+    "config": {
+        "task": {
+            "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v3/work/ce54be7f962de8b51534/pack/input-keypress-architecture",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "input-keypress-architecture__WKExTUT",
+        "trials_dir": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v3/work/ce54be7f962de8b51534/jobs/route-one",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "anthropic/claude-sonnet-4.5",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "max_budget_usd": "5",
+                "max_turns": 60,
+                "permission_mode": "bypassPermissions"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "5a055ef7-de00-43d5-8d08-79cb3afde312"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.220",
+        "model_info": {
+            "name": "claude-sonnet-4.5",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1811074,
+        "n_cache_tokens": 1725016,
+        "n_output_tokens": 5902,
+        "cost_usd": 0.92859555,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-08-11T11:34:59.391697Z",
+    "finished_at": "2026-08-11T11:38:12.912105Z",
+    "environment_setup": {
+        "started_at": "2026-08-11T11:34:59.424685Z",
+        "finished_at": "2026-08-11T11:35:01.254603Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-11T11:35:01.254706Z",
+        "finished_at": "2026-08-11T11:35:01.598316Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-11T11:35:01.598491Z",
+        "finished_at": "2026-08-11T11:38:00.633278Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-11T11:38:01.028186Z",
+        "finished_at": "2026-08-11T11:38:02.060562Z"
+    },
+    "step_results": null
+}

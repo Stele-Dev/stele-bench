@@ -1,0 +1,8 @@
+{
+  "decision": "excluded",
+  "preregistration": "../../preregistrations/dotfile-drift-detection-v1.md",
+  "reason": "The apparent N=1 memory signal did not survive N=5. The marker measured which reasonable interpretation of an ambiguous question the agent chose.",
+  "reason_code": "ambiguous-question-interpretation-variance",
+  "result": "../dotfile-drift-detection/2026-07-24-drift-r1.json",
+  "run_id": "drift-r1"
+}

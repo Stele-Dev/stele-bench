@@ -1,0 +1,999 @@
+{
+  "arms": {
+    "attempt-01-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "settings-label-roundtrip"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work/9ed9f6265413b2c01802/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1682; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "invalid",
+        "requested_budget_cap_usd_across_trials": "3.25",
+        "requested_budget_cap_usd_per_trial": "3.25",
+        "results": [
+          {
+            "challenge_id": "settings-label-roundtrip",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": true,
+              "claude_reported_amount_usd": 3.2828707500000007,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.65657415,
+              "requested_claude_cli_cap_usd": 3.25
+            },
+            "evidence": {
+              "atif_integrity_error": "missing_atif_tool_results",
+              "atif_integrity_valid": false,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "injection_channel": null,
+              "investigation_depth": {
+                "by_tool": {
+                  "bash": 40,
+                  "read": 7
+                },
+                "investigative": 47,
+                "scanned_from": 1,
+                "session": {
+                  "by_tool": {
+                    "bash": 40,
+                    "read": 7
+                  },
+                  "investigative": 47,
+                  "total": 54
+                },
+                "total": 54
+              },
+              "normalized_atif": false,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": null,
+              "result_subtype": "error_max_budget_usd",
+              "runtime_mcp_server_count": 0,
+              "runtime_plugin_count": 0,
+              "session_bytes": 478500,
+              "session_file_count": 3,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": "budget_exhausted",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "invalid",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "7d65e4d2305cb6380997a6c407a58fbaace8ce833361c43553c5bda47c280408",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": 385.088671,
+              "agent_setup": 0.336886,
+              "invocation_wall": 411.959275,
+              "verifier": 12.859174
+            },
+            "tokens": {
+              "cache_read": 684398,
+              "cache_write": 2833,
+              "input": 1172537,
+              "output": 12007
+            }
+          }
+        ],
+        "run_id": "settings-label-roundtrip-v2-attempt-01-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 414.31314337500953
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/attempt-01-control.json",
+      "run_id": "settings-label-roundtrip-v2-attempt-01-control"
+    },
+    "attempt-01-treatment": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "settings-label-roundtrip"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful-norag",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work/2714b792ad124b71c0d0/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1257; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "3.25",
+        "requested_budget_cap_usd_per_trial": "3.25",
+        "results": [
+          {
+            "challenge_id": "settings-label-roundtrip",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 3.0817732499999995,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.61635465,
+              "requested_claude_cli_cap_usd": 3.25
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "injection_channel": {
+                "auto_rag_hook_files": 0,
+                "expected": "off",
+                "install_roots": 2,
+                "sibling_hook_files": 3,
+                "verified": true
+              },
+              "investigation_depth": {
+                "by_tool": {
+                  "bash": 26,
+                  "read": 9
+                },
+                "investigative": 35,
+                "scanned_from": 1,
+                "session": {
+                  "by_tool": {
+                    "bash": 26,
+                    "read": 9
+                  },
+                  "investigative": 35,
+                  "total": 42
+                },
+                "total": 42
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": null,
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 406261,
+              "session_file_count": 3,
+              "stele_lifecycle_mentions": 231,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+              "challenge_manifest_sha256": "7d65e4d2305cb6380997a6c407a58fbaace8ce833361c43553c5bda47c280408",
+              "fixture_id": "dotstate-faithful-20260723-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": 354.68278,
+              "agent_setup": 9.803316,
+              "invocation_wall": 392.871388,
+              "verifier": 14.094456
+            },
+            "tokens": {
+              "cache_read": 883201,
+              "cache_write": 85719,
+              "input": 1332536,
+              "output": 9696
+            }
+          }
+        ],
+        "run_id": "settings-label-roundtrip-v2-attempt-01-treatment",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 395.75401441700524
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/attempt-01-treatment.json",
+      "run_id": "settings-label-roundtrip-v2-attempt-01-treatment"
+    },
+    "attempt-02-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "settings-label-roundtrip"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work/7befa1db67c2284a5db6/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1682; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "infrastructure-error",
+        "requested_budget_cap_usd_across_trials": "3.25",
+        "requested_budget_cap_usd_per_trial": "3.25",
+        "results": [
+          {
+            "challenge_id": "settings-label-roundtrip",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": true,
+              "claude_reported_amount_usd": 3.318170499999999,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.6636341,
+              "requested_claude_cli_cap_usd": 3.25
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "injection_channel": null,
+              "investigation_depth": {
+                "by_tool": {
+                  "bash": 30,
+                  "read": 14
+                },
+                "investigative": 44,
+                "scanned_from": 1,
+                "session": {
+                  "by_tool": {
+                    "bash": 30,
+                    "read": 14
+                  },
+                  "investigative": 44,
+                  "total": 51
+                },
+                "total": 51
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": null,
+              "result_subtype": "error_max_budget_usd",
+              "runtime_mcp_server_count": 0,
+              "runtime_plugin_count": 0,
+              "session_bytes": 469141,
+              "session_file_count": 3,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": "budget_exhausted",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "infrastructure-error",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "7d65e4d2305cb6380997a6c407a58fbaace8ce833361c43553c5bda47c280408",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": 294.19754,
+              "agent_setup": 0.368298,
+              "invocation_wall": 324.768263,
+              "verifier": 16.236506
+            },
+            "tokens": {
+              "cache_read": 636209,
+              "cache_write": 41812,
+              "input": 1144178,
+              "output": 11274
+            }
+          }
+        ],
+        "run_id": "settings-label-roundtrip-v2-attempt-02-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 327.3486846250016
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/attempt-02-control.json",
+      "run_id": "settings-label-roundtrip-v2-attempt-02-control"
+    },
+    "attempt-02-treatment": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "settings-label-roundtrip"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful-norag",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work/432a75ff0ee189862c65/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1257; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "3.25",
+        "requested_budget_cap_usd_per_trial": "3.25",
+        "results": [
+          {
+            "challenge_id": "settings-label-roundtrip",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 2.4607685,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.4921537,
+              "requested_claude_cli_cap_usd": 3.25
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "injection_channel": {
+                "auto_rag_hook_files": 0,
+                "expected": "off",
+                "install_roots": 2,
+                "sibling_hook_files": 3,
+                "verified": true
+              },
+              "investigation_depth": {
+                "by_tool": {
+                  "bash": 13,
+                  "read": 3
+                },
+                "investigative": 16,
+                "scanned_from": 1,
+                "session": {
+                  "by_tool": {
+                    "bash": 13,
+                    "read": 3
+                  },
+                  "investigative": 16,
+                  "total": 26
+                },
+                "total": 26
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": null,
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 388279,
+              "session_file_count": 3,
+              "stele_lifecycle_mentions": 242,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+              "challenge_manifest_sha256": "7d65e4d2305cb6380997a6c407a58fbaace8ce833361c43553c5bda47c280408",
+              "fixture_id": "dotstate-faithful-20260723-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": 256.283542,
+              "agent_setup": 10.198251,
+              "invocation_wall": 285.611291,
+              "verifier": 4.976931
+            },
+            "tokens": {
+              "cache_read": 1049442,
+              "cache_write": 41418,
+              "input": 1390422,
+              "output": 7175
+            }
+          }
+        ],
+        "run_id": "settings-label-roundtrip-v2-attempt-02-treatment",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 288.11749450000934
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/attempt-02-treatment.json",
+      "run_id": "settings-label-roundtrip-v2-attempt-02-treatment"
+    },
+    "attempt-03-control": {
+      "error": "runner_interrupted",
+      "evidence_root": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work",
+      "exit_code": null,
+      "receipt": null,
+      "receipt_path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/attempt-03-control.json",
+      "run_id": "settings-label-roundtrip-v2-attempt-03-control"
+    },
+    "attempt-03-treatment": {
+      "error": "not_started",
+      "evidence_root": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work",
+      "exit_code": null,
+      "receipt": null,
+      "receipt_path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/attempt-03-treatment.json",
+      "run_id": "settings-label-roundtrip-v2-attempt-03-treatment"
+    },
+    "attempt-04-control": {
+      "error": "not_started",
+      "evidence_root": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work",
+      "exit_code": null,
+      "receipt": null,
+      "receipt_path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/attempt-04-control.json",
+      "run_id": "settings-label-roundtrip-v2-attempt-04-control"
+    },
+    "attempt-04-treatment": {
+      "error": "not_started",
+      "evidence_root": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work",
+      "exit_code": null,
+      "receipt": null,
+      "receipt_path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/attempt-04-treatment.json",
+      "run_id": "settings-label-roundtrip-v2-attempt-04-treatment"
+    }
+  },
+  "attempts": [
+    {
+      "analysable": false,
+      "arm_order": [
+        "control",
+        "treatment"
+      ],
+      "attempt": 1,
+      "budget_truncation_risk": [
+        {
+          "above_warning_threshold": true,
+          "arm": "control",
+          "claude_reported_usd": 3.2828707500000007,
+          "effective_cap_usd": "3.25",
+          "exceeded_requested_cap": true
+        },
+        {
+          "above_warning_threshold": true,
+          "arm": "treatment",
+          "claude_reported_usd": 3.0817732499999995,
+          "effective_cap_usd": "3.25",
+          "exceeded_requested_cap": false
+        }
+      ],
+      "deltas": null,
+      "excluded_reason": "arm_outcome_invalid:control",
+      "labels": {
+        "control": "attempt-01-control",
+        "treatment": "attempt-01-treatment"
+      },
+      "memory_evidence": {
+        "treatment": null
+      },
+      "metrics": {
+        "control": {
+          "agent_execution_seconds": 385.088671,
+          "claude_reported_usd": 3.2828707500000007,
+          "gateway_rate_cross_check_usd": 0.65657415,
+          "investigative_tool_calls": 47.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 47.0,
+          "session_total_tool_calls": 54.0,
+          "tokens_cache_read": 684398.0,
+          "tokens_cache_write": 2833.0,
+          "tokens_input": 1172537.0,
+          "tokens_output": 12007.0,
+          "total_tool_calls": 54.0,
+          "trial_wall_seconds": 411.959275
+        },
+        "treatment": {
+          "agent_execution_seconds": 354.68278,
+          "claude_reported_usd": 3.0817732499999995,
+          "gateway_rate_cross_check_usd": 0.61635465,
+          "investigative_tool_calls": 35.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 35.0,
+          "session_total_tool_calls": 42.0,
+          "tokens_cache_read": 883201.0,
+          "tokens_cache_write": 85719.0,
+          "tokens_input": 1332536.0,
+          "tokens_output": 9696.0,
+          "total_tool_calls": 42.0,
+          "trial_wall_seconds": 392.871388
+        }
+      },
+      "outcomes": {
+        "control": "invalid",
+        "treatment": "passed"
+      }
+    },
+    {
+      "analysable": true,
+      "arm_order": [
+        "treatment",
+        "control"
+      ],
+      "attempt": 2,
+      "budget_truncation_risk": [
+        {
+          "above_warning_threshold": true,
+          "arm": "control",
+          "claude_reported_usd": 3.318170499999999,
+          "effective_cap_usd": "3.25",
+          "exceeded_requested_cap": true
+        }
+      ],
+      "deltas": {
+        "control": {
+          "agent_execution_seconds": 294.19754,
+          "claude_reported_usd": 3.318170499999999,
+          "gateway_rate_cross_check_usd": 0.6636341,
+          "investigative_tool_calls": 44.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 44.0,
+          "session_total_tool_calls": 51.0,
+          "tokens_cache_read": 636209.0,
+          "tokens_cache_write": 41812.0,
+          "tokens_input": 1144178.0,
+          "tokens_output": 11274.0,
+          "total_tool_calls": 51.0,
+          "trial_wall_seconds": 324.768263
+        },
+        "faithful": {
+          "agent_execution_seconds": 256.283542,
+          "claude_reported_usd": 2.4607685,
+          "gateway_rate_cross_check_usd": 0.4921537,
+          "investigative_tool_calls": 16.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 16.0,
+          "session_total_tool_calls": 26.0,
+          "tokens_cache_read": 1049442.0,
+          "tokens_cache_write": 41418.0,
+          "tokens_input": 1390422.0,
+          "tokens_output": 7175.0,
+          "total_tool_calls": 26.0,
+          "trial_wall_seconds": 285.611291
+        },
+        "faithful_minus_control": {
+          "agent_execution_seconds": -37.91399799999999,
+          "claude_reported_usd": -0.8574019999999991,
+          "gateway_rate_cross_check_usd": -0.17148039999999998,
+          "investigative_tool_calls": -28.0,
+          "reward": 0.0,
+          "session_investigative_tool_calls": -28.0,
+          "session_total_tool_calls": -25.0,
+          "tokens_cache_read": 413233.0,
+          "tokens_cache_write": -394.0,
+          "tokens_input": 246244.0,
+          "tokens_output": -4099.0,
+          "total_tool_calls": -25.0,
+          "trial_wall_seconds": -39.156971999999996
+        },
+        "faithful_reduction_percent": {
+          "agent_execution_seconds": 12.88725867660212,
+          "claude_reported_usd": 25.839600466582397,
+          "gateway_rate_cross_check_usd": 25.839600466582407,
+          "investigative_tool_calls": 63.63636363636363,
+          "session_investigative_tool_calls": 63.63636363636363,
+          "session_total_tool_calls": 49.01960784313725,
+          "tokens_cache_read": -64.95239771835985,
+          "tokens_cache_write": 0.9423132115182244,
+          "tokens_input": -21.521476553473324,
+          "tokens_output": 36.35799183963101,
+          "total_tool_calls": 49.01960784313725,
+          "trial_wall_seconds": 12.056896089012243
+        }
+      },
+      "excluded_reason": null,
+      "labels": {
+        "control": "attempt-02-control",
+        "treatment": "attempt-02-treatment"
+      },
+      "memory_evidence": {
+        "treatment": null
+      },
+      "metrics": {
+        "control": {
+          "agent_execution_seconds": 294.19754,
+          "claude_reported_usd": 3.318170499999999,
+          "gateway_rate_cross_check_usd": 0.6636341,
+          "investigative_tool_calls": 44.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 44.0,
+          "session_total_tool_calls": 51.0,
+          "tokens_cache_read": 636209.0,
+          "tokens_cache_write": 41812.0,
+          "tokens_input": 1144178.0,
+          "tokens_output": 11274.0,
+          "total_tool_calls": 51.0,
+          "trial_wall_seconds": 324.768263
+        },
+        "treatment": {
+          "agent_execution_seconds": 256.283542,
+          "claude_reported_usd": 2.4607685,
+          "gateway_rate_cross_check_usd": 0.4921537,
+          "investigative_tool_calls": 16.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 16.0,
+          "session_total_tool_calls": 26.0,
+          "tokens_cache_read": 1049442.0,
+          "tokens_cache_write": 41418.0,
+          "tokens_input": 1390422.0,
+          "tokens_output": 7175.0,
+          "total_tool_calls": 26.0,
+          "trial_wall_seconds": 285.611291
+        }
+      },
+      "outcomes": {
+        "control": "infrastructure-error",
+        "treatment": "passed"
+      }
+    },
+    {
+      "analysable": false,
+      "arm_order": [
+        "control",
+        "treatment"
+      ],
+      "attempt": 3,
+      "budget_truncation_risk": [],
+      "deltas": null,
+      "excluded_reason": "arm_did_not_complete",
+      "labels": {
+        "control": "attempt-03-control",
+        "treatment": "attempt-03-treatment"
+      },
+      "memory_evidence": {
+        "treatment": null
+      },
+      "metrics": {
+        "control": {},
+        "treatment": {}
+      },
+      "outcomes": {
+        "control": null,
+        "treatment": null
+      }
+    },
+    {
+      "analysable": false,
+      "arm_order": [
+        "treatment",
+        "control"
+      ],
+      "attempt": 4,
+      "budget_truncation_risk": [],
+      "deltas": null,
+      "excluded_reason": "arm_did_not_complete",
+      "labels": {
+        "control": "attempt-04-control",
+        "treatment": "attempt-04-treatment"
+      },
+      "memory_evidence": {
+        "treatment": null
+      },
+      "metrics": {
+        "control": {},
+        "treatment": {}
+      },
+      "outcomes": {
+        "control": null,
+        "treatment": null
+      }
+    }
+  ],
+  "billing": {
+    "claude_reported_usd_by_condition": {
+      "attempt-01-control": 3.2828707500000007,
+      "attempt-01-treatment": 3.0817732499999995,
+      "attempt-02-control": 3.318170499999999,
+      "attempt-02-treatment": 2.4607685,
+      "attempt-03-control": null,
+      "attempt-03-treatment": null,
+      "attempt-04-control": null,
+      "attempt-04-treatment": null
+    },
+    "gateway_drain_checks": [
+      {
+        "balance_usd": "117.40",
+        "checked_at": "2026-08-11T09:19:33.691251Z",
+        "drained_usd": "0.66",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "116.78",
+        "checked_at": "2026-08-11T09:26:18.455465Z",
+        "drained_usd": "1.28",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "116.29",
+        "checked_at": "2026-08-11T09:31:15.465976Z",
+        "drained_usd": "1.77",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "115.63",
+        "checked_at": "2026-08-11T09:36:45.810138Z",
+        "drained_usd": "2.43",
+        "observed": true,
+        "reason": null
+      }
+    ],
+    "gateway_drain_stop": null,
+    "gateway_reserve_preflight": {
+      "acknowledged_pair_cap_usd": "26.00",
+      "advisory": "Gateway-reported figures are advisory; the Vercel dashboard remains authoritative for actual billing and for recalibrating the reserve.",
+      "calibrated_at": "2026-07-23",
+      "calibration_age_days": 19,
+      "calibration_authority": "vercel-dashboard",
+      "checked_at": "2026-08-11T09:12:35.723826Z",
+      "headroom_after_pair_usd": "67.06",
+      "headroom_after_reserve_usd": "93.06",
+      "key_budget": {
+        "active": true,
+        "current_spend_usd": "2.60",
+        "limit_amount_usd": "350.00",
+        "refresh_period": "monthly",
+        "remaining_usd": "347.40"
+      },
+      "key_fingerprint": "b48d0a8ec3af",
+      "key_id": "4nuA3CL9Ugmp648xgNcrAHYHNyJD7svExrevW8fg09QZVoGI",
+      "key_name": "Eval Suite Key",
+      "production_reserve_usd": "25.00",
+      "schema_version": 1,
+      "shared_balance_usd": "118.06",
+      "shared_total_used_usd": "306.94"
+    },
+    "gateway_total_usd": null,
+    "recorded_at": null,
+    "source": null
+  },
+  "comparable": false,
+  "completed_at": "2026-08-11T09:37:09.083303Z",
+  "configuration": {
+    "acknowledged_paid_repeat_cap_usd": "26",
+    "arm_count": 8,
+    "attempt_arm_order": {
+      "1": [
+        "control",
+        "treatment"
+      ],
+      "2": [
+        "treatment",
+        "control"
+      ],
+      "3": [
+        "control",
+        "treatment"
+      ],
+      "4": [
+        "treatment",
+        "control"
+      ]
+    },
+    "attempts": 4,
+    "challenge_id": "settings-label-roundtrip",
+    "control_condition": "no-stele",
+    "fixture_id": "dotstate-faithful-20260723-v1",
+    "max_budget_usd_per_arm": "3.25",
+    "max_turns": 60,
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful-norag"
+  },
+  "created_at": "2026-08-11T09:12:36.884305Z",
+  "error": "runner_interrupted",
+  "provenance": {
+    "artifact_manifest": "$STELE_BENCH_STATE/artifacts/current.json",
+    "artifact_sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+    "artifact_source": {
+      "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dirty": false,
+      "head": "817d4d73ca2b4806a7b4a28ecd25ca7be86f9693",
+      "status_entries": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked_bytes": 0,
+      "untracked_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked_files": 0
+    },
+    "artifact_target": "linux-arm64",
+    "certification": {
+      "arms": [
+        "faithful"
+      ],
+      "certified": true,
+      "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/certification.json",
+      "redacted_paths": [
+        ".claude/commands/publish.md",
+        ".claude/skills/dotstate-dev/SKILL.md",
+        ".stele/project.json",
+        "CLAUDE.md"
+      ],
+      "sha256": "00d24ef2742f204ac1f5e5a12a3864044c8a18b0d41d4240a5e84463134f5018"
+    },
+    "challenge_manifest_sha256": "7d65e4d2305cb6380997a6c407a58fbaace8ce833361c43553c5bda47c280408",
+    "runtime": {
+      "docker_architecture": "aarch64",
+      "docker_server": "29.6.1",
+      "harbor": "0.20.0",
+      "python": "3.12.12",
+      "supabase": "2.109.0"
+    },
+    "verifier_sha256": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+  },
+  "repeat_id": "settings-label-roundtrip-v2",
+  "schema_version": 1,
+  "status": "interrupted",
+  "summary": {
+    "attempts_analysed": 1,
+    "attempts_excluded": [
+      {
+        "attempt": 1,
+        "reason": "arm_outcome_invalid:control"
+      },
+      {
+        "attempt": 3,
+        "reason": "arm_did_not_complete"
+      },
+      {
+        "attempt": 4,
+        "reason": "arm_did_not_complete"
+      }
+    ],
+    "attempts_run": 4,
+    "binary_measures": {
+      "cited_decision": null,
+      "reward": {
+        "control": {
+          "rate": 1.0,
+          "successes": 1,
+          "trials": 1,
+          "wilson_95": [
+            0.20654931437723745,
+            1.0
+          ]
+        },
+        "difference": 0.0,
+        "direction_tested": "treatment_greater_than_control",
+        "fisher_one_sided_p": 1.0,
+        "mcnemar_one_sided_p": 1.0,
+        "primary_test": "exact-paired-mcnemar",
+        "treatment": {
+          "rate": 1.0,
+          "successes": 1,
+          "trials": 1,
+          "wilson_95": [
+            0.20654931437723745,
+            1.0
+          ]
+        }
+      }
+    },
+    "paired_measures": {
+      "investigative_tool_calls": {
+        "attempts": 1,
+        "attempts_favouring_treatment": 1,
+        "differences": [
+          -28.0
+        ],
+        "max_difference": -28.0,
+        "median_difference": -28.0,
+        "median_reduction_percent": 63.63636363636363,
+        "min_difference": -28.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "session_investigative_tool_calls": {
+        "attempts": 1,
+        "attempts_favouring_treatment": 1,
+        "differences": [
+          -28.0
+        ],
+        "max_difference": -28.0,
+        "median_difference": -28.0,
+        "median_reduction_percent": 63.63636363636363,
+        "min_difference": -28.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "tokens_input": {
+        "attempts": 1,
+        "attempts_favouring_treatment": 0,
+        "differences": [
+          246244.0
+        ],
+        "max_difference": 246244.0,
+        "median_difference": 246244.0,
+        "median_reduction_percent": -21.521476553473324,
+        "min_difference": 246244.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "trial_wall_seconds": {
+        "attempts": 1,
+        "attempts_favouring_treatment": 1,
+        "differences": [
+          -39.156971999999996
+        ],
+        "max_difference": -39.156971999999996,
+        "median_difference": -39.156971999999996,
+        "median_reduction_percent": 12.056896089012243,
+        "min_difference": -39.156971999999996,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      }
+    }
+  }
+}

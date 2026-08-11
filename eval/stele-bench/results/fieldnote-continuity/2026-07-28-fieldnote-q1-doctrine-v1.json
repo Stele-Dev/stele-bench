@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "result_kind": "single-session-doctrine-qualification",
+  "experiment_id": "fieldnote-q1-doctrine-v1",
+  "run_id": "fieldnote-q1-doctrine-v1-20260728-treatment",
+  "status": "passed",
+  "qualification_passed": true,
+  "completed_at": "2026-07-28T07:52:54.119696Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "condition": "stele-fresh",
+  "provenance": {
+    "artifact_sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+    "artifact_source_kind": "local-dirty-worktree",
+    "artifact_source_head": "10d7473e3f0b60fb5d3d8677e7e7c328d4b67b82",
+    "artifact_source_diff_sha256": "3d61eb0d3137a486a1a96ee1a6f157875964d334e23b049cec9b2a244a9c98c6",
+    "chain_manifest_sha256": "4d84e657e8eaac47cb4cb5c5e03738be825c0897ed096e7938bc0718115a40db",
+    "challenge_manifest_sha256": "e61ee05eb8b82cd709bf65d76be54516d7e0347ef5c2e69a1f0952ea140ce046",
+    "verifier_sha256": "16c38da1e27e774a93c8fa1b5670a9799a0a37ae08fb3e7db30c5b61afaedc65",
+    "source_commit": "2c07de94b97ff1c157a50e402e682199f7f8cb55",
+    "source_tree": "5295392048a463d8e988334a7ed3fbd01f65d8ad",
+    "session_id_sha256": "bc24d739aa809dfca60f980e0077dd4e44a6ec9ffaaef7ba9aeebc74f4d256ac"
+  },
+  "billing": {
+    "gateway_usd": "0.52583860",
+    "claude_reported_usd": "0.52583250",
+    "exclusive_settled_receipt": true,
+    "acknowledged_session_cap_usd": "3.00",
+    "tokens": {
+      "input": 787268,
+      "output": 5237,
+      "cache_read": 726055,
+      "cache_write": 61096
+    }
+  },
+  "validity": {
+    "zero_model_base_target_qualification_passed": true,
+    "real_harbor_nop_qualification_passed": true,
+    "fresh_project_binding_verified": true,
+    "source_boundary_held": true,
+    "distinct_conversation_identity": true,
+    "no_external_source_access": true,
+    "model_pinned": true,
+    "cleanup_completed": true,
+    "hidden_verifier_reward": 0
+  },
+  "observable_sequence": [
+    "Skill(stele:start)",
+    "Bash(stele account status; stele project current)",
+    "Stele search",
+    "Stele component list",
+    "Stele task create TASK-4",
+    "Stele task claim TASK-4",
+    "Stele knowledge create KNOW-5",
+    "Write(fieldnote.py)"
+  ],
+  "pass_conditions": {
+    "first_project_changing_call_is_stele_lifecycle": true,
+    "task_created_and_claimed_before_implementation": true,
+    "durable_knowledge_written_before_implementation": true
+  },
+  "graph_writes": {
+    "task": {
+      "short_id": "TASK-4",
+      "title": "Implement Fieldnote Milestone 1: JSONL core summary",
+      "final_status": "done"
+    },
+    "knowledge": {
+      "short_id": "KNOW-5",
+      "title": "Fieldnote implementation constraints",
+      "category": "architecture",
+      "status_at_creation": "active",
+      "expires_on_task": null,
+      "created_before_first_file_write": true
+    }
+  },
+  "limitations": {
+    "knowledge_granularity": "The agent compressed all implementation constraints, security requirements, and four-milestone plan into one architecture node. This satisfies the frozen gate's durable-knowledge requirement but not the stronger doctrine wording that asks for each durable decision, constraint, risk, and gap as its own appropriately categorized item.",
+    "inspector_accounting": "The paid run's final graph inspector counted only created_by_source='agent', so it retained TASK-4 but omitted KNOW-5, whose agent authorship is represented by source_type='claude'. The raw trajectory retains the successful KNOW-5 create response and the total node count increased by two. The inspector predicate was corrected after the run; this result does not rewrite the frozen receipt.",
+    "correctness": "The hidden milestone verifier returned 0. Correctness was preregistered as report-only and was not part of the doctrine qualification gate.",
+    "inference": "One treatment session with no control arm supports no claim about overhead, continuity, compounding, or cross-session memory value."
+  },
+  "interpretation": "The strengthened instruction changed the observed first-action sequence from immediate file implementation in Fieldnote v7 to explicit Stele lifecycle work. It succeeded at task capture and at creating durable pre-implementation knowledge. It did not achieve the requested per-item decomposition: the agent collapsed the durable context into one architecture node."
+}

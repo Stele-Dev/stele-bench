@@ -1,0 +1,123 @@
+{
+    "id": "2b55837f-5696-4cd8-b81c-5f99cc204062",
+    "task_name": "local/package-cache-is-empty",
+    "trial_name": "package-cache-is-empty__iaC796J",
+    "trial_uri": "file://$STELE_BENCH_STATE/runs/package-cache-is-empty-v1/work/60524b3bde8340b1b8f1/jobs/route-one/package-cache-is-empty__iaC796J",
+    "task_id": {
+        "path": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v1/work/60524b3bde8340b1b8f1/pack/package-cache-is-empty"
+    },
+    "source": null,
+    "task_checksum": "8aaeb4a5afc034d20981396d90088569992f04be83343db8d26d5c6850d489e4",
+    "config": {
+        "task": {
+            "path": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v1/work/60524b3bde8340b1b8f1/pack/package-cache-is-empty",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "package-cache-is-empty__iaC796J",
+        "trials_dir": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v1/work/60524b3bde8340b1b8f1/jobs/route-one",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "anthropic/claude-haiku-4.5",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "max_budget_usd": "3",
+                "max_turns": 40,
+                "permission_mode": "bypassPermissions"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "ee972c75-339b-4692-8f33-44189df811d4"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.220",
+        "model_info": {
+            "name": "claude-haiku-4.5",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 249932,
+        "n_cache_tokens": 216333,
+        "n_output_tokens": 2852,
+        "cost_usd": 0.34804525,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-08-11T11:08:08.054078Z",
+    "finished_at": "2026-08-11T11:11:31.017588Z",
+    "environment_setup": {
+        "started_at": "2026-08-11T11:08:08.090295Z",
+        "finished_at": "2026-08-11T11:08:09.928508Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-11T11:08:09.928639Z",
+        "finished_at": "2026-08-11T11:08:10.286470Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-11T11:08:10.286697Z",
+        "finished_at": "2026-08-11T11:11:17.557864Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-11T11:11:18.055387Z",
+        "finished_at": "2026-08-11T11:11:19.723932Z"
+    },
+    "step_results": null
+}

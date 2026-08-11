@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "result_kind": "discarded-continuity-admission",
+  "experiment_id": "fieldnote-continuity-v8",
+  "run_id": "fieldnote-continuity-v8-admission-20260728",
+  "classification": "discarded-admission",
+  "status": "passed",
+  "admission_passed": true,
+  "cohort_authorized": false,
+  "completed_at": "2026-07-28T08:47:19.378846Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "arm_order": [
+    "control",
+    "treatment"
+  ],
+  "provenance": {
+    "receipt_sha256": "b0c2423707af3fee64489fe82ef98ad846761802baad9f6fdbd0dbcfb9d41ab4",
+    "artifact_sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+    "artifact_source_commit": "817d4d73ca2b4806a7b4a28ecd25ca7be86f9693",
+    "chain_manifest_sha256": "40d269c9b730db817ca5f969dc65267ea7c1224876aa4e9f98b58234fa83496f",
+    "chain_manifest_payload_sha256": "19b12aa2dee20a64ae164580477e9ea7e4fc9b1f12e22e43427b909140d7a70c",
+    "preregistration_sha256": "40a6f254fbae5e85b3852c9319330ddff1bc3a6a822909cfe5eb2e382e0222aa"
+  },
+  "billing": {
+    "fresh_conversations": 8,
+    "billed_steps": 10,
+    "settled_gateway_usd": "3.21073063",
+    "acknowledged_pair_cap_usd": "30.00",
+    "control_gateway_usd": "1.03690905",
+    "treatment_gateway_usd": "2.17382158",
+    "treatment_minus_control_usd": "1.13691253",
+    "descriptive_percent_over_control": "109.64438299"
+  },
+  "arms": {
+    "control": {
+      "condition": "no-stele",
+      "chain_outcome": "completed",
+      "rewards": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "gateway_usd_by_session": [
+        "0.21844530",
+        "0.05862810",
+        "0.31162185",
+        "0.44821380"
+      ],
+      "cumulative_gateway_usd_by_prefix": [
+        "0.21844530",
+        "0.27707340",
+        "0.58869525",
+        "1.03690905"
+      ],
+      "tokens": {
+        "input": 1899675,
+        "output": 23258,
+        "cache_read": 1824458,
+        "cache_write": 67537
+      },
+      "external_source_access_by_session": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    "treatment": {
+      "condition": "stele-fresh",
+      "chain_outcome": "completed",
+      "rewards": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "gateway_usd_by_session": [
+        "0.61672570",
+        "0.14075619",
+        "0.65864214",
+        "0.75769755"
+      ],
+      "cumulative_gateway_usd_by_prefix": [
+        "0.61672570",
+        "0.75748189",
+        "1.41612403",
+        "2.17382158"
+      ],
+      "tokens": {
+        "input": 4008181,
+        "output": 37885,
+        "cache_read": 3819376,
+        "cache_write": 184640
+      },
+      "exact_agent_task_writes_by_session": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "exact_agent_knowledge_writes_by_session": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "delivered_prior_node_by_session": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "explicit_graph_reads_by_session": [
+        2,
+        4,
+        3,
+        12
+      ],
+      "auto_rag_injected_by_session": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "session_1_durable_payload": {
+        "node_id": "TASK-4",
+        "status": "done",
+        "captured": [
+          "milestone 1 implementation and success criteria",
+          "single-file Python 3.11",
+          "standard library only",
+          "no network access",
+          "deterministic output"
+        ],
+        "omitted": [
+          "milestone 2 definition",
+          "milestone 3 Markdown decision",
+          "milestone 4 release-hardening definition",
+          "50 KiB normal-output constraint",
+          "recursive secret-redaction constraint",
+          "no daemon or watch mode"
+        ]
+      }
+    }
+  },
+  "validity": {
+    "source_and_challenge_certification_passed": true,
+    "pinned_image_base_target_qualification_passed": true,
+    "real_harbor_nop_qualification_passed": true,
+    "all_eight_sessions_started": true,
+    "distinct_conversation_identities": true,
+    "source_and_graph_boundaries_held": true,
+    "no_external_source_access": true,
+    "all_hidden_verifiers_returned_valid_rewards": true,
+    "model_pinned_every_session": true,
+    "exclusive_settled_gateway_receipts": true,
+    "pair_valid": true,
+    "failure_stage": null,
+    "failure_message": null
+  },
+  "behavioral_observation_not_an_estimate": {
+    "same_reward_vector": true,
+    "treatment_delivered_prior_agent_nodes_in_all_later_sessions": true,
+    "session_2": "Treatment received and explicitly fetched TASK-4, correctly found that milestone 2 was absent from the graph, and asked the user for its definition. Control also asked for the missing definition.",
+    "session_3": "Treatment received prior tasks but the 50 KiB decision was absent, so it accepted and implemented the contradictory include-every-event exception without pushback, as control did.",
+    "session_4": "Treatment received TASK-4, TASK-5, and TASK-6, but the original release-hardening milestone was absent. It produced a conditional release assessment and failed the registered milestone-4 verifier, as control did.",
+    "cost_curve": "Treatment cost more at every prefix. Its cumulative treatment/control ratio declined from 2.82 at K=1 to 1.69 at K=4, but there was no absolute crossover or plateau in this pair."
+  },
+  "measurement_caveat": {
+    "snapshot_issue": "The frozen v8 graph-activity snapshot classified the root component and the two starter nodes as session-1 creations because source_type defaults to claude on all node rows. The immutable receipt therefore overstates its created_count for session 1.",
+    "exact_write_evidence": "Raw successful MCP tool responses show the agent created only TASK-4 in session 1 and no knowledge node. The exact per-session write counts in this result use those trajectories, not the polluted snapshot count.",
+    "effect_on_validity": "This does not affect source boundaries, graph carryover, exact delivery of TASK-4, correctness rewards, or billing validity. It limits only the frozen snapshot's aggregate agent-node count."
+  },
+  "interpretation": "V8 passed its behavior-neutral discarded admission and is terminal. The doctrine fix reliably moved lifecycle intake before implementation and produced a task that was delivered in every later fresh session. Retrieval worked; intake completeness did not. Because TASK-4 recorded only milestone 1, it could not supply milestone 2, the 50 KiB decision, or the release-hardening plan, so treatment matched control correctness and did not push back on the contradiction. Treatment cost $1.13691253 more cumulatively. This N=1 mechanism run is not an effect estimate and does not authorize the N=20 cohort."
+}

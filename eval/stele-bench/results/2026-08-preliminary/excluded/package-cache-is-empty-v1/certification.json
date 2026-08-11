@@ -1,0 +1,49 @@
+{
+  "arms": [
+    "faithful"
+  ],
+  "certified": true,
+  "challenge_ids": [
+    "package-cache-is-empty"
+  ],
+  "cohort_id": "dotstate-foundation",
+  "corpus_tree_sha256": "8e5fa68b1e5d8d02e94b0b8affddbebbe7b2d33c2868d55b3d1e1eebdfba60a7",
+  "files_probed": 150,
+  "findings": [],
+  "fixture_id": "dotstate-faithful-20260723-v1",
+  "graph_values_probed": 5305,
+  "redactions": [
+    {
+      "kind": "auto-loaded-context",
+      "path": ".claude/commands/publish.md",
+      "pattern": ".claude/",
+      "sha256": "73c9b6c5f8055d6e4566e621acbd46ef770f087197b6210ce0cbcf41754c7d1d"
+    },
+    {
+      "kind": "auto-loaded-context",
+      "path": ".claude/skills/dotstate-dev/SKILL.md",
+      "pattern": ".claude/",
+      "sha256": "c8b00b698be525a330357fdd2b89a716e31f69f6ed806dd5afd4fb60d88e486a"
+    },
+    {
+      "kind": "suspicious-metadata",
+      "path": ".stele/project.json",
+      "pattern": ".stele/",
+      "sha256": "9626044be634890b3f54db54c993731d9341704fd173b9a615124e122dac4269"
+    },
+    {
+      "kind": "auto-loaded-context",
+      "path": "CLAUDE.md",
+      "pattern": "CLAUDE.md",
+      "sha256": "6daccc577ee8ae243fd152f31e9371b7a4f66e95f28de3f1addd32686a7defb3"
+    }
+  ],
+  "schema_version": 1,
+  "surfaces_probed": [
+    "corpus",
+    "evidence-corpus",
+    "graph",
+    "challenge"
+  ],
+  "zero_model": true
+}

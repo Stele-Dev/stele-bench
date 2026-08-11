@@ -1,0 +1,288 @@
+{
+  "aggregates": [
+    {
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": 0.7934506856227626,
+      "interval_low": 0.0,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 0.0
+    },
+    {
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": 0.7934506856227626,
+      "interval_low": 0.0,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 0.0
+    },
+    {
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "investigative_tool_calls_paired_difference",
+      "n": 1,
+      "value": 19.0
+    },
+    {
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "session_investigative_tool_calls_paired_difference",
+      "n": 1,
+      "value": 19.0
+    },
+    {
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "tokens_input_paired_difference",
+      "n": 1,
+      "value": -339934.0
+    },
+    {
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "trial_wall_seconds_paired_difference",
+      "n": 1,
+      "value": 2.984406000000007
+    }
+  ],
+  "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+  "attempts": [
+    {
+      "attempt_id": "input-keypress-architecture-v1-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "3.046896",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "incomplete",
+      "provenance_hashes": {
+        "artifact": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+        "challenge_manifest": "f60874fb49c46394e5b30ea3899d75fb361ea31f119c6ec2cf8355845fe6e34a",
+        "verifier": "9b4df070ed5d40b1c3a449f5d1ecae97bd8505403f860d3a5cbaa92229d1fd36"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 120.466759,
+        "execution_seconds": 105.93703,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 842735,
+        "cache_write_tokens": 31607,
+        "input_tokens": 1339369,
+        "output_tokens": 4114
+      }
+    },
+    {
+      "attempt_id": "input-keypress-architecture-v1-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "faithful",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "2.535941",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+        "challenge_manifest": "f60874fb49c46394e5b30ea3899d75fb361ea31f119c6ec2cf8355845fe6e34a",
+        "verifier": "9b4df070ed5d40b1c3a449f5d1ecae97bd8505403f860d3a5cbaa92229d1fd36"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 123.451165,
+        "execution_seconds": 99.081017,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 598044,
+        "cache_write_tokens": 74012,
+        "input_tokens": 999435,
+        "output_tokens": 7410
+      }
+    },
+    {
+      "attempt_id": "input-keypress-architecture-v1-attempt-02-control",
+      "attempt_index": 1,
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "3.062783",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "infrastructure-error",
+      "provenance_hashes": {
+        "artifact": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+        "challenge_manifest": "f60874fb49c46394e5b30ea3899d75fb361ea31f119c6ec2cf8355845fe6e34a",
+        "verifier": "9b4df070ed5d40b1c3a449f5d1ecae97bd8505403f860d3a5cbaa92229d1fd36"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 90.524266,
+        "execution_seconds": 76.007173,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 779399,
+        "cache_write_tokens": 715,
+        "input_tokens": 1297152,
+        "output_tokens": 3337
+      }
+    },
+    {
+      "attempt_id": "input-keypress-architecture-v1-attempt-02-treatment",
+      "attempt_index": 1,
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "faithful",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.926051",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "input-keypress-architecture-v1",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+        "challenge_manifest": "f60874fb49c46394e5b30ea3899d75fb361ea31f119c6ec2cf8355845fe6e34a",
+        "verifier": "9b4df070ed5d40b1c3a449f5d1ecae97bd8505403f860d3a5cbaa92229d1fd36"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 101.503957,
+        "execution_seconds": 76.800736,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 672351,
+        "cache_write_tokens": 3644,
+        "input_tokens": 769495,
+        "output_tokens": 3984
+      }
+    }
+  ],
+  "attempts_analysed": 1,
+  "attempts_run": 2,
+  "comparability": {
+    "challenge_id": "input-keypress-architecture",
+    "challenge_manifest_sha256": "f60874fb49c46394e5b30ea3899d75fb361ea31f119c6ec2cf8355845fe6e34a",
+    "control_condition": "no-stele",
+    "fixture_id": "dotstate-faithful-20260723-v1",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful",
+    "verifier_sha256": "9b4df070ed5d40b1c3a449f5d1ecae97bd8505403f860d3a5cbaa92229d1fd36"
+  },
+  "comparability_digest": "68618474c8ff6d2287b721d04357d14b90e235e37879aacd67efa1cfa463d1e1",
+  "memory_uptake": {
+    "control": {
+      "attempts": 2,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 2,
+      "injected": 0,
+      "marker": 0
+    }
+  },
+  "recorded_at": "2026-08-11T11:06:14.034100Z",
+  "run_id": "input-keypress-architecture-v1",
+  "run_shape": "repeat",
+  "schema_version": 1,
+  "status": "completed",
+  "publication": {
+    "decision": "excluded",
+    "reason_code": "turn-cap-atif-verifier-defects",
+    "reason": "Both controls hit the turn cap, one control was ATIF-invalid after truncation, and the verifier had whitespace sensitivity. Only one pair was analysable."
+  },
+  "verdicts": {
+    "investigative_tool_calls": {
+      "difference": 19.0,
+      "fisher_one_sided_p": null
+    },
+    "reward": {
+      "difference": 0.0,
+      "fisher_one_sided_p": 1.0
+    },
+    "session_investigative_tool_calls": {
+      "difference": 19.0,
+      "fisher_one_sided_p": null
+    },
+    "tokens_input": {
+      "difference": -339934.0,
+      "fisher_one_sided_p": null
+    },
+    "trial_wall_seconds": {
+      "difference": 2.984406000000007,
+      "fisher_one_sided_p": null
+    }
+  }
+}

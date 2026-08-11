@@ -1,0 +1,218 @@
+{
+  "aggregates": [
+    {
+      "challenge_id": "package-cache-is-empty",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "package-cache-is-empty-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "package-cache-is-empty",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "package-cache-is-empty-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "package-cache-is-empty",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "package-cache-is-empty-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "investigative_tool_calls_paired_difference",
+      "n": 1,
+      "value": -1.0
+    },
+    {
+      "challenge_id": "package-cache-is-empty",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "package-cache-is-empty-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "session_investigative_tool_calls_paired_difference",
+      "n": 1,
+      "value": -1.0
+    },
+    {
+      "challenge_id": "package-cache-is-empty",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "package-cache-is-empty-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "tokens_input_paired_difference",
+      "n": 1,
+      "value": 83520.0
+    },
+    {
+      "challenge_id": "package-cache-is-empty",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "package-cache-is-empty-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "trial_wall_seconds_paired_difference",
+      "n": 1,
+      "value": 24.042671999999996
+    }
+  ],
+  "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+  "attempts": [
+    {
+      "attempt_id": "package-cache-is-empty-v2-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "package-cache-is-empty",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.584051",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "package-cache-is-empty-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+        "challenge_manifest": "00da98b69521e2ac1b8a7f9baad1debf974c0da60c397358520f38c40d6dd3fc",
+        "verifier": "704dc9ee5f56a1c19fb8a106a6073f133583e1ae9ee12b5865763727d9556b7e"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 78.638923,
+        "execution_seconds": 45.367563,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 216544,
+        "cache_write_tokens": 31079,
+        "input_tokens": 288525,
+        "output_tokens": 3081
+      }
+    },
+    {
+      "attempt_id": "package-cache-is-empty-v2-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "package-cache-is-empty",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "faithful",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.710177",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "package-cache-is-empty-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+        "challenge_manifest": "00da98b69521e2ac1b8a7f9baad1debf974c0da60c397358520f38c40d6dd3fc",
+        "verifier": "704dc9ee5f56a1c19fb8a106a6073f133583e1ae9ee12b5865763727d9556b7e"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 102.681595,
+        "execution_seconds": 67.075885,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 288772,
+        "cache_write_tokens": 48301,
+        "input_tokens": 372045,
+        "output_tokens": 3562
+      }
+    }
+  ],
+  "attempts_analysed": 1,
+  "attempts_run": 1,
+  "comparability": {
+    "challenge_id": "package-cache-is-empty",
+    "challenge_manifest_sha256": "00da98b69521e2ac1b8a7f9baad1debf974c0da60c397358520f38c40d6dd3fc",
+    "control_condition": "no-stele",
+    "fixture_id": "dotstate-faithful-20260723-v1",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful",
+    "verifier_sha256": "704dc9ee5f56a1c19fb8a106a6073f133583e1ae9ee12b5865763727d9556b7e"
+  },
+  "comparability_digest": "d48398d4cd0776e22f4759898043e159c3f2cb7b340c9927591e8b35e41a4237",
+  "memory_uptake": {
+    "control": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    }
+  },
+  "recorded_at": "2026-08-11T11:43:52.436616Z",
+  "run_id": "package-cache-is-empty-v2",
+  "run_shape": "repeat",
+  "schema_version": 1,
+  "status": "completed",
+  "publication": {
+    "decision": "accepted",
+    "reason_code": "accepted-preliminary",
+    "reason": "The corrected N=1 low-memory pair passed its validity, correctness, mutation, and verifier rules."
+  },
+  "verdicts": {
+    "investigative_tool_calls": {
+      "difference": -1.0,
+      "fisher_one_sided_p": null
+    },
+    "reward": {
+      "difference": 0.0,
+      "fisher_one_sided_p": 1.0
+    },
+    "session_investigative_tool_calls": {
+      "difference": -1.0,
+      "fisher_one_sided_p": null
+    },
+    "tokens_input": {
+      "difference": 83520.0,
+      "fisher_one_sided_p": null
+    },
+    "trial_wall_seconds": {
+      "difference": 24.042671999999996,
+      "fisher_one_sided_p": null
+    }
+  }
+}

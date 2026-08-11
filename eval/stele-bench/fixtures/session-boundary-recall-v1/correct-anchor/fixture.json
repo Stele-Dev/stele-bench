@@ -1,0 +1,23 @@
+{
+  "cohort_id": "session-boundary-recall-v1",
+  "evidence_corpus": {
+    "media_type": "application/json",
+    "ordering": "chronological ascending; no truncation",
+    "path": "corpora/evidence.json",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "fixture_id": "session-boundary-recall-correct-anchor-v1",
+  "graphs": {
+    "faithful": {
+      "backend_compatibility_id": "stele-local-schema-2026-07",
+      "embedding_dimensions": 1536,
+      "embedding_model_id": "openai/text-embedding-3-small",
+      "graph_format_version": "stele-canonical-graph-v2",
+      "media_type": "application/json",
+      "path": "graphs/faithful.json",
+      "sha256": "9a720b8c85120dcb8948046ce7db5ded7d12c4f80bf4f4d766867b3608feda3a"
+    }
+  },
+  "memory_marker": "Close out a new dotfile candidate with a CHANGELOG entry",
+  "schema_version": 1
+}

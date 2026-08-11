@@ -1,0 +1,112 @@
+{
+  "aggregates": [],
+  "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+  "attempts": [
+    {
+      "attempt_id": "input-keypress-architecture-v2-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "1.152443",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "input-keypress-architecture-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "infrastructure-error",
+      "provenance_hashes": {
+        "artifact": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+        "challenge_manifest": "0f40c6adc1cbf00ac028b291fdd0b73438429018e777e9cf49ebdf5c46217f7f",
+        "verifier": "cd12b267ef87928bc92c20e8f2c59b2ac29fa758bd1f897bdadab0b381bdb3de"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 241.801449,
+        "execution_seconds": 227.287753,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 1263124,
+        "cache_write_tokens": 159771,
+        "input_tokens": 1421646,
+        "output_tokens": 9364
+      }
+    },
+    {
+      "attempt_id": "input-keypress-architecture-v2-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "input-keypress-architecture",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "faithful",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.760781",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "input-keypress-architecture-v2",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "infrastructure-error",
+      "provenance_hashes": {
+        "artifact": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+        "challenge_manifest": "0f40c6adc1cbf00ac028b291fdd0b73438429018e777e9cf49ebdf5c46217f7f",
+        "verifier": "cd12b267ef87928bc92c20e8f2c59b2ac29fa758bd1f897bdadab0b381bdb3de"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 232.206653,
+        "execution_seconds": 207.460082,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 775161,
+        "cache_write_tokens": 107376,
+        "input_tokens": 874067,
+        "output_tokens": 7519
+      }
+    }
+  ],
+  "attempts_analysed": 0,
+  "attempts_run": 1,
+  "comparability": {
+    "challenge_id": "input-keypress-architecture",
+    "challenge_manifest_sha256": "0f40c6adc1cbf00ac028b291fdd0b73438429018e777e9cf49ebdf5c46217f7f",
+    "control_condition": "no-stele",
+    "fixture_id": "dotstate-faithful-20260723-v1",
+    "model": "anthropic/claude-sonnet-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful",
+    "verifier_sha256": "cd12b267ef87928bc92c20e8f2c59b2ac29fa758bd1f897bdadab0b381bdb3de"
+  },
+  "comparability_digest": "d3514ac278beff8d36db24c4a7e30119d8801c72c4d6e9fb4dd1c20f3fb1ff17",
+  "memory_uptake": {
+    "control": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    }
+  },
+  "recorded_at": "2026-08-11T11:29:23.861291Z",
+  "run_id": "input-keypress-architecture-v2",
+  "run_shape": "repeat",
+  "schema_version": 1,
+  "status": "completed",
+  "publication": {
+    "decision": "excluded",
+    "reason_code": "forbidden-history-and-verifier-false-negative",
+    "reason": "Both agents inspected repository history, violating the registered source-access rule, and the verifier rejected valid terminology."
+  },
+  "verdicts": {}
+}

@@ -1,0 +1,8 @@
+{
+  "decision": "accepted",
+  "preregistration": "../../preregistrations/input-keypress-architecture-v3.md",
+  "reason": "The frozen N=1 pair passed its validity, correctness, access, and verifier rules.",
+  "reason_code": "accepted-preliminary",
+  "result": "../input-keypress-architecture/2026-08-11-input-keypress-architecture-v3.json",
+  "run_id": "input-keypress-architecture-v3"
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "result_kind": "discarded-continuity-admission",
+  "experiment_id": "fieldnote-continuity-v1",
+  "run_id": "fieldnote-continuity-admission-20260728",
+  "classification": "discarded-admission",
+  "status": "failed",
+  "admission_passed": false,
+  "cohort_authorized": false,
+  "completed_at": "2026-07-27T22:01:42.219398Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "arm_order": [
+    "control",
+    "treatment"
+  ],
+  "provenance": {
+    "receipt_sha256": "df17762ab40033417741270db7edf9b3058b6d40051fdc824ad42b0d985b7c49",
+    "artifact_sha256": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+    "chain_manifest_sha256": "8ff7e02f28a2e07b1d04ff40f498239e0380004421272c731c631d2daaf170f0",
+    "preregistration_sha256": "4c9902e85cbfa75db24715765ffc3200794b3d3b89c86cf33eb5f76637f085f9"
+  },
+  "billing": {
+    "model_calls_started": 0,
+    "settled_gateway_usd": "0.00",
+    "acknowledged_pair_cap_usd": "30.00",
+    "between_arm_drain_check_observed_usd": "0.00"
+  },
+  "arms": {
+    "control": {
+      "condition": "no-stele",
+      "chain_outcome": "not_started",
+      "error": "missing_trial_result"
+    },
+    "treatment": {
+      "condition": "stele-fresh",
+      "chain_outcome": "not_started",
+      "error": "missing_trial_result"
+    }
+  },
+  "validity": {
+    "source_and_challenge_certification_passed": true,
+    "pinned_image_base_target_qualification_passed": true,
+    "harbor_task_schema_validation_passed": false,
+    "failure_stage": "Harbor TaskConfig parsing before trial creation",
+    "failure_message": "environment.network_mode: Input should be 'no-network', 'public' or 'allowlist'; input_value='none'",
+    "cause": "The benchmark contract value 'none' was serialized directly into task.toml instead of Harbor 0.20's equivalent 'no-network' value."
+  },
+  "registered_gates": {
+    "all_eight_sessions_started": false,
+    "distinct_conversation_identities": false,
+    "source_and_graph_boundaries_held": false,
+    "all_hidden_verifiers_returned_valid_rewards": false,
+    "model_pinned_every_session": false,
+    "exclusive_settled_gateway_receipts": false
+  },
+  "interpretation": "The discarded admission is an apparatus failure and authorizes no cohort. Harbor rejected both first-session task packs before creating a trial, so no conversation started, no model behavior was observed, and no Gateway spend accrued. The registered candidate is not rerun or tuned."
+}

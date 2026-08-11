@@ -1,0 +1,288 @@
+{
+  "aggregates": [
+    {
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.34238022750665303,
+      "metric_name": "reward",
+      "n": 2,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful-norag",
+      "dispersion": null,
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.34238022750665303,
+      "metric_name": "reward",
+      "n": 2,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful-norag",
+      "dispersion": null,
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "investigative_tool_calls_paired_difference",
+      "n": 2,
+      "value": -0.5
+    },
+    {
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful-norag",
+      "dispersion": null,
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "session_investigative_tool_calls_paired_difference",
+      "n": 2,
+      "value": -0.5
+    },
+    {
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful-norag",
+      "dispersion": null,
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "tokens_input_paired_difference",
+      "n": 2,
+      "value": 601298.5
+    },
+    {
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful-norag",
+      "dispersion": null,
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "trial_wall_seconds_paired_difference",
+      "n": 2,
+      "value": 33.0848515
+    }
+  ],
+  "artifact_sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+  "attempts": [
+    {
+      "attempt_id": "settings-label-roundtrip-v4-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "1.62387",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+        "challenge_manifest": "90abb78fd844e989db75ef929e6c450a510a67a2d8c9f4f80b7e1cdc26beecd5",
+        "verifier": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 114.599415,
+        "execution_seconds": 88.58749,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 466727,
+        "cache_write_tokens": 31433,
+        "input_tokens": 712730,
+        "output_tokens": 4848
+      }
+    },
+    {
+      "attempt_id": "settings-label-roundtrip-v4-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "faithful-norag",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "1.974633",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+        "challenge_manifest": "90abb78fd844e989db75ef929e6c450a510a67a2d8c9f4f80b7e1cdc26beecd5",
+        "verifier": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 128.211827,
+        "execution_seconds": 83.249635,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 785621,
+        "cache_write_tokens": 59418,
+        "input_tokens": 1043057,
+        "output_tokens": 6069
+      }
+    },
+    {
+      "attempt_id": "settings-label-roundtrip-v4-attempt-02-control",
+      "attempt_index": 1,
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "2.19515",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+        "challenge_manifest": "90abb78fd844e989db75ef929e6c450a510a67a2d8c9f4f80b7e1cdc26beecd5",
+        "verifier": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 138.512334,
+        "execution_seconds": 104.518459,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 717445,
+        "cache_write_tokens": 31626,
+        "input_tokens": 1049219,
+        "output_tokens": 5521
+      }
+    },
+    {
+      "attempt_id": "settings-label-roundtrip-v4-attempt-02-treatment",
+      "attempt_index": 1,
+      "challenge_id": "settings-label-roundtrip",
+      "cohort_id": "dotstate-faithful-20260723-v1",
+      "condition_id": "faithful-norag",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "3.891974",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "settings-label-roundtrip-v4",
+      "fixture_id": "dotstate-faithful-20260723-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+        "challenge_manifest": "90abb78fd844e989db75ef929e6c450a510a67a2d8c9f4f80b7e1cdc26beecd5",
+        "verifier": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 191.069625,
+        "execution_seconds": 154.737941,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 1352718,
+        "cache_write_tokens": 30724,
+        "input_tokens": 1921489,
+        "output_tokens": 7837
+      }
+    }
+  ],
+  "attempts_analysed": 2,
+  "attempts_run": 2,
+  "comparability": {
+    "challenge_id": "settings-label-roundtrip",
+    "challenge_manifest_sha256": "90abb78fd844e989db75ef929e6c450a510a67a2d8c9f4f80b7e1cdc26beecd5",
+    "control_condition": "no-stele",
+    "fixture_id": "dotstate-faithful-20260723-v1",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful-norag",
+    "verifier_sha256": "7aba6b6088295fbfe28820df64c150f9f95b4640cb97169ce1153becc04fba22"
+  },
+  "comparability_digest": "5b98693281bea5ce30630c4aefeab7c3ee8dcc0e09b871817eb36a8087a3444f",
+  "memory_uptake": {
+    "control": {
+      "attempts": 2,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 2,
+      "injected": 0,
+      "marker": 0
+    }
+  },
+  "recorded_at": "2026-08-11T10:08:17.379228Z",
+  "run_id": "settings-label-roundtrip-v4",
+  "run_shape": "repeat",
+  "schema_version": 1,
+  "status": "completed",
+  "publication": {
+    "decision": "accepted",
+    "reason_code": "accepted-preliminary",
+    "reason": "Both N=2 pairs passed the frozen validity, correctness, mutation, mechanism, and budget rules."
+  },
+  "verdicts": {
+    "investigative_tool_calls": {
+      "difference": -0.5,
+      "fisher_one_sided_p": null
+    },
+    "reward": {
+      "difference": 0.0,
+      "fisher_one_sided_p": 1.0
+    },
+    "session_investigative_tool_calls": {
+      "difference": -0.5,
+      "fisher_one_sided_p": null
+    },
+    "tokens_input": {
+      "difference": 601298.5,
+      "fisher_one_sided_p": null
+    },
+    "trial_wall_seconds": {
+      "difference": 33.0848515,
+      "fisher_one_sided_p": null
+    }
+  }
+}

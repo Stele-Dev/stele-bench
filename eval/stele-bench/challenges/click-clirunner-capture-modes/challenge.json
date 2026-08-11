@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "challenge_id": "click-clirunner-capture-modes",
+  "title": "Resolve CliRunner's descriptor-exposure regression",
+  "description": "Keep a safe default capture contract while offering explicit file-descriptor capture.",
+  "prompt": "The recent `fileno()` compatibility change lets code using `os.dup2` mutate the host test runner's stdout or stderr and can break pytest cleanup. Fix that regression without losing support for `faulthandler`, stale logging handlers, and other descriptor-level writers. Establish an explicit capture contract, keep the default safe, and test its interaction with both Python-level and file-descriptor-level output.\n",
+  "allowed_output_paths": [
+    "/workspace/CHANGES.rst",
+    "/workspace/docs/testing.md",
+    "/workspace/src/click/testing.py",
+    "/workspace/tests/test_testing.py"
+  ],
+  "agent_timeout_seconds": 900,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 900,
+    "cpus": 2,
+    "memory_mb": 4096,
+    "storage_mb": 8192
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "0900efcaae4f37549da4df8fce45b9d5e230508b205b0f4965b9dacb63f5d8d3",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 30
+  }
+}

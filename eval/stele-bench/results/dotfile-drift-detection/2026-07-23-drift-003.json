@@ -1,0 +1,227 @@
+{
+  "aggregates": [
+    {
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "interval_high": 0.7934506856227626,
+      "interval_low": 0.0,
+      "metric_name": "cited_decision",
+      "n": 1,
+      "value": 0.0
+    },
+    {
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "cited_decision",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "investigative_tool_calls_paired_difference",
+      "n": 1,
+      "value": -1.0
+    },
+    {
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "tokens_input_paired_difference",
+      "n": 1,
+      "value": -189602.0
+    },
+    {
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "trial_wall_seconds_paired_difference",
+      "n": 1,
+      "value": 7.916603000000009
+    }
+  ],
+  "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+  "attempts": [
+    {
+      "attempt_id": "drift-003-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.918297",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+        "challenge_manifest": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+        "verifier": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 227.748345,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 773658,
+        "cache_write_tokens": 31162,
+        "input_tokens": 1006752,
+        "output_tokens": 4321
+      }
+    },
+    {
+      "attempt_id": "drift-003-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "dotfile-drift-detection",
+      "cohort_id": "dotfile-drift-decision-v1",
+      "condition_id": "faithful",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.803381",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "drift-003",
+      "fixture_id": "dotfile-drift-decision-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+        "challenge_manifest": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+        "verifier": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 235.664948,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 624862,
+        "cache_write_tokens": 48215,
+        "input_tokens": 817150,
+        "output_tokens": 4677
+      }
+    }
+  ],
+  "attempts_analysed": 1,
+  "attempts_run": 1,
+  "comparability": {
+    "challenge_id": "dotfile-drift-detection",
+    "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+    "control_condition": "no-stele",
+    "fixture_id": "dotfile-drift-decision-v1",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful",
+    "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+  },
+  "comparability_digest": "f230f39eb6a04174d9afe6ae5b0e3f3384aef852c381f6ce8b9c8d2df9a5f991",
+  "memory_uptake": {
+    "control": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 1,
+      "injected": 1,
+      "marker": 1
+    }
+  },
+  "recorded_at": "2026-07-23T22:59:11.552461Z",
+  "run_id": "drift-003",
+  "run_shape": "pair",
+  "schema_version": 1,
+  "status": "completed",
+  "verdicts": {
+    "cited_decision": {
+      "difference": 1.0,
+      "fisher_one_sided_p": 0.5
+    },
+    "investigative_tool_calls": {
+      "difference": -1.0,
+      "fisher_one_sided_p": null
+    },
+    "reward": {
+      "difference": 0.0,
+      "fisher_one_sided_p": 1.0
+    },
+    "tokens_input": {
+      "difference": -189602.0,
+      "fisher_one_sided_p": null
+    },
+    "trial_wall_seconds": {
+      "difference": 7.916603000000009,
+      "fisher_one_sided_p": null
+    }
+  }
+}

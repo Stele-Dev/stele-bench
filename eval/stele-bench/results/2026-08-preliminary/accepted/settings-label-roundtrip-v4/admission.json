@@ -1,0 +1,8 @@
+{
+  "decision": "accepted",
+  "preregistration": "../../preregistrations/settings-label-roundtrip-v4.md",
+  "reason": "Both N=2 pairs passed the frozen validity, correctness, mutation, mechanism, and budget rules.",
+  "reason_code": "accepted-preliminary",
+  "result": "../settings-label-roundtrip/2026-08-11-settings-label-roundtrip-v4.json",
+  "run_id": "settings-label-roundtrip-v4"
+}

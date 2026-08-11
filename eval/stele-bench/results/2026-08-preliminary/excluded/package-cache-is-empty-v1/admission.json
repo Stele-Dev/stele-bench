@@ -1,0 +1,8 @@
+{
+  "decision": "excluded",
+  "preregistration": "../../preregistrations/package-cache-is-empty-v1.md",
+  "reason": "Ordinary Cargo execution created Cargo.lock, which the mutation allowlist rejected before the hidden contract tests ran.",
+  "reason_code": "undeclared-lockfile-mutation",
+  "result": "../package-cache-is-empty/2026-08-11-package-cache-is-empty-v1.json",
+  "run_id": "package-cache-is-empty-v1"
+}

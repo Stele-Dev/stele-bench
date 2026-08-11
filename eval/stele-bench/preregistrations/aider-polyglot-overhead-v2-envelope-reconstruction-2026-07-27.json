@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-27",
+  "run_id": "aider-overhead-replication-v2",
+  "model": "anthropic/claude-haiku-4.5",
+  "claude_code_version": "2.1.220",
+  "image": "harbor-local/claude-rust:2.1.220-rust-1.88.0",
+  "stele_plugin_version": "0.48.1",
+  "stele_artifact_sha256": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+  "replay": {
+    "model_calls": 0,
+    "method": "Claude Code request intercepted by a local HTTP recorder; retained SessionStart and UserPromptSubmit hook outputs replayed verbatim",
+    "retained_plugin_tree_sha256": "1ef8488af26c3cdf19199885a0b5e346250d4ca8d2abffc9de642f53e47cef15",
+    "replay_plugin_tree_sha256": "1ef8488af26c3cdf19199885a0b5e346250d4ca8d2abffc9de642f53e47cef15"
+  },
+  "control_envelope": {
+    "serialized_body_bytes": 120971,
+    "tool_count": 24,
+    "serialized_tools_bytes": 83464,
+    "tools_sha256": "48ec2269102dc77c4b45942ee33ae678aa8ad937411d2e4e7e0936591e10b33f",
+    "serialized_system_bytes": 27985,
+    "system_sha256": "bdf927df17c652c69253a5567b5a8c7f54aae496cdd9ec1f0a089b3526e81555",
+    "attachment_characters": 6305,
+    "attachment_bytes": 6329,
+    "attachment_sha256": "70ae61ce74ea138daeb156044d3c9755485c19f800e1864e30981226067cedc6"
+  },
+  "treatment_envelope": {
+    "serialized_body_bytes": 178458,
+    "tool_count": 43,
+    "serialized_tools_bytes": 135243,
+    "tools_sha256": "31ae05024400ccc04552c4d0df8e31146bad2b1460dcd085cf1e9246afea2954",
+    "serialized_system_bytes": 27985,
+    "system_sha256": "bdf927df17c652c69253a5567b5a8c7f54aae496cdd9ec1f0a089b3526e81555",
+    "attachment_characters": 11905,
+    "attachment_bytes": 11965,
+    "attachment_sha256": "c27a5c841a5005c6ca40d62c07d339e0053647daba68b53c7d1dbcc639d4376b"
+  },
+  "structural_diff": {
+    "common_tool_count": 24,
+    "changed_common_tool_count": 0,
+    "added_tool_count": 19,
+    "added_mcp_resource_helper_count": 3,
+    "added_stele_meta_tool_count": 16,
+    "serialized_tools_byte_delta": 51779,
+    "attachment_character_delta": 5600,
+    "auto_rag_wrapper_and_payload_characters": 465
+  },
+  "observed_provider_usage": {
+    "modal_first_request_prompt_delta": 17215,
+    "range_first_request_prompt_delta": [17214, 17216],
+    "control_stable_cache_block": 30842,
+    "treatment_stable_cache_block": 44923,
+    "treatment_prompt_local_cache_block_range": [3133, 3135]
+  },
+  "count_tokens": {
+    "endpoint": "https://ai-gateway.vercel.sh/v1/messages/count_tokens?beta=true",
+    "generated_tokens": 0,
+    "exact_mid_conversation_system_role_accepted": false,
+    "adaptation": "Tool comparison used one shared minimal user message. Attachment comparison lifted exact retained attachment text into a top-level system block while holding treatment tools, main system, and first user message fixed.",
+    "counts": {
+      "control_tools_shared_message": 29585,
+      "treatment_tools_shared_message": 45278,
+      "treatment_tools_stock_attachment": 47531,
+      "treatment_tools_installed_attachment_without_auto_rag": 48914,
+      "treatment_tools_full_attachment": 49053
+    },
+    "estimated_deltas": {
+      "added_tool_catalog": 15693,
+      "installed_message_surface_without_auto_rag": 1383,
+      "two_node_auto_rag": 139,
+      "standing_installed_total": 17076,
+      "reconciled_total": 17215
+    },
+    "caveat": "Anthropic documents count_tokens as an estimate; it can differ from actual usage. The exact Claude Code body was rejected because the count route does not accept the beta mid-conversation system role."
+  }
+}

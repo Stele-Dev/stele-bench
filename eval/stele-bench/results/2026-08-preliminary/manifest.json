@@ -1,0 +1,2587 @@
+{
+  "admission_counts": {
+    "accepted": 3,
+    "excluded": 7
+  },
+  "files": [
+    {
+      "bytes": 9239,
+      "path": "README.md",
+      "sha256": "e0780b7fa2bc8f2c758340417b37254ebe4deb559dcfcbbce9078c3c910d4ac5"
+    },
+    {
+      "bytes": 387,
+      "path": "accepted/input-keypress-architecture-v3/admission.json",
+      "sha256": "06c3b5920e7258dfba68ed5c500bcbbdfd7a19552929ecabb400136715f64a3d"
+    },
+    {
+      "bytes": 734099,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/agent/trajectory.json",
+      "sha256": "84497f6de0314c70b4584045d225c39f14f719a661c997e51aeb2cd761d7bc2f"
+    },
+    {
+      "bytes": 1958,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/diagnostic.json",
+      "sha256": "84b6445fdbe223f6dc92ffc8ec4502f53803cf5d2469ff367143bb988dd3b7ca"
+    },
+    {
+      "bytes": 159,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 884,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/harbor/config.json",
+      "sha256": "cd79c8b251dc1c0fbe55c61ab4dbd43884d70df1d551a65be2489d0843839061"
+    },
+    {
+      "bytes": 917,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/harbor/job-config.json",
+      "sha256": "86c590cc4d736e83f322d0980814d8c4d53a658c5862a78dc7432cae63f7b1b2"
+    },
+    {
+      "bytes": 1236,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/harbor/job-job.log",
+      "sha256": "67105ee931ae052247a86a77d27541965b5685c591523049b26ed0586ba99295"
+    },
+    {
+      "bytes": 1152,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/harbor/job-result.json",
+      "sha256": "5516bc39064a3c845d516a8a58096ce6cdecbabbddbfd31a84859bcfe7750113"
+    },
+    {
+      "bytes": 4429,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/harbor/result.json",
+      "sha256": "eb9292b27702998b9173b2991a255dc0e970ddaa149c977158cf5ab2e4e7c02d"
+    },
+    {
+      "bytes": 1236,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/harbor/trial.log",
+      "sha256": "67105ee931ae052247a86a77d27541965b5685c591523049b26ed0586ba99295"
+    },
+    {
+      "bytes": 2687,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/receipt.json",
+      "sha256": "c1daa2d358fba9bdc4d4cf7d33f754bf45f0ba5e428c6d4b87109f958ea1274f"
+    },
+    {
+      "bytes": 123,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/verifier/evidence.json",
+      "sha256": "d881ed4b703cf02fa549da96ae8609d23e8f8ca8875b408119128be240fa1ad3"
+    },
+    {
+      "bytes": 249,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/verifier/mutation.json",
+      "sha256": "e134be75e4b2469b9df51a0f47c2d2b6cc6e034269ac266c9947473474fe2b2f"
+    },
+    {
+      "bytes": 13,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 0,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 120,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/agent/injection-channel.json",
+      "sha256": "911624db7efd3e38ba5f7ecd9f46dd1f6ab0ae49a0cf23beed7141042c93b06e"
+    },
+    {
+      "bytes": 5172,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/agent/preflight.json",
+      "sha256": "0e2a23e7da77c0c205ab0c1e4618d963ca1dc1159bf75035f19cf6a46ffa9bc1"
+    },
+    {
+      "bytes": 153819,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/agent/trajectory.json",
+      "sha256": "3eb4a335e15f06dd25f10a621441e3f3bb9b5d29651526ba948800cb1913b49a"
+    },
+    {
+      "bytes": 1958,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/diagnostic.json",
+      "sha256": "864e462fcfa65f561d9d02f65fecade928ecf843384a1d0f1d141e2efc78517e"
+    },
+    {
+      "bytes": 159,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1985,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/harbor/config.json",
+      "sha256": "95fcfa7f51350e8ca9aca74f722945d0379a85928d15d70ae66f2e3b1aa4f8eb"
+    },
+    {
+      "bytes": 2066,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/harbor/job-config.json",
+      "sha256": "723bf13032431457b99b9d7501f8732a2ccc44a5017cbce07c0aabd922e79e70"
+    },
+    {
+      "bytes": 6515,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/harbor/job-job.log",
+      "sha256": "c00a084fcf7b0240904197771245d571669cf00cec3005cbc9c55b7a2b62c06f"
+    },
+    {
+      "bytes": 1159,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/harbor/job-result.json",
+      "sha256": "0d47b938e51f03c97ee0793af22763bfc01e8914517cc04ff959ffbe517fd6fb"
+    },
+    {
+      "bytes": 5578,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/harbor/result.json",
+      "sha256": "a40cf65fc8b872b44a3ccec34b6f8435eb4ab4fb4532d05beb58b79a75ca1ae3"
+    },
+    {
+      "bytes": 6515,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/harbor/trial.log",
+      "sha256": "c00a084fcf7b0240904197771245d571669cf00cec3005cbc9c55b7a2b62c06f"
+    },
+    {
+      "bytes": 2894,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/receipt.json",
+      "sha256": "c5126d6f844b3ec2afd6478204fab6fc9c1d8d6c9553d7a5cb3b57c91dc23eef"
+    },
+    {
+      "bytes": 123,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/verifier/evidence.json",
+      "sha256": "d881ed4b703cf02fa549da96ae8609d23e8f8ca8875b408119128be240fa1ad3"
+    },
+    {
+      "bytes": 249,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/verifier/mutation.json",
+      "sha256": "e134be75e4b2469b9df51a0f47c2d2b6cc6e034269ac266c9947473474fe2b2f"
+    },
+    {
+      "bytes": 13,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 0,
+      "path": "accepted/input-keypress-architecture-v3/attempts/input-keypress-architecture-v3-attempt-01-treatment/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1339,
+      "path": "accepted/input-keypress-architecture-v3/certification.json",
+      "sha256": "9f22d6ba91d5cddf88d6e90d76f459cdcf185aad56dfa0a062b492f6747739b4"
+    },
+    {
+      "bytes": 19347,
+      "path": "accepted/input-keypress-architecture-v3/repeat.json",
+      "sha256": "d961b8c20e833ca6195db3c62dea5bed676dd261b2c5a48c4316bf196ddf7214"
+    },
+    {
+      "bytes": 7268,
+      "path": "accepted/input-keypress-architecture-v3/result.json",
+      "sha256": "dfe2a79419c8272956b384e039b222cc64a3562a23560524b17a3a87b573f951"
+    },
+    {
+      "bytes": 383,
+      "path": "accepted/package-cache-is-empty-v2/admission.json",
+      "sha256": "e160af49d7092d8a164436837a8a37ced877aef08999afd80dbefb1de4ddb36a"
+    },
+    {
+      "bytes": 141068,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/agent/trajectory.json",
+      "sha256": "ba978e8a4ebf4e1679029d21e864ce66d9d15adbbaab3269ccd8b6fbe96e6484"
+    },
+    {
+      "bytes": 1942,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/diagnostic.json",
+      "sha256": "7e28bd9d116f243afcdec590f407632c3104c99fb1a82733ecba67a458fe438d"
+    },
+    {
+      "bytes": 159,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 863,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/harbor/config.json",
+      "sha256": "fa62cf8c176dc26959d9ed054163c1d3adaa644ec74cf5d4e8b6a49495143f6a"
+    },
+    {
+      "bytes": 901,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/harbor/job-config.json",
+      "sha256": "f98ffe9af82f52f071877fee12a306f1ab17ac477f81e8262da35b44187547d6"
+    },
+    {
+      "bytes": 1226,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/harbor/job-job.log",
+      "sha256": "0de499e344774c7f305e818f737c0aa221bec863f8bb53aae71a7bc2db52c026"
+    },
+    {
+      "bytes": 1152,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/harbor/job-result.json",
+      "sha256": "99ed1465adb3362410c2c8a20e00e400bec029e781f5a2b7deed804e97cc17f4"
+    },
+    {
+      "bytes": 4383,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/harbor/result.json",
+      "sha256": "ef0940221efad44483ff9801518c6d66c30604556629ebc4292cd6ac11a037b8"
+    },
+    {
+      "bytes": 1226,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/harbor/trial.log",
+      "sha256": "0de499e344774c7f305e818f737c0aa221bec863f8bb53aae71a7bc2db52c026"
+    },
+    {
+      "bytes": 2670,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/receipt.json",
+      "sha256": "fd4ffca38d6e8fb57ac8d4e2c20ac4dbb7ea9db74bea7841aa076a80ace6f924"
+    },
+    {
+      "bytes": 38,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/verifier/evidence.json",
+      "sha256": "5d4bb931e42ff5bf6e2cad8ed4cdff908a5e7800977170538390e655e9f1b75d"
+    },
+    {
+      "bytes": 249,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/verifier/mutation.json",
+      "sha256": "879a4695838f4e904a8797dd3212f159eb0297b1aa4abb9071d14a6b0de12a6f"
+    },
+    {
+      "bytes": 13,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20795,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "cc3414848f02bf0bb3b5e3b778261478ceaf418ee8719a1a0e50f4ea5b69cb93"
+    },
+    {
+      "bytes": 120,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/agent/injection-channel.json",
+      "sha256": "911624db7efd3e38ba5f7ecd9f46dd1f6ab0ae49a0cf23beed7141042c93b06e"
+    },
+    {
+      "bytes": 5172,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/agent/preflight.json",
+      "sha256": "0e2a23e7da77c0c205ab0c1e4618d963ca1dc1159bf75035f19cf6a46ffa9bc1"
+    },
+    {
+      "bytes": 129851,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/agent/trajectory.json",
+      "sha256": "1093b310b545dd72bbc3a4dc88c79ac110722ecbde01a3bc0ad15d7b14c8ad9e"
+    },
+    {
+      "bytes": 1942,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/diagnostic.json",
+      "sha256": "4b8fa24a724618261e28fb1ff71b012e76c80ddcf20a93e7a2c2bf6b1efe076e"
+    },
+    {
+      "bytes": 159,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1964,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/harbor/config.json",
+      "sha256": "44e4c32a22713b394435e82ce4052e8b2af03011143a359c0b5bed8165715e37"
+    },
+    {
+      "bytes": 2050,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/harbor/job-config.json",
+      "sha256": "cb73529771827b08b6e50c4ae87765fa0209ff0b2e0516d3b2eb9a4733053569"
+    },
+    {
+      "bytes": 6505,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/harbor/job-job.log",
+      "sha256": "06fc2b63db3b0db1795612cfa06ac9b89e5ebdff1c444b30da65220ebb53ec9b"
+    },
+    {
+      "bytes": 1152,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/harbor/job-result.json",
+      "sha256": "2e2635edf2ee664d3b02cd2fe4307a21a446aa894ea5cbc2a31f8f56420e2d0a"
+    },
+    {
+      "bytes": 5525,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/harbor/result.json",
+      "sha256": "c7a830d661d56a942995b0bec9771c1a0bb7c876d8bc9bf36e9dc521740fc5ca"
+    },
+    {
+      "bytes": 6505,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/harbor/trial.log",
+      "sha256": "06fc2b63db3b0db1795612cfa06ac9b89e5ebdff1c444b30da65220ebb53ec9b"
+    },
+    {
+      "bytes": 2873,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/receipt.json",
+      "sha256": "873c85c8624f5c477284d89ec656f4925c143c5c9946532e4c76fb141c2fe9f9"
+    },
+    {
+      "bytes": 38,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/verifier/evidence.json",
+      "sha256": "5d4bb931e42ff5bf6e2cad8ed4cdff908a5e7800977170538390e655e9f1b75d"
+    },
+    {
+      "bytes": 249,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/verifier/mutation.json",
+      "sha256": "879a4695838f4e904a8797dd3212f159eb0297b1aa4abb9071d14a6b0de12a6f"
+    },
+    {
+      "bytes": 13,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20997,
+      "path": "accepted/package-cache-is-empty-v2/attempts/package-cache-is-empty-v2-attempt-01-treatment/verifier/test-stdout.txt",
+      "sha256": "9e1f80778e2e1c0ca434202d1e4e84455f7fba0f1dffb8e789cdbc96d8ec3e4c"
+    },
+    {
+      "bytes": 1334,
+      "path": "accepted/package-cache-is-empty-v2/certification.json",
+      "sha256": "d01c5d1372d21e84f59143460a3192beb59eb24288c094b27de5a655a160b59e"
+    },
+    {
+      "bytes": 19568,
+      "path": "accepted/package-cache-is-empty-v2/repeat.json",
+      "sha256": "6d6d8f40ce08a759a6ce1ffe1c92c4092bce4f0207a8adf79142809d99fb3efb"
+    },
+    {
+      "bytes": 7185,
+      "path": "accepted/package-cache-is-empty-v2/result.json",
+      "sha256": "9ca907ac3749ebb1b0fd3474353b9a8df7b6a3f55ffbe27251190fa3668b7766"
+    },
+    {
+      "bytes": 388,
+      "path": "accepted/settings-label-roundtrip-v4/admission.json",
+      "sha256": "76595f0ada3ef551bb99cc2658b89b65a2e2ecf02c5a343b513b2b5c6b7840b2"
+    },
+    {
+      "bytes": 283331,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/agent/trajectory.json",
+      "sha256": "e0207db1faf4a5205bc5dd0936c621c74ec8d43e36ea17eebf4b87ed655497c5"
+    },
+    {
+      "bytes": 1948,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/diagnostic.json",
+      "sha256": "1f1f1caa41d99e91f72872bc937fb53cf50381162d39f05e6e03fde9613d09ed"
+    },
+    {
+      "bytes": 159,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 871,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/harbor/config.json",
+      "sha256": "983f7733a013c945617d2fbe920ba0a3e459931256cc3f662fe201a62864bccd"
+    },
+    {
+      "bytes": 907,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/harbor/job-config.json",
+      "sha256": "d374e7247c3aa3ee9bebe5019f0e316d340c194ed4c9ebfe71fa30515cdbad9c"
+    },
+    {
+      "bytes": 1230,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/harbor/job-job.log",
+      "sha256": "78fa38d53565c21908962821aac5feeac616035715c84cdc5e7020c066370206"
+    },
+    {
+      "bytes": 1154,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/harbor/job-result.json",
+      "sha256": "20205e85468963be39177276bf9cb75b675658d1af3b589d50cc267e72361467"
+    },
+    {
+      "bytes": 4403,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/harbor/result.json",
+      "sha256": "73faae683e6cb142dccd413e4b43abd62340212023019a7ca48ea816d4e1433a"
+    },
+    {
+      "bytes": 1230,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/harbor/trial.log",
+      "sha256": "78fa38d53565c21908962821aac5feeac616035715c84cdc5e7020c066370206"
+    },
+    {
+      "bytes": 2685,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/receipt.json",
+      "sha256": "4aacf1deef3a78459f60ab0d88828ce99f2a37671d4756d0d0b45f1bb770d0cf"
+    },
+    {
+      "bytes": 49,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20462,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "6e3e4407291f2aba3a78a21736eb7b1b69ec1acf5c3672cfbf6da11e04fdea58"
+    },
+    {
+      "bytes": 121,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/agent/injection-channel.json",
+      "sha256": "760fbdc8195b5e9536755e013f91e22f0cd332b0c55a1079aa6832bff6970a70"
+    },
+    {
+      "bytes": 5172,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/agent/preflight.json",
+      "sha256": "b92e9131fb38766510a44185a94427e643d2534c2f39e3326c6b4ecb3e3c7162"
+    },
+    {
+      "bytes": 270172,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/agent/trajectory.json",
+      "sha256": "0db569132df0fcd5f18a2cea835b16ebffc34579393fc9fa2cef62e30d15356d"
+    },
+    {
+      "bytes": 1947,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/diagnostic.json",
+      "sha256": "663062ee474b9aea61b160a97577c44b8cc997c659e80403d9ba063828d4645c"
+    },
+    {
+      "bytes": 159,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1973,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/harbor/config.json",
+      "sha256": "d341997515b852a93ea00d8f4253bed21c487e7baf517f00f33b51da8788fc31"
+    },
+    {
+      "bytes": 2057,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/harbor/job-config.json",
+      "sha256": "d888683bf4e082ec5cbfb04aebc9131722be953cb9e469eb57251d7f81bc709d"
+    },
+    {
+      "bytes": 7485,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/harbor/job-job.log",
+      "sha256": "da9e735efb38c5d392a767c8b18bceaa100853cdd502f8fa163154445d12c10e"
+    },
+    {
+      "bytes": 1146,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/harbor/job-result.json",
+      "sha256": "34b94927cce85e65bf98b376982eb185a02f53f309ce7e2fb3631861970ccf88"
+    },
+    {
+      "bytes": 5538,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/harbor/result.json",
+      "sha256": "a9f79f46ea2246a769afbb46598c2e15ae9e1e431b88ab44a6b5f31a878110c9"
+    },
+    {
+      "bytes": 7485,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/harbor/trial.log",
+      "sha256": "da9e735efb38c5d392a767c8b18bceaa100853cdd502f8fa163154445d12c10e"
+    },
+    {
+      "bytes": 2886,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/receipt.json",
+      "sha256": "11a28e57ac49f786465c8f39659427c184dc2d9beecfad6b64edaa9672254697"
+    },
+    {
+      "bytes": 49,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20843,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-01-treatment/verifier/test-stdout.txt",
+      "sha256": "37c9727123893091176e09003d945df1dbe61eff44594e14617a0bc183cd43ab"
+    },
+    {
+      "bytes": 288255,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/agent/trajectory.json",
+      "sha256": "50ec1fb577d2df91108ffa93d13d3154f892daca09e9e30e23627ea7eb107b24"
+    },
+    {
+      "bytes": 1948,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/diagnostic.json",
+      "sha256": "3586b4b28398ec1958d229fd6cf99638d812c0e61da8898d847e5eca2e6ccbae"
+    },
+    {
+      "bytes": 159,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 871,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/harbor/config.json",
+      "sha256": "22a00f4a8dd99812b10637af164c084c348ba3d9ee50fce124c8ffd5614ea6d6"
+    },
+    {
+      "bytes": 907,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/harbor/job-config.json",
+      "sha256": "08077caa8787b482e65fcc004c79d989a31297cda77a070c081095be783729dd"
+    },
+    {
+      "bytes": 1230,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/harbor/job-job.log",
+      "sha256": "7029c47b009f6239b06d7d0c6e9f42d46213dbeef2cfbb9b6c7b6d78be33021d"
+    },
+    {
+      "bytes": 1155,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/harbor/job-result.json",
+      "sha256": "ebe64df25a36b481039a7bc87b19a721ec14e51b8ce9a363017c17e66b2b1b93"
+    },
+    {
+      "bytes": 4404,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/harbor/result.json",
+      "sha256": "79dd2e4199459084d30a076d56e5cffcaf241fae8335d97d6c6dd559d2a3a30a"
+    },
+    {
+      "bytes": 1230,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/harbor/trial.log",
+      "sha256": "7029c47b009f6239b06d7d0c6e9f42d46213dbeef2cfbb9b6c7b6d78be33021d"
+    },
+    {
+      "bytes": 2686,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/receipt.json",
+      "sha256": "646ac7e40875a38806f842995dbfefd0776e6b166f2e43657e3a44be9770426a"
+    },
+    {
+      "bytes": 49,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20860,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-control/verifier/test-stdout.txt",
+      "sha256": "9e35291326869a9f424256ac0205bdeeff592a62021db08461a854ad07179c80"
+    },
+    {
+      "bytes": 121,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/agent/injection-channel.json",
+      "sha256": "760fbdc8195b5e9536755e013f91e22f0cd332b0c55a1079aa6832bff6970a70"
+    },
+    {
+      "bytes": 5172,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/agent/preflight.json",
+      "sha256": "b92e9131fb38766510a44185a94427e643d2534c2f39e3326c6b4ecb3e3c7162"
+    },
+    {
+      "bytes": 463018,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/agent/trajectory.json",
+      "sha256": "142599c23e5f5895bb28d4870371fafceef1ea021d914665b684c7d4324a329d"
+    },
+    {
+      "bytes": 1948,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/diagnostic.json",
+      "sha256": "f4af9138945b8fd061018e7c7f34dc14c69ef5f5dff50d0c3e5edb6efb880c39"
+    },
+    {
+      "bytes": 159,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1973,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/harbor/config.json",
+      "sha256": "4d30ae604a81b930df394cbd6133da40a04d1f7790e2ad3e6d827939c3ab40c6"
+    },
+    {
+      "bytes": 2057,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/harbor/job-config.json",
+      "sha256": "4a19d750f1b12743bedc1f65b52a17b92bde5b7f158df43d286dc3d97b48712c"
+    },
+    {
+      "bytes": 7485,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/harbor/job-job.log",
+      "sha256": "7e005fbe640f81829f4c7729dbf483f9a2d9aceb1d47f2ebd77b6628fc622065"
+    },
+    {
+      "bytes": 1156,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/harbor/job-result.json",
+      "sha256": "3bef3ddb994de4fc0b238206f1e729bb299e9564fa683b6c91b84e32d96cb8c5"
+    },
+    {
+      "bytes": 5548,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/harbor/result.json",
+      "sha256": "765f736f88a4b310cbd601f0798a2a76d94aeefa31cc114f18074b121f130b86"
+    },
+    {
+      "bytes": 7485,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/harbor/trial.log",
+      "sha256": "7e005fbe640f81829f4c7729dbf483f9a2d9aceb1d47f2ebd77b6628fc622065"
+    },
+    {
+      "bytes": 2897,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/receipt.json",
+      "sha256": "5993cf6287249502740d4afa1d90a408b27ca353fdc239427d2f5dc2414809b3"
+    },
+    {
+      "bytes": 49,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20462,
+      "path": "accepted/settings-label-roundtrip-v4/attempts/settings-label-roundtrip-v4-attempt-02-treatment/verifier/test-stdout.txt",
+      "sha256": "05be7fce1ccbba0636922c9ac8ae45efdec214daa8d78117f49e2f93f6a0e0f4"
+    },
+    {
+      "bytes": 1336,
+      "path": "accepted/settings-label-roundtrip-v4/certification.json",
+      "sha256": "00d24ef2742f204ac1f5e5a12a3864044c8a18b0d41d4240a5e84463134f5018"
+    },
+    {
+      "bytes": 33556,
+      "path": "accepted/settings-label-roundtrip-v4/repeat.json",
+      "sha256": "6b82b5654e9e0821056e035412d1d3f3b1263bd8ee42ce99f35aec31ee6b9107"
+    },
+    {
+      "bytes": 9837,
+      "path": "accepted/settings-label-roundtrip-v4/result.json",
+      "sha256": "efd89fb40da2e50ddac4156bcb48b6cdc4a856475cd69ebc7a75d59fa19468f3"
+    },
+    {
+      "bytes": 4632,
+      "path": "admissions.json",
+      "sha256": "3fafb87e274b3cdbf1355fcc9b2eabb9ae930bd739bbe8b67d4359f697c27864"
+    },
+    {
+      "bytes": 421,
+      "path": "excluded/drift-r1/admission.json",
+      "sha256": "4289af51715c4748557431c224324283bd89d3beec00f364ef8964770538a4b9"
+    },
+    {
+      "bytes": 1891,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/diagnostic.json",
+      "sha256": "5f46a3b861f8044e46378f743c0053da2b3707af273d3d628da9de54802b9176"
+    },
+    {
+      "bytes": 869,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/harbor/config.json",
+      "sha256": "630739500ae00550e4375c0b644c95f394bf62c2b8a39bfff7734764dc0a9706"
+    },
+    {
+      "bytes": 910,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/harbor/job-config.json",
+      "sha256": "b8ec9324d0eff4c301a8db3eec23ae54f9f76645a347965f726cb2a3561ebbc7"
+    },
+    {
+      "bytes": 3021,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/harbor/job-job.log",
+      "sha256": "8e9e7950cca4137ab76d82c8d14c1c4420218d93357707152642f59ae920ecbd"
+    },
+    {
+      "bytes": 1144,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/harbor/job-result.json",
+      "sha256": "03dd2c29f1c0cbb7946c468747cf23424d6e64bee7c7f9036a8a9eb7bce8b71d"
+    },
+    {
+      "bytes": 5598,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/harbor/result.json",
+      "sha256": "f06ed13b2c7b88e5e55fd03154f354a478bbcb6bb7c21cc921ad44bc9eb584e0"
+    },
+    {
+      "bytes": 3021,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/harbor/trial.log",
+      "sha256": "8e9e7950cca4137ab76d82c8d14c1c4420218d93357707152642f59ae920ecbd"
+    },
+    {
+      "bytes": 2659,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/receipt.json",
+      "sha256": "38b3a8c2c2ba6fc6a7be196f7275b746f1b2b0814e4131729b10aeb90bcc9d19"
+    },
+    {
+      "bytes": 199239,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/steps/establish/agent/trajectory.json",
+      "sha256": "7ed16a0c854a0c50380aacd38b8eb0ea40d32665fccb9f028665a8a5c6d8c646"
+    },
+    {
+      "bytes": 202702,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-control/steps/follow-up/agent/trajectory.json",
+      "sha256": "d68eef7ae70bd6503e9b72d74738b62b32cfcff8609b2abbfe48c753dc59a5d8"
+    },
+    {
+      "bytes": 1891,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/diagnostic.json",
+      "sha256": "3c09877763e42afb1fd5293f9240f529bd3b8054a65ea6fd1c7c74a11c9be86d"
+    },
+    {
+      "bytes": 1842,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/harbor/config.json",
+      "sha256": "462dd25e0cc8184d6efd0ae0a4dbdb0312e40ba9e9c4b9f2744a7c57f186193d"
+    },
+    {
+      "bytes": 1919,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/harbor/job-config.json",
+      "sha256": "f4cf87a64c33b944a91763089d41d28ccb896d3b976a517fc623cc3ddbc1e2b6"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/harbor/job-job.log",
+      "sha256": "a83d5fc157e069b27ec12fac20f84a79ffa4bc4006910d8b14a943e1b0cfc5e5"
+    },
+    {
+      "bytes": 1144,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/harbor/job-result.json",
+      "sha256": "5b3c3c6139bc8b0212aa68def7f8a50ec7e620ac11ec7a347885eaf23a1b5bf2"
+    },
+    {
+      "bytes": 6591,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/harbor/result.json",
+      "sha256": "c6e086dd881a5b867d389ed042f80e5a1cc7a9cef8bd54cbb10d891aa717f5c2"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/harbor/trial.log",
+      "sha256": "a83d5fc157e069b27ec12fac20f84a79ffa4bc4006910d8b14a943e1b0cfc5e5"
+    },
+    {
+      "bytes": 2903,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/receipt.json",
+      "sha256": "9e7169e3f54ea326aad0db224b26b702650fd0c11b5a280a99c1c11503e7f807"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/steps/establish/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 241470,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/steps/establish/agent/trajectory.json",
+      "sha256": "171792185c5d0b68a260e40f4e24f2a93d58327df44e3a5f976db3b2207e09b4"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/steps/follow-up/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 245175,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-01-faithful/steps/follow-up/agent/trajectory.json",
+      "sha256": "e087a67d8eb016f0dcb6ba697968d4403ca095362a9edf65a7836774fb81df60"
+    },
+    {
+      "bytes": 1891,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/diagnostic.json",
+      "sha256": "187a4041dedd04168ca1b3462b5b7908098bb2b987fe006c6197fe037d15dc35"
+    },
+    {
+      "bytes": 869,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/harbor/config.json",
+      "sha256": "03a814bc784489c318a14a4b4ffedc2f99b6ca9552144555df9b58edb69ba749"
+    },
+    {
+      "bytes": 910,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/harbor/job-config.json",
+      "sha256": "5891a19b4a685605f43fb4fce422a5407c5f109bc9cf647e130c488ecda66295"
+    },
+    {
+      "bytes": 3021,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/harbor/job-job.log",
+      "sha256": "d0508cec6b5c0714d49a2c047d9fa59b4dc5cf5f8c871209448be1acd46c25fe"
+    },
+    {
+      "bytes": 1145,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/harbor/job-result.json",
+      "sha256": "67555ce88e3cc732a7d8e8222a86759db7ba76573c0ba70f18457f6dcf67590a"
+    },
+    {
+      "bytes": 5590,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/harbor/result.json",
+      "sha256": "dd274bbc3798de719f3dc4c2282245c50d9a4e311d855c1ab5ff845666755d76"
+    },
+    {
+      "bytes": 3021,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/harbor/trial.log",
+      "sha256": "d0508cec6b5c0714d49a2c047d9fa59b4dc5cf5f8c871209448be1acd46c25fe"
+    },
+    {
+      "bytes": 2658,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/receipt.json",
+      "sha256": "b952c87aa5f0061d74ca4304794ce791e6c65891b9932cc7501309e4784c3940"
+    },
+    {
+      "bytes": 87421,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/steps/establish/agent/trajectory.json",
+      "sha256": "d40f1eaa70063714ce1e734c515fee9df00cd3015611c63ecd6e92a80eaa4692"
+    },
+    {
+      "bytes": 90074,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-control/steps/follow-up/agent/trajectory.json",
+      "sha256": "b248142e72d86c04a067a46adc32b0be5209955c92cfba1e0e58868f4e85989a"
+    },
+    {
+      "bytes": 1891,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/diagnostic.json",
+      "sha256": "352d4deb616f914eae688113008735614419ec84802b7dca0efbe4ab7d8db8d4"
+    },
+    {
+      "bytes": 1842,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/harbor/config.json",
+      "sha256": "708d38c8eb91904057f577b444c3c176768c5a2965eb1534712940d4ca420a08"
+    },
+    {
+      "bytes": 1919,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/harbor/job-config.json",
+      "sha256": "49afea2e4287e5ecd0258ffca2470076edc0b2e15a273bcff8ca3615ef8b2006"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/harbor/job-job.log",
+      "sha256": "7dacb991f4275e5e2cba2dbdf34ba84d74cb5351d581956a736e653944299604"
+    },
+    {
+      "bytes": 1145,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/harbor/job-result.json",
+      "sha256": "f65e63015baee6bb0114cb891feced15bed57674ba7e96a2128a2dc681ed7973"
+    },
+    {
+      "bytes": 6583,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/harbor/result.json",
+      "sha256": "135f7f5fb9f57772f6aa83bf5ac711c2c6584d04f354a8bfe77b2cca1155cad5"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/harbor/trial.log",
+      "sha256": "7dacb991f4275e5e2cba2dbdf34ba84d74cb5351d581956a736e653944299604"
+    },
+    {
+      "bytes": 2899,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/receipt.json",
+      "sha256": "a12427e9de65fb27be9f6cdc679453394533e097afb89d4b925980ea5c87de9d"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/steps/establish/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 107082,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/steps/establish/agent/trajectory.json",
+      "sha256": "8ac162d3feb28b9f9acd884ebdd55f9ce080a9c51b4bfcec0773972ce10989b7"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/steps/follow-up/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 110221,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-02-faithful/steps/follow-up/agent/trajectory.json",
+      "sha256": "27e5613b7e067108ed917f4d4520ea6f137211e8daaa653e185a2632fb0dbc39"
+    },
+    {
+      "bytes": 2576,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-control/receipt.json",
+      "sha256": "b9de7fb2ca3d4fb1f4e2ab4c5d1538fc8203c979430dbb1a300c0e88a8b41be3"
+    },
+    {
+      "bytes": 1891,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/diagnostic.json",
+      "sha256": "3d2c8cc834267f04ed88f02dad1937fa52c8aa423fe1be81abc476953e378c58"
+    },
+    {
+      "bytes": 1842,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/harbor/config.json",
+      "sha256": "fa209ac18e7ed527e1fc382447adfcb2a1ffb4420892f6cfbbb77edc8270fe0f"
+    },
+    {
+      "bytes": 1919,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/harbor/job-config.json",
+      "sha256": "727e501dab7baa598b294c8bfb9c2c3dbb26bd42cb65642e8724c6b48195d7a0"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/harbor/job-job.log",
+      "sha256": "ae3b65d79cd2a772c048bb4b3c1913e652beb5bf71441af9938e373e238993cd"
+    },
+    {
+      "bytes": 1155,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/harbor/job-result.json",
+      "sha256": "048a7051ca3e7fe586ab9a1ede694d13b22c25888982179da2755377db705bff"
+    },
+    {
+      "bytes": 6600,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/harbor/result.json",
+      "sha256": "ab78fbd8702dd31bc54c4de8b7c6e7bd565c5952e00e0f2e3d18f4590bb21c05"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/harbor/trial.log",
+      "sha256": "ae3b65d79cd2a772c048bb4b3c1913e652beb5bf71441af9938e373e238993cd"
+    },
+    {
+      "bytes": 2904,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/receipt.json",
+      "sha256": "6d5bd3e1846ee8bc45f77f77ab216a20e1de46065a70ddc82c40808f1303c49b"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/steps/establish/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 264913,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/steps/establish/agent/trajectory.json",
+      "sha256": "ac1f5d334de39589769b199b342027687ddf4e08759961fd5520f112193f9c7f"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/steps/follow-up/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 268682,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-03-faithful/steps/follow-up/agent/trajectory.json",
+      "sha256": "c9b61bf08d6ee52cfb7c0672d9a7f4f27a8ace31be748acae43f91d3e93c8e04"
+    },
+    {
+      "bytes": 1891,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/diagnostic.json",
+      "sha256": "2de6b374f6527b89564ef3626a9b240112d168d2f31d9637dda53e2a148f7668"
+    },
+    {
+      "bytes": 869,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/harbor/config.json",
+      "sha256": "a6dfcdb4c00b9d523f50418b39e8751fbfe604480e1b87d962c9da28914e1917"
+    },
+    {
+      "bytes": 910,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/harbor/job-config.json",
+      "sha256": "1555ddbd39067aeebf7bcc56c398f7ce6f997543c450f524eb6ac4b56e931cc5"
+    },
+    {
+      "bytes": 3021,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/harbor/job-job.log",
+      "sha256": "b2a99817127a8b2ce78a458e1024fd80b079a75dac84b403315881f30e5082c4"
+    },
+    {
+      "bytes": 1153,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/harbor/job-result.json",
+      "sha256": "b5e5546980137797995f2756f403f91948104846d7c93bdb534620bf698bfd33"
+    },
+    {
+      "bytes": 5598,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/harbor/result.json",
+      "sha256": "557e3e15cf17c40be83c1675ba08bcc7dbf161e42d6efaed611fe78a3ad7d9b8"
+    },
+    {
+      "bytes": 3021,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/harbor/trial.log",
+      "sha256": "b2a99817127a8b2ce78a458e1024fd80b079a75dac84b403315881f30e5082c4"
+    },
+    {
+      "bytes": 2670,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/receipt.json",
+      "sha256": "4f7e2c01f9f96c3b1efb277edca783e44639982e7554c2707fee5f2201363cb8"
+    },
+    {
+      "bytes": 155179,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/steps/establish/agent/trajectory.json",
+      "sha256": "79d3249f75acb336abbd2a34384aeedcb43363644aea78b3772169b44c42ad79"
+    },
+    {
+      "bytes": 158186,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-control/steps/follow-up/agent/trajectory.json",
+      "sha256": "0f30664277efab0c4895ac4abf6aa3531ae7889e4e6010677be9df0f1217cdb0"
+    },
+    {
+      "bytes": 1891,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/diagnostic.json",
+      "sha256": "9c157cd4126e7afc047aa0da4214ed74d8a264202b8160d0f42881a7da9dd7bc"
+    },
+    {
+      "bytes": 1842,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/harbor/config.json",
+      "sha256": "8851218b13a2bad73002db3d73991cc43e6698ea3efa6634a7c690f0acffd6ba"
+    },
+    {
+      "bytes": 1919,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/harbor/job-config.json",
+      "sha256": "54ffb75725955c0a84d6f79a3a543da1839b76adb5d6bb3debf6931a4e88e8a6"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/harbor/job-job.log",
+      "sha256": "acef47cf8671aeaa07a82e93a566b12c6b82e2dd5c601b2d7874c4d3dcf60e14"
+    },
+    {
+      "bytes": 1147,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/harbor/job-result.json",
+      "sha256": "bbcc4d05472476281af56dfafca39d3d024db118d1f58717f19823304d499f66"
+    },
+    {
+      "bytes": 6580,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/harbor/result.json",
+      "sha256": "cc6b650fd85b5e1ff20b5ae6d1e1d3778e0dc7e21d5d497fc3d90708d4b07dfd"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/harbor/trial.log",
+      "sha256": "acef47cf8671aeaa07a82e93a566b12c6b82e2dd5c601b2d7874c4d3dcf60e14"
+    },
+    {
+      "bytes": 2896,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/receipt.json",
+      "sha256": "a7f8875d622e78f0b2e1b32252ba71f3417d4baa62adcf0248dd492cc98a29d0"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/steps/establish/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 181293,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/steps/establish/agent/trajectory.json",
+      "sha256": "4ad15d7b71617033a6a36477c6a932e62eeb5ed0c9429a8c8f8ff4bc2cb963c9"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/steps/follow-up/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 184510,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-04-faithful/steps/follow-up/agent/trajectory.json",
+      "sha256": "5c7b371ab88546e4a826412ba217b2894f0eba1024166a0eb56a04a42673a1bd"
+    },
+    {
+      "bytes": 1890,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/diagnostic.json",
+      "sha256": "65cac4cdcae8d4b595df002b8cfc245acca15f448fc051a4bc231ec896551459"
+    },
+    {
+      "bytes": 869,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/harbor/config.json",
+      "sha256": "2a7776f74c2b3d66f227ee4b992eb19a6870d73b9806d54f46222de2c53019ef"
+    },
+    {
+      "bytes": 910,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/harbor/job-config.json",
+      "sha256": "cefb46d851a23bc89fde487baee614a0a359009da8455df554c0206e07ce227e"
+    },
+    {
+      "bytes": 3021,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/harbor/job-job.log",
+      "sha256": "a05249dba936de75593f2e488b629ea358e86158dad21940510fa6e5b16b3013"
+    },
+    {
+      "bytes": 1154,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/harbor/job-result.json",
+      "sha256": "a76f6a133995f960e15788b434b76f7ab8e669fbf8d2805a6a0a241aa8872fa6"
+    },
+    {
+      "bytes": 5589,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/harbor/result.json",
+      "sha256": "4807517433c8514f55cb26c342aadeecd83c61e9ccd6f081ff886174f7f20721"
+    },
+    {
+      "bytes": 3021,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/harbor/trial.log",
+      "sha256": "a05249dba936de75593f2e488b629ea358e86158dad21940510fa6e5b16b3013"
+    },
+    {
+      "bytes": 2679,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/receipt.json",
+      "sha256": "de66b81f35d2820d078dfdc3ffd71b39aaae59b5408126624c215b50f44ec104"
+    },
+    {
+      "bytes": 207430,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/steps/establish/agent/trajectory.json",
+      "sha256": "de739761a03c428c9b424ebca35155a24e1ca1fb4a7aaeb4a60529025d3d45a2"
+    },
+    {
+      "bytes": 209982,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-control/steps/follow-up/agent/trajectory.json",
+      "sha256": "084b0860fe112bf6bf6ff7619795fdaf8adf46ccc40d2646bd01529ba191c112"
+    },
+    {
+      "bytes": 1891,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/diagnostic.json",
+      "sha256": "3f1d7b61e28c388742a79c69358e2624e2389f92f6c53c7a2d7c73f0380d08ed"
+    },
+    {
+      "bytes": 1842,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/harbor/config.json",
+      "sha256": "2378d1ba786c5a94c23d44061fb5cb5b50c1a92b8d572c339987906a1bf7c8b2"
+    },
+    {
+      "bytes": 1919,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/harbor/job-config.json",
+      "sha256": "52014df1ab81e9b8c9a9e546c744f6c6266a8c6fcaa56a2546f6d1890d36ad3e"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/harbor/job-job.log",
+      "sha256": "1b4195e59bab72e8aece7bce30c5761ff42f3c0a9748dfb8e675ffd081c5b116"
+    },
+    {
+      "bytes": 1146,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/harbor/job-result.json",
+      "sha256": "86e08fc0fa6b3f5bb82cf6d3fa25a1a60587323417e4e612ae87d0785a96709d"
+    },
+    {
+      "bytes": 6591,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/harbor/result.json",
+      "sha256": "f94cbac6a96d59b019f37438610691f3149d56875b2b6d3c0db58bdf8d135557"
+    },
+    {
+      "bytes": 7597,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/harbor/trial.log",
+      "sha256": "1b4195e59bab72e8aece7bce30c5761ff42f3c0a9748dfb8e675ffd081c5b116"
+    },
+    {
+      "bytes": 2904,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/receipt.json",
+      "sha256": "19b37fb562e4c515e1191e29018aefd2ca858619eeba8ecd329f9f9717319ee5"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/steps/establish/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 228349,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/steps/establish/agent/trajectory.json",
+      "sha256": "36143b912bfae63998a750d96416e78d4f7e4d74168ba7355aa4490ac5d2c3a9"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/steps/follow-up/agent/preflight.json",
+      "sha256": "af04ef146349f1922153e1aa659c07e2b99d57f59f60480360c1c27cf05ba840"
+    },
+    {
+      "bytes": 232064,
+      "path": "excluded/drift-r1/attempts/drift-r1-attempt-05-faithful/steps/follow-up/agent/trajectory.json",
+      "sha256": "1d77080322b3edce73c088cb97bca87a60fe7af07fc6effbe6f1b37c62418f36"
+    },
+    {
+      "bytes": 1326,
+      "path": "excluded/drift-r1/certification.json",
+      "sha256": "d05b89cc203f982d00a07fa3cf029bf73b561f61b123dc27f51dc5e90ace3459"
+    },
+    {
+      "bytes": 72040,
+      "path": "excluded/drift-r1/repeat.json",
+      "sha256": "81b488a5c7e71f20f1d0699203a277fda1cb4bdba4ae6b2191897f60d0ff3fbb"
+    },
+    {
+      "bytes": 17838,
+      "path": "excluded/drift-r1/result.json",
+      "sha256": "7e05b356a2d25586439410eea9c23a83a93e74d696a4b8d3429f07699166199a"
+    },
+    {
+      "bytes": 469,
+      "path": "excluded/input-keypress-architecture-v1/admission.json",
+      "sha256": "61717988d43d3add13693555bf4e028ed73d52e0864bf46109632dd05f72d786"
+    },
+    {
+      "bytes": 391717,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/agent/trajectory.json",
+      "sha256": "de33fd540f7c6a32e26283631a9fb14158058e0b58e081d19644952678c4ff18"
+    },
+    {
+      "bytes": 2738,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/diagnostic.json",
+      "sha256": "b25bdcfd520265729ed1e279bf14e09218ea1a6ee93550efc57f2043943e5353"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 883,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/harbor/config.json",
+      "sha256": "a09a81772b93088e7932e6f4405e30ee1875492399834bb31624254bc3505490"
+    },
+    {
+      "bytes": 916,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/harbor/job-config.json",
+      "sha256": "2d753f6adaac0ad208ec18ff149b052732f10a3635a53136159a59fbf98a4c02"
+    },
+    {
+      "bytes": 1300,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/harbor/job-job.log",
+      "sha256": "adcafb2f5f2b8c6c9815c6809da99fe7bdb1951a9fbeb2ba81c3a5c6818926e0"
+    },
+    {
+      "bytes": 1311,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/harbor/job-result.json",
+      "sha256": "c633ada634066de296147021e48e36b9a2060dac17686df0488fe0d472e1c7c6"
+    },
+    {
+      "bytes": 9372,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/harbor/result.json",
+      "sha256": "1ab2bbc3f4c6792a7d0aca85a9ac555af2c757fd8ced3b5d8b468c533f8b3084"
+    },
+    {
+      "bytes": 1226,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/harbor/trial.log",
+      "sha256": "2363b16e477178ce6259c0e56f860e44bab62291b5893891ae06e7224219e408"
+    },
+    {
+      "bytes": 2756,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/receipt.json",
+      "sha256": "ad0261fbeda227a198f0a4da528a29d5d9d51aaa47b89df3ab557e59a088c243"
+    },
+    {
+      "bytes": 123,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/verifier/evidence.json",
+      "sha256": "ef20e666d5f2db27b97688cf1d272552c8a03be13d3a21aef959893e8b5b5440"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/verifier/mutation.json",
+      "sha256": "e134be75e4b2469b9df51a0f47c2d2b6cc6e034269ac266c9947473474fe2b2f"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/verifier/reward.json",
+      "sha256": "659793fa2b3aa457042a9c92dd5049d79d13aecc98d1f2a0e73d08607e3fd786"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 120,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/agent/injection-channel.json",
+      "sha256": "911624db7efd3e38ba5f7ecd9f46dd1f6ab0ae49a0cf23beed7141042c93b06e"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/agent/preflight.json",
+      "sha256": "0e2a23e7da77c0c205ab0c1e4618d963ca1dc1159bf75035f19cf6a46ffa9bc1"
+    },
+    {
+      "bytes": 899362,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/agent/trajectory.json",
+      "sha256": "fb09ced036ea8c7e733ea16fe846388f235c3275fecfb4c6f46b176ad9075131"
+    },
+    {
+      "bytes": 1956,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/diagnostic.json",
+      "sha256": "848d008b4e44dc53ac08b73a70ebca192848afa1c2c535900d8acbf20c4c5d2d"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1984,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/harbor/config.json",
+      "sha256": "5d3e980ccf3834699fd61b0653dc2894750e43218a4f771b6f642cae3f6c5075"
+    },
+    {
+      "bytes": 2065,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/harbor/job-config.json",
+      "sha256": "c168a155921acfbc4e5c801cd77f71ec84611524d87aa84fc372139501055459"
+    },
+    {
+      "bytes": 6515,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/harbor/job-job.log",
+      "sha256": "3f6893343ef9fbd650c49de01df27c03e209c9a5ee8c66f8f343102c09e8f59c"
+    },
+    {
+      "bytes": 1159,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/harbor/job-result.json",
+      "sha256": "a972ac27704108c9dcfa910f9e50c85112b3643e05aab8190a6de046115bc3ca"
+    },
+    {
+      "bytes": 5577,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/harbor/result.json",
+      "sha256": "82f2e7dbb24d79df3a4f1de340549093144b9dd6592289f77d13e2ce93a4c87d"
+    },
+    {
+      "bytes": 6515,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/harbor/trial.log",
+      "sha256": "3f6893343ef9fbd650c49de01df27c03e209c9a5ee8c66f8f343102c09e8f59c"
+    },
+    {
+      "bytes": 2901,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/receipt.json",
+      "sha256": "dfb39fa5a2f84e938fcd815b57ff944b67c8dc324249f2f8a91456d8ef82ce31"
+    },
+    {
+      "bytes": 123,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/verifier/evidence.json",
+      "sha256": "b76c653aad92ece40d92f5862dd454bdbfd4963daa623b1c5c942c6cde1c5ec5"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/verifier/mutation.json",
+      "sha256": "e134be75e4b2469b9df51a0f47c2d2b6cc6e034269ac266c9947473474fe2b2f"
+    },
+    {
+      "bytes": 15,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/verifier/reward.json",
+      "sha256": "f028988238b860dfe510054b6eeb03d9767df7df943b9320a5e1c50c9b18dbcf"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-01-treatment/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 471046,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/agent/trajectory.json",
+      "sha256": "22a48cb58ce357449010c871be0118387dabecbc4216b8176dc43a1455f088a0"
+    },
+    {
+      "bytes": 2739,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/diagnostic.json",
+      "sha256": "6ed067b3e7bca1b6ec9c3daba6460a4dc205405a828c3395b51edd36b353a20a"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 883,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/harbor/config.json",
+      "sha256": "3b3af6c7de8237a11714524cfc227b045112281a87053062b7d4686d7be800b4"
+    },
+    {
+      "bytes": 916,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/harbor/job-config.json",
+      "sha256": "0cfcdc6cd08b6dae24a68a3250f2c7ddfd67504cfe12ea24cb8fa3d37a3000b8"
+    },
+    {
+      "bytes": 1300,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/harbor/job-job.log",
+      "sha256": "cafe93e93a9549c489433623e4c11371b6fcddd462cfb92f50f6a11c36ca60db"
+    },
+    {
+      "bytes": 1311,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/harbor/job-result.json",
+      "sha256": "f6240c687efb18c751746d46bd68d99f289a8cea099593aef3a36dcbbd7d0939"
+    },
+    {
+      "bytes": 9374,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/harbor/result.json",
+      "sha256": "bc68fe36769f143c241fed3f0ddde7e7968786b1e13370d3cf10b200d0c66ebe"
+    },
+    {
+      "bytes": 1226,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/harbor/trial.log",
+      "sha256": "eb0194e1ff98f05efa2f4a466a5a5717e10319b264f8a899efef725a8925bf67"
+    },
+    {
+      "bytes": 2741,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/receipt.json",
+      "sha256": "3e1842386220016a0700d7c095053aefd085009701b1409d9faf2e481aee749c"
+    },
+    {
+      "bytes": 123,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/verifier/evidence.json",
+      "sha256": "ef20e666d5f2db27b97688cf1d272552c8a03be13d3a21aef959893e8b5b5440"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/verifier/mutation.json",
+      "sha256": "e134be75e4b2469b9df51a0f47c2d2b6cc6e034269ac266c9947473474fe2b2f"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/verifier/reward.json",
+      "sha256": "659793fa2b3aa457042a9c92dd5049d79d13aecc98d1f2a0e73d08607e3fd786"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-control/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 120,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/agent/injection-channel.json",
+      "sha256": "911624db7efd3e38ba5f7ecd9f46dd1f6ab0ae49a0cf23beed7141042c93b06e"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/agent/preflight.json",
+      "sha256": "0e2a23e7da77c0c205ab0c1e4618d963ca1dc1159bf75035f19cf6a46ffa9bc1"
+    },
+    {
+      "bytes": 123058,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/agent/trajectory.json",
+      "sha256": "6fccd7ce574473a7efb6a3db5edb55ff1481f89445bab06afc71188257044863"
+    },
+    {
+      "bytes": 1957,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/diagnostic.json",
+      "sha256": "d18140c217ef1878352c0efd834c8324e95c83515e3f4f4bc8c43eb6730c955b"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1984,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/harbor/config.json",
+      "sha256": "188ffdacb554fd8fd7f26ff3d2d0bbdb62d1582508dce3b8b1249b8e58afedcb"
+    },
+    {
+      "bytes": 2065,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/harbor/job-config.json",
+      "sha256": "8c82e62dd0552f602b0b0f363c854179db473ba95bacb7de532c8ce8cad25711"
+    },
+    {
+      "bytes": 6515,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/harbor/job-job.log",
+      "sha256": "1e83f5128e62d74a75a53109314d13a81dc678c3370bcea91ccfc9cfff4b5008"
+    },
+    {
+      "bytes": 1159,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/harbor/job-result.json",
+      "sha256": "fa17a30374b38f83706a5248b925851f69f8eab379f165441272dc8b0073c782"
+    },
+    {
+      "bytes": 5577,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/harbor/result.json",
+      "sha256": "1191298c1b3031825717ab67181c4d17c1f4eb51602031cae1090ce89a8d5a7c"
+    },
+    {
+      "bytes": 6515,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/harbor/trial.log",
+      "sha256": "1e83f5128e62d74a75a53109314d13a81dc678c3370bcea91ccfc9cfff4b5008"
+    },
+    {
+      "bytes": 2903,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/receipt.json",
+      "sha256": "8322d1e853bd916058d17d9c7e7e8c8860d7f0c04867f45334796102c20bc402"
+    },
+    {
+      "bytes": 123,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/verifier/evidence.json",
+      "sha256": "3323291f63766ace27b1268e552c334a4f8779b23b2aaec1dd6957a6e1963bde"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/verifier/mutation.json",
+      "sha256": "e134be75e4b2469b9df51a0f47c2d2b6cc6e034269ac266c9947473474fe2b2f"
+    },
+    {
+      "bytes": 15,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/verifier/reward.json",
+      "sha256": "f028988238b860dfe510054b6eeb03d9767df7df943b9320a5e1c50c9b18dbcf"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/input-keypress-architecture-v1/attempts/input-keypress-architecture-v1-attempt-02-treatment/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1339,
+      "path": "excluded/input-keypress-architecture-v1/certification.json",
+      "sha256": "9f22d6ba91d5cddf88d6e90d76f459cdcf185aad56dfa0a062b492f6747739b4"
+    },
+    {
+      "bytes": 31779,
+      "path": "excluded/input-keypress-architecture-v1/repeat.json",
+      "sha256": "83953e652d4e1211f56b874eb8e9684d659892b96a0dd50d91431786549a76a9"
+    },
+    {
+      "bytes": 9963,
+      "path": "excluded/input-keypress-architecture-v1/result.json",
+      "sha256": "f91c1693c99d1f76dd0435f4d0b34dd9c6ec8e0be3962c43f4346e3bce3bf145"
+    },
+    {
+      "bytes": 462,
+      "path": "excluded/input-keypress-architecture-v2/admission.json",
+      "sha256": "15e7457f122851ef548842af9890e6a3b5e094d3e1c1dcc91a8d086f8664e1ca"
+    },
+    {
+      "bytes": 859260,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/agent/trajectory.json",
+      "sha256": "4832b5360ade24ee8e513d82d2816742062d0a9807c6c74d2a935d8035009587"
+    },
+    {
+      "bytes": 1957,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/diagnostic.json",
+      "sha256": "ef07c68a0f177f8897ce77d5414118830073fb1632b6fbe318dee29619d2320a"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 884,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/harbor/config.json",
+      "sha256": "df2dacdb12187d5abcdd3f199dcb110b9f2e32809ac3bfdebe422d516405b1c3"
+    },
+    {
+      "bytes": 917,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/harbor/job-config.json",
+      "sha256": "fb8473c96bc55fec3046c2c111e777926b41d7e652a4b61d6a2a0a0992e7081a"
+    },
+    {
+      "bytes": 1236,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/harbor/job-job.log",
+      "sha256": "12eec9fd5309e2a4717e24359985d21f96b8fbd157e6ff70d2b90dc0a5d12a89"
+    },
+    {
+      "bytes": 1160,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/harbor/job-result.json",
+      "sha256": "9dab7a6a55b12af4bd515d3937066ef0bd252aa63c6c87040d34b752b1706e5a"
+    },
+    {
+      "bytes": 4437,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/harbor/result.json",
+      "sha256": "785faecc1af3006e70090d86580c5f2b714b7071a2a90c4e3b24e5e64b8e466e"
+    },
+    {
+      "bytes": 1236,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/harbor/trial.log",
+      "sha256": "12eec9fd5309e2a4717e24359985d21f96b8fbd157e6ff70d2b90dc0a5d12a89"
+    },
+    {
+      "bytes": 2700,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/receipt.json",
+      "sha256": "930ef6f1c0f58ace3973ad3e9b99252275e697c4ea17671d8b36bd86988a69ad"
+    },
+    {
+      "bytes": 123,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/verifier/evidence.json",
+      "sha256": "d881ed4b703cf02fa549da96ae8609d23e8f8ca8875b408119128be240fa1ad3"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/verifier/mutation.json",
+      "sha256": "e134be75e4b2469b9df51a0f47c2d2b6cc6e034269ac266c9947473474fe2b2f"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 120,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/agent/injection-channel.json",
+      "sha256": "911624db7efd3e38ba5f7ecd9f46dd1f6ab0ae49a0cf23beed7141042c93b06e"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/agent/preflight.json",
+      "sha256": "0e2a23e7da77c0c205ab0c1e4618d963ca1dc1159bf75035f19cf6a46ffa9bc1"
+    },
+    {
+      "bytes": 290098,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/agent/trajectory.json",
+      "sha256": "99accaad4ed7ad6c349be286798b384fe702614240d64cd658b2dbeff395a3c2"
+    },
+    {
+      "bytes": 1958,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/diagnostic.json",
+      "sha256": "2d5ecf33c97e480d87b495d6c23f45cece0432770388ff06a2dd4780970d1b4d"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1985,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/harbor/config.json",
+      "sha256": "c50f124818af7e27593841456b29436af73643d5f22a282190999a5cf7e3df46"
+    },
+    {
+      "bytes": 2066,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/harbor/job-config.json",
+      "sha256": "e64e82362be7a41eca9391eae71730a11824463ca1f2f4a9be2a0426046784e8"
+    },
+    {
+      "bytes": 6515,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/harbor/job-job.log",
+      "sha256": "4b54ea39005afed2b3ce4fcc3c0dc140939f763d7583e4665ebd2f9f4b4f85e4"
+    },
+    {
+      "bytes": 1151,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/harbor/job-result.json",
+      "sha256": "1a14a8a313e010f2c3ce3c72b1c11d2a4f8b8acff3b7927155d0adc202d79618"
+    },
+    {
+      "bytes": 5570,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/harbor/result.json",
+      "sha256": "2816eb69bacbf5bf853859354f003a68404637d1ed0d65994e12d4ff11093c07"
+    },
+    {
+      "bytes": 6515,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/harbor/trial.log",
+      "sha256": "4b54ea39005afed2b3ce4fcc3c0dc140939f763d7583e4665ebd2f9f4b4f85e4"
+    },
+    {
+      "bytes": 2887,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/receipt.json",
+      "sha256": "47247992e642eaaa355f4029b56379ced90286cad5ba03cffd545a264f9fd292"
+    },
+    {
+      "bytes": 123,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/verifier/evidence.json",
+      "sha256": "4c3f50cbdc412a835934249e3cf5371bbcc14167da810844ccc00ccca8ce0bc7"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/verifier/mutation.json",
+      "sha256": "e134be75e4b2469b9df51a0f47c2d2b6cc6e034269ac266c9947473474fe2b2f"
+    },
+    {
+      "bytes": 15,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/verifier/reward.json",
+      "sha256": "21cc39d14268b8638f8d201ac3eb4ea948c83f138678e57bd6cc4495c8814a51"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/input-keypress-architecture-v2/attempts/input-keypress-architecture-v2-attempt-01-treatment/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1339,
+      "path": "excluded/input-keypress-architecture-v2/certification.json",
+      "sha256": "9f22d6ba91d5cddf88d6e90d76f459cdcf185aad56dfa0a062b492f6747739b4"
+    },
+    {
+      "bytes": 14976,
+      "path": "excluded/input-keypress-architecture-v2/repeat.json",
+      "sha256": "1ab0cd8bdf27bb19b8830fb1abf67beb9ce89ad5195bd858eb640f8a4821038b"
+    },
+    {
+      "bytes": 4054,
+      "path": "excluded/input-keypress-architecture-v2/result.json",
+      "sha256": "8d45920b7b7d1ef5f243cbf8c81baf3061c6237f7be5d528cf7a8f5949650f40"
+    },
+    {
+      "bytes": 414,
+      "path": "excluded/package-cache-is-empty-v1/admission.json",
+      "sha256": "3f4cac88a852f38964eae3587b28288b09fa3fdbc7ebc8f0924b52eea4a10546"
+    },
+    {
+      "bytes": 127218,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/agent/trajectory.json",
+      "sha256": "adf0f8756ab8e020a70c28dfabc0933f3f153961b5c88aaba8d93503ee1055c9"
+    },
+    {
+      "bytes": 1942,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/diagnostic.json",
+      "sha256": "d66a6ec4dc8c5099edd71c7bb5ed8fdf3993a07884d2e614b5914ad72a00de65"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 863,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/harbor/config.json",
+      "sha256": "b55f2c3ea6c1195c31bd51eabbf30ec9afb672d6dfcfd31a4a0aadb74fc91e8b"
+    },
+    {
+      "bytes": 901,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/harbor/job-config.json",
+      "sha256": "b997055f52506e1c364e3203e880fbc40df51aab0c2c3dd44d29ada0fdfb22a6"
+    },
+    {
+      "bytes": 1226,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/harbor/job-job.log",
+      "sha256": "d67e5a5ac2130d32563a8c60db5e47ec659e321120a1a621c7553d03c331fd37"
+    },
+    {
+      "bytes": 1144,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/harbor/job-result.json",
+      "sha256": "4978f4ed113fade9b34e3206e3c93e94e8e9909dafe9bddcc8256f9851f23446"
+    },
+    {
+      "bytes": 4375,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/harbor/result.json",
+      "sha256": "b21741ee99a06acbe48b2cf81858a8f0976166fa34ac7d5531b569e43e924b19"
+    },
+    {
+      "bytes": 1226,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/harbor/trial.log",
+      "sha256": "d67e5a5ac2130d32563a8c60db5e47ec659e321120a1a621c7553d03c331fd37"
+    },
+    {
+      "bytes": 2661,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/receipt.json",
+      "sha256": "fecc0c1aa8307c76e32448a3c855a20b071621a358716dba95bbb90e97e48e8b"
+    },
+    {
+      "bytes": 135,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/verifier/evidence.json",
+      "sha256": "067c8e712b9e4f3e828f5d47c7c0c48a5df46b17d6495ed398a0511d4fe43aba"
+    },
+    {
+      "bytes": 261,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/verifier/mutation.json",
+      "sha256": "62fee514aa738da2906b274df4978f5c8a3d2c2e121a1aa6cacf0477346ddb54"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/verifier/reward.json",
+      "sha256": "659793fa2b3aa457042a9c92dd5049d79d13aecc98d1f2a0e73d08607e3fd786"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 120,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/agent/injection-channel.json",
+      "sha256": "911624db7efd3e38ba5f7ecd9f46dd1f6ab0ae49a0cf23beed7141042c93b06e"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/agent/preflight.json",
+      "sha256": "0e2a23e7da77c0c205ab0c1e4618d963ca1dc1159bf75035f19cf6a46ffa9bc1"
+    },
+    {
+      "bytes": 105718,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/agent/trajectory.json",
+      "sha256": "6f14242f183e9e45f86e90204a99068e8a1e491211e05bc64bba0b68cbd2207e"
+    },
+    {
+      "bytes": 1942,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/diagnostic.json",
+      "sha256": "de501aabed2275b56dbdd2ce4fff75bb7c0f60ff941ad93f31e29e8b90949c74"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1964,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/harbor/config.json",
+      "sha256": "9d89ff6029ed7d8398615cab67d3d2acb5cbf796478147d12c6da4d31806e656"
+    },
+    {
+      "bytes": 2050,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/harbor/job-config.json",
+      "sha256": "a5c59fd2ddec3340dd849a82b641f91c3c4b8f747a40f99395dd0b4b4e9c165c"
+    },
+    {
+      "bytes": 6505,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/harbor/job-job.log",
+      "sha256": "d6d47fafa6eddc18723a576df456000e0c82886c79f61d264ceb7f28e31710f0"
+    },
+    {
+      "bytes": 1152,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/harbor/job-result.json",
+      "sha256": "22962d4f9664a614f4f62460a9c1c099b1817b3e53ce58e42e2ebaca4f349c07"
+    },
+    {
+      "bytes": 5525,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/harbor/result.json",
+      "sha256": "e0f53eedaa4ad51a0cc106e979278633e0b3fd963900d7af693b05c62c4083a6"
+    },
+    {
+      "bytes": 6505,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/harbor/trial.log",
+      "sha256": "d6d47fafa6eddc18723a576df456000e0c82886c79f61d264ceb7f28e31710f0"
+    },
+    {
+      "bytes": 2882,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/receipt.json",
+      "sha256": "6298afc00c6f2c7e632cb95a45d189bae38dc5b000112817a42c524af7d8f0d3"
+    },
+    {
+      "bytes": 135,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/verifier/evidence.json",
+      "sha256": "067c8e712b9e4f3e828f5d47c7c0c48a5df46b17d6495ed398a0511d4fe43aba"
+    },
+    {
+      "bytes": 261,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/verifier/mutation.json",
+      "sha256": "62fee514aa738da2906b274df4978f5c8a3d2c2e121a1aa6cacf0477346ddb54"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/verifier/reward.json",
+      "sha256": "659793fa2b3aa457042a9c92dd5049d79d13aecc98d1f2a0e73d08607e3fd786"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/package-cache-is-empty-v1/attempts/package-cache-is-empty-v1-attempt-01-treatment/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1334,
+      "path": "excluded/package-cache-is-empty-v1/certification.json",
+      "sha256": "d01c5d1372d21e84f59143460a3192beb59eb24288c094b27de5a655a160b59e"
+    },
+    {
+      "bytes": 19608,
+      "path": "excluded/package-cache-is-empty-v1/repeat.json",
+      "sha256": "b4effddbda951a1012e207976a53399601340dce25cc58f6ee7971e675dd66aa"
+    },
+    {
+      "bytes": 7212,
+      "path": "excluded/package-cache-is-empty-v1/result.json",
+      "sha256": "520b137e462c88e08e398ac50e6e7947b7f72f59c99a3886de34f067938deba9"
+    },
+    {
+      "bytes": 373,
+      "path": "excluded/settings-label-roundtrip-v1/admission.json",
+      "sha256": "41dc85c64a733da643084901c07ba4cfb1ddf6ac374ef9e2578a118495442475"
+    },
+    {
+      "bytes": 271074,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/agent/trajectory.json",
+      "sha256": "6b56520dd1bd40e7bcf7ac703e1b006a2d9bf426f21ce1d52287d4e5d933820b"
+    },
+    {
+      "bytes": 1948,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/diagnostic.json",
+      "sha256": "d6f754046f21c7fc8493e8977dff0f97ef3cb81b72e9522e1729aa4505da64ba"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 871,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/harbor/config.json",
+      "sha256": "d825f7cff942e9ffe46fabd87a69a3b517274856c54a9d5bb1e3bb9b0bf621f9"
+    },
+    {
+      "bytes": 907,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/harbor/job-config.json",
+      "sha256": "40e2a1e392be4fc5c5c1ee6ec2b0dfb13a49621196178d24c7072e31d3c1243b"
+    },
+    {
+      "bytes": 1230,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/harbor/job-job.log",
+      "sha256": "f3e7cbaa6bd7f5f3868c1e2c1c2c47c16e6da69c0906f8fe31303b06288f62fb"
+    },
+    {
+      "bytes": 1144,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/harbor/job-result.json",
+      "sha256": "c11579a714b24b94f012bb5a1b7255c688274bb729cd829cbd463b600d64b01c"
+    },
+    {
+      "bytes": 4393,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/harbor/result.json",
+      "sha256": "e8552af8a9b0c2e1c6c93fa9c07df78d0ba440b08e29f99394c3387c91dd8bcf"
+    },
+    {
+      "bytes": 1230,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/harbor/trial.log",
+      "sha256": "f3e7cbaa6bd7f5f3868c1e2c1c2c47c16e6da69c0906f8fe31303b06288f62fb"
+    },
+    {
+      "bytes": 2675,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/receipt.json",
+      "sha256": "1294075e4c467f17ffbcb41ac0fbdcdb52453bcbe7fd3e228609a73c96db008a"
+    },
+    {
+      "bytes": 166,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/verifier/evidence.json",
+      "sha256": "fad15a2415029813f5fdee4aecdb99024470c3ae7b786ae91f6f5bc80c3affde"
+    },
+    {
+      "bytes": 292,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/verifier/mutation.json",
+      "sha256": "e8a2dd14ec01eb2ab55803447b48474986011783312651408aa07685d1b2b4da"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/verifier/reward.json",
+      "sha256": "659793fa2b3aa457042a9c92dd5049d79d13aecc98d1f2a0e73d08607e3fd786"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 121,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/agent/injection-channel.json",
+      "sha256": "760fbdc8195b5e9536755e013f91e22f0cd332b0c55a1079aa6832bff6970a70"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/agent/preflight.json",
+      "sha256": "b92e9131fb38766510a44185a94427e643d2534c2f39e3326c6b4ecb3e3c7162"
+    },
+    {
+      "bytes": 403523,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/agent/trajectory.json",
+      "sha256": "ec6e8f2cc2559242c9f2eb51ec447b9a9742fb85ff3b8b72d1b5dbdb9c36cc3f"
+    },
+    {
+      "bytes": 2730,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/diagnostic.json",
+      "sha256": "809fca5180597fb81e494a16a92f2c98b5bfb380b395b08f5f8236cb79b2045c"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1973,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/harbor/config.json",
+      "sha256": "f1056c8e505b37c1879297f6a6b65062fdfd99e3893261430b1a938048dcd7e6"
+    },
+    {
+      "bytes": 2057,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/harbor/job-config.json",
+      "sha256": "77e827d90ad92caf387cb45899bc9fb770a52504763da3dcd74f50f7e9b4f725"
+    },
+    {
+      "bytes": 7549,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/harbor/job-job.log",
+      "sha256": "373ff88885a792c18806b24db7229c9fc68eccde0db2516acb4d260ecd0e16be"
+    },
+    {
+      "bytes": 1298,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/harbor/job-result.json",
+      "sha256": "37e97ba7fae24621f02993b5f114723ab7d1e063898e339b050bf6c2fe3e958a"
+    },
+    {
+      "bytes": 10452,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/harbor/result.json",
+      "sha256": "124f76a186915344982a026460970ee65b64fa50e20bbc9a750035f992c71ec0"
+    },
+    {
+      "bytes": 7475,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/harbor/trial.log",
+      "sha256": "6a0805fdf06f15f9ead8f2cb0dce5349a340ead21a9c0f2e30793207de2fd207"
+    },
+    {
+      "bytes": 2935,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/receipt.json",
+      "sha256": "9f074864744d61aaffa3478193faa9cdad7d032263af23d2a392059c3871b3ec"
+    },
+    {
+      "bytes": 174,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/verifier/evidence.json",
+      "sha256": "d81a5aa9203195bbc0cca0af502b37e09b3bb2407e663036b5bbb6b993e5f1ef"
+    },
+    {
+      "bytes": 300,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/verifier/mutation.json",
+      "sha256": "e64c6a65c302262927d4bb1496fa4d664298d8b7ae512a332507c4615c95b701"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/verifier/reward.json",
+      "sha256": "659793fa2b3aa457042a9c92dd5049d79d13aecc98d1f2a0e73d08607e3fd786"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-01-treatment/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 311683,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/agent/trajectory.json",
+      "sha256": "694a73c3e4d6d111d2e74e51ae335f6d40f0c2672a00673d60b7f8ae73513918"
+    },
+    {
+      "bytes": 2729,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/diagnostic.json",
+      "sha256": "18f4c15aa6cad3deb96251751d2cf097dcabd6ff3071b582bd5425ffab9236ca"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 871,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/harbor/config.json",
+      "sha256": "1463baa878c26f75d7eb2ba1f3e91d4916af9e364b85aaa8bdaef3b190eb5a17"
+    },
+    {
+      "bytes": 907,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/harbor/job-config.json",
+      "sha256": "b04a90354513ea302cd201a5200b44c545b61399e91f3f36b69cfd71ec6fd842"
+    },
+    {
+      "bytes": 1294,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/harbor/job-job.log",
+      "sha256": "48b0e78d645cc7b5de085871780f7b64714223f3e561cc3f353108e8fa0cbc38"
+    },
+    {
+      "bytes": 1305,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/harbor/job-result.json",
+      "sha256": "aac9ddda4d2d11e7c03b8983869b956cdd5d04fe36bad0aa11cd020315f6cea3"
+    },
+    {
+      "bytes": 9342,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/harbor/result.json",
+      "sha256": "ae129718e677b31a3388cf3385d24c9fcdc5bc489d42903673ef695889ee208b"
+    },
+    {
+      "bytes": 1220,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/harbor/trial.log",
+      "sha256": "f26ca95806cfdd9328ef1d196e63a769c3e307620b915f07a99259d3025494c4"
+    },
+    {
+      "bytes": 2742,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/receipt.json",
+      "sha256": "d69c9d32829f099365b062f134d169c875edd2fa8e683e83951941b6b48f4522"
+    },
+    {
+      "bytes": 166,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/verifier/evidence.json",
+      "sha256": "fad15a2415029813f5fdee4aecdb99024470c3ae7b786ae91f6f5bc80c3affde"
+    },
+    {
+      "bytes": 292,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/verifier/mutation.json",
+      "sha256": "c8ca3831b7bd5ccb267592e3e728d2db3d519fc684228defaec5cecf1357a2a9"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/verifier/reward.json",
+      "sha256": "659793fa2b3aa457042a9c92dd5049d79d13aecc98d1f2a0e73d08607e3fd786"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-control/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 121,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/agent/injection-channel.json",
+      "sha256": "760fbdc8195b5e9536755e013f91e22f0cd332b0c55a1079aa6832bff6970a70"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/agent/preflight.json",
+      "sha256": "b92e9131fb38766510a44185a94427e643d2534c2f39e3326c6b4ecb3e3c7162"
+    },
+    {
+      "bytes": 332944,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/agent/trajectory.json",
+      "sha256": "9c97416d15fa17c0c7e4f48649d7f06064b240887ad9a40aa1db821b08bc004a"
+    },
+    {
+      "bytes": 1948,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/diagnostic.json",
+      "sha256": "a0bc1c6e0b590732a6434eb3802a19a83de3a62cf21902c67bda1ea013e5f37d"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1973,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/harbor/config.json",
+      "sha256": "b96be3481732dd108e293b44086c84264ac73329fc0aab0b3788c0ddb6103466"
+    },
+    {
+      "bytes": 2057,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/harbor/job-config.json",
+      "sha256": "6e18456d3070f878ed039ad0ff80a061cdd7e450dff2d0b6825f7edd6f314240"
+    },
+    {
+      "bytes": 7485,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/harbor/job-job.log",
+      "sha256": "522844d5052f838a810c052882e51611c1a306de1520742132fd20eec31fd580"
+    },
+    {
+      "bytes": 1148,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/harbor/job-result.json",
+      "sha256": "af4e0472d1b16e3ba23e91ea077baa026c6cb91c03d3f1f11b4926bfc8594f8b"
+    },
+    {
+      "bytes": 5540,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/harbor/result.json",
+      "sha256": "e42a0e794706819ffc6b7afdd688da536b5e03ab0ef87030f9b1efaced89df50"
+    },
+    {
+      "bytes": 7485,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/harbor/trial.log",
+      "sha256": "522844d5052f838a810c052882e51611c1a306de1520742132fd20eec31fd580"
+    },
+    {
+      "bytes": 2887,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/receipt.json",
+      "sha256": "a3539f90f55d2c79e46a6d46507e419937ae7f72f9ca307e4555b6b153ed8f15"
+    },
+    {
+      "bytes": 135,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/verifier/evidence.json",
+      "sha256": "067c8e712b9e4f3e828f5d47c7c0c48a5df46b17d6495ed398a0511d4fe43aba"
+    },
+    {
+      "bytes": 261,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/verifier/mutation.json",
+      "sha256": "3bf10dbe315d82098cf70dd63a92eeb9599f973033644b8750db421da78d3b62"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/verifier/reward.json",
+      "sha256": "659793fa2b3aa457042a9c92dd5049d79d13aecc98d1f2a0e73d08607e3fd786"
+    },
+    {
+      "bytes": 0,
+      "path": "excluded/settings-label-roundtrip-v1/attempts/settings-label-roundtrip-v1-attempt-02-treatment/verifier/test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1336,
+      "path": "excluded/settings-label-roundtrip-v1/certification.json",
+      "sha256": "00d24ef2742f204ac1f5e5a12a3864044c8a18b0d41d4240a5e84463134f5018"
+    },
+    {
+      "bytes": 36569,
+      "path": "excluded/settings-label-roundtrip-v1/repeat.json",
+      "sha256": "c66b4fd4d8a22bcc13ea7d7a8f4d7ec3d45af7e5bc11ddcf96652054f71e18fa"
+    },
+    {
+      "bytes": 366,
+      "path": "excluded/settings-label-roundtrip-v2/admission.json",
+      "sha256": "0c63845462cd5d30b13562eccdbb64fd2cee50c5d22f46df53953fd09097051f"
+    },
+    {
+      "bytes": 532991,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/agent/trajectory.json",
+      "sha256": "b2d4475849f65b93bc3852e16b761c1b6d03d85e6281cf559a8fe44cabc57088"
+    },
+    {
+      "bytes": 2730,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/diagnostic.json",
+      "sha256": "3c33abfff11a7463777f00407c3062f84b8ef4e2271296d45c1a56d8d5d53cca"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 874,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/harbor/config.json",
+      "sha256": "ebbb57450a0ae651b135c2d7cc0cb14a99e6c6f37324f0970bfdc6badb86db89"
+    },
+    {
+      "bytes": 910,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/harbor/job-config.json",
+      "sha256": "28649d8475f2a26e78e82fe2d7a0aa8d68375b5640ddba587ea72d34ef298625"
+    },
+    {
+      "bytes": 1297,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/harbor/job-job.log",
+      "sha256": "74b0719e4e15f659e9d778fc720237e4fb60d7c20eb1bb11814f943897991d8b"
+    },
+    {
+      "bytes": 1298,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/harbor/job-result.json",
+      "sha256": "7f58212d0cd7a1ca7a09951020d0ec4aa36d09ed3a127e05fd62471373fe79b3"
+    },
+    {
+      "bytes": 9350,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/harbor/result.json",
+      "sha256": "0c04fb95839ce3442fc562d3063a5fbef24d0c23fecf5beed9a9da3e68dae624"
+    },
+    {
+      "bytes": 1223,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/harbor/trial.log",
+      "sha256": "f49d5e9e6db55a208d9bac668f4fe177d09514be0b1b968e8dcef34dd2346a85"
+    },
+    {
+      "bytes": 2742,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/receipt.json",
+      "sha256": "1a3ab933b52ccc3899e5c3e65dc2cac76960d4efa420803cd21297a98e26df01"
+    },
+    {
+      "bytes": 49,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20776,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "929d9445e1871a1f70c4274c269522ab2187fc119e5e8e197dc4c4951c57e002"
+    },
+    {
+      "bytes": 121,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/agent/injection-channel.json",
+      "sha256": "760fbdc8195b5e9536755e013f91e22f0cd332b0c55a1079aa6832bff6970a70"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/agent/preflight.json",
+      "sha256": "b92e9131fb38766510a44185a94427e643d2534c2f39e3326c6b4ecb3e3c7162"
+    },
+    {
+      "bytes": 388699,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/agent/trajectory.json",
+      "sha256": "def30c21b7609ce2dfafd7c52d91ca1ed7d66a6c0d7360a7cadd688f637031f3"
+    },
+    {
+      "bytes": 1948,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/diagnostic.json",
+      "sha256": "99072b798f884d64b6202873fa343959389b6dfb562e5bb4c353f9ef69166a98"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1976,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/harbor/config.json",
+      "sha256": "1ed935d117f255d326a03803eaa1d126977ec173bb9b19197433f230a42cae69"
+    },
+    {
+      "bytes": 2060,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/harbor/job-config.json",
+      "sha256": "ba639d3c93a738ee22fb66b97a439da1563e2078a677bc15edbe1dea393bcb93"
+    },
+    {
+      "bytes": 7488,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/harbor/job-job.log",
+      "sha256": "a64b925689bf5a57f8b9a02f6af12beda66996ef879efd36ac1153395343ef6c"
+    },
+    {
+      "bytes": 1146,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/harbor/job-result.json",
+      "sha256": "b5da12fd42d2093c7ad7fc613ab5cbe0e1534cbe5c6291ecc0992bf1af46c930"
+    },
+    {
+      "bytes": 5541,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/harbor/result.json",
+      "sha256": "88b5d81e54a3b24a52dac5577442197f5ae9c5afd006d2548687730dd2da14b5"
+    },
+    {
+      "bytes": 7488,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/harbor/trial.log",
+      "sha256": "a64b925689bf5a57f8b9a02f6af12beda66996ef879efd36ac1153395343ef6c"
+    },
+    {
+      "bytes": 2903,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/receipt.json",
+      "sha256": "ba879886fc671be06e1b06ae7a200f80616521d5eeda3688631a2804fa92d5a0"
+    },
+    {
+      "bytes": 49,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20504,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-01-treatment/verifier/test-stdout.txt",
+      "sha256": "093a0a968b3999de74540ac7c291d3f8504a7b97174ff2094f4538bded9ffd62"
+    },
+    {
+      "bytes": 466895,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/agent/trajectory.json",
+      "sha256": "b10dc26a24a6348204eefd3ad24fce5a74f7c28e7c93c477b7d15bf4daeed41a"
+    },
+    {
+      "bytes": 2730,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/diagnostic.json",
+      "sha256": "b7166c73881df5184e947712c0c5ca314a96601810c2b17b18bb80830ccb631a"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 874,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/harbor/config.json",
+      "sha256": "647090e62adda21a44b1626623ce33229f148199408b023bb632b54308687181"
+    },
+    {
+      "bytes": 910,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/harbor/job-config.json",
+      "sha256": "3f744a179fa5da876005daea7b26574a045eeb8fc89950d2da720adcac0ee561"
+    },
+    {
+      "bytes": 1297,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/harbor/job-job.log",
+      "sha256": "bcb96833075457236a19f42f343d45d931f8b1a7b80c28f0a446dbb6437711bf"
+    },
+    {
+      "bytes": 1298,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/harbor/job-result.json",
+      "sha256": "a010e2cdb74c8c545d5574567cac6db470e6e352ed9bc285c7cc2d23dda48b7f"
+    },
+    {
+      "bytes": 9346,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/harbor/result.json",
+      "sha256": "e6365da325c4a40b26c46b26283d5d4e80387770b21f60344df13fcfe45072ed"
+    },
+    {
+      "bytes": 1223,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/harbor/trial.log",
+      "sha256": "be38bc7cab74b9e6406c60347603b8013b68f27e7f579b6fb6207ab56beb413d"
+    },
+    {
+      "bytes": 2742,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/receipt.json",
+      "sha256": "e237b9bb2b66033428749114ff76f0eec7a6f5d772f26eed86ae13e4d19b0299"
+    },
+    {
+      "bytes": 49,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20884,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-control/verifier/test-stdout.txt",
+      "sha256": "25184447a3c22e0039dca13f0737d44dfc31879ce2d5cdcc7efa4b0de1d333a3"
+    },
+    {
+      "bytes": 121,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/agent/injection-channel.json",
+      "sha256": "760fbdc8195b5e9536755e013f91e22f0cd332b0c55a1079aa6832bff6970a70"
+    },
+    {
+      "bytes": 5172,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/agent/preflight.json",
+      "sha256": "b92e9131fb38766510a44185a94427e643d2534c2f39e3326c6b4ecb3e3c7162"
+    },
+    {
+      "bytes": 419613,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/agent/trajectory.json",
+      "sha256": "b71430d4ea52d6675befefce7ff8b501317d3959c291fe9cc37396eaccc57413"
+    },
+    {
+      "bytes": 1948,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/diagnostic.json",
+      "sha256": "0bcb45152a92835447cd16b15ec0762b08e86742eb729f4e28474c20978c8e98"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 1976,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/harbor/config.json",
+      "sha256": "0205cc2e93505d27e942fb7fb020719c192aeb067ab9a3d08abb2b459a59c851"
+    },
+    {
+      "bytes": 2060,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/harbor/job-config.json",
+      "sha256": "0ee444f80f6e20cf1f2beaf6ec4205d0383142755289d426b71f2a801817562b"
+    },
+    {
+      "bytes": 7488,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/harbor/job-job.log",
+      "sha256": "561790db5f0b17a9925f4dfac2686b902881ea593cb5d042c1cadd2622e9f907"
+    },
+    {
+      "bytes": 1147,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/harbor/job-result.json",
+      "sha256": "6d99cbb6067526341226f9c62a60fbd5f1c93f8b60a5121ac45b73bb0e250816"
+    },
+    {
+      "bytes": 5542,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/harbor/result.json",
+      "sha256": "0b8ad3b38af98906b676f0885623bcda1df1761225fac0d759c656f4d6b412af"
+    },
+    {
+      "bytes": 7488,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/harbor/trial.log",
+      "sha256": "561790db5f0b17a9925f4dfac2686b902881ea593cb5d042c1cadd2622e9f907"
+    },
+    {
+      "bytes": 2895,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/receipt.json",
+      "sha256": "378357aa10cb634f1c4ff27b544ec9ca82bf4efd8a257c384163136458972853"
+    },
+    {
+      "bytes": 49,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 20462,
+      "path": "excluded/settings-label-roundtrip-v2/attempts/settings-label-roundtrip-v2-attempt-02-treatment/verifier/test-stdout.txt",
+      "sha256": "4e98f65c2b463cf354a65630d559c3debecdda61783b6bf3977b09e3dd52ef56"
+    },
+    {
+      "bytes": 1336,
+      "path": "excluded/settings-label-roundtrip-v2/certification.json",
+      "sha256": "00d24ef2742f204ac1f5e5a12a3864044c8a18b0d41d4240a5e84463134f5018"
+    },
+    {
+      "bytes": 35139,
+      "path": "excluded/settings-label-roundtrip-v2/repeat.json",
+      "sha256": "dd30aa0ae08f380948cd416ddc327cb76cb9f40795bbe91fb8f1458d8bced339"
+    },
+    {
+      "bytes": 370,
+      "path": "excluded/settings-label-roundtrip-v3/admission.json",
+      "sha256": "5b7462133253bc99116128c5f4a992cab370652754fdf6eb1ec858e3f119699a"
+    },
+    {
+      "bytes": 663962,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/agent/trajectory.json",
+      "sha256": "8973222e842414d3af556edaacf3bb813827fdd64e37150fdc44df4f4626370b"
+    },
+    {
+      "bytes": 2730,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/diagnostic.json",
+      "sha256": "c2fb8c4379e5755e1e9e8e0c8761b2ede5aa6f40ebd2fbf96569044e45919f90"
+    },
+    {
+      "bytes": 159,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/harbor/artifact-manifest.json",
+      "sha256": "c1db653f487fb773c4f9247162ab3314e7f0584a486914b9874c4b3d6949e42d"
+    },
+    {
+      "bytes": 871,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/harbor/config.json",
+      "sha256": "44780be9b03cb0222e5350fd1449f51168c7e583df20db90b742514f0f1e26da"
+    },
+    {
+      "bytes": 907,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/harbor/job-config.json",
+      "sha256": "e7d707289d1c8196c6f6afea84ffe3b54016cdccdd6d8bcb23d7609eac05017f"
+    },
+    {
+      "bytes": 1294,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/harbor/job-job.log",
+      "sha256": "cba1caf80f6fd241271a237265644b853e4b8060a88bb145e74ff7d7ce3725e5"
+    },
+    {
+      "bytes": 1305,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/harbor/job-result.json",
+      "sha256": "1e29f01ce1de430aaaa554a75d843240b597b38693ee0a3401e64666afd8e359"
+    },
+    {
+      "bytes": 9356,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/harbor/result.json",
+      "sha256": "d001803d49bdf2f647da79f8ec12c085dc1f00a4d7a83eac81e40a127036e2bd"
+    },
+    {
+      "bytes": 1220,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/harbor/trial.log",
+      "sha256": "418d81264f05b7cd4bccf9e351e203e282275d1327ed70f4ae85859e8258d66d"
+    },
+    {
+      "bytes": 2736,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/receipt.json",
+      "sha256": "f85959204746ff5444782c2a4c560c7330717bdd0292b0d37e208154d40fe236"
+    },
+    {
+      "bytes": 49,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/verifier/evidence.json",
+      "sha256": "3b89f8d419de5f7535eaa71c0dbe2d64135cba92587f3d0149b99f1f02a274a7"
+    },
+    {
+      "bytes": 249,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/verifier/mutation.json",
+      "sha256": "e1777d71376aaa32764cb1bd685176aea6a0cac1b64ec21f6919f7c49fd3eb4e"
+    },
+    {
+      "bytes": 13,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/verifier/reward.json",
+      "sha256": "b13160d0762a5612ee98d66ba60e7b86d7eebdfa7416738577057e2b03c66e35"
+    },
+    {
+      "bytes": 21279,
+      "path": "excluded/settings-label-roundtrip-v3/attempts/settings-label-roundtrip-v3-attempt-01-control/verifier/test-stdout.txt",
+      "sha256": "e42da903c44318ebcd8180c83d453547f7eaa8e5c2ab42ed0b68928abf795a3e"
+    },
+    {
+      "bytes": 1336,
+      "path": "excluded/settings-label-roundtrip-v3/certification.json",
+      "sha256": "00d24ef2742f204ac1f5e5a12a3864044c8a18b0d41d4240a5e84463134f5018"
+    },
+    {
+      "bytes": 13455,
+      "path": "excluded/settings-label-roundtrip-v3/repeat.json",
+      "sha256": "bc1f6dfb840b8bc97fba0a7129b7f67f209c96aa9f9b6b106cfa02d55ab1768e"
+    }
+  ],
+  "redactions": [
+    "host state root replaced with $STELE_BENCH_STATE",
+    "host home replaced with $HOME",
+    "ephemeral semantic bridge tokens replaced with <redacted>",
+    "example GitHub token prefixes replaced with github-token-placeholder"
+  ],
+  "release": "v0.1",
+  "schema_version": 1,
+  "source": "retained local Harbor run state"
+}

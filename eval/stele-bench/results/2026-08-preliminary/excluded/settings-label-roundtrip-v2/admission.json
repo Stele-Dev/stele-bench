@@ -1,0 +1,8 @@
+{
+  "decision": "excluded",
+  "preregistration": "../../preregistrations/settings-label-roundtrip-v2.md",
+  "reason": "Both controls crossed the registered ceiling during cold Cargo compilation and exited nonzero, making the validity floor impossible.",
+  "reason_code": "cold-build-clean-exit-failure",
+  "result": null,
+  "run_id": "settings-label-roundtrip-v2"
+}

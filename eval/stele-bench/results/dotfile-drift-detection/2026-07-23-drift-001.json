@@ -1,0 +1,25 @@
+{
+  "aggregates": [],
+  "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+  "attempts": [],
+  "attempts_analysed": 0,
+  "attempts_run": 0,
+  "comparability": {
+    "challenge_id": "dotfile-drift-detection",
+    "challenge_manifest_sha256": "9a4cd60ed401586f2ed2455220df6790996567c7d2ffc423dfaab437a619f315",
+    "control_condition": "no-stele",
+    "fixture_id": "dotfile-drift-decision-v1",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful",
+    "verifier_sha256": "e1f77c4b96932cbeab01fc5c121b1b3e4d1bf92352b98b4a658456dc07cfa3ef"
+  },
+  "comparability_digest": "fd965263479b3540fb3d88be288bd19ef038cd44fd2e1f526ceb9ba931e8bed0",
+  "memory_uptake": {},
+  "recorded_at": "2026-07-23T22:26:16.390220Z",
+  "run_id": "drift-001",
+  "run_shape": "pair",
+  "schema_version": 1,
+  "status": "failed",
+  "verdicts": {}
+}

@@ -1,0 +1,135 @@
+{
+    "id": "48319271-56e5-4d4b-83c9-d78ebc7e407e",
+    "task_name": "local/settings-label-roundtrip",
+    "trial_name": "settings-label-roundtrip__65syeKg",
+    "trial_uri": "file://$STELE_BENCH_STATE/runs/settings-label-roundtrip-v1/work/9a1ae2ae63688fc61d40/jobs/route-two/settings-label-roundtrip__65syeKg",
+    "task_id": {
+        "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v1/work/9a1ae2ae63688fc61d40/pack/settings-label-roundtrip"
+    },
+    "source": null,
+    "task_checksum": "06f5659ac4f5a8cab60d867741d0a2e810a7e5ad3d24ba469cd6c8ea8e51ffc3",
+    "config": {
+        "task": {
+            "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v1/work/9a1ae2ae63688fc61d40/pack/settings-label-roundtrip",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "settings-label-roundtrip__65syeKg",
+        "trials_dir": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v1/work/9a1ae2ae63688fc61d40/jobs/route-two",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "stele_bench.harbor_entrypoint:ConfiguredSteleClaudeCode",
+            "model_name": "anthropic/claude-haiku-4.5",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "artifact_path": "$STELE_BENCH_STATE/artifacts/stele-linux-arm64-90295ac2f8bb2677",
+                "artifact_sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+                "artifact_source_kind": "local-dirty-worktree",
+                "auto_rag_injection": "off",
+                "credentials_path": "$STELE_BENCH_STATE/attempts/9a1ae2ae63688fc61d40a439523a9656f817295aba58446aa453ab1b91f3aa95/credentials.json",
+                "max_budget_usd": "3",
+                "max_turns": 60,
+                "permission_mode": "bypassPermissions",
+                "preferences_path": "$STELE_BENCH_STATE/attempts/9a1ae2ae63688fc61d40a439523a9656f817295aba58446aa453ab1b91f3aa95/preferences.json",
+                "project_binding_path": "$STELE_BENCH_STATE/attempts/9a1ae2ae63688fc61d40a439523a9656f817295aba58446aa453ab1b91f3aa95/project.json",
+                "project_name": "Workspace",
+                "project_provisioning": "restore"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****",
+                "STELE_SEMANTIC_ENDPOINT": "http://host.docker.internal:60183/api/semantic-seeds?bridge_token=<redacted>",
+                "SUPABASE_ANON_KEY": "sb_p****AaH",
+                "SUPABASE_URL": "http://host.docker.internal:54321"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "da5c32bb-c742-492d-b924-19060d71cc31"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.220",
+        "model_info": {
+            "name": "claude-haiku-4.5",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1722576,
+        "n_cache_tokens": 1305414,
+        "n_output_tokens": 7471,
+        "cost_usd": 2.93051075,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-08-11T08:57:11.214182Z",
+    "finished_at": "2026-08-11T09:02:10.026797Z",
+    "environment_setup": {
+        "started_at": "2026-08-11T08:57:11.252296Z",
+        "finished_at": "2026-08-11T08:57:13.243913Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-11T08:57:13.244045Z",
+        "finished_at": "2026-08-11T08:57:23.161515Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-11T08:57:23.161685Z",
+        "finished_at": "2026-08-11T09:01:56.561559Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-11T09:01:57.150206Z",
+        "finished_at": "2026-08-11T09:01:58.842007Z"
+    },
+    "step_results": null
+}

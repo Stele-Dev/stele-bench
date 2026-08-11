@@ -1,0 +1,17 @@
+Stele Bench
+Copyright 2026 Stele
+
+The benchmark evaluates tasks drawn from DotState:
+https://github.com/serkanyersen/dotstate
+DotState is copyright 2025 Serkan Yersen and is licensed under the MIT License.
+Its source commit and a public Stele graph snapshot are redistributed as frozen
+benchmark inputs. DotState remains under its original license.
+
+The runner integrates with Harbor 0.20.0:
+https://harborframework.com/
+Harbor is licensed under the Apache License 2.0. Harbor is not vendored into
+this repository; the benchmark imports its public package and adapter APIs.
+
+The benchmark task image installs Anthropic Claude Code at a pinned version.
+Claude Code is not vendored in this repository and remains subject to
+Anthropic's applicable terms.

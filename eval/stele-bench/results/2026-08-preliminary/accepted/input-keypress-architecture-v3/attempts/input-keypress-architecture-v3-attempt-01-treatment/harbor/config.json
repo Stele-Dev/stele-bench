@@ -1,0 +1,35 @@
+{
+    "task": {
+        "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v3/work/2e6ed179b8086f902a64/pack/input-keypress-architecture"
+    },
+    "trial_name": "input-keypress-architecture__wK3fWYe",
+    "trials_dir": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v3/work/2e6ed179b8086f902a64/jobs/route-two",
+    "agent": {
+        "import_path": "stele_bench.harbor_entrypoint:ConfiguredSteleClaudeCode",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "kwargs": {
+            "artifact_path": "$STELE_BENCH_STATE/artifacts/stele-linux-arm64-5deb3a6046ad0faf",
+            "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+            "artifact_source_kind": "local-dirty-worktree",
+            "auto_rag_injection": "on",
+            "credentials_path": "$STELE_BENCH_STATE/attempts/2e6ed179b8086f902a64a1940ad8cb4060058f6dfa91aa94c41e441b67dd54ea/credentials.json",
+            "max_budget_usd": "5",
+            "max_turns": 60,
+            "permission_mode": "bypassPermissions",
+            "preferences_path": "$STELE_BENCH_STATE/attempts/2e6ed179b8086f902a64a1940ad8cb4060058f6dfa91aa94c41e441b67dd54ea/preferences.json",
+            "project_binding_path": "$STELE_BENCH_STATE/attempts/2e6ed179b8086f902a64a1940ad8cb4060058f6dfa91aa94c41e441b67dd54ea/project.json",
+            "project_name": "Workspace",
+            "project_provisioning": "restore"
+        },
+        "env": {
+            "ANTHROPIC_API_KEY": "****",
+            "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+            "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+            "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****",
+            "STELE_SEMANTIC_ENDPOINT": "http://host.docker.internal:64729/api/semantic-seeds?bridge_token=<redacted>",
+            "SUPABASE_ANON_KEY": "sb_p****AaH",
+            "SUPABASE_URL": "http://host.docker.internal:54321"
+        }
+    },
+    "job_id": "2a8e6225-4133-4928-a642-bcab32392935"
+}

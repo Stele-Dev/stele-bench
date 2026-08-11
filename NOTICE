@@ -1,0 +1,20 @@
+Stele Bench
+Copyright 2026 Stele
+
+The benchmark corpus uses DotState at a pinned public commit:
+https://github.com/serkanyersen/dotstate
+DotState is MIT licensed. Copyright 2025 Serkan Yersen.
+The frozen graph fixture preserves the original public graph content exactly,
+including historical machine paths that are part of project notes. Those paths
+are inert text, not runtime dependencies.
+
+Containerized agent execution uses Harbor 0.20.0:
+https://harborframework.com/
+Harbor is Apache License 2.0 software. Copyright its contributors.
+
+Claude Code is installed into the benchmark task image at a pinned version.
+It is not vendored, relicensed, or distributed by this repository and remains
+subject to Anthropic's terms.
+
+Stele integration executables and model access are systems under test. They are
+not distributed or relicensed by this repository.

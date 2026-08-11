@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "result_kind": "discarded-continuity-admission",
+  "experiment_id": "fieldnote-continuity-v2",
+  "run_id": "fieldnote-continuity-v2-admission-20260728",
+  "classification": "discarded-admission",
+  "status": "failed",
+  "admission_passed": false,
+  "cohort_authorized": false,
+  "completed_at": "2026-07-27T22:39:49.715720Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "arm_order": [
+    "control",
+    "treatment"
+  ],
+  "provenance": {
+    "receipt_sha256": "2a65c7ac57dfc481aeaf359fb5405794f15d154989c3616f15143e740dd9bc66",
+    "artifact_sha256": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+    "chain_manifest_sha256": "da57a5ffb07ddb182a31525483a3da4df77de22b985bbdda996f9a5fb799ca2d",
+    "preregistration_sha256": "5cb70315c71af4396c332b704c7f214f049326208f1abc402ebc0f1d38ce6974"
+  },
+  "billing": {
+    "model_calls_started": 0,
+    "settled_gateway_usd": "0.00",
+    "acknowledged_pair_cap_usd": "30.00",
+    "between_arm_drain_check_observed_usd": "0.00",
+    "post_run_gateway_drain_observed_usd": "0.00"
+  },
+  "arms": {
+    "control": {
+      "condition": "no-stele",
+      "chain_outcome": "not_started",
+      "error": "missing_trial_result"
+    },
+    "treatment": {
+      "condition": "stele-fresh",
+      "chain_outcome": "not_started",
+      "error": "missing_trial_result"
+    }
+  },
+  "validity": {
+    "source_and_challenge_certification_passed": true,
+    "pinned_image_base_target_qualification_passed": true,
+    "harbor_task_schema_validation_passed": true,
+    "harbor_environment_capability_validation_passed": false,
+    "failure_stage": "Harbor Docker environment capability validation during Trial.create",
+    "failure_message": "network_mode='no-network' is not supported by EnvironmentType.DOCKER environment. Environment providers must enforce the requested network policy or reject the task.",
+    "cause": "Harbor 0.20 accepted the corrected no-network schema value, then rejected it at trial construction because its Docker provider on this macOS host does not advertise the capability to disable internet access."
+  },
+  "registered_gates": {
+    "all_eight_sessions_started": false,
+    "distinct_conversation_identities": false,
+    "source_and_graph_boundaries_held": false,
+    "all_hidden_verifiers_returned_valid_rewards": false,
+    "model_pinned_every_session": false,
+    "exclusive_settled_gateway_receipts": false
+  },
+  "interpretation": "The discarded v2 admission is a second apparatus failure and authorizes no cohort. The corrected task schema parsed successfully, but Harbor rejected both first-session trials while constructing their Docker environments. No conversation or model call started, no model behavior was observed, and no Gateway spend accrued. V2 is terminal and is not rerun or tuned."
+}

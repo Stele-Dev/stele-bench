@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "challenge_id": "click-clirunner-stream-contract",
+  "title": "Separate CliRunner streams without losing terminal order",
+  "description": "Make CliRunner expose stable stdout and stderr streams plus correctly interleaved terminal output.",
+  "prompt": "Update `CliRunner` so `Result.stdout` always contains only stdout, `Result.stderr` always contains only stderr, and `Result.output` preserves the natural terminal interleaving of both streams. Remove the `mix_stderr` switch rather than keeping two result contracts. Keep the change focused on the runner, its tests, and its change note.\n",
+  "allowed_output_paths": [
+    "/workspace/CHANGES.rst",
+    "/workspace/src/click/testing.py",
+    "/workspace/tests/test_termui.py",
+    "/workspace/tests/test_testing.py"
+  ],
+  "agent_timeout_seconds": 900,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 900,
+    "cpus": 2,
+    "memory_mb": 4096,
+    "storage_mb": 8192
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "8aaa0101a1162378db9eed2c5279d137e676970d60a9a594f475900ec1b3e4a4",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 30
+  }
+}

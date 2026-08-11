@@ -1,0 +1,27 @@
+{
+    "job_name": "route-one",
+    "jobs_dir": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v3/work/ce54be7f962de8b51534/jobs",
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "name": "claude-code",
+            "model_name": "anthropic/claude-sonnet-4.5",
+            "kwargs": {
+                "max_budget_usd": "5",
+                "max_turns": 60,
+                "permission_mode": "bypassPermissions"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v3/work/ce54be7f962de8b51534/pack/input-keypress-architecture"
+        }
+    ]
+}

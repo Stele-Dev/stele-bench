@@ -1,0 +1,177 @@
+{
+  "aggregates": [
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-wrong-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "sbr-002-wrong-anchor",
+      "fixture_id": "session-boundary-recall-wrong-anchor-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-wrong-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "sbr-002-wrong-anchor",
+      "fixture_id": "session-boundary-recall-wrong-anchor-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-wrong-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "sbr-002-wrong-anchor",
+      "fixture_id": "session-boundary-recall-wrong-anchor-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "tokens_input_paired_difference",
+      "n": 1,
+      "value": 123513.0
+    },
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-wrong-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "sbr-002-wrong-anchor",
+      "fixture_id": "session-boundary-recall-wrong-anchor-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "trial_wall_seconds_paired_difference",
+      "n": 1,
+      "value": 10.868178999999998
+    }
+  ],
+  "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+  "attempts": [
+    {
+      "attempt_id": "sbr-002-wrong-anchor-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-wrong-anchor-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.66545",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "sbr-002-wrong-anchor",
+      "fixture_id": "session-boundary-recall-wrong-anchor-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+        "challenge_manifest": "cfacf652984e79f8e4a13354b0bd2669adde459b6f3da96775540c9f9c83651b",
+        "verifier": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 213.592503,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 339417,
+        "cache_write_tokens": 30980,
+        "input_tokens": 469816,
+        "output_tokens": 2274
+      }
+    },
+    {
+      "attempt_id": "sbr-002-wrong-anchor-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-wrong-anchor-v1",
+      "condition_id": "faithful",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.477814",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "sbr-002-wrong-anchor",
+      "fixture_id": "session-boundary-recall-wrong-anchor-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+        "challenge_manifest": "cfacf652984e79f8e4a13354b0bd2669adde459b6f3da96775540c9f9c83651b",
+        "verifier": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 224.460682,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 522050,
+        "cache_write_tokens": 3257,
+        "input_tokens": 593329,
+        "output_tokens": 3079
+      }
+    }
+  ],
+  "attempts_analysed": 1,
+  "attempts_run": 1,
+  "comparability": {
+    "challenge_id": "session-boundary-recall",
+    "challenge_manifest_sha256": "cfacf652984e79f8e4a13354b0bd2669adde459b6f3da96775540c9f9c83651b",
+    "control_condition": "no-stele",
+    "fixture_id": "session-boundary-recall-wrong-anchor-v1",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful",
+    "verifier_sha256": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+  },
+  "comparability_digest": "7faa54bd6926efd5c14b3d64aa8c6e2e32497217051d71d22bc2e95cca5068de",
+  "memory_uptake": {
+    "control": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 1,
+      "injected": 1,
+      "marker": 0
+    }
+  },
+  "recorded_at": "2026-07-23T21:04:45.679779Z",
+  "run_id": "sbr-002-wrong-anchor",
+  "run_shape": "quad",
+  "schema_version": 1,
+  "status": "completed",
+  "verdicts": {
+    "reward": {
+      "difference": 0.0,
+      "fisher_one_sided_p": 1.0
+    },
+    "tokens_input": {
+      "difference": 123513.0,
+      "fisher_one_sided_p": null
+    },
+    "trial_wall_seconds": {
+      "difference": 10.868178999999998,
+      "fisher_one_sided_p": null
+    }
+  }
+}

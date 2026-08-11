@@ -1,0 +1,8 @@
+{
+  "decision": "excluded",
+  "preregistration": "../../preregistrations/input-keypress-architecture-v1.md",
+  "reason": "Both controls hit the turn cap, one control was ATIF-invalid after truncation, and the verifier had whitespace sensitivity. Only one pair was analysable.",
+  "reason_code": "turn-cap-atif-verifier-defects",
+  "result": "../input-keypress-architecture/2026-08-11-input-keypress-architecture-v1.json",
+  "run_id": "input-keypress-architecture-v1"
+}

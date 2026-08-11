@@ -1,0 +1,43 @@
+{
+    "id": "9a19e91b-0924-4235-9eec-b0dfc85119d7",
+    "started_at": "2026-08-11T04:04:41.176284",
+    "updated_at": "2026-08-11T04:06:11.794796",
+    "finished_at": "2026-08-11T04:06:11.794796",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "claude-code__claude-haiku-4.5__adhoc": {
+                "n_trials": 1,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0": [
+                            "input-keypress-architecture__weqx8e9"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "NonZeroAgentExitCodeError": [
+                        "input-keypress-architecture__weqx8e9"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 1297152,
+        "n_cache_tokens": 779399,
+        "n_output_tokens": 3337,
+        "cost_usd": 3.0627832500000003
+    }
+}

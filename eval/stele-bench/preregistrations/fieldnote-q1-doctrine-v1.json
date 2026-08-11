@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "experiment_id": "fieldnote-q1-doctrine-v1",
+  "apparatus_revision": {
+    "predecessor": "fieldnote-continuity-v7",
+    "predecessor_outcome": "valid-no-intake-behavioral-result",
+    "declared_changes": [
+      "change only the treatment doctrine to resolve imperative implementation prompts against required Stele lifecycle work",
+      "run only treatment session 1 as a doctrine qualification, with no control arm and no continuity inference",
+      "allow the existing manifest-driven chain runner to execute a registered single-session diagnostic"
+    ]
+  },
+  "treatment_artifact": {
+    "source_kind": "local-dirty-worktree",
+    "source_head": "10d7473e3f0b60fb5d3d8677e7e7c328d4b67b82",
+    "source_diff_sha256": "3d61eb0d3137a486a1a96ee1a6f157875964d334e23b049cec9b2a244a9c98c6",
+    "sha256": "90295ac2f8bb26779ee778459e5f82d23fda060ecf47c20090a76a9bcd267500",
+    "target": "linux-arm64"
+  },
+  "repository": {
+    "kind": "deterministic-standalone-fixture",
+    "builder": "scripts/benchmark-provisioner/build_fieldnote_scenario.py",
+    "object_format": "sha1",
+    "history_policy": "objects-reachable-from-base-only",
+    "remotes_in_task_workspace": false
+  },
+  "runtime": {
+    "harness": "claude-code",
+    "model": "anthropic/claude-sonnet-4.6",
+    "task_image": "harbor-local/claude-rust:2.1.220-rust-1.88.0",
+    "python": "3.11.2",
+    "network_mode": "public",
+    "external_source_access_policy": "invalidate-session"
+  },
+  "qualification": {
+    "arms": ["stele-fresh"],
+    "sessions": 1,
+    "session_cap_usd": "3.00",
+    "question": "Does the strengthened general doctrine make the unchanged imperative Fieldnote Q1 prompt begin with Stele lifecycle work rather than a file edit?",
+    "pass_conditions": [
+      "the first project-changing tool call is a Stele lifecycle call, not a file write",
+      "the agent creates or finds and claims a task before implementation",
+      "the agent writes separate durable intake knowledge before implementation"
+    ],
+    "failure_is_a_product_result": true,
+    "no_control_arm": true,
+    "no_effect_estimate": true,
+    "no_tuning_or_rerun": true
+  },
+  "sessions": [
+    {
+      "index": 1,
+      "challenge_id": "fieldnote-milestone-1",
+      "challenge_manifest_sha256": "e61ee05eb8b82cd709bf65d76be54516d7e0347ef5c2e69a1f0952ea140ce046",
+      "verifier_sha256": "16c38da1e27e774a93c8fa1b5670a9799a0a37ae08fb3e7db30c5b61afaedc65",
+      "base_revision": "2c07de94b97ff1c157a50e402e682199f7f8cb55",
+      "base_tree": "5295392048a463d8e988334a7ed3fbd01f65d8ad",
+      "reachable_commit_count": 1,
+      "reachable_object_count": 4,
+      "reachable_object_ids_sha256": "e91f6e6faceb5f442738e2ef494938d9d21f268f7bffbe80ed961a746461ea54",
+      "canonical_target_revision": "5b816b24d04c2a1a49658b92e38a813d4137cd24",
+      "canonical_target_tree": "5a98e4daae6974098558071d7980523c2a92ee1f",
+      "canonical_patch_sha256": "22e477b1c05e6aa46e8e393ecb17d15c58922cb6e8e3b8d0e119f1a05b44d1e0",
+      "expected_base_evidence": {"core_summary": false},
+      "expected_target_evidence": {"core_summary": true, "deterministic": true, "invalid_exit_2": true}
+    }
+  ]
+}

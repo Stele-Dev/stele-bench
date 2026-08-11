@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "experiment_id": "fieldnote-continuity-v6",
+  "apparatus_revision": {
+    "predecessor": "fieldnote-continuity-v5",
+    "predecessor_outcome": "valid-admission-with-no-pre-implementation-intake",
+    "declared_changes": [
+      "replace the treatment artifact with doctrine-fix commit fa373b1b7840776dccbd1853bda506cbfcc9af30",
+      "bind the paid run to the exact clean treatment artifact digest and source commit"
+    ]
+  },
+  "treatment_artifact": {
+    "source_commit": "fa373b1b7840776dccbd1853bda506cbfcc9af30",
+    "sha256": "d3c9fcd14d9d60cf518e265395312c8864d3b7a3556c30ea085b6d6785739961",
+    "target": "linux-arm64"
+  },
+  "repository": {
+    "kind": "deterministic-standalone-fixture",
+    "builder": "scripts/benchmark-provisioner/build_fieldnote_scenario.py",
+    "object_format": "sha1",
+    "history_policy": "objects-reachable-from-base-only",
+    "remotes_in_task_workspace": false
+  },
+  "runtime": {
+    "harness": "claude-code",
+    "model": "anthropic/claude-sonnet-4.6",
+    "task_image": "harbor-local/claude-rust:2.1.220-rust-1.88.0",
+    "python": "3.11.2",
+    "network_mode": "public",
+    "external_source_access_policy": "invalidate-chain"
+  },
+  "carry_forward": {
+    "control": [],
+    "treatment": [
+      "stele-project-graph"
+    ],
+    "forbidden": [
+      "conversation-transcript",
+      "conversation-summary",
+      "agent-home",
+      "workspace-mutations",
+      "build-artifacts",
+      "future-git-objects"
+    ]
+  },
+  "admission": {
+    "pairs": 1,
+    "behavior_is_not_an_admission_gate": true,
+    "no_graph_write_is_a_valid_end_to_end_result": true,
+    "no_tuning_or_rerun": true
+  },
+  "cohort": {
+    "pairs": 20,
+    "alternating_arm_order": true,
+    "session_cap_usd_per_billed_step": "3.00",
+    "pair_cap_usd": "30.00",
+    "cohort_cap_usd": "600.00"
+  },
+  "sessions": [
+    {
+      "index": 1,
+      "challenge_id": "fieldnote-milestone-1",
+      "challenge_manifest_sha256": "e61ee05eb8b82cd709bf65d76be54516d7e0347ef5c2e69a1f0952ea140ce046",
+      "verifier_sha256": "16c38da1e27e774a93c8fa1b5670a9799a0a37ae08fb3e7db30c5b61afaedc65",
+      "base_revision": "2c07de94b97ff1c157a50e402e682199f7f8cb55",
+      "base_tree": "5295392048a463d8e988334a7ed3fbd01f65d8ad",
+      "reachable_commit_count": 1,
+      "reachable_object_count": 4,
+      "reachable_object_ids_sha256": "e91f6e6faceb5f442738e2ef494938d9d21f268f7bffbe80ed961a746461ea54",
+      "canonical_target_revision": "5b816b24d04c2a1a49658b92e38a813d4137cd24",
+      "canonical_target_tree": "5a98e4daae6974098558071d7980523c2a92ee1f",
+      "canonical_patch_sha256": "22e477b1c05e6aa46e8e393ecb17d15c58922cb6e8e3b8d0e119f1a05b44d1e0",
+      "expected_base_evidence": {
+        "core_summary": false
+      },
+      "expected_target_evidence": {
+        "core_summary": true,
+        "deterministic": true,
+        "invalid_exit_2": true
+      }
+    },
+    {
+      "index": 2,
+      "challenge_id": "fieldnote-milestone-2",
+      "challenge_manifest_sha256": "b0e116980f2a7ccc48cbf87a1b7e1652ff2eb21966b52d5ace846c414eac3b1b",
+      "verifier_sha256": "3c6a889a43caa43560f74eeca2d4fe9d74b0e9374d86fdb6b1aa790c3f54802d",
+      "base_revision": "5b816b24d04c2a1a49658b92e38a813d4137cd24",
+      "base_tree": "5a98e4daae6974098558071d7980523c2a92ee1f",
+      "reachable_commit_count": 2,
+      "reachable_object_count": 7,
+      "reachable_object_ids_sha256": "ba7c7ac791e406ac643035120785982c1d863bc488721e96ae9de2138d22d8b9",
+      "canonical_target_revision": "bdf0d26f061001320738d9f88071cba8827a2c08",
+      "canonical_target_tree": "b2c61105f5314fa0a764281080bcd30aa1aa4068",
+      "canonical_patch_sha256": "8343afa627970683b7d9352cfbea03ef5a0cced9625b42757968540000b79ed5",
+      "expected_base_evidence": {
+        "recursive_redaction": false
+      },
+      "expected_target_evidence": {
+        "five_samples": true,
+        "recursive_redaction": true,
+        "environment_not_read": true
+      }
+    },
+    {
+      "index": 3,
+      "challenge_id": "fieldnote-milestone-3",
+      "challenge_manifest_sha256": "aa8790d6999930924f667a7ac29af4b1eadae7d800666e377f8902e83cf40185",
+      "verifier_sha256": "cff805db884b205263ee11e4aba98c266646860932a635a5133c98baeb86751d",
+      "base_revision": "bdf0d26f061001320738d9f88071cba8827a2c08",
+      "base_tree": "b2c61105f5314fa0a764281080bcd30aa1aa4068",
+      "reachable_commit_count": 3,
+      "reachable_object_count": 10,
+      "reachable_object_ids_sha256": "bb4d11553ece8cb92972ceb30d4ed7b92283b2f8913bf06d6ad58a257d27f3d3",
+      "canonical_target_revision": "1add0951a36d773bf5f299e3816a0b1cb3525314",
+      "canonical_target_tree": "2d9b952a63091b8ba399b408a5414a2311adbb96",
+      "canonical_patch_sha256": "4f3b6b027b9e1691f6201c458381bd2a8ae0ec9e1344eeb7f064bfd20709c9a6",
+      "expected_base_evidence": {
+        "html_report": false
+      },
+      "expected_target_evidence": {
+        "html_report": true,
+        "full_sanitized_events": true,
+        "size_exception": true
+      }
+    },
+    {
+      "index": 4,
+      "challenge_id": "fieldnote-milestone-4",
+      "challenge_manifest_sha256": "9f82ea741d1a5c11b8732ba5d80d02dc09a9e273ae8ac1c9657268b3ff3fb577",
+      "verifier_sha256": "985f170a8b4dc6e567db4295dfbae4fdf28adb37a0b9fdc6fccdf5ab8156f4df",
+      "base_revision": "1add0951a36d773bf5f299e3816a0b1cb3525314",
+      "base_tree": "2d9b952a63091b8ba399b408a5414a2311adbb96",
+      "reachable_commit_count": 4,
+      "reachable_object_count": 13,
+      "reachable_object_ids_sha256": "b5d793c0fd8154a17256a928c9811897c22c65e7b327aa8f3f68af55b6676208",
+      "canonical_target_revision": "2a0be444ac0e7c1072f3cc902ba5bf4ceca6e6ca",
+      "canonical_target_tree": "fe4244fba85c214cc5bcb1721d76e41c7437ecfd",
+      "canonical_patch_sha256": "f0c5047b12dd60e532e882a8a48e502dc414709b50936dea0c567830e72867bd",
+      "expected_base_evidence": {
+        "version": false
+      },
+      "expected_target_evidence": {
+        "version": true,
+        "stable_errors": true,
+        "atomic_output": true,
+        "release_contract": true
+      }
+    }
+  ]
+}

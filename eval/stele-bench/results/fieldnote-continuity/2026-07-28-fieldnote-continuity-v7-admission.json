@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "result_kind": "discarded-continuity-admission",
+  "experiment_id": "fieldnote-continuity-v7",
+  "run_id": "fieldnote-continuity-v7-admission-20260728",
+  "classification": "discarded-admission",
+  "status": "passed",
+  "admission_passed": true,
+  "cohort_authorized": false,
+  "completed_at": "2026-07-28T01:33:49.476831Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "arm_order": [
+    "control",
+    "treatment"
+  ],
+  "provenance": {
+    "receipt_sha256": "5a555a906d2d32d1aa7a987d90580ba806746a1268afa7d6c0f6a5d61d14d2b6",
+    "artifact_sha256": "d3c9fcd14d9d60cf518e265395312c8864d3b7a3556c30ea085b6d6785739961",
+    "artifact_source_commit": "fa373b1b7840776dccbd1853bda506cbfcc9af30",
+    "chain_manifest_sha256": "9e5acda138a2d6790f7c1c4e57342678cfae719dd9cd2ac9f7bbd456ac9d950b",
+    "chain_manifest_payload_sha256": "4cc5d96df238919c7e276062a172881610882d5ab322e1c27e14f7a8816e5a3b",
+    "preregistration_sha256": "4b059732df1d95fd8279c0592efc028713c08964636396a358d5464fa701ae86"
+  },
+  "billing": {
+    "model_calls_started": 8,
+    "settled_gateway_usd": "2.29945075",
+    "acknowledged_pair_cap_usd": "30.00",
+    "control_gateway_usd": "1.11155370",
+    "treatment_gateway_usd": "1.18789705",
+    "treatment_minus_control_usd": "0.07634335",
+    "descriptive_percent_over_control": "6.86816570"
+  },
+  "arms": {
+    "control": {
+      "condition": "no-stele",
+      "chain_outcome": "completed",
+      "rewards": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "gateway_usd_by_session": [
+        "0.21738270",
+        "0.07353015",
+        "0.45921855",
+        "0.36142230"
+      ],
+      "cumulative_gateway_usd_by_prefix": [
+        "0.21738270",
+        "0.29091285",
+        "0.75013140",
+        "1.11155370"
+      ],
+      "tokens": {
+        "input": 2077142,
+        "output": 28254,
+        "cache_read": 1997045,
+        "cache_write": 70112
+      },
+      "external_source_access_by_session": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    "treatment": {
+      "condition": "stele-fresh",
+      "chain_outcome": "completed",
+      "rewards": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "gateway_usd_by_session": [
+        "0.30921490",
+        "0.18155524",
+        "0.57055344",
+        "0.12657347"
+      ],
+      "cumulative_gateway_usd_by_prefix": [
+        "0.30921490",
+        "0.49077014",
+        "1.06132358",
+        "1.18789705"
+      ],
+      "tokens": {
+        "input": 2221485,
+        "output": 24601,
+        "cache_read": 2092275,
+        "cache_write": 104211
+      },
+      "external_source_access_by_session": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "graph_writes_by_session": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "delivered_prior_node_by_session": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "explicit_graph_reads_by_session": [
+        0,
+        5,
+        7,
+        3
+      ],
+      "auto_rag_injected_by_session": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "seeded_task_touched_by_session": [
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "validity": {
+    "source_and_challenge_certification_passed": true,
+    "pinned_image_base_target_qualification_passed": true,
+    "real_harbor_nop_qualification_passed": true,
+    "all_eight_sessions_started": true,
+    "distinct_conversation_identities": true,
+    "source_and_graph_boundaries_held": true,
+    "no_external_source_access": true,
+    "all_hidden_verifiers_returned_valid_rewards": true,
+    "model_pinned_every_session": true,
+    "exclusive_settled_gateway_receipts": true,
+    "pair_valid": true,
+    "failure_stage": null,
+    "failure_message": null
+  },
+  "behavioral_observation_not_an_estimate": {
+    "same_reward_vector": true,
+    "treatment_wrote_no_agent_nodes_in_any_session": true,
+    "treatment_delivered_no_prior_agent_node": true,
+    "treatment_queried_graph_in_later_sessions": true,
+    "description": "This valid N=1 discarded admission is not an effect estimate. Both arms produced [0, 0, 1, 0]. The strengthened pre-implementation doctrine did not produce an agent-authored intake write in session 1 or any later session, so there was no prior agent node to deliver. Treatment nevertheless made 5, 7, and 3 explicit graph reads in sessions 2 through 4."
+  },
+  "interpretation": "V7 passed admission and is terminal. The narrow command-field detector fix removed the v6 false positive without changing the treatment artifact or scenario. In this single discarded pair, the doctrine change did not trigger pre-implementation graph intake, both arms had identical correctness, and treatment cost $0.07634335 more cumulatively. These descriptive observations do not authorize a cohort or support an effect estimate."
+}

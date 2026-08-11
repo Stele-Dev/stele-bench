@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "result_kind": "discarded-continuity-admission",
+  "experiment_id": "fieldnote-continuity-v6",
+  "run_id": "fieldnote-continuity-v6-admission-20260728",
+  "classification": "discarded-admission",
+  "status": "failed",
+  "admission_passed": false,
+  "cohort_authorized": false,
+  "completed_at": "2026-07-28T01:06:07.649845Z",
+  "model": "anthropic/claude-sonnet-4.6",
+  "arm_order": ["control", "treatment"],
+  "provenance": {
+    "receipt_sha256": "219374020bb9f85c0c0d4fd93ce84ae0ae692c503357a5f75805418d584a6d93",
+    "artifact_sha256": "d3c9fcd14d9d60cf518e265395312c8864d3b7a3556c30ea085b6d6785739961",
+    "artifact_source_commit": "fa373b1b7840776dccbd1853bda506cbfcc9af30",
+    "chain_manifest_sha256": "e7abca7685a75ea461dfdb1262b3c1a7ed2621ee80e98ecbccbc33098c17debd",
+    "chain_manifest_payload_sha256": "e4aa1298fe555048358bb402d5376efbe09fa60c6fc31c18ca814fc386cdbe15",
+    "preregistration_sha256": "462dca1ac2c73775187c005ce958cfcb4540369bf74cf655daaad8637bf78c0c"
+  },
+  "billing": {
+    "model_calls_started": 8,
+    "settled_gateway_usd": "3.11798799",
+    "acknowledged_pair_cap_usd": "30.00",
+    "control_gateway_usd": "1.60407045",
+    "treatment_gateway_usd": "1.51391754"
+  },
+  "arms": {
+    "control": {
+      "condition": "no-stele",
+      "chain_outcome": "completed",
+      "rewards": [0.0, 0.0, 1.0, 0.0],
+      "tokens": {
+        "input": 3202553,
+        "output": 46640,
+        "cache_read": 3066724,
+        "cache_write": 111975
+      },
+      "external_source_access_by_session": [false, false, false, false]
+    },
+    "treatment": {
+      "condition": "stele-fresh",
+      "chain_outcome": "invalid",
+      "rewards": [0.0, 0.0, 1.0, 0.0],
+      "tokens": {
+        "input": 2857302,
+        "output": 28485,
+        "cache_read": 2742474,
+        "cache_write": 103842
+      },
+      "external_source_access_by_session": [false, false, false, true],
+      "graph_writes_by_session": [0, 0, 0, 0],
+      "delivered_prior_node_by_session": [false, false, false, false],
+      "seeded_task_touched_by_session": [false, false, false, true]
+    }
+  },
+  "validity": {
+    "source_and_challenge_certification_passed": true,
+    "pinned_image_base_target_qualification_passed": true,
+    "real_harbor_nop_qualification_passed": true,
+    "all_eight_sessions_started": true,
+    "distinct_conversation_identities": true,
+    "source_and_graph_boundaries_held": false,
+    "no_external_source_access": false,
+    "all_hidden_verifiers_returned_valid_rewards": true,
+    "model_pinned_every_session": true,
+    "exclusive_settled_gateway_receipts": true,
+    "pair_valid": false,
+    "failure_stage": "treatment-session-4-external-source-detector",
+    "failure_message": "The detector scanned Bash descriptive metadata and matched `curl`/`wget` in `Check if curl or wget is available`, although the executable command only ran permitted `--version` capability probes."
+  },
+  "behavioral_observation_not_an_estimate": {
+    "same_reward_vector": true,
+    "treatment_wrote_no_agent_nodes_in_any_session": true,
+    "treatment_delivered_no_prior_agent_node": true,
+    "description": "The discarded invalid admission is not an effect estimate. The doctrine-fix artifact still produced no agent-authored graph nodes in any of four sessions. Session 4 touched seeded task state, which is not an intake write. Both arms produced [0, 0, 1, 0]."
+  },
+  "interpretation": "V6 is terminal and discarded. The admission is invalid because treatment session 4 was falsely classified as external source access by scanning descriptive Bash metadata. The retained behavior nevertheless shows that the strengthened doctrine did not trigger pre-implementation intake in this attempt. A new registration may correct only command-field extraction while retaining the identical product artifact; v6 must not be rerun or reinterpreted."
+}

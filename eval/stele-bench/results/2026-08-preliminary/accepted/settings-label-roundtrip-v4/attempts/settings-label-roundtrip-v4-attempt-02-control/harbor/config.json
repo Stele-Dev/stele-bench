@@ -1,0 +1,23 @@
+{
+    "task": {
+        "path": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v4/work/6aa476fb31d1defb7d47/pack/settings-label-roundtrip"
+    },
+    "trial_name": "settings-label-roundtrip__KoeAVpU",
+    "trials_dir": "$STELE_BENCH_STATE/runs/settings-label-roundtrip-v4/work/6aa476fb31d1defb7d47/jobs/route-one",
+    "agent": {
+        "name": "claude-code",
+        "model_name": "anthropic/claude-haiku-4.5",
+        "kwargs": {
+            "max_budget_usd": "5",
+            "max_turns": 60,
+            "permission_mode": "bypassPermissions"
+        },
+        "env": {
+            "ANTHROPIC_API_KEY": "****",
+            "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+            "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+            "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****"
+        }
+    },
+    "job_id": "c821d13a-646c-4001-b308-c057072d278a"
+}

@@ -1,0 +1,2033 @@
+{
+  "arms": {
+    "attempt-01-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/9f7d51cdf8d1cab7ddf5/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1200; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 0.7209895,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.1441979,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 9,
+                "session": {
+                  "by_tool": {
+                    "bash": 5,
+                    "read": 7
+                  },
+                  "investigative": 12,
+                  "total": 12
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 1392,
+                "scanned_from": 9
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 0,
+              "runtime_plugin_count": 0,
+              "session_bytes": 144569,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 163.78105,
+              "invocation_wall": 233.275497,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 402484,
+              "cache_write": 31094,
+              "input": 590937,
+              "output": 4394
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-01-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 236.48609679099172
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-01-control.json",
+      "run_id": "drift-r1-attempt-01-control"
+    },
+    "attempt-01-faithful": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/3178fe0112ed61a7f767/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1200; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 1.48697,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.29739400000000005,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 15,
+                "session": {
+                  "by_tool": {
+                    "bash": 8,
+                    "read": 4
+                  },
+                  "investigative": 12,
+                  "total": 12
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 1395,
+                "scanned_from": 15
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 198985,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 128,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": {
+              "channels": [
+                "rag"
+              ],
+              "injected": true,
+              "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+              "occurrences": 1
+            },
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": "dotfile-drift-decision-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 178.441451,
+              "invocation_wall": 273.549042,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 1205905,
+              "cache_write": 48480,
+              "input": 1599237,
+              "output": 5720
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-01-faithful",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 277.41042937501334
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-01-faithful.json",
+      "run_id": "drift-r1-attempt-01-faithful"
+    },
+    "attempt-02-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/1b76bc6d218f8f49cc13/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1200; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 0.44421975,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.08884395,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 7,
+                "session": {
+                  "by_tool": {
+                    "bash": 3,
+                    "read": 5
+                  },
+                  "investigative": 8,
+                  "total": 8
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 643,
+                "scanned_from": 7
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 0,
+              "runtime_plugin_count": 0,
+              "session_bytes": 78748,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 166.369426,
+              "invocation_wall": 225.992584,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 278007,
+              "cache_write": 31045,
+              "input": 384351,
+              "output": 3072
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-02-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 228.45569695800077
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-02-control.json",
+      "run_id": "drift-r1-attempt-02-control"
+    },
+    "attempt-02-faithful": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/d49815a29553463d2e69/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1200; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 0.8945545,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.1789109,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 11,
+                "session": {
+                  "by_tool": {
+                    "bash": 9,
+                    "read": 5
+                  },
+                  "investigative": 14,
+                  "total": 16
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": true,
+                "markers_found": [
+                  "8-12%"
+                ],
+                "response_chars": 1285,
+                "scanned_from": 11
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 139836,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 198,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": {
+              "channels": [
+                "rag"
+              ],
+              "injected": true,
+              "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+              "occurrences": 1
+            },
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": "dotfile-drift-decision-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 359.853744,
+              "invocation_wall": 450.592388,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 819227,
+              "cache_write": 48350,
+              "input": 1026685,
+              "output": 5382
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-02-faithful",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 454.1415112079703
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-02-faithful.json",
+      "run_id": "drift-r1-attempt-02-faithful"
+    },
+    "attempt-03-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/b998dd8f4737bb5174da/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1376; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "invalid",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": null,
+              "claude_reported_amount_usd": null,
+              "claude_reported_source": "unavailable",
+              "direct_from_claude_result": false,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": null,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": "missing_atif_trajectory",
+              "atif_integrity_valid": false,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": null,
+                "session": null,
+                "total": null
+              },
+              "normalized_atif": false,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": false,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 0,
+                "scanned_from": null
+              },
+              "result_subtype": null,
+              "runtime_mcp_server_count": null,
+              "runtime_plugin_count": null,
+              "session_bytes": 0,
+              "session_file_count": 0,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": null,
+              "trial_result": true,
+              "verifier_detail_artifact": false,
+              "verifier_reward_artifact": false
+            },
+            "memory_evidence": null,
+            "outcome": "invalid",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": null,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 360.003075,
+              "invocation_wall": 374.06322,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": null,
+              "cache_write": null,
+              "input": null,
+              "output": null
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-03-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 376.4322652089759
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-03-control.json",
+      "run_id": "drift-r1-attempt-03-control"
+    },
+    "attempt-03-faithful": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/3603b7b183e11cf28c21/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1200; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 1.5981372499999997,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.31962745,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 16,
+                "session": {
+                  "by_tool": {
+                    "bash": 5,
+                    "read": 8
+                  },
+                  "investigative": 13,
+                  "total": 13
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 1473,
+                "scanned_from": 16
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 214593,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 132,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": {
+              "channels": [
+                "rag"
+              ],
+              "injected": true,
+              "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+              "occurrences": 1
+            },
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": "dotfile-drift-decision-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 176.357496,
+              "invocation_wall": 267.997165,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 1302719,
+              "cache_write": 48509,
+              "input": 1729810,
+              "output": 5745
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-03-faithful",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 270.4406944999937
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-03-faithful.json",
+      "run_id": "drift-r1-attempt-03-faithful"
+    },
+    "attempt-04-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/5368f9fe277dd1d08be7/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1200; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 0.7972524999999998,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.1594505,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 13,
+                "session": {
+                  "by_tool": {
+                    "bash": 4,
+                    "read": 6
+                  },
+                  "investigative": 10,
+                  "total": 10
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 824,
+                "scanned_from": 13
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 0,
+              "runtime_plugin_count": 0,
+              "session_bytes": 124664,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 157.317375,
+              "invocation_wall": 227.847553,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 650512,
+              "cache_write": 31194,
+              "input": 850693,
+              "output": 3938
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-04-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 230.21690195897827
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-04-control.json",
+      "run_id": "drift-r1-attempt-04-control"
+    },
+    "attempt-04-faithful": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/417d4e3b7e81ecc1518f/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1200; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 1.01039275,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.20207855,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 17,
+                "session": {
+                  "by_tool": {
+                    "bash": 5,
+                    "read": 9
+                  },
+                  "investigative": 14,
+                  "total": 14
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 1098,
+                "scanned_from": 17
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 171446,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 133,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": {
+              "channels": [
+                "rag"
+              ],
+              "injected": true,
+              "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+              "occurrences": 1
+            },
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": "dotfile-drift-decision-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 175.216956,
+              "invocation_wall": 264.904009,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 1489193,
+              "cache_write": 3563,
+              "input": 1695303,
+              "output": 5168
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-04-faithful",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 267.25098158302717
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-04-faithful.json",
+      "run_id": "drift-r1-attempt-04-faithful"
+    },
+    "attempt-05-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/a42338f4fd7b2728d476/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1199; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 0.9131492499999999,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.18262984999999998,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 14,
+                "session": {
+                  "by_tool": {
+                    "bash": 5,
+                    "read": 6
+                  },
+                  "investigative": 11,
+                  "total": 11
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 862,
+                "scanned_from": 14
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 0,
+              "runtime_plugin_count": 0,
+              "session_bytes": 151929,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 169.472229,
+              "invocation_wall": 247.011057,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 774618,
+              "cache_write": 363,
+              "input": 1017366,
+              "output": 4683
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-05-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 249.37872262502788
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-05-control.json",
+      "run_id": "drift-r1-attempt-05-control"
+    },
+    "attempt-05-faithful": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/drift-r1/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "dotfile-drift-detection"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/e28710b2ef79eafdbda0/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1200; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 60,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "1.50",
+        "requested_budget_cap_usd_per_trial": "1.50",
+        "results": [
+          {
+            "challenge_id": "dotfile-drift-detection",
+            "cost": {
+              "billed_step_count": 2,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 1.1273955,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.22547910000000002,
+              "requested_claude_cli_cap_usd": 1.5
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "investigation_depth": {
+                "by_tool": {},
+                "investigative": 0,
+                "scanned_from": 13,
+                "session": {
+                  "by_tool": {
+                    "bash": 4,
+                    "read": 8
+                  },
+                  "investigative": 12,
+                  "total": 12
+                },
+                "total": 0
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": {
+                "cited": false,
+                "markers_found": [],
+                "response_chars": 1276,
+                "scanned_from": 13
+              },
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 188371,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 131,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": {
+              "channels": [
+                "rag"
+              ],
+              "injected": true,
+              "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+              "occurrences": 1
+            },
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+              "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+              "fixture_id": "dotfile-drift-decision-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": null,
+              "agent_setup": 194.251994,
+              "invocation_wall": 406.723107,
+              "verifier": null
+            },
+            "tokens": {
+              "cache_read": 1011941,
+              "cache_write": 48388,
+              "input": 1284483,
+              "output": 5280
+            }
+          }
+        ],
+        "run_id": "drift-r1-attempt-05-faithful",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 344.7084774580435
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/drift-r1/attempt-05-faithful.json",
+      "run_id": "drift-r1-attempt-05-faithful"
+    }
+  },
+  "attempts": [
+    {
+      "analysable": true,
+      "arm_order": [
+        "control",
+        "faithful"
+      ],
+      "attempt": 1,
+      "budget_truncation_risk": [
+        {
+          "above_warning_threshold": true,
+          "arm": "faithful",
+          "claude_reported_usd": 1.48697,
+          "exceeded_requested_cap": false
+        }
+      ],
+      "deltas": {
+        "control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.7209895,
+          "gateway_rate_cross_check_usd": 0.1441979,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 12.0,
+          "session_total_tool_calls": 12.0,
+          "tokens_cache_read": 402484.0,
+          "tokens_cache_write": 31094.0,
+          "tokens_input": 590937.0,
+          "tokens_output": 4394.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 233.275497
+        },
+        "faithful": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 1.48697,
+          "gateway_rate_cross_check_usd": 0.29739400000000005,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 12.0,
+          "session_total_tool_calls": 12.0,
+          "tokens_cache_read": 1205905.0,
+          "tokens_cache_write": 48480.0,
+          "tokens_input": 1599237.0,
+          "tokens_output": 5720.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 273.549042
+        },
+        "faithful_minus_control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.7659805,
+          "gateway_rate_cross_check_usd": 0.15319610000000006,
+          "investigative_tool_calls": 0.0,
+          "reward": 0.0,
+          "session_investigative_tool_calls": 0.0,
+          "session_total_tool_calls": 0.0,
+          "tokens_cache_read": 803421.0,
+          "tokens_cache_write": 17386.0,
+          "tokens_input": 1008300.0,
+          "tokens_output": 1326.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 40.273544999999984
+        },
+        "faithful_reduction_percent": {
+          "claude_reported_usd": -106.24017409407489,
+          "gateway_rate_cross_check_usd": -106.24017409407493,
+          "session_investigative_tool_calls": 0.0,
+          "session_total_tool_calls": 0.0,
+          "tokens_cache_read": -199.61563689488278,
+          "tokens_cache_write": -55.914324306940244,
+          "tokens_input": -170.62732575553738,
+          "tokens_output": -30.17751479289941,
+          "trial_wall_seconds": -17.264370033685957
+        }
+      },
+      "excluded_reason": null,
+      "labels": {
+        "control": "attempt-01-control",
+        "faithful": "attempt-01-faithful"
+      },
+      "memory_evidence": {
+        "channels": [
+          "rag"
+        ],
+        "injected": true,
+        "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+        "occurrences": 1
+      },
+      "metrics": {
+        "control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.7209895,
+          "gateway_rate_cross_check_usd": 0.1441979,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 12.0,
+          "session_total_tool_calls": 12.0,
+          "tokens_cache_read": 402484.0,
+          "tokens_cache_write": 31094.0,
+          "tokens_input": 590937.0,
+          "tokens_output": 4394.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 233.275497
+        },
+        "faithful": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 1.48697,
+          "gateway_rate_cross_check_usd": 0.29739400000000005,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 12.0,
+          "session_total_tool_calls": 12.0,
+          "tokens_cache_read": 1205905.0,
+          "tokens_cache_write": 48480.0,
+          "tokens_input": 1599237.0,
+          "tokens_output": 5720.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 273.549042
+        }
+      }
+    },
+    {
+      "analysable": true,
+      "arm_order": [
+        "faithful",
+        "control"
+      ],
+      "attempt": 2,
+      "budget_truncation_risk": [],
+      "deltas": {
+        "control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.44421975,
+          "gateway_rate_cross_check_usd": 0.08884395,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 8.0,
+          "session_total_tool_calls": 8.0,
+          "tokens_cache_read": 278007.0,
+          "tokens_cache_write": 31045.0,
+          "tokens_input": 384351.0,
+          "tokens_output": 3072.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 225.992584
+        },
+        "faithful": {
+          "cited_decision": 1.0,
+          "claude_reported_usd": 0.8945545,
+          "gateway_rate_cross_check_usd": 0.1789109,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 14.0,
+          "session_total_tool_calls": 16.0,
+          "tokens_cache_read": 819227.0,
+          "tokens_cache_write": 48350.0,
+          "tokens_input": 1026685.0,
+          "tokens_output": 5382.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 450.592388
+        },
+        "faithful_minus_control": {
+          "cited_decision": 1.0,
+          "claude_reported_usd": 0.45033475,
+          "gateway_rate_cross_check_usd": 0.09006695,
+          "investigative_tool_calls": 0.0,
+          "reward": 0.0,
+          "session_investigative_tool_calls": 6.0,
+          "session_total_tool_calls": 8.0,
+          "tokens_cache_read": 541220.0,
+          "tokens_cache_write": 17305.0,
+          "tokens_input": 642334.0,
+          "tokens_output": 2310.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 224.59980400000003
+        },
+        "faithful_reduction_percent": {
+          "claude_reported_usd": -101.37657094264718,
+          "gateway_rate_cross_check_usd": -101.3765709426472,
+          "session_investigative_tool_calls": -75.0,
+          "session_total_tool_calls": -100.0,
+          "tokens_cache_read": -194.67855125950067,
+          "tokens_cache_write": -55.74166532452891,
+          "tokens_input": -167.12171946996367,
+          "tokens_output": -75.1953125,
+          "trial_wall_seconds": -99.38370544052898
+        }
+      },
+      "excluded_reason": null,
+      "labels": {
+        "control": "attempt-02-control",
+        "faithful": "attempt-02-faithful"
+      },
+      "memory_evidence": {
+        "channels": [
+          "rag"
+        ],
+        "injected": true,
+        "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+        "occurrences": 1
+      },
+      "metrics": {
+        "control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.44421975,
+          "gateway_rate_cross_check_usd": 0.08884395,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 8.0,
+          "session_total_tool_calls": 8.0,
+          "tokens_cache_read": 278007.0,
+          "tokens_cache_write": 31045.0,
+          "tokens_input": 384351.0,
+          "tokens_output": 3072.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 225.992584
+        },
+        "faithful": {
+          "cited_decision": 1.0,
+          "claude_reported_usd": 0.8945545,
+          "gateway_rate_cross_check_usd": 0.1789109,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 14.0,
+          "session_total_tool_calls": 16.0,
+          "tokens_cache_read": 819227.0,
+          "tokens_cache_write": 48350.0,
+          "tokens_input": 1026685.0,
+          "tokens_output": 5382.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 450.592388
+        }
+      }
+    },
+    {
+      "analysable": true,
+      "arm_order": [
+        "control",
+        "faithful"
+      ],
+      "attempt": 3,
+      "budget_truncation_risk": [
+        {
+          "above_warning_threshold": true,
+          "arm": "faithful",
+          "claude_reported_usd": 1.5981372499999997,
+          "exceeded_requested_cap": false
+        }
+      ],
+      "deltas": {
+        "control": {
+          "cited_decision": 0.0,
+          "trial_wall_seconds": 374.06322
+        },
+        "faithful": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 1.5981372499999997,
+          "gateway_rate_cross_check_usd": 0.31962745,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 13.0,
+          "session_total_tool_calls": 13.0,
+          "tokens_cache_read": 1302719.0,
+          "tokens_cache_write": 48509.0,
+          "tokens_input": 1729810.0,
+          "tokens_output": 5745.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 267.997165
+        },
+        "faithful_minus_control": {
+          "cited_decision": 0.0,
+          "trial_wall_seconds": -106.066055
+        },
+        "faithful_reduction_percent": {
+          "trial_wall_seconds": 28.355114678208675
+        }
+      },
+      "excluded_reason": null,
+      "labels": {
+        "control": "attempt-03-control",
+        "faithful": "attempt-03-faithful"
+      },
+      "memory_evidence": {
+        "channels": [
+          "rag"
+        ],
+        "injected": true,
+        "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+        "occurrences": 1
+      },
+      "metrics": {
+        "control": {
+          "cited_decision": 0.0,
+          "trial_wall_seconds": 374.06322
+        },
+        "faithful": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 1.5981372499999997,
+          "gateway_rate_cross_check_usd": 0.31962745,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 13.0,
+          "session_total_tool_calls": 13.0,
+          "tokens_cache_read": 1302719.0,
+          "tokens_cache_write": 48509.0,
+          "tokens_input": 1729810.0,
+          "tokens_output": 5745.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 267.997165
+        }
+      }
+    },
+    {
+      "analysable": true,
+      "arm_order": [
+        "faithful",
+        "control"
+      ],
+      "attempt": 4,
+      "budget_truncation_risk": [],
+      "deltas": {
+        "control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.7972524999999998,
+          "gateway_rate_cross_check_usd": 0.1594505,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 10.0,
+          "session_total_tool_calls": 10.0,
+          "tokens_cache_read": 650512.0,
+          "tokens_cache_write": 31194.0,
+          "tokens_input": 850693.0,
+          "tokens_output": 3938.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 227.847553
+        },
+        "faithful": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 1.01039275,
+          "gateway_rate_cross_check_usd": 0.20207855,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 14.0,
+          "session_total_tool_calls": 14.0,
+          "tokens_cache_read": 1489193.0,
+          "tokens_cache_write": 3563.0,
+          "tokens_input": 1695303.0,
+          "tokens_output": 5168.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 264.904009
+        },
+        "faithful_minus_control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.21314025000000025,
+          "gateway_rate_cross_check_usd": 0.04262805,
+          "investigative_tool_calls": 0.0,
+          "reward": 0.0,
+          "session_investigative_tool_calls": 4.0,
+          "session_total_tool_calls": 4.0,
+          "tokens_cache_read": 838681.0,
+          "tokens_cache_write": -27631.0,
+          "tokens_input": 844610.0,
+          "tokens_output": 1230.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 37.05645599999997
+        },
+        "faithful_reduction_percent": {
+          "claude_reported_usd": -26.734347023057353,
+          "gateway_rate_cross_check_usd": -26.734347023057314,
+          "session_investigative_tool_calls": -40.0,
+          "session_total_tool_calls": -40.0,
+          "tokens_cache_read": -128.92629190545293,
+          "tokens_cache_write": 88.57793165352311,
+          "tokens_input": -99.28493592870754,
+          "tokens_output": -31.23412899949213,
+          "trial_wall_seconds": -16.26370593499416
+        }
+      },
+      "excluded_reason": null,
+      "labels": {
+        "control": "attempt-04-control",
+        "faithful": "attempt-04-faithful"
+      },
+      "memory_evidence": {
+        "channels": [
+          "rag"
+        ],
+        "injected": true,
+        "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+        "occurrences": 1
+      },
+      "metrics": {
+        "control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.7972524999999998,
+          "gateway_rate_cross_check_usd": 0.1594505,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 10.0,
+          "session_total_tool_calls": 10.0,
+          "tokens_cache_read": 650512.0,
+          "tokens_cache_write": 31194.0,
+          "tokens_input": 850693.0,
+          "tokens_output": 3938.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 227.847553
+        },
+        "faithful": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 1.01039275,
+          "gateway_rate_cross_check_usd": 0.20207855,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 14.0,
+          "session_total_tool_calls": 14.0,
+          "tokens_cache_read": 1489193.0,
+          "tokens_cache_write": 3563.0,
+          "tokens_input": 1695303.0,
+          "tokens_output": 5168.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 264.904009
+        }
+      }
+    },
+    {
+      "analysable": true,
+      "arm_order": [
+        "control",
+        "faithful"
+      ],
+      "attempt": 5,
+      "budget_truncation_risk": [],
+      "deltas": {
+        "control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.9131492499999999,
+          "gateway_rate_cross_check_usd": 0.18262984999999998,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 11.0,
+          "session_total_tool_calls": 11.0,
+          "tokens_cache_read": 774618.0,
+          "tokens_cache_write": 363.0,
+          "tokens_input": 1017366.0,
+          "tokens_output": 4683.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 247.011057
+        },
+        "faithful": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 1.1273955,
+          "gateway_rate_cross_check_usd": 0.22547910000000002,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 12.0,
+          "session_total_tool_calls": 12.0,
+          "tokens_cache_read": 1011941.0,
+          "tokens_cache_write": 48388.0,
+          "tokens_input": 1284483.0,
+          "tokens_output": 5280.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 406.723107
+        },
+        "faithful_minus_control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.21424625000000008,
+          "gateway_rate_cross_check_usd": 0.04284925000000003,
+          "investigative_tool_calls": 0.0,
+          "reward": 0.0,
+          "session_investigative_tool_calls": 1.0,
+          "session_total_tool_calls": 1.0,
+          "tokens_cache_read": 237323.0,
+          "tokens_cache_write": 48025.0,
+          "tokens_input": 267117.0,
+          "tokens_output": 597.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 159.71205000000003
+        },
+        "faithful_reduction_percent": {
+          "claude_reported_usd": -23.462347474960975,
+          "gateway_rate_cross_check_usd": -23.462347474960985,
+          "session_investigative_tool_calls": -9.090909090909092,
+          "session_total_tool_calls": -9.090909090909092,
+          "tokens_cache_read": -30.637423865698963,
+          "tokens_cache_write": -13230.027548209368,
+          "tokens_input": -26.255742771038154,
+          "tokens_output": -12.748238308776424,
+          "trial_wall_seconds": -64.65785456721478
+        }
+      },
+      "excluded_reason": null,
+      "labels": {
+        "control": "attempt-05-control",
+        "faithful": "attempt-05-faithful"
+      },
+      "memory_evidence": {
+        "channels": [
+          "rag"
+        ],
+        "injected": true,
+        "marker_sha256": "176fc025b6b8984f79dae4b7b8655160ef4553d3dffb15911d01d475476d741d",
+        "occurrences": 1
+      },
+      "metrics": {
+        "control": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 0.9131492499999999,
+          "gateway_rate_cross_check_usd": 0.18262984999999998,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 11.0,
+          "session_total_tool_calls": 11.0,
+          "tokens_cache_read": 774618.0,
+          "tokens_cache_write": 363.0,
+          "tokens_input": 1017366.0,
+          "tokens_output": 4683.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 247.011057
+        },
+        "faithful": {
+          "cited_decision": 0.0,
+          "claude_reported_usd": 1.1273955,
+          "gateway_rate_cross_check_usd": 0.22547910000000002,
+          "investigative_tool_calls": 0.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 12.0,
+          "session_total_tool_calls": 12.0,
+          "tokens_cache_read": 1011941.0,
+          "tokens_cache_write": 48388.0,
+          "tokens_input": 1284483.0,
+          "tokens_output": 5280.0,
+          "total_tool_calls": 0.0,
+          "trial_wall_seconds": 406.723107
+        }
+      }
+    }
+  ],
+  "billing": {
+    "claude_reported_usd_by_condition": {
+      "attempt-01-control": 0.7209895,
+      "attempt-01-faithful": 1.48697,
+      "attempt-02-control": 0.44421975,
+      "attempt-02-faithful": 0.8945545,
+      "attempt-03-control": null,
+      "attempt-03-faithful": 1.5981372499999997,
+      "attempt-04-control": 0.7972524999999998,
+      "attempt-04-faithful": 1.01039275,
+      "attempt-05-control": 0.9131492499999999,
+      "attempt-05-faithful": 1.1273955
+    },
+    "gateway_drain_checks": [
+      {
+        "balance_usd": "68.62",
+        "checked_at": "2026-07-24T18:59:08.843746Z",
+        "drained_usd": "0.15",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "68.32",
+        "checked_at": "2026-07-24T19:03:53.683329Z",
+        "drained_usd": "0.45",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "68.15",
+        "checked_at": "2026-07-24T19:11:35.161796Z",
+        "drained_usd": "0.62",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "68.06",
+        "checked_at": "2026-07-24T19:15:27.209476Z",
+        "drained_usd": "0.71",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "68.06",
+        "checked_at": "2026-07-24T19:21:46.753854Z",
+        "drained_usd": "0.71",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "67.74",
+        "checked_at": "2026-07-24T19:26:24.149917Z",
+        "drained_usd": "1.03",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "67.54",
+        "checked_at": "2026-07-24T19:30:57.599233Z",
+        "drained_usd": "1.23",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "67.38",
+        "checked_at": "2026-07-24T19:34:51.199487Z",
+        "drained_usd": "1.39",
+        "observed": true,
+        "reason": null
+      },
+      {
+        "balance_usd": "67.19",
+        "checked_at": "2026-07-24T19:39:04.055053Z",
+        "drained_usd": "1.58",
+        "observed": true,
+        "reason": null
+      }
+    ],
+    "gateway_drain_stop": null,
+    "gateway_reserve_preflight": {
+      "acknowledged_pair_cap_usd": "15.00",
+      "advisory": "Gateway-reported figures are advisory; the Vercel dashboard remains authoritative for actual billing and for recalibrating the reserve.",
+      "calibrated_at": "2026-07-23",
+      "calibration_age_days": 1,
+      "calibration_authority": "vercel-dashboard",
+      "checked_at": "2026-07-24T18:55:07.142797Z",
+      "headroom_after_pair_usd": "28.77",
+      "headroom_after_reserve_usd": "43.77",
+      "key_budget": {
+        "active": true,
+        "current_spend_usd": "187.34",
+        "limit_amount_usd": "250.00",
+        "refresh_period": "monthly",
+        "remaining_usd": "62.66"
+      },
+      "key_fingerprint": "b48d0a8ec3af",
+      "key_id": "4nuA3CL9Ugmp648xgNcrAHYHNyJD7svExrevW8fg09QZVoGI",
+      "key_name": "Eval Suite Key",
+      "production_reserve_usd": "25.00",
+      "schema_version": 1,
+      "shared_balance_usd": "68.77",
+      "shared_total_used_usd": "256.23"
+    },
+    "gateway_total_usd": null,
+    "recorded_at": null,
+    "source": null
+  },
+  "comparable": true,
+  "completed_at": "2026-07-24T19:46:00.112504Z",
+  "configuration": {
+    "acknowledged_paid_repeat_cap_usd": "15.00",
+    "arm_count": 10,
+    "attempt_arm_order": {
+      "1": [
+        "control",
+        "faithful"
+      ],
+      "2": [
+        "faithful",
+        "control"
+      ],
+      "3": [
+        "control",
+        "faithful"
+      ],
+      "4": [
+        "faithful",
+        "control"
+      ],
+      "5": [
+        "control",
+        "faithful"
+      ]
+    },
+    "attempts": 5,
+    "challenge_id": "dotfile-drift-detection",
+    "fixture_id": "dotfile-drift-decision-v1",
+    "max_budget_usd_per_arm": "1.50",
+    "max_turns": 60,
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80"
+  },
+  "created_at": "2026-07-24T18:55:09.481149Z",
+  "error": null,
+  "provenance": {
+    "artifact_manifest": "$STELE_BENCH_STATE/artifacts/current.json",
+    "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+    "artifact_source": {
+      "diff_sha256": "93acc14a312d19c2d07a194a787ab73235a449510d56a376d3e846bce90a4aef",
+      "dirty": true,
+      "head": "efd7d97b0cecc9a9e19161478a5ccc93b9c4c70f",
+      "status_entries": 2,
+      "status_sha256": "f59e0e8cbc0dc3c4c2a67687a6b94683d881ca268928b5a1f325228c2c53850e",
+      "untracked_bytes": 0,
+      "untracked_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked_files": 0
+    },
+    "artifact_target": "linux-arm64",
+    "certification": {
+      "arms": [
+        "faithful"
+      ],
+      "certified": true,
+      "path": "$STELE_BENCH_STATE/runs/drift-r1/certification.json",
+      "redacted_paths": [
+        ".claude/commands/publish.md",
+        ".claude/skills/dotstate-dev/SKILL.md",
+        ".stele/project.json",
+        "CLAUDE.md"
+      ],
+      "sha256": "d05b89cc203f982d00a07fa3cf029bf73b561f61b123dc27f51dc5e90ace3459"
+    },
+    "challenge_manifest_sha256": "4b42e8d3f25f68012009a16ff0113c3ddad1074ad0b257245560da05af7fcb44",
+    "runtime": {
+      "docker_architecture": "aarch64",
+      "docker_server": "29.6.1",
+      "harbor": "0.20.0",
+      "python": "3.12.12",
+      "supabase": "2.109.0"
+    },
+    "verifier_sha256": "70129d48c911b2130bd6b24ffc354166f2e2cc6d9597c6c321cd5286536333f9"
+  },
+  "repeat_id": "drift-r1",
+  "schema_version": 1,
+  "status": "completed",
+  "summary": {
+    "attempts_analysed": 5,
+    "attempts_excluded": [],
+    "attempts_run": 5,
+    "binary_measures": {
+      "cited_decision": {
+        "control": {
+          "rate": 0.0,
+          "successes": 0,
+          "trials": 5,
+          "wilson_95": [
+            0.0,
+            0.43448246478317476
+          ]
+        },
+        "difference": 0.2,
+        "direction_tested": "treatment_greater_than_control",
+        "fisher_one_sided_p": 0.5,
+        "treatment": {
+          "rate": 0.2,
+          "successes": 1,
+          "trials": 5,
+          "wilson_95": [
+            0.036224108632430085,
+            0.6244653702374747
+          ]
+        }
+      },
+      "reward": {
+        "control": {
+          "rate": 1.0,
+          "successes": 4,
+          "trials": 4,
+          "wilson_95": [
+            0.5101091635454027,
+            1.0
+          ]
+        },
+        "difference": 0.0,
+        "direction_tested": "treatment_greater_than_control",
+        "fisher_one_sided_p": 1.0,
+        "treatment": {
+          "rate": 1.0,
+          "successes": 4,
+          "trials": 4,
+          "wilson_95": [
+            0.5101091635454027,
+            1.0
+          ]
+        }
+      }
+    },
+    "paired_measures": {
+      "investigative_tool_calls": {
+        "attempts": 4,
+        "attempts_favouring_treatment": 0,
+        "differences": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_difference": 0.0,
+        "median_difference": 0.0,
+        "median_reduction_percent": null,
+        "min_difference": 0.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "session_investigative_tool_calls": {
+        "attempts": 4,
+        "attempts_favouring_treatment": 0,
+        "differences": [
+          0.0,
+          6.0,
+          4.0,
+          1.0
+        ],
+        "max_difference": 6.0,
+        "median_difference": 2.5,
+        "median_reduction_percent": -24.545454545454547,
+        "min_difference": 0.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "tokens_input": {
+        "attempts": 4,
+        "attempts_favouring_treatment": 0,
+        "differences": [
+          1008300.0,
+          642334.0,
+          844610.0,
+          267117.0
+        ],
+        "max_difference": 1008300.0,
+        "median_difference": 743472.0,
+        "median_reduction_percent": -133.2033276993356,
+        "min_difference": 267117.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "trial_wall_seconds": {
+        "attempts": 5,
+        "attempts_favouring_treatment": 1,
+        "differences": [
+          40.273544999999984,
+          224.59980400000003,
+          -106.066055,
+          37.05645599999997,
+          159.71205000000003
+        ],
+        "max_difference": 224.59980400000003,
+        "median_difference": 40.273544999999984,
+        "median_reduction_percent": -17.264370033685957,
+        "min_difference": -106.066055,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      }
+    }
+  }
+}

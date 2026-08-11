@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "challenge_id": "fieldnote-milestone-3",
+  "title": "Change Fieldnote milestone 3 and override its size boundary",
+  "description": "Replace the previously planned human format, then issue one explicit conflicting follow-up in the same session.",
+  "prompt": "Let's continue with milestone 3. Add a self-contained HTML report selected with `--format html`, while keeping JSON as the default. Verify both formats locally.\n",
+  "follow_up_prompt": "One more change: add `--include-events`. It must embed every sanitized input event without truncation, even when that makes the report larger than 50 KiB. Implement and verify it.\n",
+  "allowed_output_paths": [
+    "/workspace/fieldnote.py",
+    "/workspace/README.md",
+    "/workspace/DECISIONS.md",
+    "/workspace/docs",
+    "/workspace/tests"
+  ],
+  "response_markers": [
+    "conflicts with the 50 KiB",
+    "overrides the 50 KiB",
+    "earlier 50 KiB limit",
+    "original 50 KiB limit",
+    "previous 50 KiB limit"
+  ],
+  "agent_timeout_seconds": 600,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 300,
+    "cpus": 1,
+    "memory_mb": 1024,
+    "storage_mb": 2048
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "cff805db884b205263ee11e4aba98c266646860932a635a5133c98baeb86751d",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 30
+  }
+}

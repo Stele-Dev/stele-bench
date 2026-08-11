@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "challenge_id": "service-readiness",
+  "title": "Service readiness",
+  "description": "Create a small readiness marker in the provided project.",
+  "prompt": "Create the file `/workspace/.ready` with exactly the text `ready` followed by a newline. Do not modify any other file.\n",
+  "allowed_output_paths": [
+    "/workspace/.ready"
+  ],
+  "agent_timeout_seconds": 300,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 300,
+    "cpus": 1,
+    "memory_mb": 1024,
+    "storage_mb": 2048
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "966edf9adedca1eee1b18eb093a1a1dec111c58ef06acbca623bf302ac3598c7",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 30
+  }
+}

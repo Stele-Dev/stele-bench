@@ -1,0 +1,4 @@
+# The generated view is derived from the records beside it — regenerate with
+# `oracle.py report` rather than committing a build artefact that goes stale
+# the moment a new record lands.
+history.html

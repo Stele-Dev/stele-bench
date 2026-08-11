@@ -1,0 +1,161 @@
+{
+    "id": "ff0cc4bd-17e5-430a-b9ae-1bcd4b560c04",
+    "task_name": "local/dotfile-drift-detection",
+    "trial_name": "dotfile-drift-detection__nukjCGQ",
+    "trial_uri": "file://$STELE_BENCH_STATE/runs/drift-r1/work/a42338f4fd7b2728d476/jobs/route-one/dotfile-drift-detection__nukjCGQ",
+    "task_id": {
+        "path": "$STELE_BENCH_STATE/runs/drift-r1/work/a42338f4fd7b2728d476/pack/dotfile-drift-detection"
+    },
+    "source": null,
+    "task_checksum": "3f9f8dcffd3c38c2f234feb265ba90b023f24b119f63e03d7201e024d6be8a5f",
+    "config": {
+        "task": {
+            "path": "$STELE_BENCH_STATE/runs/drift-r1/work/a42338f4fd7b2728d476/pack/dotfile-drift-detection",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "dotfile-drift-detection__nukjCGQ",
+        "trials_dir": "$STELE_BENCH_STATE/runs/drift-r1/work/a42338f4fd7b2728d476/jobs/route-one",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "anthropic/claude-haiku-4.5",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": true,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "max_budget_usd": "1.50",
+                "max_turns": 60,
+                "permission_mode": "bypassPermissions"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "bfad2edc-f7ec-4f99-94d5-51fd719522b8"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.219",
+        "model_info": {
+            "name": "claude-haiku-4.5",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": null,
+    "verifier_result": {
+        "rewards": {
+            "reward": 1
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-07-24T19:34:54.909900Z",
+    "finished_at": "2026-07-24T19:39:01.920957Z",
+    "environment_setup": {
+        "started_at": "2026-07-24T19:34:54.956189Z",
+        "finished_at": "2026-07-24T19:34:57.665647Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-07-24T19:34:57.665760Z",
+        "finished_at": "2026-07-24T19:37:47.137989Z"
+    },
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": [
+        {
+            "step_name": "establish",
+            "agent_result": {
+                "n_input_tokens": 484777,
+                "n_cache_tokens": 371707,
+                "n_output_tokens": 2169,
+                "cost_usd": 0.8058609999999999,
+                "rollout_details": null,
+                "metadata": null
+            },
+            "verifier_result": {
+                "rewards": {
+                    "reward": 1
+                }
+            },
+            "exception_info": null,
+            "agent_execution": {
+                "started_at": "2026-07-24T19:37:47.294398Z",
+                "finished_at": "2026-07-24T19:38:31.645634Z"
+            },
+            "verifier": {
+                "started_at": "2026-07-24T19:38:32.299010Z",
+                "finished_at": "2026-07-24T19:38:35.039289Z"
+            }
+        },
+        {
+            "step_name": "follow-up",
+            "agent_result": {
+                "n_input_tokens": 532589,
+                "n_cache_tokens": 402911,
+                "n_output_tokens": 2514,
+                "cost_usd": 0.10728825,
+                "rollout_details": null,
+                "metadata": null
+            },
+            "verifier_result": {
+                "rewards": {
+                    "reward": 1
+                }
+            },
+            "exception_info": null,
+            "agent_execution": {
+                "started_at": "2026-07-24T19:38:35.197161Z",
+                "finished_at": "2026-07-24T19:38:47.363199Z"
+            },
+            "verifier": {
+                "started_at": "2026-07-24T19:38:47.870006Z",
+                "finished_at": "2026-07-24T19:38:50.629547Z"
+            }
+        }
+    ]
+}

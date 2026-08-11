@@ -1,0 +1,35 @@
+{
+    "task": {
+        "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v1/work/dcfbf7f4b00f0132b7e9/pack/input-keypress-architecture"
+    },
+    "trial_name": "input-keypress-architecture__cbAjFSR",
+    "trials_dir": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v1/work/dcfbf7f4b00f0132b7e9/jobs/route-two",
+    "agent": {
+        "import_path": "stele_bench.harbor_entrypoint:ConfiguredSteleClaudeCode",
+        "model_name": "anthropic/claude-haiku-4.5",
+        "kwargs": {
+            "artifact_path": "$STELE_BENCH_STATE/artifacts/stele-linux-arm64-5deb3a6046ad0faf",
+            "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+            "artifact_source_kind": "local-dirty-worktree",
+            "auto_rag_injection": "on",
+            "credentials_path": "$STELE_BENCH_STATE/attempts/dcfbf7f4b00f0132b7e97bb3d1db8f1b49c57400d1cac76759c942a5a13d85d7/credentials.json",
+            "max_budget_usd": "3",
+            "max_turns": 30,
+            "permission_mode": "bypassPermissions",
+            "preferences_path": "$STELE_BENCH_STATE/attempts/dcfbf7f4b00f0132b7e97bb3d1db8f1b49c57400d1cac76759c942a5a13d85d7/preferences.json",
+            "project_binding_path": "$STELE_BENCH_STATE/attempts/dcfbf7f4b00f0132b7e97bb3d1db8f1b49c57400d1cac76759c942a5a13d85d7/project.json",
+            "project_name": "Workspace",
+            "project_provisioning": "restore"
+        },
+        "env": {
+            "ANTHROPIC_API_KEY": "****",
+            "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+            "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+            "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****",
+            "STELE_SEMANTIC_ENDPOINT": "http://host.docker.internal:63860/api/semantic-seeds?bridge_token=<redacted>",
+            "SUPABASE_ANON_KEY": "sb_p****AaH",
+            "SUPABASE_URL": "http://host.docker.internal:54321"
+        }
+    },
+    "job_id": "0409d4b5-e539-45e1-b6a6-ba41b675ea12"
+}

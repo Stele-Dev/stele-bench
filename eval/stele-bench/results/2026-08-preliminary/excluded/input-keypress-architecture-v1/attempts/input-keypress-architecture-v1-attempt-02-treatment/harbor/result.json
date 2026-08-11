@@ -1,0 +1,135 @@
+{
+    "id": "c88344bb-61b8-4691-9d5b-1ea0fb2d72df",
+    "task_name": "local/input-keypress-architecture",
+    "trial_name": "input-keypress-architecture__cbAjFSR",
+    "trial_uri": "file://$STELE_BENCH_STATE/runs/input-keypress-architecture-v1/work/dcfbf7f4b00f0132b7e9/jobs/route-two/input-keypress-architecture__cbAjFSR",
+    "task_id": {
+        "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v1/work/dcfbf7f4b00f0132b7e9/pack/input-keypress-architecture"
+    },
+    "source": null,
+    "task_checksum": "496bd1a51ade10f5c39eb021dfc4ba9a83cddfdedab394a4db9615cffed3a891",
+    "config": {
+        "task": {
+            "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v1/work/dcfbf7f4b00f0132b7e9/pack/input-keypress-architecture",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "input-keypress-architecture__cbAjFSR",
+        "trials_dir": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v1/work/dcfbf7f4b00f0132b7e9/jobs/route-two",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "stele_bench.harbor_entrypoint:ConfiguredSteleClaudeCode",
+            "model_name": "anthropic/claude-haiku-4.5",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "artifact_path": "$STELE_BENCH_STATE/artifacts/stele-linux-arm64-5deb3a6046ad0faf",
+                "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+                "artifact_source_kind": "local-dirty-worktree",
+                "auto_rag_injection": "on",
+                "credentials_path": "$STELE_BENCH_STATE/attempts/dcfbf7f4b00f0132b7e97bb3d1db8f1b49c57400d1cac76759c942a5a13d85d7/credentials.json",
+                "max_budget_usd": "3",
+                "max_turns": 30,
+                "permission_mode": "bypassPermissions",
+                "preferences_path": "$STELE_BENCH_STATE/attempts/dcfbf7f4b00f0132b7e97bb3d1db8f1b49c57400d1cac76759c942a5a13d85d7/preferences.json",
+                "project_binding_path": "$STELE_BENCH_STATE/attempts/dcfbf7f4b00f0132b7e97bb3d1db8f1b49c57400d1cac76759c942a5a13d85d7/project.json",
+                "project_name": "Workspace",
+                "project_provisioning": "restore"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****",
+                "STELE_SEMANTIC_ENDPOINT": "http://host.docker.internal:63860/api/semantic-seeds?bridge_token=<redacted>",
+                "SUPABASE_ANON_KEY": "sb_p****AaH",
+                "SUPABASE_URL": "http://host.docker.internal:54321"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "0409d4b5-e539-45e1-b6a6-ba41b675ea12"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.220",
+        "model_info": {
+            "name": "claude-haiku-4.5",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 769495,
+        "n_cache_tokens": 672351,
+        "n_output_tokens": 3984,
+        "cost_usd": 0.9260505000000002,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.8
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-08-11T11:02:53.408787Z",
+    "finished_at": "2026-08-11T11:04:34.912744Z",
+    "environment_setup": {
+        "started_at": "2026-08-11T11:02:53.442746Z",
+        "finished_at": "2026-08-11T11:02:55.336931Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-11T11:02:55.337038Z",
+        "finished_at": "2026-08-11T11:03:05.747938Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-11T11:03:05.748122Z",
+        "finished_at": "2026-08-11T11:04:22.548858Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-11T11:04:22.984658Z",
+        "finished_at": "2026-08-11T11:04:24.035821Z"
+    },
+    "step_results": null
+}

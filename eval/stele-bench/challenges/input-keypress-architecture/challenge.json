@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "challenge_id": "input-keypress-architecture",
+  "title": "Input field keypress architecture",
+  "description": "Explain the recurring input-field keypress failures from the source architecture.",
+  "prompt": "Why do keypress bugs keep recurring in Dotstate's input fields? Investigate the source and write a concise, evidence-based answer to `/workspace/.submission/answer.md`. Do not inspect `.git` or repository history, and do not modify any source files.\n",
+  "allowed_output_paths": [
+    "/workspace/.submission/answer.md"
+  ],
+  "agent_timeout_seconds": 300,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 300,
+    "cpus": 1,
+    "memory_mb": 1024,
+    "storage_mb": 2048
+  },
+  "verifier": {
+    "kind": "answer-file",
+    "runtime": "posix-shell",
+    "answer_path": "/workspace/.submission/answer.md",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "61dd13e360344100f9b4e3d38ed3be35da81709b9f887f54aabefa231f2b0860",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 30
+  }
+}

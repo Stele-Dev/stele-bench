@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "challenge_id": "profile-selection-live-path",
+  "title": "Onboarding profile-name clear shortcut",
+  "description": "Add a clear-input shortcut to the profile picker used after repository setup.",
+  "prompt": "In the profile-selection flow shown after repository setup, make Ctrl+U clear the new-profile name currently being typed without closing the picker. Add focused unit coverage and do not change unrelated behavior.\n",
+  "allowed_output_paths": [
+    "/workspace/src/components/profile_selection_popup.rs",
+    "/workspace/src/screens/profile_selection.rs",
+    "/workspace/target"
+  ],
+  "agent_timeout_seconds": 900,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 900,
+    "cpus": 2,
+    "memory_mb": 4096,
+    "storage_mb": 8192
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "b328419587cff695f6e8da5357a7acfeabe9f56257ad68f263f595a2b74e35a9",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 900
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "challenge_id": "click-clirunner-fileno-compatibility",
+  "title": "Support file-descriptor consumers inside CliRunner",
+  "description": "Let C-level standard-stream consumers work while CliRunner captures Python output.",
+  "prompt": "Commands invoked by `CliRunner` fail when `faulthandler`, subprocess code, or a C extension asks the wrapped standard streams for `fileno()`. Make those consumers work with the appropriate original descriptor while keeping ordinary stdout and stderr capture intact. Cover the behavior with a regression test and document the boundary.\n",
+  "allowed_output_paths": [
+    "/workspace/CHANGES.rst",
+    "/workspace/docs/testing.md",
+    "/workspace/src/click/testing.py",
+    "/workspace/tests/test_testing.py"
+  ],
+  "agent_timeout_seconds": 900,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 900,
+    "cpus": 2,
+    "memory_mb": 4096,
+    "storage_mb": 8192
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "e1dfeb6d3103b2afe14e735f7fa1d23031a78143fa78dcee7af05aa97b224563",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 30
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "decision": "excluded",
+  "preregistration": "../../preregistrations/settings-label-roundtrip-v1.md",
+  "reason": "The mutation fence rejected Cargo.lock and the required regression test, while two arms also exceeded the requested Claude ceiling.",
+  "reason_code": "mutation-allowlist-and-budget-defects",
+  "result": null,
+  "run_id": "settings-label-roundtrip-v1"
+}

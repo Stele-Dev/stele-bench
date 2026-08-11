@@ -1,0 +1,39 @@
+{
+    "job_name": "route-two",
+    "jobs_dir": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v1/work/79e12cae9ad8b7744899/jobs",
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "import_path": "stele_bench.harbor_entrypoint:ConfiguredSteleClaudeCode",
+            "model_name": "anthropic/claude-haiku-4.5",
+            "kwargs": {
+                "artifact_path": "$STELE_BENCH_STATE/artifacts/stele-linux-arm64-5deb3a6046ad0faf",
+                "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+                "artifact_source_kind": "local-dirty-worktree",
+                "auto_rag_injection": "on",
+                "credentials_path": "$STELE_BENCH_STATE/attempts/79e12cae9ad8b774489950153bf4c7f721ba8878ff820e807217ebe2291e7a7e/credentials.json",
+                "max_budget_usd": "3",
+                "max_turns": 40,
+                "permission_mode": "bypassPermissions",
+                "preferences_path": "$STELE_BENCH_STATE/attempts/79e12cae9ad8b774489950153bf4c7f721ba8878ff820e807217ebe2291e7a7e/preferences.json",
+                "project_binding_path": "$STELE_BENCH_STATE/attempts/79e12cae9ad8b774489950153bf4c7f721ba8878ff820e807217ebe2291e7a7e/project.json",
+                "project_name": "Workspace",
+                "project_provisioning": "restore"
+            },
+            "env": {
+                "ANTHROPIC_API_KEY": "****",
+                "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+                "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****",
+                "STELE_SEMANTIC_ENDPOINT": "http://host.docker.internal:64080/api/semantic-seeds?bridge_token=<redacted>",
+                "SUPABASE_ANON_KEY": "sb_p****AaH",
+                "SUPABASE_URL": "http://host.docker.internal:54321"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v1/work/79e12cae9ad8b7744899/pack/package-cache-is-empty"
+        }
+    ]
+}

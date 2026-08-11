@@ -1,0 +1,23 @@
+{
+    "task": {
+        "path": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v1/work/9e61a8541ca2426fe15f/pack/input-keypress-architecture"
+    },
+    "trial_name": "input-keypress-architecture__uykFxQh",
+    "trials_dir": "$STELE_BENCH_STATE/runs/input-keypress-architecture-v1/work/9e61a8541ca2426fe15f/jobs/route-one",
+    "agent": {
+        "name": "claude-code",
+        "model_name": "anthropic/claude-haiku-4.5",
+        "kwargs": {
+            "max_budget_usd": "3",
+            "max_turns": 30,
+            "permission_mode": "bypassPermissions"
+        },
+        "env": {
+            "ANTHROPIC_API_KEY": "****",
+            "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+            "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+            "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****"
+        }
+    },
+    "job_id": "21358a49-8528-4f25-b731-de4e4df2fa82"
+}

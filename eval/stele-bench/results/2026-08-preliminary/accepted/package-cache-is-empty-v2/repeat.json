@@ -1,0 +1,550 @@
+{
+  "arms": {
+    "attempt-01-control": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v2/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "package-cache-is-empty"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "no-stele",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v2/work/543e4d07dadbc2b00b43/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1251; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-one",
+        "max_turns": 40,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "3",
+        "requested_budget_cap_usd_per_trial": "3",
+        "results": [
+          {
+            "challenge_id": "package-cache-is-empty",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 0.5840507500000001,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.11681015,
+              "requested_claude_cli_cap_usd": 3.0
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "injection_channel": null,
+              "investigation_depth": {
+                "by_tool": {
+                  "bash": 2,
+                  "read": 3
+                },
+                "investigative": 5,
+                "scanned_from": 1,
+                "session": {
+                  "by_tool": {
+                    "bash": 2,
+                    "read": 3
+                  },
+                  "investigative": 5,
+                  "total": 7
+                },
+                "total": 7
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": null,
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 0,
+              "runtime_plugin_count": 0,
+              "session_bytes": 105265,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 0,
+              "structural_preflight": false,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": null,
+              "challenge_manifest_sha256": "00da98b69521e2ac1b8a7f9baad1debf974c0da60c397358520f38c40d6dd3fc",
+              "fixture_id": null,
+              "graph_arm": null,
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "704dc9ee5f56a1c19fb8a106a6073f133583e1ae9ee12b5865763727d9556b7e"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": 45.367563,
+              "agent_setup": 0.35451,
+              "invocation_wall": 78.638923,
+              "verifier": 12.655867
+            },
+            "tokens": {
+              "cache_read": 216544,
+              "cache_write": 31079,
+              "input": 288525,
+              "output": 3081
+            }
+          }
+        ],
+        "run_id": "package-cache-is-empty-v2-attempt-01-control",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 80.90888933298993
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v2/attempt-01-control.json",
+      "run_id": "package-cache-is-empty-v2-attempt-01-control"
+    },
+    "attempt-01-treatment": {
+      "error": null,
+      "evidence_root": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v2/work",
+      "exit_code": 0,
+      "receipt": {
+        "challenge_ids": [
+          "package-cache-is-empty"
+        ],
+        "classification": "exploratory",
+        "cleanup_completed": true,
+        "condition": "faithful",
+        "error": null,
+        "failure_code": null,
+        "failure_message": null,
+        "harbor_diagnostics": [
+          {
+            "condition": null,
+            "path": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v2/work/275873c39e3202cb74db/harbor.diagnostic.json",
+            "summary": "exit=0; stdout_bytes=1251; stderr_bytes=0"
+          }
+        ],
+        "harbor_exit_code": 0,
+        "harbor_job_name": "route-two",
+        "max_turns": 40,
+        "model": "anthropic/claude-haiku-4.5",
+        "outcome": "passed",
+        "requested_budget_cap_usd_across_trials": "3",
+        "requested_budget_cap_usd_per_trial": "3",
+        "results": [
+          {
+            "challenge_id": "package-cache-is-empty",
+            "cost": {
+              "billed_step_count": 1,
+              "claude_report_exceeded_requested_cap": false,
+              "claude_reported_amount_usd": 0.7101772499999999,
+              "claude_reported_source": "claude-code-result",
+              "direct_from_claude_result": true,
+              "gateway_billing_receipt": false,
+              "gateway_rate_cross_check_usd": 0.14203545,
+              "requested_claude_cli_cap_usd": 3.0
+            },
+            "evidence": {
+              "atif_integrity_error": null,
+              "atif_integrity_valid": true,
+              "external_source_access_detected": false,
+              "forbidden_repository_access_detected": false,
+              "injection_channel": {
+                "auto_rag_hook_files": 3,
+                "expected": "on",
+                "install_roots": 2,
+                "sibling_hook_files": 3,
+                "verified": true
+              },
+              "investigation_depth": {
+                "by_tool": {
+                  "bash": 3,
+                  "read": 1
+                },
+                "investigative": 4,
+                "scanned_from": 1,
+                "session": {
+                  "by_tool": {
+                    "bash": 3,
+                    "read": 1
+                  },
+                  "investigative": 4,
+                  "total": 6
+                },
+                "total": 6
+              },
+              "normalized_atif": true,
+              "opaque_delegation_detected": false,
+              "raw_claude_stream": true,
+              "response_evidence": null,
+              "result_subtype": "success",
+              "runtime_mcp_server_count": 1,
+              "runtime_plugin_count": 1,
+              "session_bytes": 117886,
+              "session_file_count": 1,
+              "stele_lifecycle_mentions": 134,
+              "structural_preflight": true,
+              "terminal_reason": "completed",
+              "trial_result": true,
+              "verifier_detail_artifact": true,
+              "verifier_reward_artifact": true
+            },
+            "memory_evidence": null,
+            "outcome": "passed",
+            "provenance": {
+              "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+              "challenge_manifest_sha256": "00da98b69521e2ac1b8a7f9baad1debf974c0da60c397358520f38c40d6dd3fc",
+              "fixture_id": "dotstate-faithful-20260723-v1",
+              "graph_arm": "faithful",
+              "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+              "source_tree_sha256": "c4f229ea2229a58dfdedea75b69e9c196e63d6eb9d62ace2f0383bec1b98d5b3",
+              "verifier_sha256": "704dc9ee5f56a1c19fb8a106a6073f133583e1ae9ee12b5865763727d9556b7e"
+            },
+            "reward": 1.0,
+            "timings": {
+              "agent_execution": 67.075885,
+              "agent_setup": 9.722443,
+              "invocation_wall": 102.681595,
+              "verifier": 5.071608
+            },
+            "tokens": {
+              "cache_read": 288772,
+              "cache_write": 48301,
+              "input": 372045,
+              "output": 3562
+            }
+          }
+        ],
+        "run_id": "package-cache-is-empty-v2-attempt-01-treatment",
+        "schema_version": 4,
+        "timings": {
+          "invocation_wall": 105.11493074998725
+        }
+      },
+      "receipt_path": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v2/attempt-01-treatment.json",
+      "run_id": "package-cache-is-empty-v2-attempt-01-treatment"
+    }
+  },
+  "attempts": [
+    {
+      "analysable": true,
+      "arm_order": [
+        "control",
+        "treatment"
+      ],
+      "attempt": 1,
+      "budget_truncation_risk": [],
+      "deltas": {
+        "control": {
+          "agent_execution_seconds": 45.367563,
+          "claude_reported_usd": 0.5840507500000001,
+          "gateway_rate_cross_check_usd": 0.11681015,
+          "investigative_tool_calls": 5.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 5.0,
+          "session_total_tool_calls": 7.0,
+          "tokens_cache_read": 216544.0,
+          "tokens_cache_write": 31079.0,
+          "tokens_input": 288525.0,
+          "tokens_output": 3081.0,
+          "total_tool_calls": 7.0,
+          "trial_wall_seconds": 78.638923
+        },
+        "faithful": {
+          "agent_execution_seconds": 67.075885,
+          "claude_reported_usd": 0.7101772499999999,
+          "gateway_rate_cross_check_usd": 0.14203545,
+          "investigative_tool_calls": 4.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 4.0,
+          "session_total_tool_calls": 6.0,
+          "tokens_cache_read": 288772.0,
+          "tokens_cache_write": 48301.0,
+          "tokens_input": 372045.0,
+          "tokens_output": 3562.0,
+          "total_tool_calls": 6.0,
+          "trial_wall_seconds": 102.681595
+        },
+        "faithful_minus_control": {
+          "agent_execution_seconds": 21.708322000000003,
+          "claude_reported_usd": 0.1261264999999998,
+          "gateway_rate_cross_check_usd": 0.025225300000000006,
+          "investigative_tool_calls": -1.0,
+          "reward": 0.0,
+          "session_investigative_tool_calls": -1.0,
+          "session_total_tool_calls": -1.0,
+          "tokens_cache_read": 72228.0,
+          "tokens_cache_write": 17222.0,
+          "tokens_input": 83520.0,
+          "tokens_output": 481.0,
+          "total_tool_calls": -1.0,
+          "trial_wall_seconds": 24.042671999999996
+        },
+        "faithful_reduction_percent": {
+          "agent_execution_seconds": -47.84987458991351,
+          "claude_reported_usd": -21.595126793347973,
+          "gateway_rate_cross_check_usd": -21.595126793348015,
+          "investigative_tool_calls": 20.0,
+          "session_investigative_tool_calls": 20.0,
+          "session_total_tool_calls": 14.285714285714285,
+          "tokens_cache_read": -33.354883995862274,
+          "tokens_cache_write": -55.41362334695453,
+          "tokens_input": -28.94723160904601,
+          "tokens_output": -15.611814345991561,
+          "total_tool_calls": 14.285714285714285,
+          "trial_wall_seconds": -30.5735011147088
+        }
+      },
+      "excluded_reason": null,
+      "labels": {
+        "control": "attempt-01-control",
+        "treatment": "attempt-01-treatment"
+      },
+      "memory_evidence": {
+        "treatment": null
+      },
+      "metrics": {
+        "control": {
+          "agent_execution_seconds": 45.367563,
+          "claude_reported_usd": 0.5840507500000001,
+          "gateway_rate_cross_check_usd": 0.11681015,
+          "investigative_tool_calls": 5.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 5.0,
+          "session_total_tool_calls": 7.0,
+          "tokens_cache_read": 216544.0,
+          "tokens_cache_write": 31079.0,
+          "tokens_input": 288525.0,
+          "tokens_output": 3081.0,
+          "total_tool_calls": 7.0,
+          "trial_wall_seconds": 78.638923
+        },
+        "treatment": {
+          "agent_execution_seconds": 67.075885,
+          "claude_reported_usd": 0.7101772499999999,
+          "gateway_rate_cross_check_usd": 0.14203545,
+          "investigative_tool_calls": 4.0,
+          "reward": 1.0,
+          "session_investigative_tool_calls": 4.0,
+          "session_total_tool_calls": 6.0,
+          "tokens_cache_read": 288772.0,
+          "tokens_cache_write": 48301.0,
+          "tokens_input": 372045.0,
+          "tokens_output": 3562.0,
+          "total_tool_calls": 6.0,
+          "trial_wall_seconds": 102.681595
+        }
+      },
+      "outcomes": {
+        "control": "passed",
+        "treatment": "passed"
+      }
+    }
+  ],
+  "billing": {
+    "claude_reported_usd_by_condition": {
+      "attempt-01-control": 0.5840507500000001,
+      "attempt-01-treatment": 0.7101772499999999
+    },
+    "gateway_drain_checks": [
+      {
+        "balance_usd": "106.68",
+        "checked_at": "2026-08-11T11:41:58.675421Z",
+        "drained_usd": "0.12",
+        "observed": true,
+        "reason": null
+      }
+    ],
+    "gateway_drain_stop": null,
+    "gateway_reserve_preflight": {
+      "acknowledged_pair_cap_usd": "6.00",
+      "advisory": "Gateway-reported figures are advisory; the Vercel dashboard remains authoritative for actual billing and for recalibrating the reserve.",
+      "calibrated_at": "2026-07-23",
+      "calibration_age_days": 19,
+      "calibration_authority": "vercel-dashboard",
+      "checked_at": "2026-08-11T11:40:34.063315Z",
+      "headroom_after_pair_usd": "75.80",
+      "headroom_after_reserve_usd": "81.80",
+      "key_budget": {
+        "active": true,
+        "current_spend_usd": "13.86",
+        "limit_amount_usd": "350.00",
+        "refresh_period": "monthly",
+        "remaining_usd": "336.14"
+      },
+      "key_fingerprint": "b48d0a8ec3af",
+      "key_id": "4nuA3CL9Ugmp648xgNcrAHYHNyJD7svExrevW8fg09QZVoGI",
+      "key_name": "Eval Suite Key",
+      "production_reserve_usd": "25.00",
+      "schema_version": 1,
+      "shared_balance_usd": "106.80",
+      "shared_total_used_usd": "318.20"
+    },
+    "gateway_total_usd": null,
+    "recorded_at": null,
+    "source": null
+  },
+  "comparable": true,
+  "completed_at": "2026-08-11T11:43:52.436616Z",
+  "configuration": {
+    "acknowledged_paid_repeat_cap_usd": "6",
+    "arm_count": 2,
+    "attempt_arm_order": {
+      "1": [
+        "control",
+        "treatment"
+      ]
+    },
+    "attempts": 1,
+    "challenge_id": "package-cache-is-empty",
+    "control_condition": "no-stele",
+    "fixture_id": "dotstate-faithful-20260723-v1",
+    "max_budget_usd_per_arm": "3",
+    "max_turns": 40,
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful"
+  },
+  "created_at": "2026-08-11T11:40:35.287626Z",
+  "error": null,
+  "provenance": {
+    "artifact_manifest": "$STELE_BENCH_STATE/artifacts/current.json",
+    "artifact_sha256": "5deb3a6046ad0faff880536d2489368f25015bf2ab406eacb3e1e4a1099fd2e6",
+    "artifact_source": {
+      "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dirty": false,
+      "head": "5b5e5c58bbe2f3455df789cae1aa29811ad9eb5c",
+      "status_entries": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked_bytes": 0,
+      "untracked_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked_files": 0
+    },
+    "artifact_target": "linux-arm64",
+    "certification": {
+      "arms": [
+        "faithful"
+      ],
+      "certified": true,
+      "path": "$STELE_BENCH_STATE/runs/package-cache-is-empty-v2/certification.json",
+      "redacted_paths": [
+        ".claude/commands/publish.md",
+        ".claude/skills/dotstate-dev/SKILL.md",
+        ".stele/project.json",
+        "CLAUDE.md"
+      ],
+      "sha256": "d01c5d1372d21e84f59143460a3192beb59eb24288c094b27de5a655a160b59e"
+    },
+    "challenge_manifest_sha256": "00da98b69521e2ac1b8a7f9baad1debf974c0da60c397358520f38c40d6dd3fc",
+    "runtime": {
+      "docker_architecture": "aarch64",
+      "docker_server": "29.6.1",
+      "harbor": "0.20.0",
+      "python": "3.12.12",
+      "supabase": "2.109.0"
+    },
+    "verifier_sha256": "704dc9ee5f56a1c19fb8a106a6073f133583e1ae9ee12b5865763727d9556b7e"
+  },
+  "repeat_id": "package-cache-is-empty-v2",
+  "schema_version": 1,
+  "status": "completed",
+  "summary": {
+    "attempts_analysed": 1,
+    "attempts_excluded": [],
+    "attempts_run": 1,
+    "binary_measures": {
+      "cited_decision": null,
+      "reward": {
+        "control": {
+          "rate": 1.0,
+          "successes": 1,
+          "trials": 1,
+          "wilson_95": [
+            0.20654931437723745,
+            1.0
+          ]
+        },
+        "difference": 0.0,
+        "direction_tested": "treatment_greater_than_control",
+        "fisher_one_sided_p": 1.0,
+        "mcnemar_one_sided_p": 1.0,
+        "primary_test": "exact-paired-mcnemar",
+        "treatment": {
+          "rate": 1.0,
+          "successes": 1,
+          "trials": 1,
+          "wilson_95": [
+            0.20654931437723745,
+            1.0
+          ]
+        }
+      }
+    },
+    "paired_measures": {
+      "investigative_tool_calls": {
+        "attempts": 1,
+        "attempts_favouring_treatment": 1,
+        "differences": [
+          -1.0
+        ],
+        "max_difference": -1.0,
+        "median_difference": -1.0,
+        "median_reduction_percent": 20.0,
+        "min_difference": -1.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "session_investigative_tool_calls": {
+        "attempts": 1,
+        "attempts_favouring_treatment": 1,
+        "differences": [
+          -1.0
+        ],
+        "max_difference": -1.0,
+        "median_difference": -1.0,
+        "median_reduction_percent": 20.0,
+        "min_difference": -1.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "tokens_input": {
+        "attempts": 1,
+        "attempts_favouring_treatment": 0,
+        "differences": [
+          83520.0
+        ],
+        "max_difference": 83520.0,
+        "median_difference": 83520.0,
+        "median_reduction_percent": -28.94723160904601,
+        "min_difference": 83520.0,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      },
+      "trial_wall_seconds": {
+        "attempts": 1,
+        "attempts_favouring_treatment": 0,
+        "differences": [
+          24.042671999999996
+        ],
+        "max_difference": 24.042671999999996,
+        "median_difference": 24.042671999999996,
+        "median_reduction_percent": -30.5735011147088,
+        "min_difference": 24.042671999999996,
+        "note": "exploratory \u2014 no significance test is computed for a continuous measure at this N",
+        "test": null
+      }
+    }
+  }
+}

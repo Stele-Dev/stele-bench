@@ -1,0 +1,24 @@
+{
+    "task": {
+        "path": "$STELE_BENCH_STATE/runs/drift-r1/work/5368f9fe277dd1d08be7/pack/dotfile-drift-detection"
+    },
+    "trial_name": "dotfile-drift-detection__mQLUmtJ",
+    "trials_dir": "$STELE_BENCH_STATE/runs/drift-r1/work/5368f9fe277dd1d08be7/jobs/route-one",
+    "agent": {
+        "name": "claude-code",
+        "model_name": "anthropic/claude-haiku-4.5",
+        "resume_trajectory": true,
+        "kwargs": {
+            "max_budget_usd": "1.50",
+            "max_turns": 60,
+            "permission_mode": "bypassPermissions"
+        },
+        "env": {
+            "ANTHROPIC_API_KEY": "****",
+            "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+            "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+            "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****"
+        }
+    },
+    "job_id": "e6f7d978-dec4-4222-95a6-5fbce193229a"
+}

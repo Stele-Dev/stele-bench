@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "challenge_id": "click-clirunner-buffer-ownership",
+  "title": "Fix CliRunner stream ownership without reviving the race",
+  "description": "Correct a logging regression caused by competing owners closing the same capture buffers.",
+  "prompt": "Repeated `CliRunner.invoke` calls can leave logging handlers writing to a closed stream and emit `ValueError: I/O operation on closed file`. Fix the ownership error without reintroducing the earlier free-threaded finalization race. The wrappers and mixer must have one clear owner for each underlying buffer. Add a deterministic regression test.\n",
+  "allowed_output_paths": [
+    "/workspace/CHANGES.rst",
+    "/workspace/src/click/testing.py",
+    "/workspace/tests/test_testing_logging.py"
+  ],
+  "agent_timeout_seconds": 900,
+  "environment": {
+    "network_mode": "public",
+    "build_timeout_seconds": 900,
+    "cpus": 2,
+    "memory_mb": 4096,
+    "storage_mb": 8192
+  },
+  "verifier": {
+    "kind": "script",
+    "runtime": "posix-shell",
+    "asset": {
+      "path": "verifier.sh",
+      "sha256": "b15941fcccd0596396e37864a69b6b9d75650fc8c1ac89e06302d362bf74707b",
+      "media_type": "text/x-shellscript"
+    },
+    "timeout_seconds": 30
+  }
+}

@@ -1,0 +1,954 @@
+{
+  "aggregates": [
+    {
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "interval_high": 0.6873262302663417,
+      "interval_low": 0.16818032970623614,
+      "metric_name": "reward",
+      "n": 10,
+      "value": 0.4
+    },
+    {
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "comparative_delta": null,
+      "condition_id": "stele-fresh",
+      "dispersion": null,
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "interval_high": 0.6873262302663417,
+      "interval_low": 0.16818032970623614,
+      "metric_name": "reward",
+      "n": 10,
+      "value": 0.4
+    },
+    {
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "comparative_delta": null,
+      "condition_id": "stele-fresh",
+      "dispersion": null,
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "tokens_input_paired_difference",
+      "n": 10,
+      "value": 51838.0
+    },
+    {
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "comparative_delta": null,
+      "condition_id": "stele-fresh",
+      "dispersion": null,
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "trial_wall_seconds_paired_difference",
+      "n": 10,
+      "value": 19.692569499999998
+    }
+  ],
+  "artifact_sha256": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+  "attempts": [
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.295087",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 84.619117,
+        "execution_seconds": 24.719161,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 61711,
+        "cache_write_tokens": 30885,
+        "input_tokens": 98311,
+        "output_tokens": 1705
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.416184",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 95.367863,
+        "execution_seconds": 25.585907,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 96138,
+        "cache_write_tokens": 48104,
+        "input_tokens": 149945,
+        "output_tokens": 1558
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-02-control",
+      "attempt_index": 1,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "1.076194",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 120.39611,
+        "execution_seconds": 56.654563,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 560051,
+        "cache_write_tokens": 31459,
+        "input_tokens": 689525,
+        "output_tokens": 4379
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-02-treatment",
+      "attempt_index": 1,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "1.899042",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 172.353884,
+        "execution_seconds": 96.913634,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 1451691,
+        "cache_write_tokens": 4073,
+        "input_tokens": 1652522,
+        "output_tokens": 6558
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-03-control",
+      "attempt_index": 2,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "2.037274",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "infrastructure-error",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 167.510056,
+        "execution_seconds": 108.498511,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 845124,
+        "cache_write_tokens": 1050,
+        "input_tokens": 1124174,
+        "output_tokens": 8726
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-03-treatment",
+      "attempt_index": 2,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "2.065576",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "infrastructure-error",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 187.26259,
+        "execution_seconds": 117.498118,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 1064624,
+        "cache_write_tokens": 48735,
+        "input_tokens": 1322428,
+        "output_tokens": 7333
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-04-control",
+      "attempt_index": 3,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.428334",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 98.21928,
+        "execution_seconds": 30.30144,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 185418,
+        "cache_write_tokens": 30980,
+        "input_tokens": 232253,
+        "output_tokens": 2509
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-04-treatment",
+      "attempt_index": 3,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.520967",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 134.991111,
+        "execution_seconds": 60.268741,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 420202,
+        "cache_write_tokens": 13853,
+        "input_tokens": 461852,
+        "output_tokens": 3412
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-05-control",
+      "attempt_index": 4,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.357717",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 92.887971,
+        "execution_seconds": 38.821139,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 309380,
+        "cache_write_tokens": 278,
+        "input_tokens": 334116,
+        "output_tokens": 3160
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-05-treatment",
+      "attempt_index": 4,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.222225",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 98.970173,
+        "execution_seconds": 27.465374,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 237273,
+        "cache_write_tokens": 3219,
+        "input_tokens": 248736,
+        "output_tokens": 1690
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-06-control",
+      "attempt_index": 5,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.719821",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 125.863357,
+        "execution_seconds": 66.981251,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 371912,
+        "cache_write_tokens": 31204,
+        "input_tokens": 443669,
+        "output_tokens": 5443
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-06-treatment",
+      "attempt_index": 5,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.72259",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 149.607407,
+        "execution_seconds": 80.656533,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 623498,
+        "cache_write_tokens": 3489,
+        "input_tokens": 676799,
+        "output_tokens": 5599
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-07-control",
+      "attempt_index": 6,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.73188",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 210.595334,
+        "execution_seconds": 120.008936,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 465652,
+        "cache_write_tokens": 483,
+        "input_tokens": 532522,
+        "output_tokens": 6564
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-07-treatment",
+      "attempt_index": 6,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.40763",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 117.102466,
+        "execution_seconds": 25.553025,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 96135,
+        "cache_write_tokens": 48098,
+        "input_tokens": 148398,
+        "output_tokens": 1525
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-08-control",
+      "attempt_index": 7,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.463209",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 109.946327,
+        "execution_seconds": 27.646118,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 216375,
+        "cache_write_tokens": 31077,
+        "input_tokens": 268175,
+        "output_tokens": 2287
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-08-treatment",
+      "attempt_index": 7,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.395979",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 138.638833,
+        "execution_seconds": 44.986351,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 274982,
+        "cache_write_tokens": 14222,
+        "input_tokens": 307849,
+        "output_tokens": 3055
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-09-control",
+      "attempt_index": 8,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.143031",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 77.221162,
+        "execution_seconds": 19.072731,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 92552,
+        "cache_write_tokens": 44,
+        "input_tokens": 106442,
+        "output_tokens": 1090
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-09-treatment",
+      "attempt_index": 8,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.189394",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 92.862251,
+        "execution_seconds": 22.260203,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 141060,
+        "cache_write_tokens": 3179,
+        "input_tokens": 158298,
+        "output_tokens": 1148
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-10-control",
+      "attempt_index": 9,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.115328",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 83.470909,
+        "execution_seconds": 22.059238,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 92548,
+        "cache_write_tokens": 43,
+        "input_tokens": 96443,
+        "output_tokens": 1981
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-10-treatment",
+      "attempt_index": 9,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.160115",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 96.373389,
+        "execution_seconds": 26.645152,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 141060,
+        "cache_write_tokens": 3176,
+        "input_tokens": 148263,
+        "output_tokens": 1984
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-11-control",
+      "attempt_index": 10,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.095778",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "failed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 94.852411,
+        "execution_seconds": 19.029123,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 92548,
+        "cache_write_tokens": 43,
+        "input_tokens": 96333,
+        "output_tokens": 1221
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-11-treatment",
+      "attempt_index": 10,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.326565",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 130.964755,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 381874,
+        "cache_write_tokens": 3370,
+        "input_tokens": 399872,
+        "output_tokens": 1657
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-12-control",
+      "attempt_index": 11,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "2.048222",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "infrastructure-error",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 213.093083,
+        "execution_seconds": 125.777503,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 780281,
+        "cache_write_tokens": 31601,
+        "input_tokens": 1042047,
+        "output_tokens": 12390
+      }
+    },
+    {
+      "attempt_id": "aider-overhead-replication-v2-attempt-12-treatment",
+      "attempt_index": 11,
+      "challenge_id": "aider-polyglot-clean",
+      "cohort_id": "created-per-task",
+      "condition_id": "stele-fresh",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "2.032",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "aider-overhead-replication-v2",
+      "fixture_id": "created-per-task",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "incomplete",
+      "provenance_hashes": {
+        "artifact": "8708cca650f1b44ea0558c97dccc3d35f42474dc87026d026f1645e9f6fe6874",
+        "challenge_manifest": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+        "verifier": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 211.947163,
+        "execution_seconds": 122.59575,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 1196463,
+        "cache_write_tokens": 14179,
+        "input_tokens": 1422662,
+        "output_tokens": 11402
+      }
+    }
+  ],
+  "attempts_analysed": 10,
+  "attempts_run": 12,
+  "comparability": {
+    "challenge_id": "aider-polyglot-clean",
+    "challenge_manifest_sha256": "5bc6e597395069cbaddd96306a72bb96f335d9fd39520be8e5127e0950934530",
+    "control_condition": "no-stele",
+    "fixture_id": "created-per-task",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "1f30ed63820d6091cf9dc33386e5a0e739768836a909e731e4afb96abeeaf400",
+    "treatment_condition": "stele-fresh",
+    "verifier_sha256": "6db459c139ee97afe25b1fc64fd1bf3120dc9f093c7e449b416771de72390225"
+  },
+  "comparability_digest": "072c41af385ef8490b4efebc48f2b58e4b3f52cec602df8b6e4d28a214364a4a",
+  "memory_uptake": {
+    "control": {
+      "attempts": 12,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 12,
+      "injected": 0,
+      "marker": 0
+    }
+  },
+  "recorded_at": "2026-07-27T01:02:52.891629Z",
+  "run_id": "aider-overhead-replication-v2",
+  "run_shape": "suite",
+  "schema_version": 1,
+  "status": "completed",
+  "verdicts": {
+    "reward": {
+      "difference": 0.0,
+      "fisher_one_sided_p": 0.6750416765896642
+    },
+    "solve_rate_non_inferiority": {
+      "difference": 0.0,
+      "interval_high": 0.24204862770230118,
+      "interval_low": -0.24204862770230118,
+      "margin": 0.1,
+      "verdict": 0.0
+    },
+    "tokens_input": {
+      "difference": 51838.0,
+      "fisher_one_sided_p": null
+    },
+    "trial_wall_seconds": {
+      "difference": 19.692569499999998,
+      "fisher_one_sided_p": null
+    }
+  }
+}

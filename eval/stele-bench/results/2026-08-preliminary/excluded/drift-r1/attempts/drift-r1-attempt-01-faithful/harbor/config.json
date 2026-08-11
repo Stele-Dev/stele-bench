@@ -1,0 +1,33 @@
+{
+    "task": {
+        "path": "$STELE_BENCH_STATE/runs/drift-r1/work/3178fe0112ed61a7f767/pack/dotfile-drift-detection"
+    },
+    "trial_name": "dotfile-drift-detection__nRjFpeC",
+    "trials_dir": "$STELE_BENCH_STATE/runs/drift-r1/work/3178fe0112ed61a7f767/jobs/route-two",
+    "agent": {
+        "import_path": "stele_bench.harbor_entrypoint:ConfiguredSteleClaudeCode",
+        "model_name": "anthropic/claude-haiku-4.5",
+        "resume_trajectory": true,
+        "kwargs": {
+            "artifact_path": "$STELE_BENCH_STATE/artifacts/stele-linux-arm64-1fdc1e40d6327eac",
+            "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+            "artifact_source_kind": "local-dirty-worktree",
+            "credentials_path": "$STELE_BENCH_STATE/attempts/3178fe0112ed61a7f7674e2662639d0e5bfbaae06d451dbd602430b3ecba4ba0/credentials.json",
+            "max_budget_usd": "1.50",
+            "max_turns": 60,
+            "permission_mode": "bypassPermissions",
+            "preferences_path": "$STELE_BENCH_STATE/attempts/3178fe0112ed61a7f7674e2662639d0e5bfbaae06d451dbd602430b3ecba4ba0/preferences.json",
+            "project_binding_path": "$STELE_BENCH_STATE/attempts/3178fe0112ed61a7f7674e2662639d0e5bfbaae06d451dbd602430b3ecba4ba0/project.json"
+        },
+        "env": {
+            "ANTHROPIC_API_KEY": "****",
+            "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
+            "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+            "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "****",
+            "STELE_SEMANTIC_ENDPOINT": "http://host.docker.internal:56547/api/semantic-seeds?bridge_token=<redacted>",
+            "SUPABASE_ANON_KEY": "sb_p****AaH",
+            "SUPABASE_URL": "http://host.docker.internal:54321"
+        }
+    },
+    "job_id": "8430c615-46eb-4ed2-86ec-b8f057a5a17b"
+}

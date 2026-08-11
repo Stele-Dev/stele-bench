@@ -1,0 +1,177 @@
+{
+  "aggregates": [
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "no-stele",
+      "dispersion": null,
+      "experiment_id": "sbr-002-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "sbr-002-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "interval_high": 1.0,
+      "interval_low": 0.20654931437723745,
+      "metric_name": "reward",
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "sbr-002-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "tokens_input_paired_difference",
+      "n": 1,
+      "value": 380569.0
+    },
+    {
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "comparative_delta": null,
+      "condition_id": "faithful",
+      "dispersion": null,
+      "experiment_id": "sbr-002-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "interval_high": null,
+      "interval_low": null,
+      "metric_name": "trial_wall_seconds_paired_difference",
+      "n": 1,
+      "value": 60.94990099999998
+    }
+  ],
+  "artifact_sha256": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+  "attempts": [
+    {
+      "attempt_id": "sbr-002-no-anchor-attempt-01-control",
+      "attempt_index": 0,
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "condition_id": "no-stele",
+      "condition_kind": "no-stele",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.66545",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "sbr-002-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "graph_arm": null,
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+        "challenge_manifest": "cfacf652984e79f8e4a13354b0bd2669adde459b6f3da96775540c9f9c83651b",
+        "verifier": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 213.592503,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 339417,
+        "cache_write_tokens": 30980,
+        "input_tokens": 469816,
+        "output_tokens": 2274
+      }
+    },
+    {
+      "attempt_id": "sbr-002-no-anchor-attempt-01-treatment",
+      "attempt_index": 0,
+      "challenge_id": "session-boundary-recall",
+      "cohort_id": "session-boundary-recall-no-anchor-v1",
+      "condition_id": "faithful",
+      "condition_kind": "graph",
+      "cost_metrics": {
+        "authoritative_receipt": null,
+        "calculated_cross_check_cost": "0.79069",
+        "calculated_cross_check_currency": "USD"
+      },
+      "experiment_id": "sbr-002-no-anchor",
+      "fixture_id": "session-boundary-recall-no-anchor-v1",
+      "graph_arm": "faithful",
+      "memory_evidence": [],
+      "outcome": "passed",
+      "provenance_hashes": {
+        "artifact": "1fdc1e40d6327eac0cccece43e99b15132e9f6b33a3b86a47ccfd6a0ea010d20",
+        "challenge_manifest": "cfacf652984e79f8e4a13354b0bd2669adde459b6f3da96775540c9f9c83651b",
+        "verifier": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+      },
+      "quality_evidence": [],
+      "timings": {
+        "active_seconds": 274.542404,
+        "execution_seconds": 0.0,
+        "queue_seconds": 0.0
+      },
+      "token_metrics": {
+        "cache_read_tokens": 733052,
+        "cache_write_tokens": 14496,
+        "input_tokens": 850385,
+        "output_tokens": 6448
+      }
+    }
+  ],
+  "attempts_analysed": 1,
+  "attempts_run": 1,
+  "comparability": {
+    "challenge_id": "session-boundary-recall",
+    "challenge_manifest_sha256": "cfacf652984e79f8e4a13354b0bd2669adde459b6f3da96775540c9f9c83651b",
+    "control_condition": "no-stele",
+    "fixture_id": "session-boundary-recall-no-anchor-v1",
+    "model": "anthropic/claude-haiku-4.5",
+    "source_commit": "a4a5986eafa496dee73a93141588cffaed559f80",
+    "treatment_condition": "faithful",
+    "verifier_sha256": "03e5f20219c27774fad3cab545d0365b87b6435cc8790ad05186507de4dbd5aa"
+  },
+  "comparability_digest": "49e5da3c4d2b0093232e7801fab2bfc4271f6320a53ec5e8a972567c1d021a12",
+  "memory_uptake": {
+    "control": {
+      "attempts": 1,
+      "injected": 0,
+      "marker": 0
+    },
+    "treatment": {
+      "attempts": 1,
+      "injected": 1,
+      "marker": 0
+    }
+  },
+  "recorded_at": "2026-07-23T21:04:45.679779Z",
+  "run_id": "sbr-002-no-anchor",
+  "run_shape": "quad",
+  "schema_version": 1,
+  "status": "completed",
+  "verdicts": {
+    "reward": {
+      "difference": 0.0,
+      "fisher_one_sided_p": 1.0
+    },
+    "tokens_input": {
+      "difference": 380569.0,
+      "fisher_one_sided_p": null
+    },
+    "trial_wall_seconds": {
+      "difference": 60.94990099999998,
+      "fisher_one_sided_p": null
+    }
+  }
+}
