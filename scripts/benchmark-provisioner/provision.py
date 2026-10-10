@@ -1197,8 +1197,8 @@ begin
     insert into nodes (
       id, project_id, type, parent_component_id, title, body, status, category,
       completed_at, topics, created_by_user_id, created_by_source, created_at, updated_at,
-      short_id, source_type, content_updated_at, workspace_id, embedding,
-      embedding_updated_at, priority, kind, anchor_files, anchor_symbols, hidden
+      short_id, source_type, content_updated_at, workspace_id,
+      priority, kind, anchor_files, anchor_symbols, hidden
     ) values (
       node_id, destination_id, item->>'type',
       (select id from node_map where short_id=item->>'parent'), item->>'title', item->>'body',
@@ -1208,13 +1208,28 @@ begin
       (item->>'updated_at')::timestamptz, item->>'short_id', item->>'source_type',
       (item->>'content_updated_at')::timestamptz,
       (select id from workspace_map where name=item->>'workspace'),
-      (item->'embedding')::text::halfvec(1536),
-      (item->>'embedding_updated_at')::timestamptz, item->>'priority', item->>'kind',
+      item->>'priority', item->>'kind',
       array(select jsonb_array_elements_text(item->'anchor_files')),
       array(select jsonb_array_elements_text(item->'anchor_symbols')),
       (item->>'hidden')::boolean
     );
+    -- Vectors live in the node_embeddings side table, not on the nodes row.
+    if item->'embedding' is not null and jsonb_typeof(item->'embedding') <> 'null' then
+      insert into node_embeddings (node_id, embedding, embedding_updated_at)
+      values (
+        node_id, (item->'embedding')::text::halfvec(1536),
+        coalesce(
+          (item->>'embedding_updated_at')::timestamptz,
+          (item->>'content_updated_at')::timestamptz
+        )
+      );
+    end if;
   end loop;
+  -- nodes_project_id_fkey is DEFERRABLE INITIALLY DEFERRED, so every insert above
+  -- queued a check, and ALTER TABLE refuses to run while events are pending.
+  -- Run just that constraint's checks now, then put its deferral back.
+  set constraints public.nodes_project_id_fkey immediate;
+  set constraints public.nodes_project_id_fkey deferred;
   execute 'alter table public.nodes enable trigger trg_nodes_enqueue_embed';
   insert into node_counters(project_id, next_id)
   select destination_id, max((regexp_match(short_id, '[0-9]+$'))[1]::bigint) from node_map;
@@ -1367,9 +1382,10 @@ with selected_project as (
 ), probe_knowledge as (
   select n.id, n.project_id,
          regexp_replace(n.title, '[^[:alnum:] ]+', ' ', 'g') as fts_query,
-         n.embedding, n.workspace_id
+         ne.embedding, n.workspace_id
   from nodes n join selected_project p on p.id=n.project_id
-  where n.type='knowledge' and n.status='active' and n.embedding is not null
+  join node_embeddings ne on ne.node_id=n.id
+  where n.type='knowledge' and n.status='active'
   order by substring(n.short_id from '[0-9]+$')::bigint limit 1
 ), probe_graph_seed as (
   select e.src_node_id as id
@@ -1415,8 +1431,8 @@ with selected_project as (
       'created_at', to_char(n.created_at at time zone 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"'),
       'updated_at', to_char(n.updated_at at time zone 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"'),
       'content_updated_at', to_char(n.content_updated_at at time zone 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"'),
-      'embedding_updated_at', to_char(n.embedding_updated_at at time zone 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"'),
-      'embedding', n.embedding::text,
+      'embedding_updated_at', to_char(ne.embedding_updated_at at time zone 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"'),
+      'embedding', ne.embedding::text,
       'completed_at', case when n.completed_at is null then null else to_char(n.completed_at at time zone 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"') end,
       'priority', n.priority, 'kind', n.kind, 'source_type', n.source_type,
       'anchor_files', to_jsonb(n.anchor_files), 'anchor_symbols', to_jsonb(n.anchor_symbols),
@@ -1426,6 +1442,7 @@ with selected_project as (
       substring(n.short_id from '[0-9]+$')::bigint
     ), '[]'::jsonb) from nodes n
       left join nodes parent on parent.id=n.parent_component_id
+      left join node_embeddings ne on ne.node_id=n.id
       left join workspaces w on w.id=n.workspace_id where n.project_id=p.id),
     'edges', (select coalesce(jsonb_agg(jsonb_build_object(
       'src', src.short_id, 'dst', dst.short_id, 'relation', e.relation,

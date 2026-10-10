@@ -29,7 +29,9 @@ from math import comb
 from pathlib import Path
 from typing import Any
 
+import anthropic_reserve
 import gateway_reserve
+import model_provider
 import prepare_external_dataset
 from gateway_reserve import GatewayReserveError
 
@@ -38,7 +40,7 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 # public benchmark package alongside the contracts it summarises.
 sys.path.insert(0, os.fspath(REPOSITORY_ROOT / "eval" / "stele-bench" / "src"))
 
-from stele_bench import metrics, report, results, statistics  # noqa: E402
+from stele_bench import harbor_pack, metrics, report, results, statistics  # noqa: E402
 
 DEFAULT_SOURCE = REPOSITORY_ROOT.parent / "dotstate"
 DEFAULT_REVISION = "a4a5986eafa496dee73a93141588cffaed559f80"
@@ -135,6 +137,44 @@ CommandRunner = Callable[..., CommandResult]
 ReserveChecker = Callable[..., dict[str, Any]]
 
 
+def _provider_reserve_check(**kwargs: Any) -> dict[str, Any]:
+    """The spending-fence preflight for the selected model provider."""
+
+    if model_provider.current() == model_provider.ANTHROPIC:
+        return anthropic_reserve.check_anthropic_reserve(**kwargs)
+    return gateway_reserve.check_gateway_reserve(**kwargs)
+
+
+def _provider_drain_check(**kwargs: Any) -> dict[str, Any]:
+    """The between-arms drain check for the selected model provider."""
+
+    if model_provider.current() == model_provider.ANTHROPIC:
+        return anthropic_reserve.check_anthropic_drain(**kwargs)
+    return gateway_reserve.check_gateway_drain(**kwargs)
+
+
+def _default_reserve_config(state_root: Path) -> Path:
+    if model_provider.current() == model_provider.ANTHROPIC:
+        return anthropic_reserve.default_config_path(state_root)
+    return gateway_reserve.default_config_path(state_root)
+
+
+def _require_gateway_provider(run_shape: str) -> None:
+    """Refuse a run shape whose analysis only the Gateway's billing can support.
+
+    Compounding, K=5 and continuity runs score each session on an exclusive,
+    settled cost delta read from the Gateway key's quota. The Anthropic usage
+    and cost reports have no equivalent at that grain, so running them on the
+    direct provider would produce receipts their own analysis rejects.
+    """
+
+    if model_provider.current() != model_provider.GATEWAY:
+        raise OracleError(
+            f"{run_shape} runs require the gateway model provider; their analysis needs "
+            "exclusive per-session Gateway billing deltas"
+        )
+
+
 def _check_reserve(
     checker: ReserveChecker,
     *,
@@ -142,12 +182,12 @@ def _check_reserve(
     config_path: Path | None,
     pair_cap_usd: Decimal,
 ) -> dict[str, Any]:
-    """Verify the shared-Gateway spending fence, mapping failures into OracleError."""
+    """Verify the selected provider's spending fence, mapping failures into OracleError."""
 
     try:
         return checker(
             acknowledged_pair_cap_usd=pair_cap_usd,
-            config_path=config_path or gateway_reserve.default_config_path(state_root),
+            config_path=config_path or _default_reserve_config(state_root),
         )
     except GatewayReserveError as error:
         raise OracleError(str(error)) from None
@@ -480,7 +520,7 @@ def doctor(
     gateway_reserve_config: Path | None = None,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
 ) -> dict[str, Any]:
     root = _state_root(state_root)
     checks: dict[str, Any] = {
@@ -516,10 +556,18 @@ def doctor(
     if not os.environ.get("AI_GATEWAY_KEY_EVAL"):
         raise OracleError("AI_GATEWAY_KEY_EVAL is not exported")
     checks["gateway_key_present"] = True
+    fence_name = "gateway_reserve"
+    if model_provider.current() == model_provider.ANTHROPIC:
+        # The Gateway key stays required: the semantic bridge embeds through it.
+        for name in (model_provider.ANTHROPIC_KEY_ENV, model_provider.ANTHROPIC_ADMIN_KEY_ENV):
+            if not os.environ.get(name):
+                raise OracleError(f"{name} is not exported")
+        checks["model_provider"] = model_provider.ANTHROPIC
+        fence_name = "anthropic_reserve"
     # Zero-cost readiness: a cap of zero only reports the current fence state,
     # but it still fails if identity, balance, budget, or calibration cannot be
     # verified — which is exactly what "ready for a paid run" has to mean.
-    checks["gateway_reserve"] = _check_reserve(
+    checks[fence_name] = _check_reserve(
         reserve_checker,
         state_root=root,
         config_path=gateway_reserve_config,
@@ -1042,8 +1090,8 @@ def _validate_paid_budget(
     if not acknowledged.is_finite() or acknowledged != requested_cap:
         raise OracleError(
             f"paid run acknowledgement must match the exact {arm_count}-arm requested cap "
-            f"of {requested_cap} USD and confirms AI_GATEWAY_KEY_EVAL is a dedicated eval "
-            "key with an external budget ceiling"
+            f"of {requested_cap} USD and confirms {model_provider.key_env()} is a dedicated "
+            "eval key with an external budget ceiling"
         )
     return budget, acknowledged
 
@@ -1293,8 +1341,8 @@ def run_pair(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
 ) -> dict[str, Any]:
     pair_id = _safe_id(pair_id)
     budget, acknowledged_pair_cap = _validate_paid_budget(
@@ -1346,6 +1394,7 @@ def run_pair(
         "status": "in_progress",
         "error": None,
         "configuration": {
+            "task_image": harbor_pack.task_image(),
             "challenge_id": challenge,
             "source_commit": source_commit,
             "fixture_id": challenge_provenance["fixture_id"],
@@ -1499,8 +1548,8 @@ def run_quad(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
 ) -> dict[str, Any]:
     """Run one shared no-stele control against N faithful graph-variant arms.
 
@@ -1569,6 +1618,7 @@ def run_quad(
         "status": "in_progress",
         "error": None,
         "configuration": {
+            "task_image": harbor_pack.task_image(),
             "challenge_id": challenge,
             "source_commit": source_commit,
             "control_label": control_label,
@@ -1879,8 +1929,8 @@ def run_repeat(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
 ) -> dict[str, Any]:
     """Run N paired attempts of two conditions and report a rate, not a point.
 
@@ -1982,6 +2032,7 @@ def run_repeat(
         "status": "in_progress",
         "error": None,
         "configuration": {
+            "task_image": harbor_pack.task_image(),
             "challenge_id": challenge,
             "source_commit": prepared.source_commit,
             "fixture_id": challenge_provenance["fixture_id"],
@@ -2933,13 +2984,14 @@ def _run_registered_chain_pair(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
     attempt_index: int = 1,
     arm_order: Sequence[str] | None = None,
 ) -> dict[str, Any]:
     """Run one discarded admission or one frozen registered chain pair."""
 
+    _require_gateway_provider(registration_label)
     run_id = _safe_id(run_id, f"{registration_label} pair run id")
     if model != DEFAULT_COMPOUNDING_MODEL:
         raise OracleError(
@@ -3168,8 +3220,8 @@ def run_k5_pair(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
     attempt_index: int = 1,
     arm_order: Sequence[str] | None = None,
 ) -> dict[str, Any]:
@@ -3221,8 +3273,8 @@ def run_continuity_pair(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
     attempt_index: int = 1,
     arm_order: Sequence[str] | None = None,
 ) -> dict[str, Any]:
@@ -3332,11 +3384,12 @@ def _run_registered_chain_batch(
     gateway_reserve_config: Path | None = None,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
 ) -> dict[str, Any]:
     """Append exactly the next immutable pair to a registered chain cohort."""
 
+    _require_gateway_provider(registration_label)
     cohort_id = _safe_id(cohort_id, f"{registration_label} cohort id")
     if not 1 <= attempt_index <= cohort_attempts:
         raise OracleError(
@@ -3524,8 +3577,8 @@ def run_k5_batch(
     gateway_reserve_config: Path | None = None,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
     pair_runner: Callable[..., dict[str, Any]] = run_k5_pair,
 ) -> dict[str, Any]:
     return _run_registered_chain_batch(
@@ -3571,8 +3624,8 @@ def run_continuity_batch(
     gateway_reserve_config: Path | None = None,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
     pair_runner: Callable[..., dict[str, Any]] = run_continuity_pair,
 ) -> dict[str, Any]:
     return _run_registered_chain_batch(
@@ -3622,13 +3675,14 @@ def run_compounding(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
     cohort_attempt_index: int | None = None,
     cohort_arm_order: Sequence[str] | None = None,
 ) -> dict[str, Any]:
     """Run the locked live two-session experiment, either admission or N=10."""
 
+    _require_gateway_provider("compounding")
     run_id = _safe_id(run_id, "compounding run id")
     if admission and cohort_attempt_index is not None:
         raise OracleError("an admission run cannot be a cohort batch")
@@ -4023,11 +4077,12 @@ def run_compounding_batch(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
 ) -> dict[str, Any]:
     """Append exactly the next frozen pair to a ten-pair compounding cohort."""
 
+    _require_gateway_provider("compounding")
     cohort_id = _safe_id(cohort_id, "compounding cohort id")
     if DEFAULT_COMPOUNDING_PREREGISTRATION.name in RETIRED_COMPOUNDING_PREREGISTRATIONS:
         raise OracleError("profile-selection compounding v4 was retired after admission 003 audit")
@@ -4360,8 +4415,8 @@ def run_suite(
     timeout_seconds: float = 900.0,
     state_root: Path | None = None,
     runner: CommandRunner = _run_command,
-    reserve_checker: ReserveChecker = gateway_reserve.check_gateway_reserve,
-    drain_checker: ReserveChecker = gateway_reserve.check_gateway_drain,
+    reserve_checker: ReserveChecker = _provider_reserve_check,
+    drain_checker: ReserveChecker = _provider_drain_check,
 ) -> dict[str, Any]:
     """Pair two arms across tasks borrowed from someone else's benchmark.
 
@@ -4478,6 +4533,7 @@ def run_suite(
         "status": "in_progress",
         "error": None,
         "configuration": {
+            "task_image": harbor_pack.task_image(),
             # The dataset stands where a challenge id stands in every other run
             # shape: it is the question being asked.
             "challenge_id": dataset.name,
@@ -4732,7 +4788,12 @@ def preflight(
         os.fspath(receipt_path),
     )
     environment = dict(os.environ)
-    environment.pop("AI_GATEWAY_KEY_EVAL", None)
+    for name in (
+        "AI_GATEWAY_KEY_EVAL",
+        model_provider.ANTHROPIC_KEY_ENV,
+        model_provider.ANTHROPIC_ADMIN_KEY_ENV,
+    ):
+        environment.pop(name, None)
     try:
         result = runner(
             argv,
@@ -5038,6 +5099,18 @@ def clean_pair(
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state-root", type=Path)
+    parser.add_argument(
+        "--model-provider",
+        choices=model_provider.PROVIDERS,
+        default=os.environ.get(model_provider.PROVIDER_ENV) or model_provider.GATEWAY,
+        help=(
+            "where the agent's model calls are billed: the Vercel AI Gateway "
+            f"({model_provider.GATEWAY_KEY_ENV}) or the first-party Anthropic API "
+            f"({model_provider.ANTHROPIC_KEY_ENV}, fenced by "
+            f"<state-root>/{anthropic_reserve.DEFAULT_CONFIG_NAME}; "
+            "--gateway-reserve-config overrides that path too)"
+        ),
+    )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     doctor_parser = subparsers.add_parser("doctor")
@@ -5433,6 +5506,11 @@ def _parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
     try:
+        # Exported, not passed: every runner subprocess reads the provider from
+        # the environment, so no arm can be billed differently from the fence.
+        model_provider.activate(args.model_provider)
+        if args.model_provider == model_provider.ANTHROPIC and getattr(args, "model", None):
+            model_provider.direct_model_id(args.model)
         with _controlled_termination_signals():
             if args.command == "doctor":
                 result = doctor(

@@ -188,6 +188,17 @@ def merge_json_objects(
     return result
 
 
+_HOST_ALIAS_COMMAND = (
+    "if ! getent hosts host.docker.internal >/dev/null 2>&1; then "
+    "gw=$(awk '$2==\"00000000\" {print $3; exit}' /proc/net/route); "
+    'if [ -n "$gw" ]; then '
+    "printf '%d.%d.%d.%d host.docker.internal\\n' "
+    '"0x$(echo "$gw" | cut -c7-8)" "0x$(echo "$gw" | cut -c5-6)" '
+    '"0x$(echo "$gw" | cut -c3-4)" "0x$(echo "$gw" | cut -c1-2)" >> /etc/hosts; '
+    "fi; fi"
+)
+
+
 class _Environment(Protocol):
     async def exec(self, command: str, **kwargs: Any) -> Any: ...
 
@@ -527,6 +538,11 @@ class _ClaudeSetupBehavior:
             environment, command=f"chmod 0755 {_quoted(_ARTIFACT_DESTINATION)}"
         )
         await self.exec_as_root(environment, command=_install_stele_command_link())
+        # Docker Desktop resolves host.docker.internal by itself; plain Docker on
+        # Linux does not. Map it to this container's default gateway (the host)
+        # here, in the configured arm only, so the stock arm and the shared task
+        # pack carry no trace of a host-side backend.
+        await self.exec_as_root(environment, command=_HOST_ALIAS_COMMAND)
 
         owner, settings_destination = await self._upload_credentials_and_preferences(environment)
         await self.exec_as_agent(

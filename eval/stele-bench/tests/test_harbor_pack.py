@@ -841,3 +841,16 @@ def test_loopback_backends_are_accepted(tmp_path: Path, url: str) -> None:
     )
 
     assert config.backend_url == url
+
+
+def test_the_task_image_override_reaches_the_generated_dockerfile(monkeypatch) -> None:
+    from stele_bench import harbor_pack
+
+    assert harbor_pack._dockerfile().startswith(f"FROM {harbor_pack.HARBOR_TASK_IMAGE}\n")
+    monkeypatch.setenv(harbor_pack.TASK_IMAGE_ENV, "harbor-local/claude-rust:2.1.296-rust-1.88.0")
+    assert harbor_pack._dockerfile().startswith(
+        "FROM harbor-local/claude-rust:2.1.296-rust-1.88.0\n"
+    )
+    monkeypatch.setenv(harbor_pack.TASK_IMAGE_ENV, "docker.io/someone/else:latest")
+    with pytest.raises(ValueError, match="harbor-local/claude-rust"):
+        harbor_pack._dockerfile()

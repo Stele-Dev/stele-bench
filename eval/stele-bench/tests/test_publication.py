@@ -59,7 +59,17 @@ def test_preliminary_evidence_manifest_covers_every_exported_file() -> None:
         for path in RELEASE.rglob("*")
         if path.is_file() and path.name != "manifest.json"
     }
-    assert listed.keys() == actual.keys()
+    # Name the offending paths. The bare `listed.keys() == actual.keys()` form
+    # printed `assert dict_keys(['R...repeat.json']) == dict_keys(['a...ectory.json'])`,
+    # which reads like an ordering difference and is not one (`dict_keys` compares
+    # as a set). That message cost a wrong diagnosis and three red pushes: the real
+    # cause was `*.log` in the repo's ignore file holding 68 Harbor logs out of the
+    # commit, so the bundle was short in CI and complete on the machine that built it.
+    unpublished = sorted(listed.keys() - actual.keys())
+    unlisted = sorted(actual.keys() - listed.keys())
+    assert not unpublished, f"in manifest.json but absent from the release tree: {unpublished}"
+    assert not unlisted, f"in the release tree but absent from manifest.json: {unlisted}"
+
     for relative, path in actual.items():
         data = path.read_bytes()
         assert listed[relative]["bytes"] == len(data)

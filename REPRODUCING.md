@@ -54,6 +54,25 @@ The v0.1 Linux ARM64 task image had content digest
 The Dockerfile pins its base image digest, Rust toolchain, and Claude Code
 version.
 
+That image reproduces v0.1. A new run with a current Stele build or a model
+newer than Claude Code 2.1.220 needs a newer CLI. That CLI version cannot
+install current Stele plugins, and it prices unknown models at a fallback rate
+that trips `--max-budget-usd` early. Build the same Dockerfile with a newer
+Claude Code and select it for the run:
+
+```sh
+docker build --build-arg CLAUDE_CODE_VERSION=2.1.296 \
+  --tag harbor-local/claude-rust:2.1.296-rust-1.88.0 images/claude-rust
+export STELE_BENCH_TASK_IMAGE=harbor-local/claude-rust:2.1.296-rust-1.88.0
+```
+
+Run receipts record the image under `configuration.task_image`. The registered
+compounding, K=5 and continuity runs refuse the override.
+
+Docker Desktop and plain Docker on Linux both work. On Linux the configured
+arm maps `host.docker.internal` to the container's gateway itself; the control
+arm is left untouched.
+
 ## Connect a Stele integration
 
 New treatment runs require:
@@ -62,7 +81,10 @@ New treatment runs require:
 2. a reachable compatible backend and its public client key;
 3. an executable graph adapter implementing the public JSON-over-stdin
    `prepare`, `restore`, `snapshot`, `destroy`, and `cleanup` operations;
-4. Harbor 0.20.x, Docker, and a dedicated model/Gateway credential;
+4. Harbor 0.20.x, Docker, and a dedicated model credential: a Vercel AI
+   Gateway key (the default), or a first-party Anthropic API key with
+   `--model-provider anthropic` (setup and its spending fence are in
+   `scripts/benchmark-provisioner/README.md`);
 5. an artifact manifest whose `artifact.path`, `artifact.sha256`, and
    `artifact.target` identify the integration executable.
 

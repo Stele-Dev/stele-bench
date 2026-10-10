@@ -1,0 +1,9 @@
+Skipping image OS validation for hb__90cbd32c2a31669110e0258545353b3c: docker inspect returned 1
+Claude Code is already available at the requested version
+Running command: mkdir -p $CLAUDE_CONFIG_DIR/debug $CLAUDE_CONFIG_DIR/projects/-app $CLAUDE_CONFIG_DIR/shell-snapshots $CLAUDE_CONFIG_DIR/statsig $CLAUDE_CONFIG_DIR/todos $CLAUDE_CONFIG_DIR/skills && if [ -d ~/.claude/skills ]; then cp -r ~/.claude/skills/. $CLAUDE_CONFIG_DIR/skills/ 2>/dev/null || true; fi
+Command outputs captured
+Running command: export PATH="$HOME/.local/bin:$PATH"; harbor_claude_code_instruction_e93a7002feed469bb1b2e07e4041c36b="$HARBOR_CLAUDE_CODE_INSTRUCTION_E93A7002FEED469BB1B2E07E4041C36B"; unset HARBOR_CLAUDE_CODE_INSTRUCTION_E93A7002FEED469BB1B2E07E4041C36B; printf "%s" "$harbor_claude_code_instruction_e93a7002feed469bb1b2e07e4041c36b" | claude --verbose --output-format=stream-json --max-turns 60 --max-budget-usd 3.25 --permission-mode=bypassPermissions --print 2>&1 | tee /logs/agent/claude-code.txt
+Command failed
+Wrote Claude Code trajectory to $STELE_BENCH_STATE/runs/settings-label-roundtrip-v2/work/9ed9f6265413b2c01802/jobs/route-one/settings-label-roundtrip__D6jK4jT/agent/trajectory.json
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached

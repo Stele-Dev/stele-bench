@@ -207,6 +207,114 @@ The pair receipt is written atomically to
 receipts and retained Harbor evidence. Results remain exploratory until repeated
 with a pre-registered design.
 
+### Billing the agent to the Anthropic API directly (`--model-provider anthropic`)
+
+By default every agent call goes through the Vercel AI Gateway. Pass
+`--model-provider anthropic` (or export `STELE_BENCH_MODEL_PROVIDER=anthropic`)
+to send the agent's calls to the first-party Anthropic API instead — the only
+way to spend Anthropic API credits, which the Gateway cannot draw on. The
+oracle exports the choice to every runner, so each arm of a run is billed the
+same way the fence checked.
+
+Only the agent moves. The semantic bridge still embeds through the Gateway
+(the Anthropic API has no embeddings endpoint), so a faithful arm still needs
+`AI_GATEWAY_KEY_EVAL`. Compounding, K=5 and continuity runs refuse this
+provider: their analysis scores each session on an exclusive Gateway billing
+delta that the Anthropic reports cannot reproduce. `run-pair`, `run-quad`,
+`run-repeat` and `run-suite` accept it.
+
+Models keep their benchmark names (`--model anthropic/claude-haiku-4.5`); the
+oracle writes the first-party id (`claude-haiku-4-5`) into the Harbor config.
+A model without a recorded price in `model_provider.py` is refused before
+anything starts, because the drain check could not price it.
+
+**Use a Claude Code new enough for the model.** The CLI's own cost figure is
+what enforces `--max-budget-usd`, and a CLI older than the model prices it at a
+fallback rate (Claude Code 2.1.220 priced Claude Haiku 5.5 like Opus, about 50
+times its real price, which would cut every arm short). Build a newer
+`images/claude-rust` and select it for the run:
+
+```sh
+docker build --build-arg CLAUDE_CODE_VERSION=2.1.296 \
+  --tag harbor-local/claude-rust:2.1.296-rust-1.88.0 images/claude-rust
+export STELE_BENCH_TASK_IMAGE=harbor-local/claude-rust:2.1.296-rust-1.88.0
+```
+
+Run receipts record the image as `configuration.task_image`. Registered chain
+runs refuse the override, because their manifests pin the default image.
+
+**One-time setup in the Claude Console:**
+
+1. Create a **dedicated workspace** for the benchmark. The default workspace is
+   refused: the cost report cannot attribute its spend.
+2. Set a **monthly spend limit** on that workspace. Anthropic enforces it
+   server-side, and it is the hard stop — everything below only refuses to
+   start a run that the limit cannot absorb.
+3. Create an **API key in that workspace**, used by nothing else. Export it as
+   `ANTHROPIC_API_KEY_EVAL`.
+4. Create an **Admin API key** (organization admins only) and export it as
+   `ANTHROPIC_ADMIN_KEY_EVAL`. The oracle uses it only on the host, to read the
+   key's record and the usage and cost reports; it never reaches Harbor.
+
+Then write `<state-root>/anthropic-reserve.json`, mode 0600 (override the path
+with `--gateway-reserve-config`). Nothing in it is a secret:
+
+```jsonc
+{
+  "schema_version": 1,
+  "key_sha256": "<sha256 of ANTHROPIC_API_KEY_EVAL>",
+  "key_id": "apikey_...",            // the eval key's id
+  "key_name": "<the eval key's name>",
+  "organization_id": "<org uuid>",   // the admin key must belong to this org
+  "workspace_id": "wrkspc_...",      // the dedicated workspace
+  "monthly_spend_limit_usd": "400.00", // exactly what the Console shows
+  "calibrated_at": "YYYY-MM-DD",     // when you last checked that limit
+  "max_calibration_age_days": 30     // optional, default 30
+}
+```
+
+```sh
+printf %s "$ANTHROPIC_API_KEY_EVAL" | shasum -a 256          # key_sha256
+curl -s https://api.anthropic.com/v1/organizations/api_keys \
+  -H "x-api-key: $ANTHROPIC_ADMIN_KEY_EVAL" \
+  -H "anthropic-version: 2023-06-01"                         # key_id, workspace_id
+```
+
+Before any state or spend, `doctor` and every paid run verify, through
+`anthropic_reserve.py`:
+
+1. **Key identity** — the exported key matches `key_sha256`, and it is not
+   the Admin key.
+2. **A fresh attestation** — Anthropic exposes neither the credit balance nor
+   the spend limit through its API, so the limit is recorded by hand and goes
+   stale after `max_calibration_age_days`.
+3. **A live key** — `GET /v1/models` accepts it (zero cost).
+4. **The right key in the right place** — the admin key belongs to the
+   configured organization, and the Admin API reports the eval key active,
+   with the configured name, in the configured workspace, with a redacted hint
+   that matches the exported key.
+5. **Headroom** — the workspace's month-to-date cost plus the acknowledged cap
+   fits under the monthly limit.
+
+Between arms the oracle prices the eval key's usage since the preflight from
+the Admin usage report and stops before the next arm if it has passed the
+acknowledged cap. The report is documented to lag about five minutes and has
+been seen lagging an hour, so this check undercounts recent arms; the workspace
+spend limit catches the rest. For the same reason the month-to-date figure is
+the larger of the settled cost report (which shows nothing for today until the
+day closes) and the priced usage report. The preflight lands in the run receipt under
+`billing.gateway_reserve_preflight` (with `"model_provider": "anthropic"`) and
+the observations under `billing.gateway_drain_checks`. The Console's Cost page
+remains authoritative for billing.
+
+Check the fence without running anything:
+
+```sh
+uv run ../../scripts/benchmark-provisioner/oracle.py --model-provider anthropic doctor
+uv run ../../scripts/benchmark-provisioner/anthropic_reserve.py \
+  --config ~/.local/state/stele-bench/anthropic-reserve.json --pair-cap-usd 10.00
+```
+
 ### Multi-variant discrimination (`run-quad`)
 
 A pair compares no-stele vs one faithful graph. A memory question needs more

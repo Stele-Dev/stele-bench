@@ -39,6 +39,7 @@ from stele_bench.harbor_pack import (  # noqa: E402
     HARBOR_TASK_IMAGE,
     FaithfulAgentConfig,
     generate_harbor_task_pack,
+    task_image,
 )
 from stele_bench.memory_evidence import (  # noqa: E402
     detect_injection_in_session,
@@ -234,7 +235,7 @@ def _chain_spec(inputs: CompoundingInputs) -> _ChainSpec:
         raise CompoundingRunError("chain_manifest_model_mismatch")
     if runtime.get("harness") != "claude-code":
         raise CompoundingRunError("chain_manifest_harness_mismatch")
-    if runtime.get("task_image") != HARBOR_TASK_IMAGE:
+    if runtime.get("task_image") != HARBOR_TASK_IMAGE or task_image() != HARBOR_TASK_IMAGE:
         raise CompoundingRunError("chain_manifest_task_image_mismatch")
     raw_sessions = raw.get("sessions")
     if not isinstance(raw_sessions, list) or len(raw_sessions) < 1:
@@ -299,6 +300,10 @@ def _chain_spec(inputs: CompoundingInputs) -> _ChainSpec:
 def _configure_and_run(
     inputs: CompoundingInputs, config: Path, jobs_root: Path
 ) -> tuple[int, float]:
+    if support.model_provider.current() != support.model_provider.GATEWAY:
+        # The registered analysis needs exclusive, settled per-session costs from
+        # the Gateway quota; the Anthropic reports have no equivalent at that grain.
+        raise CompoundingRunError("compounding_chains_require_the_gateway_provider")
     if not os.environ.get("AI_GATEWAY_KEY_EVAL"):
         raise CompoundingRunError("ai_gateway_key_eval_is_not_exported")
 

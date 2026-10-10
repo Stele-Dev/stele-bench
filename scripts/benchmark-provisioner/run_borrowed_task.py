@@ -277,8 +277,9 @@ def _job_config(inputs: BorrowedInputs, task: Path) -> dict[str, object]:
 
 
 def _run_harbor(inputs: BorrowedInputs, config: Path, jobs_root: Path) -> tuple[int, float]:
-    if not os.environ.get("AI_GATEWAY_KEY_EVAL"):
-        raise ScoredSmokeError("ai_gateway_key_eval_is_not_exported")
+    model_key = support.model_provider.key_env()
+    if not os.environ.get(model_key):
+        raise ScoredSmokeError(f"{model_key.lower()}_is_not_exported")
     argv = support.scored_harbor_argv(
         config, jobs_root, harbor_executable=inputs.harbor_executable
     )

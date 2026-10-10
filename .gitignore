@@ -4,3 +4,8 @@
 **/__pycache__/
 **/*.pyc
 eval/stele-bench/dist/
+
+# Published benchmark evidence includes Harbor's job-job.log and trial.log per
+# attempt, and results/**/manifest.json hashes them. Keep them even where a
+# global ignore file excludes *.log.
+!eval/stele-bench/results/**/*.log

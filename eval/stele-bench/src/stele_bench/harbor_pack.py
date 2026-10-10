@@ -69,6 +69,22 @@ _ESTABLISH_STEP_NAME = "establish"
 _FOLLOW_UP_STEP_NAME = "follow-up"
 _REDACTION_RECEIPT_NAME = "context-redaction.json"
 HARBOR_TASK_IMAGE = "harbor-local/claude-rust:2.1.220-rust-1.88.0"
+# A run may substitute another build of images/claude-rust (for example a newer
+# Claude Code that knows a newer model's price). The registered chain manifests
+# pin the default, and their runner refuses any override.
+TASK_IMAGE_ENV = "STELE_BENCH_TASK_IMAGE"
+_TASK_IMAGE_TAG = re.compile(r"^harbor-local/claude-rust:[0-9][0-9A-Za-z.\-]{0,127}$")
+
+
+def task_image() -> str:
+    """The task base image for this run: the pinned default unless overridden."""
+
+    value = os.environ.get(TASK_IMAGE_ENV, "").strip()
+    if not value:
+        return HARBOR_TASK_IMAGE
+    if not _TASK_IMAGE_TAG.fullmatch(value):
+        raise ValueError(f"{TASK_IMAGE_ENV} must name a harbor-local/claude-rust:<tag> image")
+    return value
 _HARBOR_NETWORK_MODE = {"none": "no-network", "public": "public"}
 _REVEALING_MARKER = re.compile(
     r"(?<![a-z0-9])(?:benchmark|eval|condition|arm|stele)(?![a-z0-9])",
@@ -621,7 +637,7 @@ storage_mb = {environment.storage_mb}
 
 def _dockerfile(prebuild_argv: tuple[str, ...] = ()) -> str:
     prebuild = f"RUN {json.dumps(list(prebuild_argv))}\n" if prebuild_argv else ""
-    return f"""FROM {HARBOR_TASK_IMAGE}
+    return f"""FROM {task_image()}
 WORKDIR /workspace
 COPY project/ /workspace/
 {prebuild}

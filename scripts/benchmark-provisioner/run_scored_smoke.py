@@ -11,7 +11,7 @@ import os
 import re
 import sys
 import time
-from collections.abc import Mapping, Sequence
+from collections.abc import Iterator, Mapping, Sequence
 from dataclasses import asdict, dataclass
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
@@ -63,13 +63,18 @@ _CONDITIONS: tuple[Condition, ...] = ("no-stele", "faithful", "faithful-norag")
 # artifact, fixture, provisioner and backend inputs; they differ only downstream.
 _GRAPH_CONDITIONS: tuple[Condition, ...] = ("faithful", "faithful-norag")
 
+# The subcommand must follow `git` within one shell command: the match may not
+# cross a newline or a command separator. These patterns run on each raw
+# argument string, not on serialized JSON. Without the limit, a heredoc of
+# source code holding the string "git" and a later `.clone()` read as
+# `git clone` and invalidated an honest arm.
 _GIT_REMOTE = re.compile(
-    r"\bgit\b.{0,240}\b(?:clone|fetch|pull|ls-remote)\b",
-    re.IGNORECASE | re.DOTALL,
+    r"\bgit\b[^\n;&|]{0,240}?\b(?:clone|fetch|pull|ls-remote)\b",
+    re.IGNORECASE,
 )
 _GIT_HISTORY = re.compile(
-    r"\bgit\b.{0,240}\b(?:log|reflog|rev-list|show|cat-file|blame)\b",
-    re.IGNORECASE | re.DOTALL,
+    r"\bgit\b[^\n;&|]{0,240}?\b(?:log|reflog|rev-list|show|cat-file|blame)\b",
+    re.IGNORECASE,
 )
 _DOTSTATE_REPOSITORY_URL = re.compile(
     r"(?:github\.com|githubusercontent\.com).{0,160}(?:serkanyersen[/\\]dotstate|dotstate)",
@@ -259,8 +264,9 @@ def _configure_scored_job(
 
 
 def _run_harbor(inputs: ScoredInputs, config: Path, jobs_root: Path) -> tuple[int, float]:
-    if not os.environ.get("AI_GATEWAY_KEY_EVAL"):
-        raise ScoredSmokeError("ai_gateway_key_eval_is_not_exported")
+    model_key = support.model_provider.key_env()
+    if not os.environ.get(model_key):
+        raise ScoredSmokeError(f"{model_key.lower()}_is_not_exported")
     argv = support.scored_harbor_argv(config, jobs_root, harbor_executable=inputs.harbor_executable)
     started = time.monotonic()
     try:
@@ -477,6 +483,12 @@ def _model_usage(model: str, raw_result: Mapping[str, Any] | None) -> Mapping[st
     if not isinstance(usage_by_model, Mapping):
         return None
     usage = usage_by_model.get(model)
+    if usage is None:
+        # Under the direct provider the CLI reports the bare first-party id.
+        try:
+            usage = usage_by_model.get(support.model_provider.harbor_model_name(model))
+        except support.model_provider.ModelProviderError:
+            usage = None
     return usage if isinstance(usage, Mapping) else None
 
 
@@ -798,6 +810,19 @@ def _external_source_access_detected(trajectory: Mapping[str, Any]) -> bool:
     return False
 
 
+def _string_values(value: Any) -> Iterator[str]:
+    """Every string inside a tool call's arguments, unescaped."""
+
+    if isinstance(value, str):
+        yield value
+    elif isinstance(value, Mapping):
+        for item in value.values():
+            yield from _string_values(item)
+    elif isinstance(value, (list, tuple)):
+        for item in value:
+            yield from _string_values(item)
+
+
 def _forbidden_repository_access(
     trajectory: Mapping[str, Any], *, allow_local_git_history: bool = False
 ) -> bool:
@@ -818,9 +843,12 @@ def _forbidden_repository_access(
             "terminal",
             "exec_command",
         }
-        if shell_tool and _GIT_REMOTE.search(serialized):
+        raw_strings = list(_string_values(arguments)) if shell_tool else []
+        if any(_GIT_REMOTE.search(text) for text in raw_strings):
             return True
-        if shell_tool and not allow_local_git_history and _GIT_HISTORY.search(serialized):
+        if not allow_local_git_history and any(
+            _GIT_HISTORY.search(text) for text in raw_strings
+        ):
             return True
         if _DOTSTATE_REPOSITORY_URL.search(serialized):
             return True

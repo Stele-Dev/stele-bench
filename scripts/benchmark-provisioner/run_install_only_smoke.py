@@ -35,6 +35,8 @@ _PUBLIC_SOURCE = _REPOSITORY_ROOT / "eval" / "stele-bench" / "src"
 if os.fspath(_PUBLIC_SOURCE) not in sys.path:
     sys.path.insert(0, os.fspath(_PUBLIC_SOURCE))
 
+import model_provider  # noqa: E402
+
 from stele_bench.challenges import LoadedChallenge, select_challenges  # noqa: E402
 from stele_bench.contracts import GraphArm, RunIdentity  # noqa: E402
 from stele_bench.corpus import (  # noqa: E402
@@ -78,13 +80,18 @@ _CHILD_ENV_ALLOWLIST = (
     "USERPROFILE",
     "XDG_RUNTIME_DIR",
 )
+# Every scored arm caps one model turn at this many output tokens.
+AGENT_MAX_OUTPUT_TOKENS = "2048"
+
 _PUBLIC_CONFIG_ENV_ALLOWLIST = (
     "STELE_BENCH_ATTEMPT_ROOT",
     "STELE_BENCH_DB_CONTAINER",
     "STELE_BENCH_DB_NAME",
     "STELE_BENCH_DB_USER",
+    "STELE_BENCH_MODEL_PROVIDER",
     "STELE_BENCH_SUPABASE_ANON_KEY",
     "STELE_BENCH_SUPABASE_URL",
+    "STELE_BENCH_TASK_IMAGE",
     "SUPABASE_TEST_ANON_KEY",
     "SUPABASE_TEST_URL",
 )
@@ -256,10 +263,10 @@ def _child_environment(*, include_gateway: bool = False) -> dict[str, str]:
     }
     environment["PYTHONPATH"] = os.fspath(_PUBLIC_SOURCE)
     if include_gateway:
-        gateway_key = os.environ.get("AI_GATEWAY_KEY_EVAL")
-        if gateway_key:
-            environment["AI_GATEWAY_KEY_EVAL"] = gateway_key
-        environment["ANTHROPIC_BASE_URL"] = "https://ai-gateway.vercel.sh"
+        # "Gateway" here means "the model endpoint": the selected provider's key
+        # and base URL, so Harbor can expand the agent's credential placeholder.
+        environment.update(model_provider.harbor_process_env())
+        environment["CLAUDE_CODE_MAX_OUTPUT_TOKENS"] = AGENT_MAX_OUTPUT_TOKENS
     return environment
 
 
@@ -485,13 +492,14 @@ def configure_agent_job(
     gateway_url: str,
     semantic_endpoint: str | None = None,
 ) -> None:
-    """Pin the model, the turn and money caps, and the Gateway credential.
+    """Pin the model, the turn and money caps, and the model-call credential.
 
     Shared by every scored runner so an arm cannot be billed differently
-    depending on which run shape launched it. The key is written as the literal
-    `${AI_GATEWAY_KEY_EVAL}` for Harbor to expand at run time — the secret never
-    enters a config file on disk, which is what lets the file be kept as
-    evidence.
+    depending on which run shape launched it. The credential follows the
+    selected model provider (`model_provider.current()`): the Gateway key, or
+    the first-party Anthropic key. It is written as a literal `${...}`
+    placeholder for Harbor to expand at run time — the secret never enters a
+    config file on disk, which is what lets the file be kept as evidence.
     """
 
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -503,7 +511,10 @@ def configure_agent_job(
     env = agent.setdefault("env", {})
     if not isinstance(kwargs, dict) or not isinstance(env, dict):
         raise InstallOnlySmokeError("configured_job_has_unexpected_agent_shape")
-    agent["model_name"] = model
+    try:
+        agent["model_name"] = model_provider.harbor_model_name(model)
+    except model_provider.ModelProviderError as error:
+        raise InstallOnlySmokeError("configured_model_is_not_available_on_provider") from error
     kwargs.update(
         {
             "max_turns": max_turns,
@@ -511,14 +522,16 @@ def configure_agent_job(
             "permission_mode": "bypassPermissions",
         }
     )
-    env.update(
-        {
-            "ANTHROPIC_BASE_URL": gateway_url,
-            "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
-            "ANTHROPIC_API_KEY": "",
-            "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "2048",
-        }
-    )
+    agent_env = model_provider.harbor_agent_env()
+    if model_provider.current() == model_provider.GATEWAY:
+        agent_env["ANTHROPIC_BASE_URL"] = gateway_url
+    # The output cap is deliberately NOT set here. Harbor treats every agent env
+    # key containing TOKEN as a secret and replaces its value throughout the
+    # retained evidence, so "2048" became "[REDACTED]" wherever a turn produced
+    # exactly 2048 tokens, and the trajectory stopped being JSON. Harbor reads
+    # the same variable from its own process environment (_child_environment).
+    env.pop("CLAUDE_CODE_MAX_OUTPUT_TOKENS", None)
+    env.update(agent_env)
     if semantic_endpoint is not None:
         env["STELE_SEMANTIC_ENDPOINT"] = semantic_endpoint
     data["n_attempts"] = 1

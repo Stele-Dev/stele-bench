@@ -2235,3 +2235,89 @@ def test_run_suite_identifies_its_corpus_by_the_dataset_not_an_unrelated_repo(
     assert not any(
         args[:2] == ("git", "rev-parse") for args, _ in runner.calls
     )
+
+
+def test_doctor_on_the_anthropic_provider_checks_its_own_fence(
+    tmp_path: Path, monkeypatch
+) -> None:
+    monkeypatch.setenv("AI_GATEWAY_KEY_EVAL", "gateway-secret")
+    monkeypatch.setenv("STELE_BENCH_MODEL_PROVIDER", "anthropic")
+    monkeypatch.delenv("ANTHROPIC_API_KEY_EVAL", raising=False)
+    monkeypatch.setenv("ANTHROPIC_ADMIN_KEY_EVAL", "admin-secret")
+    source = tmp_path / "dotstate"
+    source.mkdir()
+    with pytest.raises(oracle.OracleError, match="ANTHROPIC_API_KEY_EVAL is not exported"):
+        oracle.doctor(
+            source=source,
+            state_root=tmp_path / "state",
+            runner=FakeRunner(),
+            reserve_checker=FakeReserveChecker(),
+        )
+
+    monkeypatch.setenv("ANTHROPIC_API_KEY_EVAL", "direct-secret")
+    seen: list[Path] = []
+
+    def checker(*, acknowledged_pair_cap_usd, config_path):
+        seen.append(config_path)
+        return {"model_provider": "anthropic", "acknowledged_pair_cap_usd": "0.00"}
+
+    result = oracle.doctor(
+        source=source, state_root=tmp_path / "state", runner=FakeRunner(), reserve_checker=checker
+    )
+    assert result["checks"]["model_provider"] == "anthropic"
+    assert result["checks"]["anthropic_reserve"]["model_provider"] == "anthropic"
+    assert "gateway_reserve" not in result["checks"]
+    assert seen == [tmp_path / "state" / "anthropic-reserve.json"]
+    assert "direct-secret" not in json.dumps(result)
+
+
+def test_the_default_fence_follows_the_selected_provider(monkeypatch) -> None:
+    calls: list[str] = []
+    monkeypatch.setattr(
+        oracle.gateway_reserve, "check_gateway_reserve", lambda **_: calls.append("gateway")
+    )
+    monkeypatch.setattr(
+        oracle.anthropic_reserve, "check_anthropic_reserve", lambda **_: calls.append("anthropic")
+    )
+    monkeypatch.setattr(
+        oracle.anthropic_reserve, "check_anthropic_drain", lambda **_: calls.append("drain")
+    )
+    oracle._provider_reserve_check(acknowledged_pair_cap_usd=Decimal(1), config_path=Path("x"))
+    monkeypatch.setenv("STELE_BENCH_MODEL_PROVIDER", "anthropic")
+    oracle._provider_reserve_check(acknowledged_pair_cap_usd=Decimal(1), config_path=Path("x"))
+    oracle._provider_drain_check(preflight={})
+    assert calls == ["gateway", "anthropic", "drain"]
+
+
+def test_compounding_runs_refuse_the_anthropic_provider(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setenv("STELE_BENCH_MODEL_PROVIDER", "anthropic")
+    with pytest.raises(oracle.OracleError, match="require the gateway model provider"):
+        oracle.run_compounding(
+            run_id="compounding-001",
+            admission=True,
+            attempts=1,
+            state_root=tmp_path / "state",
+            runner=FakeRunner(),
+            reserve_checker=FakeReserveChecker(),
+        )
+    assert not (tmp_path / "state").exists()
+
+
+def test_the_cli_refuses_a_model_the_direct_provider_cannot_run(tmp_path: Path, capsys) -> None:
+    status = oracle.main(
+        [
+            "--state-root",
+            os.fspath(tmp_path / "state"),
+            "--model-provider",
+            "anthropic",
+            "run-pair",
+            "pair-001",
+            "--model",
+            "openai/gpt-5",
+            "--acknowledge-paid-pair-cap-usd",
+            "10.00",
+        ]
+    )
+    assert status == 1
+    assert "cannot run model" in capsys.readouterr().out
+    assert not (tmp_path / "state").exists()
