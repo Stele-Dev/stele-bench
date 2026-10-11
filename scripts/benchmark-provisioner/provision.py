@@ -1143,7 +1143,6 @@ begin
   create temporary table node_map(short_id text primary key, id uuid not null) on commit drop;
   create temporary table comment_map(key text primary key, id uuid not null) on commit drop;
 
-  select count(*) into queue_before from pgmq.q_embed_jobs;
   update auth.users owner
   set raw_app_meta_data = coalesce(owner.raw_app_meta_data, '{}'::jsonb) ||
     jsonb_build_object('local_graph_provisioner_v1', jsonb_build_object(
@@ -1261,6 +1260,13 @@ begin
       (item->>'anchor_offset')::int, item->>'anchor_status'
     );
   end loop;
+  -- Embed jobs for THIS project only. The queue is shared by every run on the
+  -- stack, and the per-minute drain (stele-embed-drain) consumes other runs'
+  -- leftovers at its own pace, so a global count moves on its own. The restore
+  -- runs with the enqueue trigger disabled, so this is 0 for an exact restore.
+  select count(*) into queue_before from pgmq.q_embed_jobs q
+    join nodes n on n.id = (q.message->>'node_id')::uuid
+    where n.project_id = destination_id;
   insert into provision_result values (destination_id, queue_before);
 end
 $restore$;
@@ -1475,7 +1481,9 @@ select json_build_object(
   'canonical', (select value from canonical),
   'node_count', (select count(*) from nodes n join selected_project p on p.id=n.project_id),
   'edge_count', (select count(*) from edges e join selected_project p on p.id=e.project_id),
-  'queue_count', (select count(*) from pgmq.q_embed_jobs),
+  'queue_count', (select count(*) from pgmq.q_embed_jobs q
+    join nodes n on n.id = (q.message->>'node_id')::uuid
+    join selected_project p on p.id = n.project_id),
   'fts', (select coalesce(json_agg(json_build_object('id', n.short_id, 'score', round(s.score::numeric, 6)) order by s.score desc,
             case n.type when 'component' then 0 when 'knowledge' then 1 when 'task' then 2 when 'document' then 3 else 4 end,
             substring(n.short_id from '[0-9]+$')::bigint), '[]'::json)
@@ -1541,7 +1549,11 @@ def _snapshot(request: dict[str, Any]) -> dict[str, Any]:
     if canonical is None:
         raise ProvisionerError("project is not owned by the local graph provisioner")
     for node in canonical["nodes"]:
-        node["embedding"] = _embedding_vector_from_text(node["embedding"])
+        # A node the agent wrote during the run has no vector until the embed
+        # drain reaches it. It cannot match a fixture node, so the digest still
+        # shows the graph changed; it must not abort the snapshot.
+        if node["embedding"] is not None:
+            node["embedding"] = _embedding_vector_from_text(node["embedding"])
     digest = hashlib.sha256(_canonical_bytes(canonical)).hexdigest()
     restored_knowledge = sum(
         1

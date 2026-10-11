@@ -47,6 +47,14 @@ _HOME_RE = re.compile(r"^/[A-Za-z0-9._/@+:-]+$")
 _ARTIFACT_DESTINATION = "/opt/agent-tools/stele"
 _STELE_COMMAND_LINK = "/usr/local/bin/stele"
 _CLAUDE_RUNTIME_CONFIG_DIR = PurePosixPath("/logs/agent/sessions")
+# The fences `stele install` writes around its instructions block in the
+# user-level CLAUDE.md. A real install tells the agent how to use Stele there,
+# so the configured arm must run with it (the evaluated project's own CLAUDE.md
+# is a different file, stripped from every arm while packaging).
+_STELE_INSTRUCTIONS_MARKERS = (
+    "======== Stele: Important Project Context  ===========",
+    "======== Stele: Instructions End  ====================",
+)
 
 
 class HarborUnavailableError(RuntimeError):
@@ -487,13 +495,21 @@ class _ClaudeSetupBehavior:
         owner: str,
         source_dir: PurePosixPath,
     ) -> None:
-        """Stage only the installed plugin state used by Harbor's Claude process."""
+        """Stage the installed plugin state and instructions Harbor's Claude process reads.
+
+        Harbor points ``CLAUDE_CONFIG_DIR`` at the runtime dir, so anything the
+        install wrote to ``~/.claude`` and not copied here never reaches the
+        agent. The user-level ``CLAUDE.md`` carries the Stele instructions block;
+        without it the agent is not told to activate recall.
+        """
 
         uid, gid = owner.split(":", maxsplit=1)
         source_plugins = source_dir / "plugins"
         source_settings = source_dir / "settings.json"
+        source_instructions = source_dir / "CLAUDE.md"
         destination_plugins = _CLAUDE_RUNTIME_CONFIG_DIR / "plugins"
         destination_settings = _CLAUDE_RUNTIME_CONFIG_DIR / "settings.json"
+        destination_instructions = _CLAUDE_RUNTIME_CONFIG_DIR / "CLAUDE.md"
 
         await self.exec_as_root(
             environment,
@@ -520,6 +536,15 @@ class _ClaudeSetupBehavior:
                     f"cp -a -- {_quoted(source_settings)} {_quoted(destination_settings)}",
                     f"cmp -s -- {_quoted(source_settings)} {_quoted(destination_settings)}",
                     f"test -f {_quoted(destination_plugins / 'installed_plugins.json')}",
+                    f"test -f {_quoted(source_instructions)}",
+                    f"test ! -L {_quoted(source_instructions)}",
+                    f"test ! -e {_quoted(destination_instructions)}",
+                    f"test ! -L {_quoted(destination_instructions)}",
+                    f"cp -a -- {_quoted(source_instructions)} {_quoted(destination_instructions)}",
+                    *(
+                        f"grep -qF -- {_quoted(marker)} {_quoted(destination_instructions)}"
+                        for marker in _STELE_INSTRUCTIONS_MARKERS
+                    ),
                 )
             ),
         )

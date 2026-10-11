@@ -69,6 +69,14 @@ export STELE_BENCH_TASK_IMAGE=harbor-local/claude-rust:2.1.296-rust-1.88.0
 Run receipts record the image under `configuration.task_image`. The registered
 compounding, K=5 and continuity runs refuse the override.
 
+Both arms run the default Claude Code client. Harbor sets
+`CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1`, and with it Claude Code 2.1.296
+drops every MCP tool whose input schema has a top-level `anyOf`. The runner
+sets that variable to an empty string for both arms, so the configured arm
+sees the integration's full tool list. The configured arm also keeps the
+integration's global agent instructions; only the project's own auto-loaded
+context is removed, identically in both arms.
+
 Docker Desktop and plain Docker on Linux both work. On Linux the configured
 arm maps `host.docker.internal` to the container's gateway itself; the control
 arm is left untouched.

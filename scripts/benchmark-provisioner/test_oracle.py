@@ -1011,6 +1011,35 @@ def test_a_repeat_excludes_an_attempt_whose_arm_the_runner_marked_invalid(
     assert summary["binary_measures"]["cited_decision"]["treatment"]["trials"] == 1
 
 
+def test_a_repeat_excludes_an_attempt_whose_arm_ended_in_an_infrastructure_error(
+    tmp_path: Path, monkeypatch
+) -> None:
+    """A clean exit can still carry an infrastructure error.
+
+    Claude Code aborts with OutputTokenExceededError when a turn passes the
+    output cap; the verifier then scores an unfinished workspace as 0, which
+    would be analysed as a genuine failure.
+    """
+
+    monkeypatch.setenv("AI_GATEWAY_KEY_EVAL", "gateway-secret")
+    factory = _repeat_receipts(cited_faithful={1: True, 2: True})
+
+    def with_broken_treatment(run_id: str, condition: str) -> dict:
+        receipt = factory(run_id, condition)
+        if condition == "faithful" and "attempt-02" in run_id:
+            receipt["outcome"] = "infrastructure-error"
+        return receipt
+
+    runner = FakeRunner(scored_receipt=with_broken_treatment)
+    result = _run_repeat(tmp_path, attempts=2, runner=runner)
+    summary = oracle._read_json(Path(result["repeat_receipt"]))["summary"]
+
+    assert summary["attempts_analysed"] == 1
+    assert summary["attempts_excluded"] == [
+        {"attempt": 2, "reason": "arm_infrastructure_error:treatment"}
+    ]
+
+
 def test_a_repeat_reports_a_continuous_measure_as_a_paired_delta_with_no_p_value(
     tmp_path: Path, monkeypatch
 ) -> None:

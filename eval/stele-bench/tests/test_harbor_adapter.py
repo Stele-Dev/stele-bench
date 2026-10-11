@@ -417,6 +417,39 @@ def test_setup_stages_installed_plugin_state_after_preflight(tmp_path: Path) -> 
     assert "/home/agent/.claude /logs/agent/sessions" not in stage_command
 
 
+def test_setup_stages_the_stele_instructions_the_install_wrote(tmp_path: Path) -> None:
+    # Harbor runs Claude with CLAUDE_CONFIG_DIR at the runtime dir. A user-level
+    # CLAUDE.md left in ~/.claude never reaches the agent, and without its Stele
+    # block the agent is never told to activate recall.
+    binary = tmp_path / "cli"
+    binary.write_bytes(b"ready")
+    adapter = _adapter(tmp_path, _artifact(binary))
+    environment = FakeEnvironment()
+
+    asyncio.run(adapter.setup(environment))
+
+    stage_command = next(
+        command for command, _ in environment.commands if "cp -a --" in command
+    )
+    assert "test -f /home/agent/.claude/CLAUDE.md" in stage_command
+    assert "test ! -L /home/agent/.claude/CLAUDE.md" in stage_command
+    assert "test ! -e /logs/agent/sessions/CLAUDE.md" in stage_command
+    assert (
+        "cp -a -- /home/agent/.claude/CLAUDE.md /logs/agent/sessions/CLAUDE.md"
+        in stage_command
+    )
+    # Setup fails unless the staged copy carries both fences of the Stele block.
+    assert (
+        "grep -qF -- '======== Stele: Important Project Context  ===========' "
+        "/logs/agent/sessions/CLAUDE.md"
+    ) in stage_command
+    assert (
+        "grep -qF -- '======== Stele: Instructions End  ====================' "
+        "/logs/agent/sessions/CLAUDE.md"
+    ) in stage_command
+    assert stage_command.splitlines()[0] == "set -eu"
+
+
 def test_runtime_config_staging_does_not_depend_on_a_login_shell(tmp_path: Path) -> None:
     binary = tmp_path / "cli"
     binary.write_bytes(b"ready")
@@ -883,3 +916,16 @@ def test_setup_refuses_a_workspace_it_cannot_trust(tmp_path: Path, reported: str
 
     with pytest.raises(StructuralPreflightError, match="evaluated project directory"):
         asyncio.run(adapter.setup(environment))
+
+
+def test_the_instructions_fences_match_the_stele_cli() -> None:
+    # The fences are the CLI's contract. The public benchmark repository does not
+    # carry the CLI source, so this check runs only inside the Stele monorepo.
+    source = Path(__file__).resolve().parents[3] / "apps/cli/src/harness/_memory_block.ts"
+    if not source.is_file():
+        pytest.skip("Stele CLI source is not in this checkout")
+    from stele_bench.harbor_adapter import _STELE_INSTRUCTIONS_MARKERS
+
+    text = source.read_text(encoding="utf-8")
+    for marker in _STELE_INSTRUCTIONS_MARKERS:
+        assert f'"{marker}"' in text

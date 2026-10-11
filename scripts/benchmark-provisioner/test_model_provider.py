@@ -55,6 +55,7 @@ def test_the_gateway_agent_config_keeps_its_credential_wiring(tmp_path: Path) ->
         "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
         "ANTHROPIC_AUTH_TOKEN": "${AI_GATEWAY_KEY_EVAL}",
         "ANTHROPIC_API_KEY": "",
+        **support.AGENT_CLIENT_ENV,
     }
 
 
@@ -68,6 +69,7 @@ def test_the_anthropic_agent_config_bills_the_direct_key(
         "ANTHROPIC_BASE_URL": "https://api.anthropic.com",
         "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY_EVAL}",
         "ANTHROPIC_AUTH_TOKEN": "",
+        **support.AGENT_CLIENT_ENV,
     }
     assert agent["kwargs"]["max_budget_usd"] == "5.00"
 
@@ -179,3 +181,12 @@ def test_the_repository_access_guard_reads_commands_not_prose(
         ]
     }
     assert scored._forbidden_repository_access(trajectory) is forbidden
+
+
+def test_both_arms_run_the_default_claude_client(tmp_path: Path) -> None:
+    # Harbor sets CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1, and Claude Code then
+    # drops every MCP tool with a top-level anyOf schema. Only "" unsets it.
+    agent = _configure(_job(tmp_path))
+    assert agent["env"]["CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC"] == ""
+    assert agent["env"]["DISABLE_AUTOUPDATER"] == "1"
+    assert "DISABLE_TELEMETRY" not in agent["env"]

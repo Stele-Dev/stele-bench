@@ -230,6 +230,11 @@ class ScoredReceipt:
     failure_code: str | None = None
     failure_message: str | None = None
     harbor_diagnostics: tuple[dict[str, str | None], ...] = ()
+    # What the agent did to the restored graph. The Stele arm runs a real
+    # install, whose instructions tell the agent to create, claim and complete
+    # tasks and to record knowledge, so a changed graph is evidence, not a
+    # failure. The exact-restore proof is taken before the agent starts.
+    graph_after_run: dict[str, object] | None = None
 
     def as_dict(self) -> dict[str, object]:
         return asdict(self)
@@ -1206,6 +1211,26 @@ def _failure_details(error: BaseException) -> tuple[str, str]:
     return "unexpected_error", "runner failed unexpectedly"
 
 
+def _graph_after_run(
+    restored: Any, snapshot: Any, restore: Any, fixture: Any
+) -> dict[str, object]:
+    # Read the states directly. `snapshot.observation(restore)` refuses to build
+    # once the embedding queue moved, and an agent edit re-queues the node it
+    # touched, so it cannot describe a graph the agent wrote to.
+    before = restored.state
+    after = snapshot.state
+    expected = fixture.graphs[GraphArm.FAITHFUL]
+    return {
+        "unchanged": after.canonical_state.sha256 == expected.sha256,
+        "node_count_before": before.declared_node_count,
+        "node_count_after": after.declared_node_count,
+        "edge_count_before": before.declared_edge_count,
+        "edge_count_after": after.declared_edge_count,
+        "embed_queue_before": restore.queue_before_count,
+        "embed_queue_after": snapshot.queue_after_count,
+    }
+
+
 def run_scored_smoke(inputs: ScoredInputs) -> ScoredReceipt:
     challenges = select_challenges(inputs.challenge_ids)
     # True for both graph conditions: they install Stele and restore the same
@@ -1240,6 +1265,7 @@ def run_scored_smoke(inputs: ScoredInputs) -> ScoredReceipt:
     primary_error: BaseException | None = None
     harbor_exit: int | None = None
     harbor_wall_seconds: float | None = None
+    graph_after_run: dict[str, object] | None = None
     harbor_job_name: str | None = None
     source_commit = inputs.revision
     source_tree_sha = ""
@@ -1279,6 +1305,12 @@ def run_scored_smoke(inputs: ScoredInputs) -> ScoredReceipt:
                     )
                 )
             project = restore.project
+            # Prove the restore before the agent can write: afterwards the graph
+            # legitimately differs from the fixture.
+            with support._scoped_child_environment():
+                restored = asyncio.run(provisioner.snapshot_with_receipt(project))
+            if not support._snapshot_matches_fixture(restored.observation(restore), fixture):
+                raise ScoredSmokeError("restored_snapshot_mismatch")
             support._read_binding(attempt_directory / "project.json")
             faithful_config = FaithfulAgentConfig(
                 artifact_path=artifact,
@@ -1344,8 +1376,7 @@ def run_scored_smoke(inputs: ScoredInputs) -> ScoredReceipt:
             assert fixture is not None
             with support._scoped_child_environment():
                 snapshot = asyncio.run(provisioner.snapshot_with_receipt(project))
-            if not support._snapshot_matches_fixture(snapshot.observation(restore), fixture):
-                raise ScoredSmokeError("post_run_snapshot_mismatch")
+            graph_after_run = _graph_after_run(restored, snapshot, restore, fixture)
         for task_directory in pack.task_directories:
             audit_effective_context(task_directory)
     except BaseException as error:
@@ -1416,6 +1447,7 @@ def run_scored_smoke(inputs: ScoredInputs) -> ScoredReceipt:
         failure_code=failure_code,
         failure_message=failure_message,
         harbor_diagnostics=support._recover_harbor_diagnostics(run_directory, []),
+        graph_after_run=graph_after_run,
     )
     if primary_error is not None:
         raise ScoredSmokeError("scored_smoke_failed", receipt=receipt) from primary_error

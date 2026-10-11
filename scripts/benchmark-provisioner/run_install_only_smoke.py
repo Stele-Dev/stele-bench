@@ -483,6 +483,21 @@ def _private_command(
     return response
 
 
+# Harbor sets CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 on every Claude Code
+# run. With it (or DISABLE_TELEMETRY) set, Claude Code 2.1.296 silently drops
+# every MCP tool whose input schema has a top-level anyOf: 12 of Stele's 17
+# tools, `organize` among them, so no arm could activate recall. An arm must run
+# the client a default user runs, so both arms clear it. Harbor applies the agent
+# env after its own, and only the empty string counts as unset ("0" does not).
+# The two narrower switches keep the pinned CLI version and the container quiet;
+# neither changes which tools load.
+AGENT_CLIENT_ENV = {
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+}
+
+
 def configure_agent_job(
     path: Path,
     *,
@@ -532,6 +547,7 @@ def configure_agent_job(
     # the same variable from its own process environment (_child_environment).
     env.pop("CLAUDE_CODE_MAX_OUTPUT_TOKENS", None)
     env.update(agent_env)
+    env.update(AGENT_CLIENT_ENV)
     if semantic_endpoint is not None:
         env["STELE_SEMANTIC_ENDPOINT"] = semantic_endpoint
     data["n_attempts"] = 1

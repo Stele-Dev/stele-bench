@@ -2165,8 +2165,18 @@ def run_repeat(
         invalid = sorted(
             role for role, outcome in record["outcomes"].items() if outcome == "invalid"
         )
+        # An arm can exit cleanly and still report an infrastructure error, for
+        # example when Claude Code aborts with OutputTokenExceededError. Its
+        # verifier then scores an unfinished workspace, which is not a verdict.
+        broken = sorted(
+            role
+            for role, outcome in record["outcomes"].items()
+            if outcome == "infrastructure-error"
+        )
         if receipts["control"] is None or receipts["treatment"] is None:
             record["excluded_reason"] = "arm_did_not_complete"
+        elif broken:
+            record["excluded_reason"] = f"arm_infrastructure_error:{','.join(broken)}"
         elif invalid:
             # An arm the runner itself marked invalid did not produce a
             # trustworthy verdict, so the pair is not a measurement. Excluding
@@ -4666,8 +4676,18 @@ def run_suite(
         invalid = sorted(
             role for role, outcome in record["outcomes"].items() if outcome == "invalid"
         )
+        # An arm can exit cleanly and still report an infrastructure error, for
+        # example when Claude Code aborts with OutputTokenExceededError. Its
+        # verifier then scores an unfinished workspace, which is not a verdict.
+        broken = sorted(
+            role
+            for role, outcome in record["outcomes"].items()
+            if outcome == "infrastructure-error"
+        )
         if receipts["control"] is None or receipts["treatment"] is None:
             record["excluded_reason"] = "arm_did_not_complete"
+        elif broken:
+            record["excluded_reason"] = f"arm_infrastructure_error:{','.join(broken)}"
         elif invalid:
             # This is where a trial that reached the reference solution leaves
             # the analysis: the runner marked it invalid, so the whole paired

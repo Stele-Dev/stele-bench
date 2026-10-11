@@ -5,6 +5,7 @@ import json
 import stat
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -1335,3 +1336,36 @@ def test_scored_main_persists_retained_failure_receipt(
     assert exit_code == 1
     assert payload["failure"]["code"] == "post_run_snapshot_mismatch"
     assert payload["receipt"]["classification"] == "exploratory"
+
+
+def _graph_snapshot(sha: str, nodes: int, edges: int, queue: int) -> SimpleNamespace:
+    state = SimpleNamespace(
+        canonical_state=SimpleNamespace(sha256=sha),
+        declared_node_count=nodes,
+        declared_edge_count=edges,
+    )
+    return SimpleNamespace(state=state, queue_after_count=queue)
+
+
+def test_agent_writes_to_the_restored_graph_are_recorded_not_failed() -> None:
+    # A real install tells the agent to create and complete tasks and to edit
+    # knowledge, so the post-run graph may differ from the fixture, and an edit
+    # re-queues an embedding. The receipt records both instead of failing.
+    from types import SimpleNamespace
+
+    from stele_bench.provisioning import GraphArm
+
+    fixture = SimpleNamespace(graphs={GraphArm.FAITHFUL: SimpleNamespace(sha256="a" * 64)})
+    restore = SimpleNamespace(queue_before_count=0)
+    restored = _graph_snapshot("a" * 64, 40, 30, 0)
+    after = _graph_snapshot("b" * 64, 41, 31, 2)
+    assert scored._graph_after_run(restored, after, restore, fixture) == {
+        "unchanged": False,
+        "node_count_before": 40,
+        "node_count_after": 41,
+        "edge_count_before": 30,
+        "edge_count_after": 31,
+        "embed_queue_before": 0,
+        "embed_queue_after": 2,
+    }
+    assert scored._graph_after_run(restored, restored, restore, fixture)["unchanged"] is True
